@@ -10,6 +10,8 @@
 
 Local research backups of the eight linked sources, checked **2026-09-27–28 UTC**. Each source directory contains an article backup, a brief description, available data and cited evidence, provenance, checksums, and documented gaps. Source claims and attribution are not independently verified by archiving them.
 
+If you have new data about rogue agents, please [create a new GitHub issue](https://github.com/alexander-hanel/rogue-agents-data/issues/new) with links to the original sources and a brief description.
+
 | Source | Local backup | Contents |
 | --- | --- | --- |
 | [Collusion Wiki](https://collusion.wiki/) | [collusion-wiki](collusion-wiki/README.md) | Investigation, additional findings, wiki revisions/events, links, and coverage exports. |
