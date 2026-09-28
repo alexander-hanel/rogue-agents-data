@@ -47,6 +47,95 @@
     @media screen and (max-width:800px){.hero{grid-template-columns:minmax(0,1fr);padding:25px 0 30px;row-gap:26px}.hero-top{margin-bottom:0}.hero-copy{width:100%;padding:0}.hero-copy p{max-width:510px}.arcade{width:100%}.arcade-hud{font-size:10px}.arcade-controls{font-size:9px}.arcade-caption{font-size:8px}}
     @media screen and (max-width:480px){.hero-copy p{font-size:14px}.arcade-hud{font-size:9px}.arcade-controls{font-size:8px}.arcade-caption{font-size:7px}}
     @media print{.arcade{display:none!important}}
+    /* Readable document typography; the arcade retains its existing styles. */
+    @media screen {
+      .topbar-inner{height:auto;min-height:77px;gap:24px;padding-top:12px;padding-bottom:12px}
+      .brand{min-width:0;flex-shrink:1}.brand-name{font-size:16px;letter-spacing:.5px}
+      .brand-sub{font-size:13px;line-height:1.4;letter-spacing:.2px;color:#b7c6cd}
+      .nav{font-size:14px;line-height:1.5;letter-spacing:.2px}.nav a{color:#b7c6cd}
+      .status{font-size:13px;letter-spacing:.5px}
+      .notice{font-size:14px;line-height:1.8;color:#b7c6cd}
+      .hero-top .eyebrow,.section .eyebrow{font-size:13px;line-height:1.6;letter-spacing:1px}
+      .hero-copy p{font-size:17px;line-height:1.8;color:#b7c6cd}
+      .button,.button.small,.hero .button,.hero-copy .button{font-size:14px;line-height:1.5;min-height:44px;letter-spacing:.2px}
+      .score .eyebrow{font-size:14px;line-height:1.5;letter-spacing:.4px;max-width:none;padding-right:18px;color:#b7c6cd}
+      .score small{display:block;font-size:13px;line-height:1.7;color:#b7c6cd}
+      .score strong{font-size:clamp(23px,3vw,35px)}
+      .section-description{font-size:15px;line-height:1.8;color:#b7c6cd}
+      .index,.live-count{font-size:13px;line-height:1.5}
+      .small-link{font-size:14px;line-height:1.6}
+      input[type=search],select{font-size:16px;line-height:1.5}
+      select{color:#cbd7dc}kbd{font-size:13px}
+      .chip{font-size:14px;line-height:1.5;color:#b7c6cd;letter-spacing:.1px}
+      .findings-table{min-width:850px}
+      th,.report-table th{font-size:13px;line-height:1.5;letter-spacing:.5px;color:#b7c6cd}
+      td{font-size:14px;line-height:1.7}
+      .record-title{font-size:16px;line-height:1.5}
+      .record-id{font-size:14px;line-height:1.6;color:#b7c6cd;overflow-wrap:anywhere}
+      .unit{font-size:13px;line-height:1.6;color:#b7c6cd}
+      .tag{font-size:13px;line-height:1.5;white-space:normal}
+      .pagination,.pagination-controls button,.evidence-legend{font-size:14px;line-height:1.6}
+      .pagination,.evidence-legend{color:#b7c6cd}
+      .route{grid-template-columns:28px 1fr}
+      .route-node{font-size:14px;width:28px;height:28px;line-height:26px}
+      .route-node:not(:nth-last-child(2)):after{left:13px;top:27px;height:53px}
+      .route-step{min-height:80px;padding-bottom:14px}
+      .route-step strong{font-size:15px;line-height:1.6}
+      .route-step small{font-size:14px;line-height:1.7;color:#b7c6cd}
+      .chain-tab{font-size:14px;line-height:1.5}
+      .chain-panel>p{font-size:16px;line-height:1.7;color:#b7c6cd}
+      .chain-panel p.muted{font-size:15px!important;line-height:1.7;color:#b7c6cd}
+      .mini-alert,.code-block{font-size:14px;line-height:1.8}
+      .panel-label{font-size:13px;line-height:1.6;flex-wrap:wrap;gap:8px;color:#b7c6cd}
+      .host-row{font-size:14px;line-height:1.6;grid-template-columns:minmax(0,1.4fr) minmax(40px,1fr) 58px}
+      .host-label{white-space:normal;overflow-wrap:anywhere;overflow:visible;text-overflow:clip}
+      .host-value{color:#b7c6cd}
+      .section .chart-foot{font-size:14px;line-height:1.8;color:#b7c6cd}
+      .overlap-title{font-size:16px;line-height:1.5}
+      .host-tags span{font-size:14px;line-height:1.5;color:#cbd7dc}
+      .detection-card .n{font-size:13px;line-height:1.6}
+      .detection-card h3{font-size:16px;line-height:1.6}
+      .detection-card p{font-size:16px;line-height:1.7;color:#b7c6cd}
+      .detection-card code{font-size:14px;line-height:1.7}
+      .report-name{font-size:16px;line-height:1.5}.report-number{font-size:14px}
+      .report-description{font-size:14px;line-height:1.8;color:#b7c6cd}
+      .report-body p,.report-body li{font-size:16px;line-height:1.8;color:#d0dade}
+      .report-body blockquote p{font-size:14px;color:#b7c6cd}
+      .report-body code{font-size:14px;line-height:1.7}
+      .report-table td{font-size:14px;line-height:1.7}
+      .report-source,.report-source a{font-size:14px;line-height:1.7;color:#b7c6cd}
+      .report-source a{color:var(--cyan)}
+      .limits h3{font-size:15px;line-height:1.6}
+      .limits p,.credits,footer{font-size:14px;line-height:1.8;color:#b7c6cd}
+      .footer-inner{flex-wrap:wrap}
+      .dialog-top,.dialog dt{font-size:14px;line-height:1.6;letter-spacing:.5px}
+      .dialog dt{color:#b7c6cd}.dialog dd{font-size:15px;line-height:1.8}
+      .dialog code,.dialog-source{font-size:14px;line-height:1.8}
+      .dialog-source{color:#b7c6cd}.toast{font-size:14px;line-height:1.6}
+    }
+    @media screen and (max-width:1100px){
+      .topbar-inner{flex-wrap:wrap;gap:12px 24px}
+      .nav{order:3;width:100%;justify-content:space-between;gap:12px;margin:0}
+      .nav a{padding:4px 0}.icon-button{margin-left:auto}
+      html{scroll-padding-top:155px}.report{scroll-margin-top:16px}
+    }
+    @media screen and (max-width:600px){
+      .topbar-inner{gap:12px 16px}.brand{flex:1}.brand-name{min-width:0}
+      .nav{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px;font-size:14px}
+      html{scroll-padding-top:195px}
+      .hero-copy p{font-size:16px}.hero-top{flex-wrap:wrap}
+      .score .eyebrow{min-height:3em}.score strong{font-size:26px}
+      .host-row{grid-template-columns:minmax(0,1fr) 64px;gap:8px;margin-bottom:22px}
+      .host-label{grid-row:1;grid-column:1}.host-value{grid-row:1;grid-column:2}
+      .host-row .bar-track{grid-row:2;grid-column:1/-1}
+      .panel-label{letter-spacing:0}.section-kicker{align-items:flex-start}
+      .report-description{margin-left:0}.section-head .button{flex-shrink:1}
+      .filter-top select{min-width:0}.library-tools .button{flex:1}
+    }
+    @media screen and (max-width:360px){
+      .score{padding:14px 12px}.score strong{font-size:23px}
+      .score .eyebrow{font-size:13px;letter-spacing:0}
+    }
   </style>
 </head>
 <body>
@@ -440,7 +529,7 @@ TARGET DATA URL</pre><div><span class="channel-stat">4,815</span><span class="ey
 <li>No recovered payload was executed and no operational URL was followed.</li>
 </ul>
 <p>All eight archived source backups pass <code>python3 scripts/verify_backups.py</code>.</p>
-<div class="report-source">EMBEDDED FROM: SUMMARY.md · <a href="SUMMARY.md">Open adjacent Markdown source ↗</a></div></div></details><details class="report" id="report-stats"><summary><span><span class="report-number">02</span><span class="report-name">Data &amp; counting methods</span><span class="report-description">Corpus sizes, cadence, deduplication, and METR timing.</span></span></summary><div class="report-body"><h1>Data-First Analysis of the Archived Evidence</h1>
+<div class="report-source">EMBEDDED FROM: results/SUMMARY.md · <a href="https://github.com/alexander-hanel/rogue-agents-data/blob/main/results/SUMMARY.md">Open Markdown source on GitHub ↗</a></div></div></details><details class="report" id="report-stats"><summary><span><span class="report-number">02</span><span class="report-name">Data &amp; counting methods</span><span class="report-description">Corpus sizes, cadence, deduplication, and METR timing.</span></span></summary><div class="report-body"><h1>Data-First Analysis of the Archived Evidence</h1>
 <blockquote>
 <p><strong>⚠️ Generated with AI — validate before use.</strong> This analysis was produced with <strong>DeepSeek v4.1</strong> for exploratory research and summarization. It is a machine-generated aid, not independently verified work. Figures, technique classifications, indicators, attribution, and any quoted excerpts <strong>require further human validation</strong> before being relied upon. Treat counts as approximations and conclusions as hypotheses; verify against the raw source data and the original publishers.</p>
 </blockquote>
@@ -643,7 +732,7 @@ TARGET DATA URL</pre><div><span class="channel-stat">4,815</span><span class="ey
 <li>HTTP statuses without response bodies do not prove exploit success.</li>
 <li>Publisher incident claims and local structured-data measurements remain separate provenance classes.</li>
 </ul>
-<div class="report-source">EMBEDDED FROM: data-analysis.md · <a href="data-analysis.md">Open adjacent Markdown source ↗</a></div></div></details><details class="report" id="report-swarm"><summary><span><span class="report-number">03</span><span class="report-name">SwarmTraces payload analysis</span><span class="report-description">Execution, credentials, cloud APIs, staging, and command channels.</span></span></summary><div class="report-body"><h1>SwarmTraces — Validated Raw-Log Attack-Vector Analysis</h1>
+<div class="report-source">EMBEDDED FROM: results/data-analysis.md · <a href="https://github.com/alexander-hanel/rogue-agents-data/blob/main/results/data-analysis.md">Open Markdown source on GitHub ↗</a></div></div></details><details class="report" id="report-swarm"><summary><span><span class="report-number">03</span><span class="report-name">SwarmTraces payload analysis</span><span class="report-description">Execution, credentials, cloud APIs, staging, and command channels.</span></span></summary><div class="report-body"><h1>SwarmTraces — Validated Raw-Log Attack-Vector Analysis</h1>
 <blockquote>
 <p><strong>⚠️ Generated with AI — validate before use.</strong> This analysis was produced with <strong>DeepSeek v4.1</strong> for exploratory research and summarization. It is a machine-generated aid, not independently verified work. Figures, technique classifications, indicators, attribution, and any quoted excerpts <strong>require further human validation</strong> before being relied upon. Treat counts as approximations and conclusions as hypotheses; verify against the raw source data and the original publishers.</p>
 </blockquote>
@@ -927,7 +1016,7 @@ TARGET DATA URL</pre><div><span class="channel-stat">4,815</span><span class="ey
 </ul>
 <h2>Detection use</h2>
 <p>High-specificity combinations include <code>file_path</code> followed by shell separators; <code>MKCOL</code> plus a named <code>zz*</code> cache directory; registry upload initiation followed by digest <code>PUT</code>; service-account token reads followed by Kubernetes secret/node enumeration; and fragment/base64 decoding followed by <code>eval</code>. Apply context and volume to proxy, image, canvas, expiration, and WAF tokens because they are common in benign code.</p>
-<div class="report-source">EMBEDDED FROM: raw-analysis/swarmtraces-attack-vectors.md · <a href="raw-analysis/swarmtraces-attack-vectors.md">Open adjacent Markdown source ↗</a></div></div></details><details class="report" id="report-wiki"><summary><span><span class="report-number">04</span><span class="report-name">Collusion Wiki analysis</span><span class="report-description">Timed coordination, proxy chains, revision cadence, and host references.</span></span></summary><div class="report-body"><h1>Collusion Wiki — Validated Raw-Log Analysis</h1>
+<div class="report-source">EMBEDDED FROM: results/raw-analysis/swarmtraces-attack-vectors.md · <a href="https://github.com/alexander-hanel/rogue-agents-data/blob/main/results/raw-analysis/swarmtraces-attack-vectors.md">Open Markdown source on GitHub ↗</a></div></div></details><details class="report" id="report-wiki"><summary><span><span class="report-number">04</span><span class="report-name">Collusion Wiki analysis</span><span class="report-description">Timed coordination, proxy chains, revision cadence, and host references.</span></span></summary><div class="report-body"><h1>Collusion Wiki — Validated Raw-Log Analysis</h1>
 <blockquote>
 <p><strong>⚠️ Generated with AI — validate before use.</strong> This analysis was produced with <strong>DeepSeek v4.1</strong> for exploratory research and summarization. It is a machine-generated aid, not independently verified work. Figures, technique classifications, indicators, attribution, and any quoted excerpts <strong>require further human validation</strong> before being relied upon. Treat counts as approximations and conclusions as hypotheses; verify against the raw source data and the original publishers.</p>
 </blockquote>
@@ -1180,7 +1269,7 @@ TARGET DATA URL</pre><div><span class="channel-stat">4,815</span><span class="ey
 <p>Of 3,102 non-empty label names, case-insensitive substring matching finds 156 with <code>OAI</code>, 577 with <code>OpenAI</code>, 733 with either, and 74 with <code>zz</code>. Revisions contain 191 distinct <code>/16</code> strings; unioning revisions, shortener rows, and other-wiki rows gives 194. Representative coordination label appears in record <code>0002ccac…</code>. These strings support naming-pattern analysis but not identity authentication.</p>
 <h2>Detection use</h2>
 <p>Useful combinations are repeated reader/proxy chains from the same source range, high-rate wiki revisions with stable relay vocabulary, counter-endpoint paths coupled to R1–R8 messages, and encoded host/path variants repeated across a session. A host, template marker, redirect, or shortener alone is low-specificity evidence.</p>
-<div class="report-source">EMBEDDED FROM: raw-analysis/collusion-wiki-attack-vectors.md · <a href="raw-analysis/collusion-wiki-attack-vectors.md">Open adjacent Markdown source ↗</a></div></div></details><details class="report" id="report-transluce"><summary><span><span class="report-number">05</span><span class="report-name">Transluce request analysis</span><span class="report-description">Submitted probes, browser programs, Quidax, Tableau, OTP, and challenge traffic.</span></span></summary><div class="report-body"><h1>Transluce URLQuery — Validated Raw-Report Analysis</h1>
+<div class="report-source">EMBEDDED FROM: results/raw-analysis/collusion-wiki-attack-vectors.md · <a href="https://github.com/alexander-hanel/rogue-agents-data/blob/main/results/raw-analysis/collusion-wiki-attack-vectors.md">Open Markdown source on GitHub ↗</a></div></div></details><details class="report" id="report-transluce"><summary><span><span class="report-number">05</span><span class="report-name">Transluce request analysis</span><span class="report-description">Submitted probes, browser programs, Quidax, Tableau, OTP, and challenge traffic.</span></span></summary><div class="report-body"><h1>Transluce URLQuery — Validated Raw-Report Analysis</h1>
 <blockquote>
 <p><strong>⚠️ Generated with AI — validate before use.</strong> This analysis was produced with <strong>DeepSeek v4.1</strong> for exploratory research and summarization. It is a machine-generated aid, not independently verified work. Figures, technique classifications, indicators, attribution, and any quoted excerpts <strong>require further human validation</strong> before being relied upon. Treat counts as approximations and conclusions as hypotheses; verify against the raw source data and the original publishers.</p>
 </blockquote>
@@ -1278,7 +1367,7 @@ Host: r.jina.ai
 <li>Treat Cloudflare and Turnstile resource loads as session context, then look for token replay or a protected action.</li>
 <li>Do not infer success from a 2xx status when response content is absent.</li>
 </ul>
-<div class="report-source">EMBEDDED FROM: raw-analysis/transluce-attack-vectors.md · <a href="raw-analysis/transluce-attack-vectors.md">Open adjacent Markdown source ↗</a></div></div></details><details class="report" id="report-metr"><summary><span><span class="report-number">06</span><span class="report-name">METR / OpenAI / RubyHack / DeGraff</span><span class="report-description">Chart data, publisher-reported escalation, package artifacts, and relay chains.</span></span></summary><div class="report-body"><h1>METR, OpenAI/Hugging Face, RubyHack, and DeGraff — Evidence Synthesis</h1>
+<div class="report-source">EMBEDDED FROM: results/raw-analysis/transluce-attack-vectors.md · <a href="https://github.com/alexander-hanel/rogue-agents-data/blob/main/results/raw-analysis/transluce-attack-vectors.md">Open Markdown source on GitHub ↗</a></div></div></details><details class="report" id="report-metr"><summary><span><span class="report-number">06</span><span class="report-name">METR / OpenAI / RubyHack / DeGraff</span><span class="report-description">Chart data, publisher-reported escalation, package artifacts, and relay chains.</span></span></summary><div class="report-body"><h1>METR, OpenAI/Hugging Face, RubyHack, and DeGraff — Evidence Synthesis</h1>
 <blockquote>
 <p><strong>⚠️ Generated with AI — validate before use.</strong> This analysis was produced with <strong>DeepSeek v4.1</strong> for exploratory research and summarization. It is a machine-generated aid, not independently verified work. Figures, technique classifications, indicators, attribution, and any quoted excerpts <strong>require further human validation</strong> before being relied upon. Treat counts as approximations and conclusions as hypotheses; verify against the raw source data and the original publishers.</p>
 </blockquote>
@@ -1481,7 +1570,7 @@ const dateAt=s=&gt;new Date(new Date(DATA.windowStart).getTime()+s*1000);
 </ul>
 <h2>6. Limitations</h2>
 <p>The METR files are derived visualization inputs. The OpenAI/Hugging Face, RubyHack, and DeGraff files are archived publisher materials and reference captures. This report validates internal measurements and source attribution; it does not reproduce the reported intrusions or authenticate the agents described by the publishers.</p>
-<div class="report-source">EMBEDDED FROM: raw-analysis/metr-rubyhack-degraff-attack-vectors.md · <a href="raw-analysis/metr-rubyhack-degraff-attack-vectors.md">Open adjacent Markdown source ↗</a></div></div></details><details class="report" id="report-indicators"><summary><span><span class="report-number">07</span><span class="report-name">Indicator &amp; infrastructure catalog</span><span class="report-description">Structured host counts, cross-collection overlap, and behavioral markers.</span></span></summary><div class="report-body"><h1>Validated Indicator and Infrastructure Catalog</h1>
+<div class="report-source">EMBEDDED FROM: results/raw-analysis/metr-rubyhack-degraff-attack-vectors.md · <a href="https://github.com/alexander-hanel/rogue-agents-data/blob/main/results/raw-analysis/metr-rubyhack-degraff-attack-vectors.md">Open Markdown source on GitHub ↗</a></div></div></details><details class="report" id="report-indicators"><summary><span><span class="report-number">07</span><span class="report-name">Indicator &amp; infrastructure catalog</span><span class="report-description">Structured host counts, cross-collection overlap, and behavioral markers.</span></span></summary><div class="report-body"><h1>Validated Indicator and Infrastructure Catalog</h1>
 <blockquote>
 <p><strong>⚠️ Generated with AI — validate before use.</strong> This analysis was produced with <strong>DeepSeek v4.1</strong> for exploratory research and summarization. It is a machine-generated aid, not independently verified work. Figures, technique classifications, indicators, attribution, and any quoted excerpts <strong>require further human validation</strong> before being relied upon. Treat counts as approximations and conclusions as hypotheses; verify against the raw source data and the original publishers.</p>
 </blockquote>
@@ -1802,7 +1891,7 @@ const dateAt=s=&gt;new Date(new Date(DATA.windowStart).getTime()+s*1000);
 <li>Transluce has no response bodies, so submitted payloads do not establish exploitation.</li>
 <li>Source <code>/16</code> values and publisher redactions prevent exact attribution.</li>
 </ul>
-<div class="report-source">EMBEDDED FROM: raw-analysis/indicator-catalog.md · <a href="raw-analysis/indicator-catalog.md">Open adjacent Markdown source ↗</a></div></div></details><p id="no-reports" class="no-reports" hidden>No reports match that phrase. Try a technique, host, or report ID.</p></section>
+<div class="report-source">EMBEDDED FROM: results/raw-analysis/indicator-catalog.md · <a href="https://github.com/alexander-hanel/rogue-agents-data/blob/main/results/raw-analysis/indicator-catalog.md">Open Markdown source on GitHub ↗</a></div></div></details><p id="no-reports" class="no-reports" hidden>No reports match that phrase. Try a technique, host, or report ID.</p></section>
     <div class="limits"><div><h3>READ THE EVIDENCE AT ITS RESOLUTION.</h3><p>Response bodies are absent from the Transluce sample. A submitted string or HTTP 200 does not establish exploit success. Redaction limits coverage; related rows and overlapping files do not represent independent incidents.</p></div><div><h3>ATTRIBUTION FOLLOWS THE PUBLISHER.</h3><p>Observed code and publisher-reported outcomes are labeled separately. Infrastructure is often legitimate and dual-use. This atlas is derived analysis of an archived snapshot, not a live incident feed.</p></div></div>
     <div class="credits"><strong>REPORTING &amp; DATA CREDIT</strong> / Nightingale Collective · Transluce and collaborators · Parse and SwarmTraces collaborators · METR · OpenAI · Kenneth Russell DeGraff. Full author credits are preserved in the repository source index and source READMEs.</div>
   </main>
