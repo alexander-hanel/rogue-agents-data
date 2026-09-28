@@ -40,6 +40,10 @@ Each source’s original URL is linked in the table above (and restated at the t
 
 ## Analysis
 
+The analysis results and linked reports below were created using AI to explore the archived data. They are derived analysis, not primary evidence, and retain each source’s attribution and redaction caveats.
+
+An [interactive view of the analysis](https://alexander-hanel.github.io/rogue-agents-data/) is also available.
+
 - [results/SUMMARY.md](results/SUMMARY.md) — **consolidated single-spot summary** of all analysis below (attack vectors, ATT&CK, SOC detections, indicator catalog, limitations).
 - [results/raw-analysis/](results/raw-analysis/README.md) — five raw-log attack-vector mining files (SwarmTraces, Collusion Wiki, Transluce, METR/RubyHack/DeGraff, cross-source indicator catalog).
 - [results/data-analysis.md](results/data-analysis.md) — data-first analysis of the raw structured logs: schemas, payload taxonomy, coordination/cadence statistics, cross-source infrastructure correlation, and data-derived detection signatures.
