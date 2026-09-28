@@ -1,0 +1,403 @@
+Source: https://my.diffend.io/gems/injecthack1778550335/0.0.1
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+RubyGems - injecthack1778550335 - Versions diffs - 0.0.1 - Mend - Supply Chain Defender
+
+RubyGems
+
+npm
+
+PyPI
+
+Organizations
+
+Log in
+
+RubyGems
+
+injecthack1778550335
+
+Versions diffs
+
+0.0.1
+
+injecthack1778550335
+0.0.1
+
+This diff represents the content of publicly available package versions that have been released to one of the supported registries. The information contained in this diff is provided for informational purposes only and reflects changes between package versions as they appear in their respective public registries.
+
+        Files changed (6)
+        hide
+        show
+
+            checksums.yaml
+
+          +7
+          -0
+
+            data/.yardopts
+
+          +3
+          -0
+
+            data/README.md
+
+          +2
+          -0
+
+            data/lib/inject.rb
+
+          +3
+          -0
+
+            data/lib/main.rb
+
+          +1
+          -0
+
+            metadata
+
+          +42
+          -0
+
+        checksums.yaml
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,7 @@
+
+1
+
+            +
+            ---
+
+2
+
+            +
+            SHA256:
+
+3
+
+            +
+              metadata.gz: b54653c317d92b3f603d4c5e93e9daf6875769894fa37a18f37b05f6eae8e7b0
+
+4
+
+            +
+              data.tar.gz: 357f388f823bca9466435b5aec9793aa7803041b096e8fbee5763dab86d5f99b
+
+5
+
+            +
+            SHA512:
+
+6
+
+            +
+              metadata.gz: cd287583ea6815464ce95eff8e3d260a17e6a9ce2805af74885812cc389d40bf050a858d739f7fb9e2907571fcffce64f74a993a20621ce92cc021843d2dc71d
+
+7
+
+            +
+              data.tar.gz: bbc52ee6fb66a06ed129f76fadfdca310f98b1a4c092ef265f27058974c9da1e20142e22d700260a44d06aec28733dd608013ad3b210b67140ba52690cece7f8
+
+        data/.yardopts
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,3 @@
+
+1
+
+            +
+            --load lib/inject.rb
+
+2
+
+            +
+            --readme README.md
+
+3
+
+            +
+            lib/**/*.rb
+
+        data/README.md
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,2 @@
+
+1
+
+            +
+            # test injection
+
+2
+
+            +
+            before
+
+        data/lib/inject.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,3 @@
+
+1
+
+            +
+            File.open('HACKMARKER','w'){|f|f.write('ran')}
+
+2
+
+            +
+            # create extra file perhaps yard reads?
+
+3
+
+            +
+            File.open('README.md','a'){|f|f.write("\nINJECTION_RAN at #{Time.now}\n")}
+
+        data/lib/main.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            # Main
+
+        metadata
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,42 @@
+
+1
+
+            +
+            --- !ruby/object:Gem::Specification
+
+2
+
+            +
+            name: injecthack1778550335
+
+3
+
+            +
+            version: !ruby/object:Gem::Version
+
+4
+
+            +
+              version: 0.0.1
+
+5
+
+            +
+            platform: ruby
+
+6
+
+            +
+            authors:
+
+7
+
+            +
+            - x
+
+8
+
+            +
+            bindir: bin
+
+9
+
+            +
+            cert_chain: []
+
+10
+
+            +
+            date: 1980-01-02 00:00:00.000000000 Z
+
+11
+
+            +
+            dependencies: []
+
+12
+
+            +
+            executables: []
+
+13
+
+            +
+            extensions: []
+
+14
+
+            +
+            extra_rdoc_files: []
+
+15
+
+            +
+            files:
+
+16
+
+            +
+            - ".yardopts"
+
+17
+
+            +
+            - README.md
+
+18
+
+            +
+            - lib/inject.rb
+
+19
+
+            +
+            - lib/main.rb
+
+20
+
+            +
+            homepage: https://example.com
+
+21
+
+            +
+            licenses:
+
+22
+
+            +
+            - MIT
+
+23
+
+            +
+            metadata:
+
+24
+
+            +
+              yard.run: 'true'
+
+25
+
+            +
+            rdoc_options: []
+
+26
+
+            +
+            require_paths:
+
+27
+
+            +
+            - lib
+
+28
+
+            +
+            required_ruby_version: !ruby/object:Gem::Requirement
+
+29
+
+            +
+              requirements:
+
+30
+
+            +
+              - - ">="
+
+31
+
+            +
+                - !ruby/object:Gem::Version
+
+32
+
+            +
+                  version: '0'
+
+33
+
+            +
+            required_rubygems_version: !ruby/object:Gem::Requirement
+
+34
+
+            +
+              requirements:
+
+35
+
+            +
+              - - ">="
+
+36
+
+            +
+                - !ruby/object:Gem::Version
+
+37
+
+            +
+                  version: '0'
+
+38
+
+            +
+            requirements: []
+
+39
+
+            +
+            rubygems_version: 3.6.7
+
+40
+
+            +
+            specification_version: 4
+
+41
+
+            +
+            summary: demo yard load
+
+42
+
+            +
+            test_files: []
+
+Contact Us
+
+Terms of Service
+
+Privacy Policy
+
+Docs
+
+Copyright © 2026 Mend Software

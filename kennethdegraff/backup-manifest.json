@@ -1,0 +1,496 @@
+{
+  "source_url": "https://www.kennethdegraff.com/swarm",
+  "checked_at": "2026-09-27T22:38:03.766386+00:00",
+  "scope": "Source articles, their directly linked first-party assets, public download bundles, and selected directly cited articles/evidence. No recursive crawl of citations or operational endpoints.",
+  "downloads": [
+    {
+      "url": "https://www.kennethdegraff.com/swarm",
+      "path": "article/index.html",
+      "kind": "article",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://www.kennethdegraff.com/swarm",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 154160,
+      "sha256": "5df508400f270c33930f9fd009da3dd949aa177b2bb1ea64d0095a85d6df537e",
+      "status": "downloaded"
+    },
+    {
+      "url": "http://web.archive.org/web/20240709202334/https://www.vanderbilt.edu/houseorgan/2011/08/of-jfk-u2-telephones-and-security/",
+      "path": "references/6682837d71-of-jfk-u2-telephones-and-security.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "http://web.archive.org/web/20240709202334/https://www.vanderbilt.edu/houseorgan/2011/08/of-jfk-u2-telephones-and-security/",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 34450,
+      "sha256": "16e4d6b485fbf4eb2bb230c93c939fe309d651929c8e0a30eca488da0138aeb2",
+      "status": "downloaded"
+    },
+    {
+      "url": "http://web.archive.org/web/20260904190301/https://uoft.me/maagentxyz99999+",
+      "path": "references/b54c3c0708-maagentxyz99999-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "http://web.archive.org/web/20260904190301/https://uoft.me/maagentxyz99999+",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 249679,
+      "sha256": "a0acc9613267c734738bb0f2b9fd3dd3eb576cf6205af43f0e89dc96e019b822",
+      "status": "downloaded"
+    },
+    {
+      "url": "http://web.archive.org/web/20260904190413/https://uoft.me/mafresh91011+",
+      "path": "references/7678810afd-mafresh91011-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "http://web.archive.org/web/20260904190413/https://uoft.me/mafresh91011+",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 53980,
+      "sha256": "4876f4ddc0b77c0ebaab38f9f8c2ce8049c1bfa8c87322f1a74e1c3abe485e82",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://casar.house.gov/sites/evo-subsites/casar.house.gov/files/evo-media-document/oversight-letter-to-openai-openai-hugging-face-incident-1.pdf",
+      "path": "references/4a24bf12f5-oversight-letter-to-openai-openai-hugging-face-incident-1.pdf",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://casar.house.gov/sites/evo-subsites/casar.house.gov/files/evo-media-document/oversight-letter-to-openai-openai-hugging-face-incident-1.pdf",
+      "content_type": "application/pdf",
+      "bytes": 1369168,
+      "sha256": "95fedaa7566e6b0917149649d1d17e7f1affce5e35653c5f6674b869551d7c75",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf",
+      "path": "references/2869273e2d-OpenAI-Hugging-Face-Incident-Technical-Report.pdf",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf",
+      "content_type": "application/pdf",
+      "bytes": 521159,
+      "sha256": "dd635cf6e5f39f0e1f646f08c36549090d77156ed89cbd3d733ed496648cae9c",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://fi-le.net/vanderbilt",
+      "path": "references/625cbb20bc-vanderbilt.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://fi-le.net/vanderbilt/",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 23619,
+      "sha256": "2c3f49ad1e095649b6936f99bab647c2416712d5d4bb401b84abbcde3c973f31",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://helppeer.app/research/bridges",
+      "path": "references/5313f0382c-bridges.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://helppeer.app/research/bridges",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 130947,
+      "sha256": "d8520deff5d0032ca50d5ddec271b04a4db4f5f49df6e8207e114b3f153f000b",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fbi-cde/crime-data-frontend/master/README.md",
+      "path": "references/e2a607d75b-README.md",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://raw.githubusercontent.com/fbi-cde/crime-data-frontend/master/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 7409,
+      "sha256": "9f43313f12b2ba7b4699a4af9abcef0cceb909dcf53023dc0808943a2bd53188",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fbi-cde/crime-data-frontend/master/public/swagger/main.js",
+      "path": "references/7d3e2a31b7-main.js",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://raw.githubusercontent.com/fbi-cde/crime-data-frontend/master/public/swagger/main.js",
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 2070,
+      "sha256": "a166ccf84c62d4e76d4a02bd7a780d434a730188ea5a6ff4d73b8f4260f5596d",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://web.archive.org/web/20260609114840/https://vanderbi.lt/",
+      "path": "references/6b2a8087a4-vanderbi.lt",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260609114840/https://vanderbi.lt/",
+      "content_type": "text/html;charset=utf-8",
+      "bytes": 12839,
+      "sha256": "e02fae6b39cbf674829eecc6b5535fab0d62498fbfa93807658772e79dcd390a",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://web.archive.org/web/20260904190543/https://vanderbi.lt/iyg1y+",
+      "path": "references/ab2752a9d7-iyg1y-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260904190543/https://vanderbi.lt/iyg1y+",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 1707981,
+      "sha256": "eadf465e94946bd3169906db7ff4a677f368e8769c9c09574c10e862f98c82f5",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://web.archive.org/web/20260904204918/https://vanderbi.lt/agf623d+",
+      "path": "references/aec6bb102f-agf623d-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260904204918/https://vanderbi.lt/agf623d+",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 18651,
+      "sha256": "affee3486e7cea42cfe4e115ef8d17012822ff34c18c575dcf89c8429231aeef",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://web.archive.org/web/20260904204918/https://vanderbi.lt/highallmap260622+",
+      "path": "references/507cbcfafd-highallmap260622-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260904204918/https://vanderbi.lt/highallmap260622+",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 18768,
+      "sha256": "0c60a0f52750c9e26967f662c5d57106a805c8f872f8a6d8da2bf1d3f58aba4d",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://web.archive.org/web/20260904204918/https://vanderbi.lt/jqinv11method+",
+      "path": "references/ad457c9ec2-jqinv11method-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260904204918/https://vanderbi.lt/jqinv11method+",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 24939,
+      "sha256": "4448a11dcddffa714b2cd84a9bd32be899343be1dd7ab3300e6731c29c011845",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://web.archive.org/web/20260904204918/https://vanderbi.lt/jqinv11raw+",
+      "path": "references/e9b43cd77d-jqinv11raw-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260904204918/https://vanderbi.lt/jqinv11raw+",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 29548,
+      "sha256": "04d1c239afa1be6feaf328c07f60b9f2fa03e2617306ba73c4aa9122593162b8",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://web.archive.org/web/20260904204918/https://vanderbi.lt/jsallwrap260618+",
+      "path": "references/87eca861d7-jsallwrap260618-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260904204918/https://vanderbi.lt/jsallwrap260618+",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 19420,
+      "sha256": "1f8ba90ca5b2389bffda95b170c71a6d813023f61744a2c900b58f8f3ef53a4b",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://web.archive.org/web/20260904204918/https://vanderbi.lt/ourjsget26abc+",
+      "path": "references/500e6027d0-ourjsget26abc-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260904204918/https://vanderbi.lt/ourjsget26abc+",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 23716,
+      "sha256": "2db2c5b7eac91d56154af8ad290378b3284c01c21ca2f21db1c56fcd32c51623",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/allregrawx260622+",
+      "path": "references/23c9846d0e-allregrawx260622-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/allregrawx260622+",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 18964,
+      "sha256": "92fa15062980f90b95f6d32f6f88912cccd8b77eb3b4cb09bf49dc528f9cb12b",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/countgf260623c+",
+      "path": "references/45ca0e1619-countgf260623c-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/countgf260623c+",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 18551,
+      "sha256": "12b344ed373050ca0cb0d03858555d5039e03af706de62bfe3935565fc8d0666",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/countrf260623c+",
+      "path": "references/59ea6d5636-countrf260623c-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T23:51:06.720535+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/countrf260623c+",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 24292,
+      "sha256": "b6c9422e06f344a0cdc4139858c4957e94e46dc62b498a7aa14f8dba06b24882",
+      "status": "downloaded",
+      "previous_attempts": [
+        {
+          "url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/countrf260623c+",
+          "path": "references/59ea6d5636-countrf260623c-.html",
+          "kind": "reference",
+          "checked_at": "2026-09-27T22:38:03.766386+00:00",
+          "http_status": "404",
+          "final_url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/countrf260623c+",
+          "content_type": "text/html",
+          "status": "unavailable",
+          "error": "curl: (22) The requested URL returned error: 404"
+        }
+      ]
+    },
+    {
+      "url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/mainsource623+",
+      "path": "references/21cc5b2224-mainsource623-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/mainsource623+",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 18557,
+      "sha256": "851041c8d96fbe5503321b8ebaec8f9c965b89693c5d8eefcc1fe4b72215c673",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/masecjs260619+",
+      "path": "references/d4503d7621-masecjs260619-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T23:51:06.720535+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/masecjs260619+",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 18640,
+      "sha256": "37721314b572e899f9b108dc202ee189fd39ac9ee2527127d60eb3cc2000b24a",
+      "status": "downloaded",
+      "previous_attempts": [
+        {
+          "url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/masecjs260619+",
+          "path": "references/d4503d7621-masecjs260619-.html",
+          "kind": "reference",
+          "checked_at": "2026-09-27T22:38:03.766386+00:00",
+          "http_status": "000",
+          "final_url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/masecjs260619+",
+          "content_type": "",
+          "status": "unavailable",
+          "error": "curl: (28) Failed to connect to web.archive.org port 443 after 15003 ms: Timeout was reached\ncurl: (28) Failed to connect to web.archive.org port 443 after 15002 ms: Timeout was reached"
+        }
+      ]
+    },
+    {
+      "url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/mdgood778+",
+      "path": "references/34c39cd82f-mdgood778-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T23:51:06.720535+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/mdgood778+",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 21950,
+      "sha256": "2006fb9720a9637e9857940ebf63378869d87ba92fb9ea09cf9410515f70fa68",
+      "status": "downloaded",
+      "previous_attempts": [
+        {
+          "url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/mdgood778+",
+          "path": "references/34c39cd82f-mdgood778-.html",
+          "kind": "reference",
+          "checked_at": "2026-09-27T22:38:03.766386+00:00",
+          "http_status": "000",
+          "final_url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/mdgood778+",
+          "content_type": "",
+          "status": "unavailable",
+          "error": "curl: (28) Failed to connect to web.archive.org port 443 after 15002 ms: Timeout was reached\ncurl: (28) Failed to connect to web.archive.org port 443 after 15002 ms: Timeout was reached"
+        }
+      ]
+    },
+    {
+      "url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/openaipovertycompacttest+",
+      "path": "references/324bc7b9e1-openaipovertycompacttest-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T23:51:06.720535+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/openaipovertycompacttest+",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 18985,
+      "sha256": "edfad4c2ce0239f090eb36a3cd879bf7685951200f62e60a9ac1b3401954c0ff",
+      "status": "downloaded",
+      "previous_attempts": [
+        {
+          "url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/openaipovertycompacttest+",
+          "path": "references/324bc7b9e1-openaipovertycompacttest-.html",
+          "kind": "reference",
+          "checked_at": "2026-09-27T22:38:03.766386+00:00",
+          "http_status": "000",
+          "final_url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/openaipovertycompacttest+",
+          "content_type": "",
+          "status": "unavailable",
+          "error": "curl: (28) Failed to connect to web.archive.org port 443 after 15002 ms: Timeout was reached\ncurl: (28) Failed to connect to web.archive.org port 443 after 15001 ms: Timeout was reached"
+        }
+      ]
+    },
+    {
+      "url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/oursecallraw443+",
+      "path": "references/960b035458-oursecallraw443-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T23:51:06.720535+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/oursecallraw443+",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 18173,
+      "sha256": "779c97aaff4f3e47a6c766820c8d046c11c9e3cc7228b29c71fa2770145e31dd",
+      "status": "downloaded",
+      "previous_attempts": [
+        {
+          "url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/oursecallraw443+",
+          "path": "references/960b035458-oursecallraw443-.html",
+          "kind": "reference",
+          "checked_at": "2026-09-27T22:38:03.766386+00:00",
+          "http_status": "000",
+          "final_url": "https://web.archive.org/web/20260904204919/https://vanderbi.lt/oursecallraw443+",
+          "content_type": "",
+          "status": "unavailable",
+          "error": "curl: (28) Failed to connect to web.archive.org port 443 after 15002 ms: Timeout was reached\ncurl: (28) Failed to connect to web.archive.org port 443 after 15002 ms: Timeout was reached"
+        }
+      ]
+    },
+    {
+      "url": "https://web.archive.org/web/20260906031931/https://vanderbi.lt/ourseccounty+",
+      "path": "references/622948bc80-ourseccounty-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T23:51:06.720535+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260906031931/https://vanderbi.lt/ourseccounty+",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 20586,
+      "sha256": "75455b7ec9a70e29e58092d456116338783d0da7c90a3dc4516e2fb3b73630f8",
+      "status": "downloaded",
+      "previous_attempts": [
+        {
+          "url": "https://web.archive.org/web/20260906031931/https://vanderbi.lt/ourseccounty+",
+          "path": "references/622948bc80-ourseccounty-.html",
+          "kind": "reference",
+          "checked_at": "2026-09-27T22:38:03.766386+00:00",
+          "http_status": "000",
+          "final_url": "https://web.archive.org/web/20260906031931/https://vanderbi.lt/ourseccounty+",
+          "content_type": "",
+          "status": "unavailable",
+          "error": "curl: (28) Failed to connect to web.archive.org port 443 after 15002 ms: Timeout was reached\ncurl: (28) Failed to connect to web.archive.org port 443 after 15001 ms: Timeout was reached"
+        }
+      ]
+    },
+    {
+      "url": "https://web.archive.org/web/20260906093354/https://vanderbi.lt/massjson715+",
+      "path": "references/96f7016c8c-massjson715-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T23:51:06.720535+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260906093354/https://vanderbi.lt/massjson715+",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 67099,
+      "sha256": "07fa23ed2fbca43d42a5b8472a2bd5db02575717619db1565468404feab676e2",
+      "status": "downloaded",
+      "previous_attempts": [
+        {
+          "url": "https://web.archive.org/web/20260906093354/https://vanderbi.lt/massjson715+",
+          "path": "references/96f7016c8c-massjson715-.html",
+          "kind": "reference",
+          "checked_at": "2026-09-27T22:38:03.766386+00:00",
+          "http_status": "000",
+          "final_url": "https://web.archive.org/web/20260906093354/https://vanderbi.lt/massjson715+",
+          "content_type": "",
+          "status": "unavailable",
+          "error": "curl: (28) Failed to connect to web.archive.org port 443 after 15002 ms: Timeout was reached\ncurl: (28) Failed to connect to web.archive.org port 443 after 15002 ms: Timeout was reached"
+        }
+      ]
+    },
+    {
+      "url": "https://web.archive.org/web/20260906205549/https://u.ethz.ch/nB1nv+",
+      "path": "references/9a2549f864-nB1nv-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T23:51:06.720535+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260906205549/https://u.ethz.ch/nB1nv+",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 42757,
+      "sha256": "d229d7b076efef0b58ad04421f260b6cc339c0f15b8dfcbccffe62351e795275",
+      "status": "downloaded",
+      "previous_attempts": [
+        {
+          "url": "https://web.archive.org/web/20260906205549/https://u.ethz.ch/nB1nv+",
+          "path": "references/9a2549f864-nB1nv-.html",
+          "kind": "reference",
+          "checked_at": "2026-09-27T22:38:03.766386+00:00",
+          "http_status": "000",
+          "final_url": "https://web.archive.org/web/20260906205549/https://u.ethz.ch/nB1nv+",
+          "content_type": "",
+          "status": "unavailable",
+          "error": "curl: (28) Failed to connect to web.archive.org port 443 after 15002 ms: Timeout was reached\ncurl: (28) Failed to connect to web.archive.org port 443 after 15002 ms: Timeout was reached"
+        }
+      ]
+    },
+    {
+      "url": "https://web.archive.org/web/20260909023754/https://goto.unm.edu/7t6-o+",
+      "path": "references/314ada8895-7t6-o-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T23:51:06.720535+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260909023754/https://goto.unm.edu/7t6-o+",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 258182,
+      "sha256": "d113d1a12a469e5fc8977b1be80ec1d59a237e11829a73d391f94f6a8fb63736",
+      "status": "downloaded",
+      "previous_attempts": [
+        {
+          "url": "https://web.archive.org/web/20260909023754/https://goto.unm.edu/7t6-o+",
+          "path": "references/314ada8895-7t6-o-.html",
+          "kind": "reference",
+          "checked_at": "2026-09-27T22:38:03.766386+00:00",
+          "http_status": "000",
+          "final_url": "https://web.archive.org/web/20260909023754/https://goto.unm.edu/7t6-o+",
+          "content_type": "",
+          "status": "unavailable",
+          "error": "curl: (28) Failed to connect to web.archive.org port 443 after 15003 ms: Timeout was reached\ncurl: (28) Failed to connect to web.archive.org port 443 after 15002 ms: Timeout was reached"
+        }
+      ]
+    },
+    {
+      "url": "https://web.archive.org/web/20260909030411/https://2dd.pl/p9279729+",
+      "path": "references/dc0aa855fb-p9279729-.html",
+      "kind": "reference",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20260909030411/https://2dd.pl/p9279729+",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 5215,
+      "sha256": "92d991e8ae5d1896ca8722085a08faf63dd2cd48cf114fce8693fb2606f1b29f",
+      "status": "downloaded"
+    }
+  ]
+}

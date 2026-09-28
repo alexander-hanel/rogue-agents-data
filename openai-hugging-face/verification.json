@@ -1,0 +1,20 @@
+{
+  "files_checked": 11,
+  "format_checks": {
+    "article/links.json": {
+      "json": "valid"
+    },
+    "backup-manifest.json": {
+      "json": "valid"
+    },
+    "data/The Hugging Face incident and the road ahead _ OpenAI.pdf": {
+      "pdf_header": "valid"
+    },
+    "data/derived-manifest.json": {
+      "json": "valid"
+    },
+    "references/2869273e2d-OpenAI-Hugging-Face-Incident-Technical-Report.pdf": {
+      "pdf_header": "valid"
+    }
+  }
+}

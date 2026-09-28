@@ -1,0 +1,238 @@
+Source: https://thehackernews.com/2026/05/gemstuffer-abuses-150-rubygems-to.html?m=1&version=meter%2Bat%2Bnull%3Fm%3D1
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+GemStuffer Abuses 150+ RubyGems to Exfiltrate Scraped U.K. Council Portal Data
+
+-->
+
+#1 Trusted Cybersecurity News Platform
+
+Followed by 5.70+ million
+
+
+
+
+
+
+
+ Get the Latest News
+
+Home
+
+Newsletter
+
+Webinars
+
+Home
+
+Threat Intelligence
+
+Vulnerabilities
+
+Cyber Attacks
+
+Webinars
+
+Expert Insights
+
+Awards
+
+
+
+
+
+
+
+Resources
+
+Webinars
+
+Awards
+
+Free eBooks
+
+About Site
+
+About THN
+
+Jobs
+
+Advertise with us
+
+Contact/Tip Us
+
+
+
+Reach out to get featured—contact us to send your exclusive story idea, research, hacks, or ask us a question or leave a comment/feedback!
+
+Follow Us On Social Media
+
+
+
+
+
+
+
+ RSS Feeds
+ Email Alerts
+
+GemStuffer Abuses 150+ RubyGems to Exfiltrate Scraped U.K. Council Portal Data
+
+Ravie LakshmananMay 13, 2026Software Supply Chain / Data Exfiltration
+
+Cybersecurity researchers are calling attention to a new campaign dubbed GemStuffer that has targeted the RubyGems repository with more than 150 gems that use the registry as a data exfiltration channel rather than for malware distribution.
+
+"The packages do not appear designed for mass developer compromise," Socket said. "Many have little or no download activity, and the payloads are repetitive, noisy, and unusually self-contained."
+
+"Instead, the scripts fetch pages from U.K. local government democratic services portals, package the collected responses into valid .gem archives, and publish those gems back to RubyGems using hardcoded API keys."
+
+The development comes as RubyGems temporarily disabled new account registration following what has been described as a major malicious attack. While it's not clear if the two sets of activities are related, the application security company said GemStuffer fits the "same abuse pattern," which involves using newly created packages with junk names to host the scraped data.
+
+At a high level, the campaign abuses RubyGems as a place to stage the scraped council content. It does this by fetching hard-coded U.K. council portal URLs, packaging the HTTP responses into valid .gem archives, and publishing those archives to RubyGems using embedded registry credentials.
+
+In some cases, the payload embedded within the gem creates a temporary RubyGems credential environment under "/tmp," overrides the HOME environment variant, builds a gem locally, and pushes it to RubyGems using the gem command-line interface (CLI), as opposed to depending on pre-existing RubyGems credentials on the target machine.
+
+Other variants of the malicious gems have been found to eschew the CLI component in favor of uploading the archive directly to the RubyGems API via an HTTP POST request. Once the new gems have been published, all an attacker has to do is run a "gem fetch" command with the gem name and version to access the scraped data.
+
+The novel scraping campaign has been found to target public-facing ModernGov portals used by Lambeth, Wandsworth, and Southwark, with an aim to collect committee meeting calendars, agenda item listings, linked PDF documents, officer contact information, and RSS feed content.It's not clear what exactly the end goals are, as the information appears to be publicly accessible anyway.
+
+Socket has assessed that the systematic bulk collection and archival of this data raises the possibility that the attacker may be leveraging the "council portal access as a pivot to demonstrate capability against government infrastructure."
+
+"It may be registry spam, a proof-of-concept worm, an automated scraper misusing RubyGems as a storage layer, or a deliberate test of package registry abuse," Socket said. "But the mechanics are intentional: repeated gem generation, version increments, hardcoded RubyGems credentials, direct registry pushes, and scraped data embedded inside package archives."
+
+Found this article interesting?  Follow us on Google News, Twitter and LinkedIn to read more exclusive content we post.
+
+SHARE
+
+
+
+
+
+Tweet
+
+Share
+
+Share
+
+Share
+
+
+Share on Facebook
+Share on Twitter
+Share on Linkedin
+Share on Reddit
+Share on Hacker News
+Share on Email
+Share on WhatsApp
+Share on Facebook Messenger
+Share on Telegram
+
+SHARE 
+
+cybersecurity, data exfiltration, Package Registry, Ruby, RubyGems, Software Supply Chain, Web Scraping
+
+Get the Latest News in Your Inbox
+
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders, all for free.
+
+Email
+
+Cybersecurity Webinars
+
+300+ Security Leaders Reveal
+
+How to Find, Authorize and Govern Every AI Agent in Your Environment
+
+AI agents are already operating inside enterprises with growing access to sensitive systems and data—while security teams still lack the visibility, controls, and governance to keep that access in check.
+
+Register
+
+Evaluate Your Defenses
+
+A Practical Guide to Defending Identity Against AI-Powered Attacks
+
+Attackers are using AI to accelerate reconnaissance, compromise identities and escalate access. See how security teams can fight back with runtime identity controls.
+
+Register
+
+⚡ Latest News
+
+Cybersecurity Resources
+
+11 Real Stories: How Identity Exposure Unlocks Active Attack Paths
+
+Map cross-domain privilege escalation to sever breach routes at key choke points.
+
+SANS 2026 Security Awareness & Culture Report Shows the Gap
+
+See what separates programs that drive real behavior change from those stuck at compliance level.
+
+Shadow AI, Ransomware, Budget Cuts: 20 Decisions You Make in One Week
+
+The SANS security manager course runs a full leadership simulation. GSLC cert. San Francisco, Nov 2.
+
+​
+
+Expert Insights Articles
+Videos
+
+Why Deepfake Legislation Won't Save the 2026 Elections
+
+September 21, 2026
+Read ➝
+
+The Login Worked. That Was the Attack.
+
+September 21, 2026
+Read ➝
+
+Beyond ISO 27001: Building a Risk Program That Can Keep Up With AI
+
+September 21, 2026
+Read ➝
+
+Enterprise Mobile AI: The Security Trade-Offs You Can't Ignore
+
+September 21, 2026
+Read ➝
+
+Connect with us!
+
+
+2,300,000 Followers
+
+
+730,000 Followers
+
+
+26,000 Subscribers
+
+
+180,000 Followers
+
+
+1,800,000 Followers
+
+65,000 Followers
+
+Company
+
+About THN
+
+Advertise with us
+
+Contact
+
+Pages
+
+Webinars
+
+Awards
+
+Privacy Policy
+
+ RSS Feeds
+
+ Contact Us
+
+© 2026 The Hacker News. All Rights Reserved.

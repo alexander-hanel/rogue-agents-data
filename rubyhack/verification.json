@@ -1,0 +1,17 @@
+{
+  "files_checked": 88,
+  "format_checks": {
+    "OpenAI agents carried out an undisclosed cyber-attack on RubyGems.pdf": {
+      "pdf_header": "valid"
+    },
+    "article/links.json": {
+      "json": "valid"
+    },
+    "backup-manifest.json": {
+      "json": "valid"
+    },
+    "references/2869273e2d-OpenAI-Hugging-Face-Incident-Technical-Report.pdf": {
+      "pdf_header": "valid"
+    }
+  }
+}

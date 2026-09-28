@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-09-24T01:04:45.699737+00:00",
+  "base_release": "agent-attacks-urlquery-links-v5",
+  "scope": "Only the March 11 Thai and March 15 metals Base64-encoded answer-table submissions, identified by the exact report IDs below. Other v5 classifications are preserved.",
+  "decisions": [
+    {
+      "report_id": "d6669745-83d2-4628-82fa-87420ae6a5d7",
+      "report_url": "https://urlquery.net/report/d6669745-83d2-4628-82fa-87420ae6a5d7",
+      "report_date_utc": "2026-03-11T12:05:59Z",
+      "episode": "March 11 Thai NSO / Roi Et",
+      "previous_confidence": "suggestive",
+      "confidence": "significant",
+      "basis": "user_requested_case_review",
+      "reason": "Confidence changed to significant at Daniel’s request for this Base64-encoded answer-table submission through httpbin.org/base64/. Other reports in the episode retain their v5 confidence. This is an explicit review override, not a rerun of the original static detector.",
+      "unchanged_fields": [
+        "disposition",
+        "broad_class",
+        "why_included",
+        "caveat"
+      ]
+    },
+    {
+      "report_id": "4c62b534-a8e2-44d1-bddf-db92d4bf20a6",
+      "report_url": "https://urlquery.net/report/4c62b534-a8e2-44d1-bddf-db92d4bf20a6",
+      "report_date_utc": "2026-03-15T13:53:35Z",
+      "episode": "March 15 Trading Economics / metals",
+      "previous_confidence": "suggestive",
+      "confidence": "significant",
+      "basis": "user_requested_case_review",
+      "reason": "Confidence changed to significant at Daniel’s request for this Base64-encoded answer-table submission through httpbin.org/base64/. Other reports in the episode retain their v5 confidence. This is an explicit review override, not a rerun of the original static detector.",
+      "unchanged_fields": [
+        "disposition",
+        "broad_class",
+        "why_included",
+        "caveat"
+      ]
+    }
+  ]
+}

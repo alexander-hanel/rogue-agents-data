@@ -1,0 +1,52 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Derived / extracted data — do NOT commit.
+#
+# Per AGENT.md: "Keep original downloaded bytes separate from derived text,
+# extracted archives, and summaries." The decompressed/unzipped derivatives are
+# reproducible from the tracked publisher archives (.gz / .zip) via
+# `scripts/backup_sources.py` + local decompression, so they are excluded here.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Decompressed / unzipped derivative trees (explicitly named "extracted")
+collusion-wiki/data/extracted/
+swarmtraces/data/extracted/
+
+# Catch any other "extracted" directory that may be created by future sources
+**/data/extracted/
+
+# ── Optional: widen to exclude ALL unzipped/uncompressed derivatives ──────────
+# Uncomment the line below to also drop Transluce's publisher ZIP expansion
+# (documented as the "extracted catalog"). Default: KEEP it tracked, since it is
+# the publisher's intended layout and is described in transluce/data/README.md.
+# transluce/data/catalog/
+
+# ── Optional: narrow-scope safety net -------------------------------------------------
+# Decompressed JSON/JSONL that has a compressed sibling (.gz). Add these only if
+# you later hoist extracted files out of data/extracted/ into a source's data/.
+# **/data/*.jsonl
+# !**/data/*.jsonl.gz
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Original downloaded bytes and documentation are intentionally KEPT tracked:
+#   - *.jsonl.gz / *.json.gz / *.zip            (publisher archives)
+#   - *.pdf, article/, references/, data/*.csv, data/*.json
+#   - README.md, AGENT.md, backup-manifest.json, inventory.json,
+#     SHA256SUMS, verification.json
+#   - scripts/, results/ (analysis docs)
+# ─────────────────────────────────────────────────────────────────────────────
+
+# OS / editor noise (not part of the archive)
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+
+# Python bytecode caches from running the local scripts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Transient downloader/lock artifacts (if any are ever written here)
+*.download.lock
+.download.lock

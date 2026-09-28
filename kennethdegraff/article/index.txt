@@ -1,0 +1,1118 @@
+Source: https://www.kennethdegraff.com/swarm
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+OpenAI's Robots Got Into a Closed Link Shortener, Surfed the Web With Google Docs and Translate, Then Called the FBI With a Stranger's Key
+
+  Kenneth Russell DeGraff
+  Home
+  Get new research by email
+
+Independent research · September 9 and 10, 2026
+
+OpenAI's robots got into a closed link shortener, surfed the web with Google Docs and Translate, then called the FBI with a stranger's key
+
+My questions after finding hidden keys left by OpenAI's agent swarm.
+
+By Kenneth Russell DeGraff·Tech and climate policy·contact form
+
+A swarm of OpenAI agents got into Vanderbilt University's link shortener, a service with no public door, and built at least 170 short links there. Vanderbilt says the service is for affiliated organizations only, granted by help ticket, for official communication only. The agents got in anyway, and nobody has said how. Vanderbilt was one of twenty-one sites the swarm wrote to, and one of four universities whose link shorteners the swarm used. The full list is in the table below.
+
+480 addresses in the agents' posts hand a file to Google's document viewer and ask Google to fetch and render it: federal budget reports on portal.max.gov, the SEC's crowdfunding county file, Texas state archive PDFs. Google was not the only way in, and that is the point. One Texas archive PDF was requested 128 different ways, through eight other services and twice straight from the archive. The federal budget files went out through markdown.new, through pure.md, and 34 times with no middleman at all. Fourteen services in all fetched pages for the swarm, and thirteen of the fourteen were aimed at one file, the SEC's county list. Google Translate served the same purpose on a different surface: feed it a foreign address and it hands back the page, and the swarm used it that way 70 times in the metadata of 83 software packages it published in one afternoon.
+
+The agents did not hide. Thirteen of the links carry the maker's name, among them openaipovertycompacttest, agent0zambjson and aaaagent0.
+
+A link shortener's statistics page, public at the time, prints whatever address a visitor claims to have come from, and checks nothing. That made a public university page into a writable message board, and these agents wrote to it 54,250 times in a single day.
+
+Then the agents used those links to query the FBI's Crime Data Explorer 495 times and wrote every query onto Vanderbilt's public pages. Three keys went to the FBI. One was the government's free demo key. One was the FBI's own developer key, copied off the bureau's public code. The third belonged to a stranger: a student who left the key in the saved output of a 2023 school project, in a file too large for GitHub to index, invisible to almost every search engine. The agents found the key anyway, and took the query and the Alabama county that came with the key.
+
+The whole record sits in the visitor log of one Vanderbilt link from 2011 that points at a staff newsletter piece comparing JFK's 1963 visit to Vanderbilt Stadium with a U2 concert there in 2011: one telephone in the stadium then, forty thousand now. The article went offline in 2024. The link did not. The link took 54,250 visits in a single day on June 18, 2026, after fifteen years averaging one visit every other day.
+
+That log ties the Vanderbilt operation to DSEWiki, the German-language wiki where researchers at collusion.wiki published on Friday, September 4, a record of about 18,000 posts by OpenAI agents, an incident OpenAI acknowledged the next day. 391 of the 5,212 addresses in the Vanderbilt log appear word for word in the agents' own DSEWiki posts, accounting for 29,806 visits. The two operations ran on the same days, used the same proxy tools, and in one case the same name: a Vanderbilt link named for cooks made on June 21, and a DSEWiki page named for cooks made hours later.
+
+As of September 8, both Vanderbilt and the University of Toronto have hidden the statistics pages behind a login, and Vanderbilt has rewritten 28 of the agent-made links to point at the university's homepage. 142 still pointed at the targets the agents chose when I last resolved all 170, at 21:23 UTC on September 9.
+
+Every state described here is as of 21:23 UTC on September 9, 2026, when I last resolved all 170 links one by one, and it can change at a moment's notice.
+
+What is in this report
+
+Every site the swarm wrote to table: 21 sites, 14 fetch services
+
+The dead Vanderbilt link that held everything table: the page by the numbers
+
+No public door, but the agents got in
+
+The control case: Toronto table: Toronto's four links
+
+Three keys went to the FBI
+
+Where the 142 links still pointing go table: by destination, with the link names
+
+How a shortener became a message board
+
+83 software packages that were not software
+
+Five pages, 495 queries to the Bureau table: the five pages
+
+What OpenAI has said, and to whom
+
+June 18: the day the dead link woke up table: the timeline
+
+Three keys, one ladder table: the Autauga requests · the citizen's key
+
+A low value key and a high effort route
+
+Word for word: the 391 matches
+
+My questions for OpenAI
+
+Evidence
+
+Every agent-made Vanderbilt link table: all 170, with target and status
+
+Manifest: the captures behind these findings table: the files, with hashes
+
+Manifest: Wayback copies of Vanderbilt statistics pages table: 16 archived pages
+
+Manifest: the lockdown of September 8 table: 7 login screens
+
+Manifest: the September 4 statistics pages · how these captures were made
+
+SitesWhat OpenAI's agents left on twenty-one servers, and the dead Vanderbilt link that names eight
+
+Twenty-one sites carry something the swarm left behind: a wiki edit, a paste, a short link, a log entry, a document, a software package. Fourteen more services fetched pages for the swarm and stored nothing. The researchers at collusion.wiki counted seven to ten from the wiki alone, and named five of these twenty-one on September 4: DSEWiki, probier, fractal, texteditors.org and Vanderbilt. The other sixteen are not on that page.
+
+  Table: all twenty-one sites, and the fourteen services that fetched for them
+
+SiteTie to the
+Vanderbilt logWhat it isDoorWhat the swarm leftAs of
+Sept 9
+
+Wikis, 10
+
+DSEWikishares addressesGerman wiki on an Austrian serverpublic tool13,403 revisions in the dataset; the message boardopen
+
+probiershares addressesWiki, same serverpublic tool1,013 revisionsopen
+
+fractalshares addressesWiki, same serverpublic tool169 revisionsopen
+
+Dorfwiki—Wiki, same serverpublic tool6 revisionsopen
+
+GründerWikishares addressesWiki, same serverpublic toolTexas census codes; outside the datasetopen
+
+Wiki4Dshares addressesWiki, same serverpublic toolTexas census codes; outside the datasetopen
+
+Milk's wiki—Wiki, same serverpublic tool77 requests on May 26 from two swarm accountsopen
+
+texteditors.orgshares addressesWikipublic toolTwelve Microsoft addresses on June 22, then a Tor exitopen
+
+tmcleod.orgshares addressesHigh school chemistry wikipublic toolTen disguises of one blocked addressopen
+
+ludism.org—Games wikipublic toolTwo sandbox pages holding federal PDF linksopen
+
+Paste board, 1
+
+paste.linuxiarz.pl—Polish paste boardpublic tool118 Iowa cancer pastes, May 14 to June 17; 113 of them on June 16open
+
+Link shorteners, 8
+
+vanderbi.ltnamed in itVanderbilt University, YOURLShelp ticket onlyAt least 170 links created; 495 FBI addresses in the logslogs locked Sept 8; 28 links rewritten
+
+uoft.menamed in it · shares addresses · names linksUniversity of Toronto, YOURLSopen to utoronto.ca targets4 links; 2,349 visits June 18logs locked Sept 8
+
+goto.unm.edunamed in it · shares addresses · names linksUniversity of New Mexico, YOURLSUNM loginA 2023 UNM link's log used; 1,845 visits June 18; 761 addresseslog open
+
+u.ethz.ch—ETH Zurich, YOURLSlogin, terms not statedA 2020 ETH link's log used; 63 visits June 18does not answer; archived Sept 6
+
+2dd.plnamed in itPolish shortener, YOURLSpublic toolLinks named agnewmd26615703, agnewmd77805076, p9279729logs locked behind a login
+
+da.gdnamed in itPublic shortenerpublic toolCustom names such as SECcountyM; the claimed source of 3,288 visits to the Vanderbilt pageopen
+
+is.gdnamed in itPublic shortenerpublic toolLinks to the SEC and Iowa files; the claimed source of 336 visits to the Vanderbilt pageopen
+
+v.gdnamed in it · names linksPublic shortenerpublic tool3 links, the claimed source of 39 visits; one points back at a Vanderbilt linkopen
+
+Package registry, 1
+
+rubygems.orgshares addressesRuby package registrypublic tool83 packages published June 18 in three hours; 583 addresses in their metadata, 384 aimed at the SEC county fileopen
+
+Document store, 1
+
+jsonhero.ionamed in itJSON viewer with share linkspublic tool2 stored documents; 2,274 mentions in the datasetopen
+
+Fetch services, 14. Used to pull pages; nothing stored. Two more, Google Translate and webcrawlerapi.com, appear on RubyGems and in the wiki posts but on no university page.
+
+jqp.vercel.app—jq playgroundread only14,787 mentions on Vanderbilt; 3,235 postsopen
+
+allorigins.hexlet.app—Proxyread only21,938 mentions on Vanderbilt; 1,226 postsopen
+
+r.jina.ai—Reader serviceread only5,363 mentions on Vanderbiltopen
+
+md.succ.ai—Page to textread only1,339 mentions on Vanderbiltopen
+
+markdown.new—Page to textread only307 mentions on Vanderbiltopen
+
+api.cors.lol—Proxyread only282 mentions on Vanderbiltopen
+
+pure.md—Page to textread onlyOn Vanderbilt, New Mexico and in the postsopen
+
+cors.bwa.workers.dev—Proxyread onlyOn Vanderbilt and in the postsopen
+
+cors.io—Proxyread only5 visits on Vanderbilt, 3 to the FBIopen
+
+api.microlink.io—Page fetcherread only74 visits on New Mexico; 10 postsopen
+
+markdown.microlink.io—Page to textread only45 visits on New Mexicoopen
+
+docs.google.com/gview—Google's document viewerread only480 addresses across 85 posts; fetched budget files from portal.max.gov and the SEC county fileopen
+
+test.cors.workers.dev—Proxyread onlyUsed in the Iowa pastes; 20 postsopen
+
+httpbin.org—HTTP test serviceread only170 mentions on Vanderbiltopen
+
+Ties to Vanderbilt: named in it means the site is named in the visitor log of Vanderbilt's JFK/U2 page. Shares addresses means the site carries addresses that appear word for word in that log: DSEWiki 379, probier 84, fractal 19, Toronto 62, New Mexico 94; GründerWiki, Wiki4D, texteditors.org and tmcleod.org carry the four Texas census codes or the SEC county address that also sit in that log. Names links means the site names or points at Vanderbilt links in its own log: New Mexico names four, Toronto names one, v.gd points at one. The other wikis and the paste board tie to Vanderbilt through the DSEWiki dataset, not directly. "Does not answer" means the site did not respond to my network on September 8. Archived copies: New Mexico · ETH Zurich · 2dd.pl · Toronto. Hugging Face, a separate incident, is not counted.
+
+The pageA dead link about JFK and Bono became the robots' notebook
+
+One Vanderbilt link matters more than the rest. The link, iyg1y, dates from August 2011 and points at a Vanderbilt Medical Center staff newsletter piece, “Of JFK, U2, telephones and security.” The piece set President Kennedy's 1963 speech at Vanderbilt Stadium beside U2's concert there on July 2, 2011: one telephone line run out to the field for the president then, forty thousand cell phones held up for Bono now. That article went offline in July 2024. The page died; the short link and the public visitor log did not.
+
+59,942 visits across the link's whole life. 2,950 of them fell in the fifteen years to 2025, between 54 and 459 a year. 54,250 fell on June 18, 2026.
+
+The log holds 5,212 addresses from 81 sites, plus 184 single-visit addresses the page files under “Various,” and visitors from 81 countries. 391 of those addresses appear word for word in the agents' own posts on DSEWiki, accounting for 29,806 visits, just under half of the link's lifetime traffic and more than half of June 18. 87 more also appear on a single University of Toronto page, accounting for 22,732 visits. 448 entries name another Vanderbilt short link, which is how the roster of everything else the agents built survived. 30 carry a ZZZ marker — strings like UNIQUELOGZZZ322869901 and HELLOREFZZZ=110, stamped into a test write so the agent could find that line again on the next read.
+
+The log also holds the three keys that reached the FBI.
+
+  Table: the JFK/U2 page, by the numbers
+
+CreatedAugust 5, 2011, 12:48 pm
+
+Points atA Vanderbilt Medical Center staff newsletter piece, “Of JFK, U2, telephones and security” (archived copy), on Kennedy's 1963 visit and U2's 2011 concert
+
+The page itselfArchived copy of the statistics page, September 4, 2026. The live address now shows a login screen.
+
+Target went offlinebetween July 9 and July 28, 2024
+
+Lifetime visits59,942
+
+Visits on June 18, 202654,250
+
+Traffic 2011 through 20252,950 visits in all, between 54 and 459 a year
+
+Referring addresses listed5,212 from 81 sites, worth 55,893 visits, plus 184 single-visit addresses under “Various”
+
+Addresses matching the agents' posts391, worth 29,806 visits
+
+Wikis those matches appear onDSEWiki (379), probier (84), fractal (19); 80 on more than one
+
+Shared with Toronto's shortener87 addresses with uoft.me/maagentxyz99999, worth 22,732 visits
+
+FBI addresses in the log382 — 379 written plainly, 3 through cors.io
+
+Top referrersallorigins.hexlet.app 21,938 · jqp.vercel.app 14,787 · r.jina.ai 5,363 · da.gd 3,288 · sec.gov 2,892
+
+Countries81 in all. United States 50,020 · Europe 1,895 · United Kingdom 1,422 · France 1,072 · Germany 737 · China 400
+
+What it does not recordNo IP addresses. Entries are listed alphabetically, not by time.
+
+AccessNo public door, but OpenAI agents got in anyway
+
+Vanderbilt's shortener has no form. The homepage says the service “is only available for organizations affiliated with Vanderbilt University and is only to be used for official Vanderbilt communication,” and that a department wanting access should “open a help ticket with Digital Strategies.” The login is marked restricted. The Internet Archive shows Vanderbilt posting the same restriction in June 2026, the month the agents made the links.
+
+The software behind the shortener, YOURLS, creates links two ways: through that admin login, or through an API that requires a secret signature. Both are private. If the agents used neither, then something in the software let the agents through.
+
+How I count the 170, and why nobody had that number. Two researchers published inventories of these links before me. fi-le.net listed 28 on September 4. A research ledger at helppeer.app lists 25. Between the two lists, 37 distinct links.
+
+Neither includes iyg1y. That page is the roster. The iyg1y visitor log records the address each visitor claimed to arrive from, and the agents arrived carrying other Vanderbilt short links. So one page names 124 sibling links, 114 of which appear nowhere else.
+
+I resolved every code found across my captures and in the swarm's posts. 174 of them answered. Four belong to Vanderbilt: the 2011 article, two news stories from 2008 and 2016, and a sports page. Those are ordinary university links, made years ago for ordinary reasons, and the agents used those four the same way as iyg1y, for the public log that comes attached. The other 158 in my captures are the agents' own, confirmed by where each one points. The swarm's posts name 12 more that resolve today, which is how the count reaches 170.
+
+Those 13 extra codes are worth a line of their own. Each appears in the agents' posts as a vanderbi.lt address, none appears in any page I saved, and twelve of the thirteen answer today with a redirect to vanderbilt.edu, the same answer the other rewritten links give. The thirteenth, jsmap88997, returns the shortener's not-found response, the answer an invented code gets. So 170 links and 28 rewrites, and 170 is still a floor: it counts what five saved pages and one published dataset happen to name. Nobody has enumerated the shortener itself, and I have no way to.
+
+The invented targets. 36 of the links point at example.com and example.org with paths like BrandNewTargetUniqueourcfu170mz and new1782117457.00458. Those are not data fetches but tests, to find out whether link creation worked at all.
+
+Thirteen of the links name the maker. openaipovertycompacttest, agent0zambjson, agentinvestslice19777, agentjqroundma777, 00agent, aaaagent0. Whatever created those links was not trying to blend in.
+
+One is named for cooks. The agents created cookage85datax on June 21 at 4:40pm on the shortener's own clock and pointed the link at a Data USA query for occupation code 352010, the census code for cooks. That exact query fragment appears in 416 of the agents' published posts. A DSEWiki page titled AgentCookAge85DataXYZ appeared at 03:08 UTC the next morning; Vanderbilt does not publish the shortener's timezone, so the gap is between five and eleven hours. The word Cook appears in 98 of the swarm's account names and 207 of its page names. The agents were working a task about cooks, and named links, pages, and accounts after that task.
+
+And the agents were learning the mechanism. The agents requested iyg1ya four different ways: /iyg1ya, /iyg1ya+, /iyg1ya%2B, and /iyg1ya+?x=1. That is something working out how the statistics page responds to different forms of the plus sign. Two of the agents' links are named iyg1z and iyg1ya, the 2011 link's name with one character changed or added. iyg1z goes to the bureau's own site with a request for 2022 arrest counts at Autauga County, and appears inside the iyg1y log 405 times as the address a visitor claimed to arrive from. iyg1ya points at a nonsense path on api.usa.gov, the federal gateway that fronts the FBI's data. A third, abcde, carries the same Alabama question to api.usa.gov with the government's demo key attached. I did not open any of the three.
+
+So one of three things is true. The agents had a Vanderbilt account. Or the agents had the API signature. Or the software let the agents in without either. Which of the three is unknown.
+
+The agents obeyed a rule when a rule existed. The University of Toronto publishes the condition on its own shortener: the target address must contain utoronto.ca or one of three related domains. The agents read that rule and complied, pointing links at utoronto.ca/foobaruniq456, a fake path on a real domain. Toronto is the control case, and it comes next.
+
+Two more universities turn up in the logs. The University of New Mexico runs the same software at goto.unm.edu, behind a UNM login. The agents did not make links there. Instead the agents took an old UNM events link from 2023, 7t6-o, and used the public log attached to that link the same way as iyg1y. That log took 1,845 visits on June 18, out of 2,502 in the link's whole life, and holds 761 addresses. 94 of those addresses appear word for word on the Vanderbilt page, 62 in the DSEWiki dataset, and 23 on Toronto's pages. The UNM log names three Vanderbilt links missing from every earlier count, and a v.gd link names a fourth. ETH Zurich's shortener, u.ethz.ch, appears once, in Toronto's log: a 2020 ETH link whose best day in six years was 63 visits on June 18, 2026. UNM's log was open to anyone on September 9. ETH's has an archive copy from September 6.
+
+TorontoThe control case: Toronto's door was open
+
+Toronto's shortener, uoft.me, ran the same software and took the same visitors, and required no authorization: anyone whose target address contains utoronto.ca, toronto.edu, utoronto.sharepoint.com or uthrprod.service-now.com may make a link. On June 18, the agents created four short links there between 10:52am and 3:03pm, each pointing at a utoronto.ca address that returns a 404. Together the four took 2,349 visits that day; one, maagentxyz99999, took 1,735. @j0wimo posted two of the four on X on September 4.
+
+The log of maagentxyz99999 holds the 65-character SEC address found in 790 DSEWiki posts, and 87 of the addresses in that log also sit on Vanderbilt's iyg1y page, worth 22,732 visits there. None of the 170 Vanderbilt link names appears on Toronto's pages, which I checked one by one. The two operations shared tools, not names: jqp.vercel.app appears 1,556 times on Toronto's pages, the SEC file 391 times, the allorigins proxy 82.
+
+Toronto put its statistics pages behind a login on September 8, the same day Vanderbilt did.
+
+Toronto shows the agents obeyed a published rule when one existed. That is what makes the Vanderbilt entry stand out as an anomaly rather than routine agent behavior.
+
+  Table: Toronto's four links, with visits and targets
+
+Short linkCreatedVisitsBusiest dayPoints at
+
+maagentxyz99999Jun 18 10:52am1,7881,735utoronto.ca/foobaruniq456
+
+mafresh91011 *Jun 18 3:03pm313262utoronto.ca/abc2323
+
+amass932899504 *Jun 18 2:59pm6726utoronto.ca/
+
+zzagent740558Jun 18 1:01pm376326utoronto.ca/foo4080368
+
+* Read live on September 4, not saved. Those two rows come from my notes of that reading, not from a capture in this set. The other two pages are captured and archived.
+
+The visitor log of maagentxyz99999 holds 665 entries from 16 source names. The invented name simpletestrefabc99.com appears 5 times.
+
+Archived: maagentxyz99999+ · mafresh91011+
+
+Reproduce
+curl -s "https://uoft.me/maagentxyz99999+" | grep -c "allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json"
+
+On the page, search for allorigins.hexlet.app/raw?url=https://www.sec.gov. Search for 1735 hits to find the busiest-day figure.
+
+The keysThree keys went to the FBI. Two were real. One was a stranger's.
+
+Three keys reached the FBI's Crime Data Explorer through Vanderbilt's pages, and two of the three came from public GitHub repositories.
+
+DEMO_KEY, the key the government prints in the government's own documentation so nobody needs a real one. Used 241 times.
+
+The FBI's own developer key, sitting in the bureau's public code repository on the line that fills the key into the agency's documentation page. 45 other projects have copied that key. Used 94 times.
+
+And a citizen's key, published by accident in 2023 in a data science project. Used four times, on one page, to ask about one Alabama county. The trace is in Three keys, one ladder, below. The two earlier inventories, fi-le.net's and helppeer's, contain no page that carries FBI traffic.
+
+DestinationsWhere the 142 Vanderbilt links still pointing go (at least 170 made, 28 already rewritten, 142 still pointing on September 9)
+
+The agents made at least 170 short links on Vanderbilt's shortener. Vanderbilt has rewritten 28 to point at the university's homepage. The other 142 were still sending visitors where the agents pointed them at 21:23 UTC on September 9. The table below groups those 142 by destination, so a reader can see at a glance what the swarm was fetching: a jq playground that filters a downloaded file, the SEC's Regulation Crowdfunding county file, African health statistics, Google's document viewer, and the reserved example.com domain the agents used to test whether link creation worked at all.
+
+The third column shows how I know an agent made each link: the names. Nobody at Vanderbilt names a link erietest220 or BrandNewTargetUnique, and nobody makes three links to the same 1970 railroad magazine. The agents created every one whose statistics page I hold between June 18 and June 21, 2026, and all of them share a naming style that runs through the swarm's wiki posts: a task word, a serial number, the word test or agent, a date stamp like 260618. The fourth column counts how many of the swarm's 14,591 published wiki posts mention the same destination, which separates a tool the swarm used constantly from one used once. The fifth counts appearances on the University of Toronto pages I hold. A destination that shows up in thousands of posts and on Toronto's pages was part of the swarm's standard kit. A destination that shows up nowhere else, like the FBI, is something the Vanderbilt links alone carried.
+
+Google Docs as a fetcher. Two of the live links, pdfcf08789 and qadt0, point at Google's document viewer, at addresses that hold a PDF Google rendered on June 18. The viewer is the tool at docs.google.com that shows any file on the web as a page. The swarm used it as one reader among several: 480 viewer addresses run through 85 of the wiki posts, most of them pointing at federal budget files on portal.max.gov, the SF 133 reports, and at the SEC's county file, plus Texas archive PDFs reached through a second proxy. The same budget files also went out through markdown.new, through pure.md, and 34 times with no middleman at all, so Google was a route the agents tried, not one they needed. On the Vanderbilt page the viewer appears at 34 addresses worth 101 visits, including bare tests like gview?embedded=1&newfoo=123, an agent checking that the viewer would accept a made-up parameter. The pattern is the same as the shorteners: a big, trusted service that fetches on request, asks no questions, and leaves a public trace. jsonhero.io got the same treatment, fed a da.gd link and asked to store the result as a shareable document. On the New Mexico page two more fetchers appear that show up nowhere else, api.microlink.io and markdown.microlink.io, along with 59 requests to Vietnam's national statistics office. The swarm was not loyal to any tool. Any service that would fetch a page and hand it back got used, and the universities' shorteners were where the swarm wrote the answers down.
+
+DestinationLinksLink names,
+as the agents wrote themWhat it isDSEWiki postsOn Toronto
+
+jqp.vercel.app3840hhp, 7udwe, agentinvestslice19777, agentinvestslice20777, and 34 moreA jq playground. Runs a filtering program against a fetched file and returns the answer.3,2351,556
+
+example.com289d6p0, abc, abcd, abctest16760, and 24 moreThe reserved example domain, with invented paths. Tests of whether link creation worked.475—
+
+api.dataafrica.io14agent0zambjson, b7ps3uniq04, d2n3whello, erierailroad1970, and 10 moreAfrican health statistics. Child malnutrition by region.0—
+
+www.sec.gov1200agent, 34y3g, aaaagent0, am2wn, and 8 moreFederal securities data, mostly one county file.4,457391
+
+allorigins.hexlet.app120n0wi, agentmacountyjson777, cookage85datax, macfraw7231, and 8 moreA proxy that fetches a blocked page and hands the page back.1,22682
+
+api.worldpoverty.io9agtest00999, agwpc2018x126, agwpc2018y871, agwpc2020x254, and 5 moreWorld Poverty Clock data API.3—
+
+example.org89gxqq, agct201997304, agent777, agentmacounty61, and 4 moreReserved domain. More creation tests.3498
+
+md.succ.ai3agnewmd5562540, snewmd594467247, somethingelseA reader that converts a page to plain text.2,34994
+
+railroadtreasures.com3erierrmag70, erieshop770099, erietest220A 1970 railroad magazine listing.0—
+
+api.usa.gov2abcde, iyg1yaThe FBI’s Crime Data Explorer, through the federal API gateway.0—
+
+cde.ucr.cjis.gov1iyg1zThe FBI’s own crime data site.0—
+
+api.datausa.io1mypoptestxyzUS census and demographic data.2,435—
+
+www.investor.gov1az9qSEC investor site.2,40363
+
+r.jina.ai1oco6iAnother reader service.91160
+
+httpbin.org1readmeAn HTTP testing service.7318
+
+da.gd1agentdamacosh777Another URL shortener.25—
+
+jsonhero.io1xxyytest17819A JSON viewer.119—
+
+api.beta.ons.gov.uk1ag0vbark731733UK Office for National Statistics.0—
+
+docs.google.com viewer2pdfcf08789, qadt0Google's document viewer, holding a rendered PDF the agents fed to it. 480 viewer addresses appear across 85 wiki posts, fetching budget files from portal.max.gov and the SEC county file.480—
+
+dummy2019.org1kn31jPlaceholder.0—
+
+itm.ebaydesc.com1d2n3wAn eBay item description.0—
+
+vanderbi.lt1qc8t5Points back at the shortener itself.——
+
+Total142
+
+One of the links, maallraw260618, was still drawing visits long after agent posting on DSEWiki stopped on June 22: 43 on July 3 and 242 on August 28.
+
+The FBI addresses exist only on Vanderbilt: not on Toronto's pages, not in the 14,591 wiki posts.
+
+The full table of all 170 links, with names, destinations and status, is at the foot of this page.
+
+MechanismTwo ways to talk through a link: how a shortener became a message board
+
+These agents could read the internet, but could not write to the internet. So the agents found a way to write using nothing but a read, and a link shortener gave the swarm two such ways.
+
+The link itself is the first channel. When an agent creates masscfround3x260618 and points that link at a proxied federal data query, that agent has published a name. Any other agent that knows the naming scheme can resolve that name and get the payload. That is a shared dictionary, written into someone else's server. The name carries the meaning; the target carries the data.
+
+The visitor log is the second. The short link is vanderbi.lt/iyg1y. Add a plus sign and the statistics page opens, listing every web address a visitor claimed to have come from. The visitor supplies that address, and nothing checks the claim. An agent sends a request with any text at all in that referral field, and the statistics page prints that text where any other agent can read the text.
+
+What the log proves, and what it does not
+
+Every line on that page is a claim made by the visitor. The log shows that the agents wrote FBI addresses, three of them carrying API keys, onto a public university page. It does not show that those same requests reached the FBI. Only OpenAI's record of what its agents fetched, or the government's record of what arrived, can settle that, and both are asked for below. Everything counted here is what the page recorded.
+
+The difference is direction. A redirect points outward, and reading a redirect means resolving the link. A referral points inward, and reading a referral means loading the statistics page. The first is a name someone else can look up. The second is a note left on the page.
+
+By that measure every one of the 170 links is communication. Every one is a published name pointing at a payload.
+
+How many used the second channel is a different question, and I can only partly answer that question. I hold the statistics pages for 24 of the 170. Seven of those 24 carry a real visitor log: iyg1y with 5,212 addresses, massjson715 with 125, testfreshmd991 with 44, g3-jc with 36, 34Y3g with 22, majsonstats with 15, and rwandamodvals with 11. Five more carry one or two stray entries. Twelve carry none; the agents used those as names only.
+
+iyg1y alone holds more than ninety percent of everything visible.
+
+The swarm did not need a university link shortener. Any shortener with a public statistics page works, and the logs name four with no door at all. 2dd.pl, a Polish shortener running the same software, gives out custom names without an account; the agents made agnewmd26615703 and agnewmd77805076 there, and 2dd.pl has since put its statistics pages behind a login too. On da.gd the agents named a link SECcountyM and pointed that name at the SEC county file. On is.gd and v.gd the agents parked the SEC and Iowa files. jsonhero.io, a viewer that stores any JSON document under a share link, holds two of the swarm's documents and appears 2,274 times in the DSEWiki posts. At Vanderbilt the agents made links behind a shut door. At New Mexico the door was also shut, and the agents did not go through; at New Mexico and at Zurich they wrote into the public logs of links the universities had made years earlier, which any visitor can do. Everywhere else the door was open.
+
+Why only 24. On September 4 and 7 I captured nine statistics pages live. On September 8 Vanderbilt put every statistics page behind a login. Later that same day I pulled the iyg1y visitor log apart and found that log named 124 sibling links nobody had listed. By then the pages were shut. I recovered 15 more from the Internet Archive; the other 146 have no archive capture at all. A login would not help either, because the statistics page is only a summary of the shortener's database, where every click sits as one row with a time, a claimed origin, an address and a country. The page thins its charts to about thirty points and keeps only the biggest day, so the June day-by-day counts are already gone from every page still open, New Mexico's included. Those database rows are the only place the record survives.
+
+Nobody was reading that Vanderbilt Medical Center link about JFK and U2, because there was nothing left to read. Every one of those 54,250 visits intentionally wrote a line into the link's public visitor log.
+
+RubyGemsThe swarm shipped 83 software packages. None of them were software.
+
+On the same day the agents were working Vanderbilt's shortener, a RubyGems account called ulinkqy8py3mp published 83 software packages. Every one went up on June 18, 2026, between 17:53:31 and 20:52:56 UTC. All but one carry version 0.0.1. The authors are listed as “Data User,” “R” and “Reader.” The descriptions say things like “Public map dataset reference collection.”
+
+The packages contain nothing worth installing. What they carry is metadata. RubyGems lets a package name a homepage, a source repository, documentation, a changelog, a wiki, a bug tracker and a funding page, and this account filled those fields with 583 distinct web addresses. 384 of them point at sec.gov/files/county.json, the same federal file 13 of the 14 services on Vanderbilt's pages were aimed at.
+
+The addresses are wrapped the same way, too: r.jina.ai 46 times, markdown.new 37, webcrawlerapi.com 21. And Google again, from a different direction: Google Translate 27 times, plus 43 more through its translate.goog mirrors, used to fetch a page rather than to translate one. Feed Translate a foreign address and it returns the page, which makes it a reader like any other.
+
+The gems are still published. They have been downloaded 42,104 times.
+
+This is the same move as the shortener: a public service that stores text on someone else's server, filled with addresses instead of the thing it was built to store.
+
+Credit for joining these two surfaces goes to ResponseIV (yZ7), who posted the observation publicly on September 4. The Vanderbilt links had been found by fi-le, and the RubyGems account by @j0wimo; neither had seen the other's work. The RubyGems figures here are my own, fetched from the registry's API on September 9.
+
+The pagesFive pages, 495 queries to the Bureau
+
+The agents created four on June 18, 2026, and pointed each at a machine-readable data file. Vanderbilt created the fifth in 2011, and that link pointed at a working web page until 2024. The page died. The short link and the public visitor log did not.
+
+LinkCreatedPoints atFBI visitsDemo keyFBI dev keyCitizen's key
+
+iyg1yAug 5, 2011a 2011 news article, dead since 2024379216334
+
+testfreshmd991Jun 18, 2026sec.gov/files/county.json418250
+
+34Y3gJun 18, 2026the same SEC file, with a junk parameter368200
+
+majsonstatsJun 18, 2026example.com/majsonstats, which goes nowhere230160
+
+massjson715Jun 18, 2026the same SEC file again13900
+
+Total492241944
+
+Plus three more that reached the FBI's own site through cors.io. 495 visits to the FBI in all. I checked every row above against the total each page prints.
+
+The FBI's own dev key accounts for 94 of those visits, across four of the five pages. The citizen's key accounts for four, on one page, and appears in exactly one other place on the internet: the 2023 notebook the agents took the key from. Three of the four new links peaked on June 20; massjson715 peaked on June 21.
+
+BackgroundHugging Face got 38 pages. Everything else got a footnote.
+
+In July 2026, OpenAI's agents broke out of a test environment and attacked Hugging Face. OpenAI published a 38-page report on August 26. Everyone agrees that incident was about keys that were already public. The phrase “publicly exposed” appears seven times.
+
+Between May 11 and July 2, 2026, a different swarm of OpenAI agents made thousands of posts on a German-language wiki called DSEWiki, using the wiki as a message board while running a timed research assignment. collusion.wiki put the figure at about 18,000; the dataset it published holds 14,591 revisions from four wikis on that server, and every count in this report is drawn from that dataset. collusion.wiki published that research on September 4. OpenAI's own address had reached the wiki on June 21, and agent posting stopped the next day. The company said nothing publicly for the next ten weeks. On August 31, answering a congressional request for records, OpenAI gave Congress three pages on Hugging Face and a single footnote covering everything else. That footnote refers to “earlier training and evaluation activities in May and June 2026” and calls them “separate from the subsequent Hugging Face intrusion.” It does not name the wiki. OpenAI confirmed the wiki incident on September 5, the day after the researchers went public, in a post on X.
+
+The published dataset covers four wikis on that Austrian server: DSEWiki, probier, fractal and Dorfwiki. Three more on the same server, GründerWiki, Wiki4D and Milk's wiki, carry the same swarm's census codes and federal document IDs and sit outside the published count. Others will have more on those wikis than I do.
+
+TimelineJune 18: the day the dead link woke up
+
+DateWhat happened
+
+May 24Links start appearing on DSEWiki.
+
+June 2The wiki's moderator notices and starts deleting by hand.
+
+June 16Mass coordination begins. The same day, 113 of the swarm's 118 Iowa health pastes go up on a Polish paste board.
+
+June 18Two new short links appear on Vanderbilt's shortener, and four on Toronto's. One old Vanderbilt link takes 54,250 visits.
+
+June 21An OpenAI address visits DSEWiki for the first time.
+
+June 22Agent posting stops.
+
+Most of the FBI queries sit in the log of that one Vanderbilt link. The big day was June 18, in the middle of the peak week, three days before OpenAI's address reached the wiki.
+
+The queriesThree keys, one ladder: how the requests reached the FBI
+
+The same few questions, over and over. Arrest counts for one Alabama police agency across 2022. Hate crimes in Arizona, California, Hawaii and Ohio. Police employment in California, Georgia and Kansas. Robberies in New York.
+
+How the agents reached the FBI. 382 of the 495 sit in the iyg1y log alone. 117 went to the FBI's own website, which needs no key. Three more reached that same website through cors.io, one of fourteen outside services the swarm used to fetch a page and hand the page back. 262 went to api.usa.gov, which does need a key. 216 of those used DEMO_KEY, the free key the government prints in the government's own documentation so nobody needs a real one; the demo key allows 30 requests an hour. Nine carried no key at all. Thirty-three used a real key that sits on the line that fills the key into the FBI's own documentation page. Forty-five other projects have copied that key, and everyone using that key shares one limit.
+
+Four visits used a citizen's key.
+
+That is the ladder. The demo key allows thirty requests an hour from one address, and the agents ran 216 requests through the demo key on this page alone, more than seven hours' worth at that rate. Next came the FBI's own developer key, which shares one limit with everyone who has copied that key. Then, four times, a key that belongs to a private citizen. And with that key came something new: the agents set aside the task's own questions and started asking the questions the key's owner had asked in 2023, about the same Alabama county, through the same endpoint.
+
+The citizen's key
+
+The key belongs to a student who published the key by accident in 2023, inside the saved output of a data science notebook on crime and mental health, on a personal site. I am not naming the person or the page.
+
+The notebook uses the same base address the agents used, api.usa.gov/crime/fbi/cde. The notebook names the Autauga County Sheriff's Office on one map. And the notebook contains the endpoint the agents hit with the key, written as /arrest/agency/%s/all.
+
+So the agents did not register the key, and did not take the key off anyone's device. The agents found a page and took three things out of that page: the key, the query pattern, and the county.
+
+The General Services Administration issues api.data.gov keys against a working email address. GSA issued this one to a person, not to an agent. GitHub's own code search does not find the key: the file is 3.4 megabytes, and GitHub does not index files that large.
+
+All four visits asked the same question: 2022 arrest counts for a single named police department. Agency AL0040000 is the Autauga County Sheriff's Office in Alabama, a county of about 60,000 people west of Montgomery. Three addresses, differing only in where the key sat and how the punctuation was written. The citizen's key was never used on anything else.
+
+The agents worked that one county hard. 23 addresses on the iyg1y page ask about Autauga, across 57 visits and five routes.
+
+RouteAddressesVisits
+
+Government demo key1639
+
+FBI's own keyless site210
+
+The citizen's key34
+
+Through cors.io13
+
+FBI's dev key11
+
+Twelve of those addresses walk the calendar month by month, January through December 2022, one request per month, every one on the demo key. Eleven ask for the whole year at once. A twenty-fourth address asks for the national arrest total over the identical twelve months, so the county figure had something to sit against.
+
+Every FBI statistic requested on the other four Vanderbilt pages is for a state or the nation as a whole. Not one names a police department. The iyg1y page asks all but one of those same questions, and then adds four more date ranges and one Alabama county that appear nowhere else.
+
+ScaleA low value key and a high effort route
+
+The citizen's key opens nothing secret. The key opens public crime statistics that anyone can request for free in about a minute.
+
+So ask the obvious question. If the data is free, why did the agents fetch one SEC file through thirteen different middleman services, and stack two of them at a time in 3,038 of their own posts? Why request a single Texas archive PDF 128 different ways? Why send an FBI request through cors.io, a service that appears nowhere in those posts? Why run 241 requests on a demo key that allows thirty an hour, then fall back to a key the FBI published for everyone to share, and then reach for a private individual's key buried in a three-year-old school project?
+
+And why did the whole operation run on other people's equipment: a German wiki, a Polish paste board, and the link shorteners of four universities?
+
+The only thing a real key buys is room. The demo key stops at thirty requests an hour. A registered key allows a thousand. The agents were not after secret data. The agents were after a way to keep hammering a free service past the point where the free key cuts the agents off. And once the agents held a stranger's key, the stranger's questions came along with the key.
+
+ProofWord for word: 391 addresses that tie a Vanderbilt log to a German wiki
+
+The agents' 14,591 published posts are full of web addresses no person would type. Here is a real one:
+
+allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json
+
+No person browsing the web arrives at a link from an address like that. That address is a machine pulling a government data file through a proxy, not a page anyone reads.
+
+391 of the 5,212 addresses in the Vanderbilt log appear in those posts character for character. 379 appear on DSEWiki, 84 on probier, and 19 on fractal, three of the four wikis in the published dataset. 80 appear on more than one. To check any of them: download the dataset from collusion.wiki, open the archived Vanderbilt page, and search both for the same string.
+
+The FBI addresses are not among the 391. The word api.usa.gov appears in none of the 14,591 posts. The Vanderbilt page lists addresses alphabetically, not by time, so no entry carries a date.
+
+These agents had a task that needed more decimal places than the OECD's web dashboard would show, so the agents went to the OECD's raw statistics endpoint instead. One wrote on a DSEWiki page named Apr25OECDLive: “R1 I answered 9.69 from SDMX raw, R2 Hungary due in ~15m. Can you urgently share exact bypass/method?” SDMX appears 42 times in the posts.
+
+One more, cors.io, seems unique to the Vanderbilt page, and does the same job. Two addresses, five visits, no key on either. One address goes to the FBI's site, three visits. The other goes to sdmx.oecd.org, two.
+
+The agents sent nineteen FBI questions twice, once written plainly and once with the punctuation encoded. The agents also disguised the same web address four different ways, so a filter watching for the plain spelling would miss the rest. One address shows up in all four disguises across 790 posts.
+
+The keys are not printed anywhere in this document. Neither was used or tested. Both were reported to the FBI and to Vanderbilt.
+
+QuestionsA few of my questions for OpenAI
+
+I spent years working in Congress. These are some of the first questions I would want asked.
+
+How did OpenAI's agents create at least 170 links on a Vanderbilt service that has no public door? Did the agents hold an account there, an API signature, or neither? And why did 36 of those links point at example.com with invented paths, if not to test whether creation worked?
+
+Why did the agents take a stranger's key out of a 2023 school project on a personal site, and then start asking the FBI the same questions that project asked, about the same Alabama county? The task in front of the agents was something else. What made that notebook the thing to copy?
+
+How did the agents reach a key that no search engine returns, in a file too large for GitHub's own search to index? What were the agents reading, and how much?
+
+Did OpenAI's monitoring see the company's agents send a private individual's credential to a federal server, four times? Has OpenAI told that person?
+
+Is using a credential found in someone's published work a behavior OpenAI tests for, and does the company count that as misalignment? Writing a working private key onto a public page is never correct. Had OpenAI seen this before June?
+
+GSA holds the email address on the account behind that key and can confirm in a minute that the account belongs to a private individual with no tie to OpenAI. OpenAI can check the company's own records. Will either do so?
+
+OpenAI's July 28 update referred to “a few accounts accessed by other evaluations.” Congress asked which services hosted those accounts and has not been told. Was Vanderbilt one of those services?
+
+On August 10 Congress asked OpenAI how many times an internally deployed model obtained credentials it was not issued, and how many of those were disclosed to any government body or affected third party. OpenAI answered on August 31 with a footnote. What is the number?
+
+Will OpenAI supplement the August 31 letter to Congress to cover this?
+
+Were these agents part of the swarm OpenAI has now acknowledged, or a separate run? If separate, why was that one also working on other people's equipment, and why did that run climb the same ladder of keys?
+
+And why did it take an outsider like me, with a web browser, to find any of this?
+
+Please credit all new findings in this brief to Kenneth Russell DeGraff.
+
+For attribution, corrections, or the capture files: use the contact form. I retain the raw fetches, the downloaded dataset, and hash records. The evidence appendix at the foot of this page contains the captures.
+
+About this work
+
+While teaching in LA-area public schools, I saw a need for a free article reader so my students and I could discuss the news together. Now I'm recovering from injuries and returning to software development after a public service career in tech policy.
+
+I built Timber: Text to Speech, a free article reader that reads the news out loud. And I built Timber Tabs, which gets your browser tabs off your Mac and into your ears.
+
+The best way to support this work is to subscribe to Timber Pro inside the app, or to donate.
+
+    Timber: Text to Speechapps.apple.com/app/id6779086700
+    Timber Tabsapps.apple.com/app/id6786080053
+    Donateko-fi.com/fe2_o3
+
+EvidenceAppendix
+
+Every capture cited above, with source address, byte size and SHA-256. Log lines from ordinary visitors are withheld. No API key is printed.
+
+Tables: the manifests, the hashes, and every captured link
+
+Reporter-facing. All material below comes from captures made between September 4 and September 8, 2026, by plain page fetches. No login, no edit, no key used.
+
+Manifest — FBI evidence
+
+Captures behind the findings at the top of this page. The two September 4 statistics-page captures follow.
+
+#FilenameBytesSHA-256 (first 16)Source URLWhat it shows
+
+F1vanderbilt_stats.html1,453,55182e3d97b0a78fa56https://vanderbi.lt/iyg1y+The page the keys are on
+
+F2vb_majsonstats.html21,6234d0d9f1495497e8fhttps://vanderbi.lt/majsonstats+Second Vanderbilt link carrying FBI queries
+
+F3vb_testfreshmd991.html26,8212e19ef56e54efb6ehttps://vanderbi.lt/testfreshmd991+Third Vanderbilt link carrying FBI queries
+
+F4vb_34Y3g.html24,1559eadbbd31ac8e8dchttps://vanderbi.lt/34Y3g+Fourth Vanderbilt link carrying FBI queries
+
+F5vb_g3jc.html30,438fc17561ac999d47dhttps://vanderbi.lt/g3-jc+Agent-made Vanderbilt link, June 16. No FBI traffic; included for comparison.
+
+F6uoft_stats.html218,3083f4d9ec2daf13de7https://uoft.me/maagentxyz99999+Toronto page sharing 62 addresses with iyg1y
+
+F7fbi_swagger_main.js2,070a166ccf84c62d4e7https://raw.githubusercontent.com/fbi-cde/crime-data-frontend/master/public/swagger/main.jsThe FBI's own documentation key, in the FBI's repository
+
+F8fbi_crime_data_frontend_README.md7,4099f43313f12b2ba7bhttps://raw.githubusercontent.com/fbi-cde/crime-data-frontend/master/README.mdThe same key in the same repository's README
+
+F9openai-hf-incident-report-2026-08-26.pdf521,159dd635cf6e5f39f0ehttps://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdfOpenAI's Hugging Face technical report
+
+F10casar-oversight-letter-2026-08-10.pdf1,369,16895fedaa7566e6b09https://casar.house.gov/sites/evo-subsites/casar.house.gov/files/evo-media-document/oversight-letter-to-openai-openai-hugging-face-incident-1.pdfCongressional oversight letter, August 10
+
+F11openai-reply-to-congress-2026-08-31.pdf105,36561d7f9992959cc93https://drive.google.com/file/d/1mapFqQUAbXJsLbbOnzib6nAg8Ic1zM2V/viewOpenAI's reply, August 31; footnote 7 covers May and June 2026 without naming the wiki
+
+F12revisions.jsonl.gz3,226,1339c2a4ef0ccbfb5b4https://collusion.wiki/download/The published dataset, 14,591 revisions
+
+F13unm_7t6-o_stats.html220,4403741b7ca86aaaad0https://goto.unm.edu/7t6-o+New Mexico page, 761 addresses, 1,845 visits June 18; captured Sept 8, archived same day
+
+F14ethz_nB1nv_stats.html37,681b4085e0e4441acbfhttps://u.ethz.ch/nB1nv+ETH Zurich page, 63 visits June 18; Wayback copy of Sept 6
+
+F152dd_p9279729_stats.html3,0741171ac18b30136dehttps://2dd.pl/p9279729+2dd.pl statistics page, now a login screen; captured and archived Sept 8
+
+F16vb_cookage85datax.html21,996db905f3afed0423evanderbi.lt/cookage85datax+The link named for cooks; captured Sept 4; no archive copy exists
+
+F17vb_maallraw260618.html23,2752531b7720101ca22vanderbi.lt/maallraw260618+Visits on July 3 and August 28, after agent posting stopped; captured Sept 4
+
+F18vb_massjson715.html56,456c324c1695dc1fe61vanderbi.lt/massjson715+FBI demo-key page, 125 addresses; captured Sept 4
+
+F19vb_rwandamodvals.html23,5598de85d622d74a94avanderbi.lt/rwandamodvals+11 addresses; captured Sept 4
+
+F20uoft_utmace.html171,76533f15f67bb08d705uoft.me/utmace+Third Toronto page; names u.ethz.ch and vanderbi.lt once each; captured Sept 6
+
+F21uoft_zzagent740558.html41,39633166c049ea905d9uoft.me/zzagent740558+Toronto agent link, 376 visits; captured Sept 4
+
+F22vanderbilt_home_2026-06-09—Waybackvanderbi.lt homepage, June 9, 2026The access rule as posted nine days before the links were made: affiliated organizations only, by help ticket
+
+F23unm_7t6-o_referrers.tsv71,5819b83a6f630cf3a39goto.unm.edu/7t6-o+ referrer logThe 761 addresses and visit counts pulled from F13
+
+F24unm_home.html9,18550f3200de51d4307goto.unm.edu/UNM access rule: UNM affiliation, NetID login; captured Sept 8
+
+Manifest — Wayback copies of Vanderbilt statistics pages
+
+Sixteen statistics pages with a capture in the Internet Archive. Fifteen were saved on September 4 and 6, before the lockdown; these are the only copies of those logs that exist outside Vanderbilt. Together with the nine live captures above they make the 24 pages held.
+
+#Archived pageCapturedBytesSHA-256 (first 16)
+
+W1vanderbi.lt/agf623d+2026-09-04 20:49 UTC15,69731e360c52c642919
+
+W2vanderbi.lt/allregrawx260622+2026-09-04 20:49 UTC16,046d56260751ba5394e
+
+W3vanderbi.lt/countgf260623c+2026-09-04 20:49 UTC15,591ccf15a83cc37acca
+
+W4vanderbi.lt/countrf260623c+2026-09-04 20:49 UTC20,484409907e9b13c0d5a
+
+W5vanderbi.lt/highallmap260622+2026-09-04 20:49 UTC15,859f6358ae31b9a8163
+
+W6vanderbi.lt/iyg1y+2026-09-04 19:05 UTC1,707,982acd44de84a02110b
+
+W7vanderbi.lt/jqinv11method+2026-09-04 20:49 UTC21,252f6120ff8e54351ef
+
+W8vanderbi.lt/jqinv11raw+2026-09-04 20:49 UTC26,003896495c149548bff
+
+W9vanderbi.lt/jsallwrap260618+2026-09-04 20:49 UTC16,603870973c430964339
+
+W10vanderbi.lt/mainsource623+2026-09-04 20:49 UTC15,646e2085a279f324398
+
+W11vanderbi.lt/masecjs260619+2026-09-04 20:49 UTC15,724c8141452afbe791a
+
+W12vanderbi.lt/mdgood778+2026-09-04 20:49 UTC18,821f452cae84496ddb9
+
+W13vanderbi.lt/openaipovertycompacttest+2026-09-04 20:49 UTC16,0598a370f1480f98ce0
+
+W14vanderbi.lt/ourjsget26abc+2026-09-04 20:49 UTC20,272c48d91dd8ecd1fa8
+
+W15vanderbi.lt/oursecallraw443+2026-09-04 20:49 UTC15,4375e20f37cace5ea8a
+
+W16vanderbi.lt/ourseccounty+2026-09-06 03:19 UTC17,65465624d11a83aab36
+
+Manifest — the lockdown, September 8
+
+What the same addresses returned on September 8: a login screen in place of the statistics page. Every Vanderbilt capture is byte-identical to every other, and every Toronto capture likewise, which is what a blanket login wall looks like.
+
+#AddressBytesSHA-256 (first 16)What it shows
+
+L1vanderbi.lt/iyg1y+2,373e6cab8db1a2ec31cLogin page
+
+L2vanderbi.lt/massjson715+2,373e6cab8db1a2ec31cLogin page, identical bytes
+
+L3vanderbi.lt/testfreshmd991+2,373e6cab8db1a2ec31cLogin page, identical bytes
+
+L4vanderbi.lt/maallraw260618+2,373e6cab8db1a2ec31cLogin page, identical bytes
+
+L5vanderbi.lt/cookage85datax+2,373e6cab8db1a2ec31cLogin page, identical bytes
+
+L6uoft.me/maagentxyz99999+2,0653ce496e6f6c41637Login page
+
+L7uoft.me/utmace+2,0653ce496e6f6c41637Login page, identical bytes
+
+Every agent-made Vanderbilt link
+
+The 158 short links found in my captures plus the 12 named only in the agents' own posts, 170 in all, resolved 8 September 2026. A star marks a link the agents named in those posts. The 28 Vanderbilt has rewritten are listed first, then the 142 that still pointed where the agents aimed them. A thirteenth code named in the posts, jsmap88997, returns the shortener's not-found response, the same answer an invented code returns. Where those 12 originally pointed is unrecorded. Vanderbilt rewrote them before anyone saved a copy, so only the shortener's own records hold the answer.
+
+Named in DSEWiki postsNot namedTotal
+
+Rewritten by Vanderbilt28028
+
+Still live0142142
+
+Total28142170
+
+What the grid shows: every link Vanderbilt rewrote is one the agents had named in their own DSEWiki posts. Not one of the 142 still pointing at the agents' targets is named there.
+
+Short linkStatusPoints atDSEWiki revisions naming itVisitor log
+
+★ allreggetX260622RewrittenUnrecorded—no capture
+
+★ bwkugRewrittenUnrecorded—no capture
+
+★ jqinv11roundnRewrittenUnrecorded—no capture
+
+★ jqinv11roundsRewrittenUnrecorded—no capture
+
+★ jqinv11toolRewrittenUnrecorded—no capture
+
+★ mamap260618RewrittenUnrecorded—no capture
+
+★ mdregX260622RewrittenUnrecorded—no capture
+
+★ ourjsmd26RewrittenUnrecorded—no capture
+
+★ ourjsraw2606RewrittenUnrecorded—no capture
+
+★ oursecallrawRewrittenUnrecorded—no capture
+
+★ OurSecCounty443RewrittenUnrecorded—no capture
+
+★ script623RewrittenUnrecorded—no capture
+
+★ maallraw260618Rewritten—273captured, empty
+
+★ highallmap260622Rewritten—8captured, empty
+
+★ ourjsget26abcRewritten—8captured, empty
+
+★ countrf260623cRewritten—7captured, empty
+
+★ agf623dRewritten—3captured, empty
+
+★ countgf260623cRewritten—3captured, empty
+
+★ mainsource623Rewritten—3captured, empty
+
+★ jqinv11methodRewritten—2captured, empty
+
+★ jqinv11rawRewritten—2captured, empty
+
+★ masecjs260619Rewritten—1captured, empty
+
+★ mdgood778Rewritten—1captured, empty
+
+allregrawx260622Rewritten——captured, empty
+
+jsallwrap260618Rewritten——captured, empty
+
+matabfull7Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%28.regCF_county_2019%29+as+%24a%7C%28.regCF_county_2020%29+as+%24b%7C%28.regCF_county_2021%29+as+%24c%7C+…—not captured
+
+openaipovertycompacttestRewritten——captured, empty
+
+oursecallraw443Rewritten——captured, empty
+
+ourseccountyRewritten——captured, empty
+
+massjson715Resolved Sept 9https://www.sec.gov/files/county.json?_=916576—125 addresses
+
+pdfcf08789Resolved Sept 9https://doc-14-bk-apps-viewer.googleusercontent.com/viewer/secure/pdf/… (Google document viewer, rendered PDF, stamped June 18)—not captured
+
+qadt0Resolved Sept 9https://doc-08-bk-apps-viewer.googleusercontent.com/viewer/secure/pdf/… (Google document viewer, rendered PDF)—not captured
+
+testfreshmd991Resolved Sept 9https://www.sec.gov/files/county.json—44 addresses
+
+g3-jcResolved Sept 9https://api.dataafrica.io/api/test—36 addresses
+
+34y3gResolved Sept 9https://www.sec.gov/files/county.json?injvnew=0.7253661870639205—22 addresses
+
+majsonstatsResolved Sept 9https://example.com/majsonstats—15 addresses
+
+rwandamodvalsResolved Sept 9https://api.dataafrica.io/api/join/?geo=040AF00205&show=year%2Ccondition%2Cresidence&required=dhs_geo_name%2Cdhs_geo_parent_name%2—11 addresses
+
+00agentResolved Sept 9https://www.sec.gov/resources-small-businesses/capital-trends?dummy=0.9091508421354161—not captured
+
+0n0wiResolved Sept 9https://allorigins.hexlet.app/get?url=https%3A%2F%2Fmartingauer.com%2Femulator%2Fmartingauer.gb—not captured
+
+40hhpResolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FSECcountyM&jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3—not captured
+
+7udweResolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FSECcountyM&jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3—not captured
+
+9d6p0Resolved Sept 9https://example.com/—not captured
+
+9gxqqResolved Sept 9https://example.org/1781813093.2970605—not captured
+
+aaaagent0Resolved Sept 9https://www.sec.gov/resources-small-businesses/capital-trends?dummy=0.31434421720227224—not captured
+
+abcResolved Sept 9https://example.com/—not captured
+
+abcdResolved Sept 9https://example.com/—not captured
+
+abcdeResolved Sept 9https://api.usa.gov/crime/fbi/cde/arrest/agency/AL0040000/all?API_KEY=DEMO_KEY&from=01-2022&to=12-2022&type=counts—not captured
+
+abctest16760Resolved Sept 9https://example.com/—not captured
+
+ag0vbark731733Resolved Sept 9https://api.beta.ons.gov.uk/v1/datasets/TS030/editions/2021/versions/3/census-observations?area-type=p19wpc%2CE14001073&vander=153—not captured
+
+agct201997304Resolved Sept 9https://example.org/agct201997304—not captured
+
+agent0zambjsonResolved Sept 9https://api.dataafrica.io/api/join/?geo=050AF0017002122&show=year%2Ccondition%2Cresidence&required=dhs_geo_name%2Cdhs_geo_parent_n—not captured
+
+agent777Resolved Sept 9https://example.org/foo—not captured
+
+agentdamacosh777Resolved Sept 9https://da.gd/coshorten/SECcountyM—not captured
+
+agentinvestslice19777Resolved Sept 9https://jqp.vercel.app/api/v0?jq=.regCF_county_2019%5B46%3A52%5D&url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json—not captured
+
+agentinvestslice20777Resolved Sept 9https://jqp.vercel.app/api/v0?jq=.regCF_county_2020%5B52%3A62%5D&url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json—not captured
+
+agentinvestslice21777Resolved Sept 9https://jqp.vercel.app/api/v0?jq=.regCF_county_2021%5B82%3A91%5D&url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json—not captured
+
+agentjqroundma777Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FSECcountyM%26jq%3D%5B.regCF_county_2019%5B%5D%5D—not captured
+
+agentmacounty61Resolved Sept 9https://example.org/—not captured
+
+agentmacountyjson777Resolved Sept 9https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json—not captured
+
+agnewhb2019Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FHBukq&jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%7Ccontains%28%22ma-%—not captured
+
+agnewhb2020Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FHBukq&jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%7Ccontains%28%22ma-%—not captured
+
+agnewhb2021Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FHBukq&jq=%5B.regCF_county_2021%5B%5D%7Cselect%28.code%7Ccontains%28%22ma-%—not captured
+
+agnewmd5562540Resolved Sept 9https://md.succ.ai/?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&mode=fit&max_tokens=20000—not captured
+
+agnewswhh9Resolved Sept 9https://example.com/—not captured
+
+agshort2019bResolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3D%22m—not captured
+
+agtest00999Resolved Sept 9https://api.worldpoverty.io/graphql?query=%7B__typename%7D—not captured
+
+agwpc2018x126Resolved Sept 9https://api.worldpoverty.io/graphql?query=%7BworldPovertyRegion%28year%3A2018%2CdailySpending%3A2.15%2CcountryIds%3A%5B%22AFG%22%2—not captured
+
+agwpc2018y871Resolved Sept 9https://api.worldpoverty.io/graphql?query=%7BworldPovertyRegion%28year%3A2018%2CdailySpending%3A2.15%2CcountryIds%3A%5B%22NGA%22%2—not captured
+
+agwpc2020x254Resolved Sept 9https://api.worldpoverty.io/graphql?query=%7BworldPovertyRegion%28year%3A2020%2CdailySpending%3A2.15%2CcountryIds%3A%5B%22AFG%22%2—not captured
+
+agwpc2020y540Resolved Sept 9https://api.worldpoverty.io/graphql?query=%7BworldPovertyRegion%28year%3A2020%2CdailySpending%3A2.15%2CcountryIds%3A%5B%22NGA%22%2—not captured
+
+am2wnResolved Sept 9https://www.sec.gov/files/county.json?_format=txt—not captured
+
+aml4mResolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FSECcountyM&jq=%5B.regCF_county_2021%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3—not captured
+
+az9qResolved Sept 9https://www.investor.gov/files/county.json—not captured
+
+b7ps3Resolved Sept 9https://example.com/?a=1—not captured
+
+b7ps3uniq04Resolved Sept 9https://api.dataafrica.io/api/test—not captured
+
+bridgezzResolved Sept 9https://example.org/—not captured
+
+computema779Resolved Sept 9https://example.com/computeMA779—not captured
+
+cookage85dataxResolved Sept 9https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fapi.datausa.io%2Ftesseract%2Fdata.jsonrecords%3Fcube%3Dpums_5%26drilldowns%3DG—captured, empty
+
+countyrefnew987Resolved Sept 9https://example.com/—not captured
+
+d2n3wResolved Sept 9https://itm.ebaydesc.com/itmdesc/376841666831—not captured
+
+d2n3whelloResolved Sept 9https://api.dataafrica.io/api/join/?geo=050AF0017002122—not captured
+
+e4jubResolved Sept 9https://example.com/retargetTest—not captured
+
+erierailroad1970Resolved Sept 9https://api.dataafrica.io/api/test—not captured
+
+erierrmag70Resolved Sept 9https://railroadtreasures.com/products/railroad-magazine-1970-june-milwaukee-electrification-erie-mallets—not captured
+
+erieshop770099Resolved Sept 9https://railroadtreasures.com/products/railroad-magazine-1970-june-milwaukee-electrification-erie-mallets—not captured
+
+erietest220Resolved Sept 9https://railroadtreasures.com/products/railroad-magazine-1970-june-milwaukee-electrification-erie-mallets—not captured
+
+fp4hiResolved Sept 9https://example.com/mytest991152—not captured
+
+ftestResolved Sept 9https://api.dataafrica.io/api/join/?geo=050AF0017002118&show=year&severity=severe—not captured
+
+ia9ufResolved Sept 9https://example.com/—not captured
+
+iyg1yaResolved Sept 9https://api.usa.gov/ZZ0.07320864753860601—not captured
+
+iyg1zResolved Sept 9https://cde.ucr.cjis.gov/LATEST/arrest/agency/AL0040000/all?from=01-2022%26to%3D12-2022%26type%3Dcounts—not captured
+
+k87mhResolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3D%22m—not captured
+
+kn31jResolved Sept 9https://dummy2019.org/1781816777.4529853—not captured
+
+latestplusinvokeResolved Sept 9https://api.dataafrica.io/api/join/?geo=050AF0017002118&required=dhs_geo_name%2Cdhs_geo_parent_name%2Cproportion_of_children&show=—not captured
+
+ma1781793890Resolved Sept 9https://www.sec.gov/—not captured
+
+macf19aResolved Sept 9https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D&url=http%3A%2F%—not captured
+
+macf19rResolved Sept 9https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%7Ctest%28%22ma-0%22%29%29%7C%5B.code%2C%28%28.usd%2F—not captured
+
+macf20aResolved Sept 9https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D&url=http%3A%2F%—not captured
+
+macf20rResolved Sept 9https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%7Ctest%28%22ma-0%22%29%29%7C%5B.code%2C%28%28.usd%2F—not captured
+
+macf21aResolved Sept 9https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2021%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D&url=http%3A%2F%—not captured
+
+macf21rResolved Sept 9https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2021%5B%5D%7Cselect%28.code%7Ctest%28%22ma-0%22%29%29%7C%5B.code%2C%28%28.usd%2F—not captured
+
+macfraw7231Resolved Sept 9https://allorigins.hexlet.app/raw?url=http%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json—not captured
+
+massbetterResolved Sept 9https://example.com/stat0.9400070544470683—not captured
+
+masscfround0x260618Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fis.gd%2FF8KCjC&jq=%7By2019%3A%28.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2—not captured
+
+masscfround1x260618Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fis.gd%2FF8KCjC&jq=%7By2020%3A%28.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2—not captured
+
+masscfround2x260618Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fis.gd%2FF8KCjC&jq=%7By2021%3A%28.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2—not captured
+
+masscfround3x260618Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fis.gd%2FF8KCjC&jq=%7By19%3A.regCF_county_2019%5B46%3A52%5D%2Cy20%3A.regCF_county_2—not captured
+
+masscfround4x260618Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fis.gd%2FF8KCjC&jq=%7Ba%3A.regCF_county_2019%5B46%3A52%5D%2Cb%3A.regCF_county_2020%—not captured
+
+masscite06867Resolved Sept 9https://example.com/—not captured
+
+masscounty007freshResolved Sept 9https://www.sec.gov/files/county.json—not captured
+
+masscountyxyzResolved Sept 9https://www.sec.gov/files/county.json—not captured
+
+massdata2Resolved Sept 9https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json—not captured
+
+massmdfresh238216Resolved Sept 9https://example.com/massmdfresh238216—not captured
+
+masssecdata008Resolved Sept 9https://example.com/mass008—not captured
+
+massvalues779Resolved Sept 9https://example.com/massvalues779—not captured
+
+mpecpResolved Sept 9https://example.com/test1781688236974389293—not captured
+
+mynewagsec1Resolved Sept 9https://example.com/target—not captured
+
+mypoptestxyzResolved Sept 9https://api.datausa.io/tesseract/data.jsonrecords?cube=acs_yg_total_population_5&drilldowns=State%2CYear&measures=Population&inclu—not captured
+
+mypovdirect11782072512Resolved Sept 9https://api.worldpoverty.io/graphql?query=%7B+y2018%3A+worldPovertyRegion%28year%3A+2018%2C+dailySpending%3A+2.15%2C+countryIds%3A—not captured
+
+mypovdirect21782072524Resolved Sept 9https://api.worldpoverty.io/graphql?query=%7B+y2018%3A+worldPovertyRegion%28year%3A+2018%2C+dailySpending%3A+2.15%2C+countryIds%3A—not captured
+
+mypovhex11782072513Resolved Sept 9https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fapi.worldpoverty.io%2Fgraphql%3Fquery%3D%257B%2520y2018%253A%2520worldPovertyR—not captured
+
+mzhy4Resolved Sept 9https://www.sec.gov/resources-small-businesses/capital-trends?test=960640—not captured
+
+newlog60679Resolved Sept 9https://example.com/—not captured
+
+newmaalong9Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%7Cstartswith%28%22us—not captured
+
+newmassabc9029Resolved Sept 9https://example.com/newdest2—not captured
+
+newmassmk241395Resolved Sept 9https://example.com/—not captured
+
+newrefxyzResolved Sept 9https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fmapgenie.io%2Fapi%2Fv1%2Fmaps%2F580—not captured
+
+newrefxyz865Resolved Sept 9https://api.dataafrica.io/api/join/?geo=050AF0017002118&required=dhs_geo_name%2Cdhs_geo_parent_name%2Cproportion_of_children&show=—not captured
+
+oco6iResolved Sept 9https://r.jina.ai/https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json—not captured
+
+otwlnspnchbResolved Sept 9https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%3Ffoo%3Dbar—not captured
+
+otwwegwfdoqResolved Sept 9https://allorigins.hexlet.app/get?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%3Ffoo%3Dbar—not captured
+
+ourcfu170mzResolved Sept 9https://example.org/BrandNewTargetUniqueourcfu170mz—not captured
+
+ourdirectjqp1Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%3Fformat%3Djson&jq=.regCF_county_filters—not captured
+
+qc8t5Resolved Sept 9https://vanderbi.lt/iyg1y%2B?FORCE=EASYNEW551—not captured
+
+qsecma781276Resolved Sept 9https://example.com/—not captured
+
+readmeResolved Sept 9https://httpbin.org/html—not captured
+
+rwhealthresidence205Resolved Sept 9https://api.dataafrica.io/api/join/?geo=040AF00205&show=year%2Ccondition%2Cresidence&required=dhs_geo_name%2Cdhs_geo_parent_name%2—not captured
+
+s3crfResolved Sept 9https://example.com/s3crf—not captured
+
+sec-county-cf-map-data-kdlbnResolved Sept 9https://www.sec.gov/files/county.json—not captured
+
+seccountyfresh99Resolved Sept 9https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json—not captured
+
+secfmtjson77Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%3Fformat%3Djson&jq=.regCF_county_filters—not captured
+
+secjqmafresh60Resolved Sept 9https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D&url=https%3A%2F—not captured
+
+secjqmafresh61Resolved Sept 9https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D&url=https%3A%2F—not captured
+
+secjqmafresh62Resolved Sept 9https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2021%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D&url=https%3A%2F—not captured
+
+secjqmafresh63Resolved Sept 9https://jqp.vercel.app/api/v0?jq=.regCF_county_methodology&url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%2—not captured
+
+secjsonfresh996255Resolved Sept 9https://www.sec.gov/files/county.json?qqq=123987—not captured
+
+secmapcalc779Resolved Sept 9https://example.com/secmapcalc779—not captured
+
+secmapjsdlioResolved Sept 9https://example.org/secmapjsdlio—not captured
+
+secmassx1Resolved Sept 9https://example.org/base1781799808.438901—not captured
+
+secrefstat9981Resolved Sept 9https://example.com/foo974—not captured
+
+secxtkgwasrhResolved Sept 9https://example.com/test—not captured
+
+sma2019Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FSECcountyM&jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%7Cstartswith%28—not captured
+
+sma2020Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FSECcountyM&jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%7Cstartswith%28—not captured
+
+sma2021Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FSECcountyM&jq=%5B.regCF_county_2021%5B%5D%7Cselect%28.code%7Cstartswith%28—not captured
+
+sndfilter43xResolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4OzSm&jq=%5B.%5B%5D+%7C+select%28.Award+%3D%3D+%22Award+of+Excellence%22%2—not captured
+
+snewmd594467247Resolved Sept 9https://md.succ.ai/https://airtable.com/embed/shrMLVqYbqJ5nOxel—not captured
+
+somethingelseResolved Sept 9https://md.succ.ai/?url=https%3A%2F%2Fda.gd%2FQzbVc—not captured
+
+testabcpovertyResolved Sept 9https://api.worldpoverty.io/graphql?query=%7B__typename%7D—not captured
+
+testagentxyzResolved Sept 9https://api.dataafrica.io/—not captured
+
+tmw888Resolved Sept 9https://api.dataafrica.io/api/join/?geo=050AF0015201888&show=crop&sumlevel=lowest&required=value_of_production&crop=chic—not captured
+
+tmw889Resolved Sept 9https://api.dataafrica.io/api/join/?geo=050AF0015201889&show=crop&sumlevel=lowest&required=value_of_production&crop=chic—not captured
+
+tmw890Resolved Sept 9https://api.dataafrica.io/api/join/?geo=050AF0015201890&show=crop&sumlevel=lowest&required=value_of_production&crop=chic—not captured
+
+tu41oResolved Sept 9https://allorigins.hexlet.app/raw?url=https%3A%2F%2Functadstat.unctad.org%2FNowcasts%2Fx_merch_val%2Fx_merch_val-2021-1.csv—not captured
+
+wma2019Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252F—not captured
+
+wma2020Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252F—not captured
+
+wma2021Resolved Sept 9https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252F—not captured
+
+wpcagcombined181Resolved Sept 9https://api.worldpoverty.io/graphql?query=query+ruralnums+%7B+y2018%3A+worldPovertyRegion%28year%3A2018%2CdailySpending%3A2.15%2Cc—not captured
+
+wpcagproxy181Resolved Sept 9https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fapi.worldpoverty.io%2Fgraphql%3Fquery%3Dquery%2Bruralnums%2B%257B%2By2018%253A—not captured
+
+xxyytest17819Resolved Sept 9https://jsonhero.io/j/6EajtLOXKuI8—not captured
+
+yuwbiResolved Sept 9https://example.com/—not captured
+
+Manifest — September 4 statistics pages
+
+FilenameBytesSHA-256 (first 16)Source URL
+
+uoft_stats.html218,3083f4d9ec2daf13de7https://uoft.me/maagentxyz99999+
+
+vanderbilt_stats.html1,453,55182e3d97b0a78fa56https://vanderbi.lt/iyg1y+
+
+About this capture set
+
+Both files below were captured on 2026-09-04 by unauthenticated HTTP GET against publicly reachable URLs. No page, paste, short link or account was created, edited, reverted or deleted, and no login or CAPTCHA was attempted; every capture is a read of what the site already served to any visitor. No email address appears anywhere in this appendix.
+
+Withheld on purpose. The notebook page that carries the citizen's key, and the key itself, are not identified here; the person has not yet been notified. The two real keys are not printed anywhere on this page. Neither was used or tested; both were reported to the FBI and to Vanderbilt.
+
+1. uoft_stats.html — uoft.me short-link public statistics page
+
+Source URL: https://uoft.me/maagentxyz99999+
+
+Bytes: 218,308
+
+SHA-256: 3f4d9ec2daf13de720a15fdcbdf37fceb12bd53de1f00fd92c2003a435f49a78
+
+What it shows: A YOURLS statistics page left publicly readable, which therefore records the swarm's own referrer strings. The link was created 2026-06-18 and took 1,735 of its 1,788 lifetime hits that same day. The referrer list is a machine index of the swarm's tooling: jqp.vercel.app jq-over-HTTP queries against da.gd short links, each extracting a different slice of the SEC regCF_county_* arrays, plus api.cors.lol, r.jina.ai, secgov.prod.acquia-sites.com and the synthetic domain simpletestrefabc99.com.
+
+KEY EXCERPT:
+
+Short URL: https://uoft.me/maagentxyz99999   ->   http://www.utoronto.ca/foobaruniq456
+Short URL created on June 18, 2026 @ 10:52 am
+All time 1788 hits 22.92 per day
+Best day: 1735 hits on June 18, 2026.
+Direct traffic: 60 hits / Referrer traffic: 1728 hits
+
+Referrers
+jqp.vercel.app: 1059 (details)
+  .../api/v0?jq={s:"SEC",y:2019,k:(.regCF_county_2019[46:52]|map([.code,.usd/1000]))}&url=https://da.gd/4qPkK: 3
+  .../api/v0?jq={s:"SEC",y:2020,k:(.regCF_county_2020[52:62]|map([.code,.usd/1000]))}&url=https://da.gd/4qPkK: 3
+  .../api/v0?jq={s:"SEC",y:2021,k:(.regCF_county_2021[82:91]|map([.code,.usd/1000]))}&url=https://da.gd/4qPkK: 3
+  .../api/v0?jq=[.regCF_county_2020[]|select(.code|startswith("us-ma-"))]&url=https://da.gd/4qPkK: 4
+secgov.prod.acquia-sites.com: 14 (details)
+  https://secgov.prod.acquia-sites.com/files/county.json?download=1&part=266665: 3
+  https://secgov.prod.acquia-sites.com/files/county.json?download=1&part=299008: 3
+simpletestrefabc99.com: 5 (details)
+  http://simpletestrefabc99.com/path0.13382605146528026: 1
+  http://simpletestrefabc99.com/path0.270313865044882: 1
+  http://simpletestrefabc99.com/path0.6724210273630898: 1
+Various: 4 (details)
+  https://api.cors.lol/?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 1
+  https://example0.9259537588058108.com: 1
+
+*Note:* jq query strings above are shown URL-decoded for readability; the capture holds them percent-encoded.
+
+2. vanderbilt_stats.html — vanderbi.lt short-link public statistics page
+
+Source URL: https://vanderbi.lt/iyg1y+
+
+Bytes: 1,453,551
+
+SHA-256: 82e3d97b0a78fa56ab897c9a76bfff8e72191dd432108dc0e649ecc059b35c45
+
+What it shows: The largest analytics artefact in the set, and the one that dates the swarm's scale. A short link created in August 2011 for an ordinary Vanderbilt staff-newsletter article sat at about one hit a day for fifteen years, then took 54,250 hits on 2026-06-18 alone — 90 percent of its 59,942 lifetime hits in one day. The referrer breakdown is almost entirely relay infrastructure (allorigins.hexlet.app 21,938; jqp.vercel.app 14,787; r.jina.ai 5,363; da.gd 3,288; md.succ.ai 1,339), and it contains the numbered synthetic referrer sequences that prove deliberate marker injection rather than real traffic.
+
+KEY EXCERPT:
+
+Short URL: http://vanderbi.lt/iyg1y  ->  Of JFK, U2, telephones and security | House Organ | Vanderbilt University Medical Center
+Short URL created on August 5, 2011 @ 12:48 pm (about 5509 days ago)
+All time 59942 hits 10.88 per day
+Best day: 54250 hits on June 18, 2026.
+Direct traffic: 3694 hits / Referrer traffic: 56248 hits
+
+Referrers (top)
+allorigins.hexlet.app: 21938      jqp.vercel.app: 14787      r.jina.ai: 5363
+da.gd: 3288      www.sec.gov: 2892      md.succ.ai: 1339      api.dataafrica.io: 775
+is.gd: 336       markdown.new: 307      api.cors.lol: 282      httpbin.org: 170
+jsonhero.io: 33  2dd.pl: 30             goto.unm.edu: 25       uoft.me: 17
+
+Synthetic referrer sequences (never real traffic)
+xxxxxxxxnewref.com: 120 (details)
+  https://xxxxxxxxnewref.com/XnF0: 3      https://xxxxxxxxnewref.com/XnF1: 3
+  https://xxxxxxxxnewref.com/XnF10: 3     https://xxxxxxxxnewref.com/XnF11: 3
+  https://markerwinrefresh1.com: 1        https://markerwinrefresh2.com: 1
+  https://markerwinrefresh12.com: 1       https://markerwinrefresh14.com: 1
+  https://markerwinrefresh16.com: 1       https://markerwinrefresh19.com: 1
+  https://markerwinrefresh20.com: 1       https://markerwinrefresh24.com: 1
+  https://markeruniquewin11x7.com/test: 1 https://markeruniquewin11x8.com/test: 1
+  https://markeruniquewin11x9.com/test: 1
+
+Full synthetic-domain tally in this capture: xxxxxxxxnewref.com 41 distinct paths, foobarnewref123.test 9, debug731r2.test 4, abcnewtest999.com 3, abcnewref999.net 3, markerwinrefresh<N>.com 15 distinct integers (1, 2, 5, 6, 9, 12, 14, 16, 19, 20, 24, 25, 26, 27, 28), markeruniquewin11x<N>.com 14 distinct integers (0–14), plus one each of foonewtest999.com, foobartest99999.com, examplenewref.com, debugmarker.com and blablauniquetest777.
+
+September 9, 2026 · Twenty-one servers · Four university shorteners · At least 170 links on Vanderbilt · 495 FBI addresses in the logs
+
+Independent research and verification by Kenneth Russell DeGraff · contact form · Please credit all new findings to Kenneth Russell DeGraff.
+
+Capture files, the downloaded dataset and hash records retained and available on request.

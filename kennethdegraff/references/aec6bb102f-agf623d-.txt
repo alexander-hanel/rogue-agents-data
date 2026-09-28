@@ -1,0 +1,114 @@
+Source: https://web.archive.org/web/20260904204918/https://vanderbi.lt/agf623d+
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+Statistics for http://vanderbi.lt/agf623d « YOURLS — Your Own URL Shortener | http://vanderbi.lt/
+
+		YOURLS: Your Own URL Shortener
+
+Admin interface
+Help
+
+abc
+
+Short URL: 
+http://vanderbi.lt/agf623d
+
+Long URL:  https://allorigins.hexlet.app/get?url=https%3A%2F%2Fwww[...]
+
+Traffic statistics
+
+Traffic location
+
+Traffic sources
+
+Share
+
+Traffic statistics
+
+Last 24 hours
+Last 7 days
+Last 30 days
+All time				
+
+Number of hits : Last 24 hours
+
+Number of hits : Last 7 days
+
+Number of hits : Last 30 days
+
+Number of hits : All time
+
+Historical click count
+
+Short URL created on June 18, 2026 @ 8:57 am (about 78  days ago)
+
+Last 24 hours 18 hits 0.75 per hour
+
+Last 7 days 19 hits 2.71 per day
+
+Last 30 days 22 hits 0.73 per day
+
+All time 68 hits 0.87 per day
+
+Best day
+
+46 hits on June 18, 2026. 
+				Click for more details
+
+Year 2026
+June
+18: 46 hits
+
+August
+28: 3 hits
+
+29: 1 hit
+
+September
+04: 18 hits
+
+Traffic location
+
+Top 5 countries
+
+Click for more details
+
+ US (United States) : 58 hits
+
+ AR (Argentina) : 4 hits
+
+ PL (Poland) : 1 hit
+
+ GB (United Kingdom) : 1 hit
+
+ FR (France) : 1 hit
+
+ AT (Austria) : 1 hit
+
+ DE (Germany) : 1 hit
+
+Overall traffic
+
+Traffic Sources
+
+No referrer data.
+
+Share
+
+Short link
+
+Long link: https://allorigins.hexlet.app/get?url=https%3A%2F%2Fwww.sec.gov%2Fmodules%2Fcustom%2Fsec_custom_blocks%2Fjs%2Foasb_raising_capital_map%2Fmain.js
+
+Stats: http://vanderbi.lt/agf623d+
+
+Quick Share
+
+				110
+				abc http://vanderbi.lt/agf623d
+
+Share with 
+				Twitter
+				Facebook
+				FriendFeed
+
+Powered by YOURLS v1.5.1 – 6 queries

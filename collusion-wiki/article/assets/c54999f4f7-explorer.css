@@ -1,0 +1,908 @@
+/* The explorer's root-owned visual system. Generated pages supply markup and behaviour only;
+ * tokens.css supplies the shared AI 2040 palette and type families. */
+
+:root {
+  /* Fluid explorer scale: compact enough for records, open enough for ET Book headings. */
+  --step--1: clamp(0.8125rem, 0.7887rem + 0.1087vi, 0.875rem) !important;
+  --step-0: clamp(1.0625rem, 1.0397rem + 0.1041vi, 1.125rem) !important;
+  --step-1: clamp(1.1875rem, 1.1418rem + 0.2083vi, 1.3125rem) !important;
+  --step-2: clamp(1.375rem, 1.284rem + 0.4149vi, 1.625rem) !important;
+  --step-3: clamp(1.625rem, 1.4658rem + 0.7256vi, 2.0625rem) !important;
+  --step-6: clamp(2.375rem, 1.8286rem + 2.4913vi, 3.875rem) !important;
+
+  --space-s: clamp(0.75rem, 0.6902rem + 0.2717vi, 0.9375rem) !important;
+  --space-m: clamp(1.125rem, 1.0353rem + 0.4076vi, 1.4063rem) !important;
+  --space-l: clamp(1.5rem, 1.3804rem + 0.5435vi, 1.875rem) !important;
+  --space-xl: clamp(2.25rem, 2.0707rem + 0.8152vi, 2.8125rem) !important;
+  --space-2xl: clamp(3.25rem, 2.9076rem + 1.5217vi, 4.25rem) !important;
+
+  --panel: color-mix(in srgb, var(--accent) 3%, var(--vivid-background)) !important;
+  --panel-2: color-mix(in srgb, var(--outside) 8%, var(--vivid-background)) !important;
+  --line: var(--hair) !important;
+  --line-2: var(--rule) !important;
+  --line-strong: var(--rule) !important;
+  --screen-1: color-mix(in srgb, var(--accent) 10%, var(--vivid-background)) !important;
+  --screen-2: color-mix(in srgb, var(--accent) 19%, var(--vivid-background)) !important;
+  --screen-3: color-mix(in srgb, var(--accent) 28%, var(--vivid-background)) !important;
+  --screen-4: color-mix(in srgb, var(--accent) 39%, var(--vivid-background)) !important;
+  --screen-5: color-mix(in srgb, var(--accent) 50%, var(--vivid-background)) !important;
+  --screen-6: color-mix(in srgb, var(--accent) 62%, var(--vivid-background)) !important;
+  --screen-7: color-mix(in srgb, var(--accent) 76%, var(--vivid-background)) !important;
+
+  /* analysis.html names its generated internal roles in an inline style. These aliases make their
+     values root-owned; important keeps them authoritative even though that style comes later. The
+     agentwatch refresh in 767c16e78 stopped shipping that page, so nothing consumes these today —
+     they are kept, and kept correct, so a refresh that brings it back lands on the right palette
+     rather than on whatever these last happened to say. The roles named for interface parts
+     (blue, focus, office) take the structural slate; only --coral and --linked are provenance. */
+  --ground: var(--vivid-background) !important;
+  --paper: var(--panel) !important;
+  --bg: var(--vivid-background) !important;
+  --ink-2: var(--dull-foreground) !important;
+  --ink-3: color-mix(in srgb, var(--dull-foreground) 72%, var(--vivid-background)) !important;
+  --blue: var(--ui) !important;
+  --blue-press: color-mix(in srgb, var(--ui) 84%, var(--ink)) !important;
+  --coral: var(--outside) !important;
+  --focus: var(--ui) !important;
+  --registered: var(--accent) !important;
+  --office: var(--ui) !important;
+  --linked: var(--outside) !important;
+  --unknown: var(--dull-foreground) !important;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  background: var(--vivid-background);
+  color: var(--ink);
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;  /* chrome.css says where a jump lands, for both halves */
+}
+
+body {
+  margin: 0;
+  background: var(--vivid-background);
+  font-family: var(--serif);
+  font-size: var(--step-0);
+  line-height: 1.5;
+}
+
+/* The explorer colours its links and the write-up does not, and that is deliberate rather than a
+   drift between the two halves: a record page is hundreds of links deep, where Tufte's black-and-
+   underline would be a wall of rules, while the essay is prose, where it is exactly right. What
+   the two halves must agree on is that the colour is structural — it says "this is a control",
+   not "this came from the dumps". Hence slate here, and green nowhere in this block. */
+a { color: var(--ui); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--ui);
+  outline-offset: -2px;
+}
+button, input, select { font: inherit; color: inherit; }
+/* No record page emits either; they are for the prose on download.html, where a field name has to
+   be legible as a field name.  0.9em because the mono faces run large beside ET Book. */
+code { font-family: var(--mono); font-size: 0.9em; }
+pre { font-family: var(--mono); font-size: var(--step--1); }
+
+.skip {
+  position: absolute;
+  left: -9999px;
+}
+.skip:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+  z-index: 20;
+  padding: 0.6rem 0.9rem;
+  background: var(--panel);
+  border: 1px solid var(--ui);
+  border-radius: 0;
+}
+
+/* ---------------------------------------------------------------- chrome */
+
+/* The bar -- story link, views, caret menu -- is chrome.css's, all of it. A bar rule stated here
+   would win on the explorer, which loads this file after that one, and be missing from the essay,
+   which never loads it: that is how the caret menu's two views came to underline on hover while
+   the three beside them did not. */
+
+.shell {
+  /* width and side padding come from .framed-column (chrome.css), shared with the essay */
+  padding-top: var(--space-m);
+  padding-bottom: var(--space-2xl);
+}
+
+/* ---------------------------------------------------------- headline row */
+
+.counts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.4rem;
+  margin: 0 0 var(--space-m);
+  padding: 0;
+}
+.counts div { margin: 0; }
+.counts dt {
+  order: 2;
+  color: var(--dull-foreground);
+  font-size: var(--step--1);
+}
+.counts dd {
+  order: 1;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: var(--step-3);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.05;
+  color: var(--ink);
+}
+.counts div { display: flex; flex-direction: column; }
+
+/* A word with a tooltip saying what it counts (build_explorer.tip): dotted so a reader knows to
+   hover, the panel at once on hover or keyboard focus, in the page's serif because the sentence is
+   ours and not the record's.  On a name's page the request-log numbers are folded under their
+   heading: the stored ones are what a reader came for. */
+.tip { position: relative; }
+.tip .term { cursor: help; border-bottom: 1px dotted currentColor; }
+.tip .tooltip {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.4rem);
+  z-index: 5;
+  width: max-content;
+  max-width: min(24rem, calc(100vw - 2 * var(--frame-pad, 18px) - 2rem));
+  padding: 0.45rem 0.7rem;
+  background: var(--ink);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  font-family: var(--serif);
+  font-size: var(--step--1);
+  font-weight: normal;
+  line-height: 1.45;
+  letter-spacing: normal;
+  white-space: normal;
+  color: #fff;
+  visibility: hidden;
+  pointer-events: none;
+}
+.tip:hover .tooltip, .tip:focus-within .tooltip { visibility: visible; }
+.requests { margin: 0 0 var(--space-m); }
+.requests > summary { cursor: pointer; }
+.requests > summary:hover { color: var(--ui); }
+.requests .about {
+  margin: 0.4rem 0 0.6rem;
+  font-size: var(--step--1);
+  line-height: 1.45;
+  color: var(--dull-foreground);
+}
+.requests .counts { margin: 0; }
+
+/* ------------------------------------------------------------- searchbox */
+
+/* `display: flex` beats the `hidden` attribute's UA `display: none`, and the Forum search form
+ * ships hidden until Pagefind loads.  Without this it is visible and dead on
+ * `file://`, which is exactly the case the fallback exists for. */
+[hidden] { display: none !important; }
+
+.searchbox {
+  display: flex;
+  gap: 0.4rem;
+  margin: 0 0 var(--space-l);
+}
+.searchbox input {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 44px;
+  padding: 0 0.6rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  font-family: var(--mono);
+  font-size: var(--step--1);
+}
+.searchbox button {
+  min-height: 44px;
+  padding: 0 0.9rem;
+  background: var(--ui);
+  color: var(--vivid-background);
+  border: 1px solid var(--ui);
+  border-radius: 0;
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  cursor: pointer;
+}
+
+.index-tools {
+  display: flex;
+  flex-wrap: wrap;  /* two dropdowns beside the box: on a phone they take the next line */
+  gap: 0.4rem;
+  margin: 0 0 var(--space-s);
+}
+.index-tools input, .index-tools select, .results select {
+  min-height: 40px;
+  padding: 0 0.6rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  font-family: var(--mono);
+  font-size: var(--step--1);
+}
+.index-tools input { flex: 1 1 12rem; min-width: 0; }
+.index-tools select { flex: 0 0 auto; }
+/* The dropdowns draw their own chevron. The browser's is pinned to the border edge and ignores
+   padding-right, which reads as cramped against these hairline boxes; drawing it puts the mark
+   where the padding says, in the palette's own grey, and the same way in every engine.
+   Two 6px squares side by side, each carrying a 1.5px band down its centre diagonal: the left
+   square's runs "\", the right one's "/", and they meet at the corner they share. A gradient,
+   rather than an SVG, because only this way does the stroke take its colour from the token. */
+.index-tools select, .results select {
+  appearance: none;
+  padding-right: 2rem;  /* the 12px chevron, plus a gap either side of it */
+  background-image:
+    linear-gradient(45deg, transparent calc(50% - 0.75px), var(--dull-foreground) calc(50% - 0.75px),
+                    var(--dull-foreground) calc(50% + 0.75px), transparent calc(50% + 0.75px)),
+    linear-gradient(135deg, transparent calc(50% - 0.75px), var(--dull-foreground) calc(50% - 0.75px),
+                    var(--dull-foreground) calc(50% + 0.75px), transparent calc(50% + 0.75px));
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+  background-position: right calc(0.7rem + 6px) center, right 0.7rem center;
+}
+
+/* Under the filters: what the list holds on the left, its order on the right.  The order is not a
+   filter -- it applies to whatever the filters left -- which is why it sits here and not with them. */
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem 1rem;
+  margin: 0 0 var(--space-s);
+}
+.results .state { margin: 0; }
+.results .order {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  color: var(--dull-foreground);
+}
+
+/* ----------------------------------------------------------- the day bars
+ * 28 days, and the largest (6,543 edits) is 165 times the median (39).  Vertical bars would make
+ * 27 of them invisible slivers on a phone, so the chart is rotated: one row per day, a linear
+ * stacked bar, and the count printed at the end of it.  Linear and labelled beats a log axis
+ * nobody can read the rule for on a site with no sentences to state it.
+ */
+
+.days { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.day-row {
+  display: grid;
+  grid-template-columns: 4.4rem minmax(0, 1fr) 3.6rem;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 42px;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
+}
+.day-row:hover, .day-row:focus-visible { background: var(--panel); }
+.day-row:hover .day-date, .day-row:focus-visible .day-date,
+.day-row:hover .day-n, .day-row:focus-visible .day-n { color: var(--ui); }
+.day-date {
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  color: var(--dull-foreground);
+}
+/* A hairline the full width of the plot, so a 2 px bar reads as "almost nothing out of that" and
+ * not as a stray mark.  18 June is 6,543 edits against a median day of 39, so most bars are the
+ * minimum width and the track is the only thing that gives them a scale. */
+.day-bar {
+  display: flex;
+  align-items: flex-end;
+  height: 14px;
+  gap: 1px;
+  background: linear-gradient(var(--line), var(--line)) no-repeat 0 100% / 100% 1px;
+}
+.day-bar span { display: block; min-width: 2px; height: 14px; }
+.day-n {
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.9rem;
+  margin: var(--space-s) 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--step--1);
+  color: var(--dull-foreground);
+}
+.legend li { display: flex; align-items: center; gap: 0.35rem; }
+.legend i { width: 10px; height: 10px; display: block; }
+.legend b { font-family: var(--mono); font-weight: 400; color: var(--ink); }
+
+/* --------------------------------------------------------- generic lists */
+
+.rows { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.rows > li { border-bottom: 1px solid var(--line); }
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.3rem 0.6rem;
+  min-height: 44px;
+  padding: 0.35rem 0;
+  color: inherit;
+  text-decoration: none;
+}
+.row-name {
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  overflow-wrap: anywhere;
+}
+/* A row under the pointer takes a fill as well as the ink: the name and the count go accent, and
+   the fill is the column's own width, so it lines up with the rules between rows instead of
+   bleeding past their ends.  The same on the front door's day bars (.day-row, above). */
+.row:hover, .row:focus-visible { background: var(--panel); }
+.row:hover .row-name, .row:focus-visible .row-name,
+.row:hover .row-n, .row:focus-visible .row-n { color: var(--ui); }
+.row-n {
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  font-variant-numeric: tabular-nums;
+  color: var(--dull-foreground);
+  white-space: nowrap;
+}
+.row-meta {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.5rem;
+  font-size: var(--step--1);
+  color: var(--dull-foreground);
+}
+.row-meta span { font-family: var(--mono); }
+.row-meta .nowrap { white-space: nowrap; }  /* "20 clicks", "1,736 lines" */
+/* "jl → example.org": where a row's artifact points sits on its name's line; the date, when there
+   is one, at the right of the line below, and on the Sites index who reported the site after it.
+   Whichever of the two comes first takes the free space, so the credit is at the right with or
+   without a date before it. */
+.row-name .row-to { margin-left: 0.6rem; color: var(--dull-foreground); }
+/* "New" on the Sites index: a site the original report did not name.  Beside the name; where the
+   frame has its rail (chrome.css, above 1320px) it stands out in the gutter to the row's left,
+   centred on the row. */
+.row-name .badge {
+  display: inline-block;
+  margin-left: 0.6rem;
+  padding: 0 0.3rem;
+  border: 1px solid var(--ui);
+  color: var(--ui);
+  font-family: var(--sans);
+  font-size: 0.7em;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: 0.15em;
+}
+@media (min-width: 1321px) {
+  .rows .row { position: relative; }
+  .row-name .badge {
+    position: absolute;
+    right: calc(100% + 16px);
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+  }
+}
+.row-meta .row-date, .row-meta .row-credit { margin-left: auto; }
+.row-meta .row-date + .row-credit { margin-left: 0; }
+.row-wiki {
+  display: inline-block;
+  padding: 0 0.3rem;
+  border-left: 3px solid var(--line);
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  color: var(--dull-foreground);
+}
+/* A dot between the site and what follows it on the line ("dse · 342 names", "wiki · 3,908 with
+   text"); not before a right-aligned date or credit, which the free space already sets apart. */
+.row-meta .row-wiki + span:not(.row-date):not(.row-credit)::before {
+  content: "·";
+  padding-right: 0.5rem;   /* the column gap again, so the dot sits centred */
+}
+
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: var(--space-m) 0 0;
+}
+.pager a, .pager span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0 0.4rem;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  text-decoration: none;
+}
+.pager span { background: var(--ui); color: var(--vivid-background); border-color: var(--ui); }
+/* Under a filtered list: the next 200 rows, on a click.  Dressed as a pager item, because it is
+   the pager's job done by hand. */
+.more {
+  display: block;
+  margin: var(--space-m) 0 0;
+  min-height: 40px;
+  padding: 0 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--panel);
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  color: var(--ink);
+  cursor: pointer;
+}
+.more:hover, .more:focus-visible { color: var(--ui); border-color: var(--ui); }
+
+/* ------------------------------------------------------------ page header */
+
+.section-title {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: var(--step-0);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.head { margin: 0 0 var(--space-m); }
+.head h1 {
+  margin: 0 0 0.2rem;
+  font-family: var(--serif);
+  font-size: var(--step-2);
+  font-weight: 400;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+.head .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem 0.6rem;
+  margin: 0;
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  color: var(--dull-foreground);
+}
+.head .meta a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
+.head .meta a:hover, .head .meta a:focus-visible { color: var(--ui); border-bottom-color: var(--ui); }
+.head-labels {
+  margin: 0.4rem 0 0;
+  font-family: var(--mono);
+  font-size: var(--step--1);
+}
+.head-labels summary {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--dull-foreground);
+}
+.head-labels p { margin: 0 0 0.4rem; overflow-wrap: anywhere; }
+
+/* The names a page was edited under are the page's own summary, so they are shown rather than folded
+   away: six lines of them, and where that is the whole list -- 4,450 of the 4,575 pages hold ten
+   names or fewer -- there is nothing else to see and no control.  Where it is not, the sixth line
+   goes to the control instead and the fifth fades into it, so the cut is visible as a cut.  The
+   control is one-way: it says how many names there are in all, and opening the list retires it,
+   because a reader who asked for the rest has no use for a lever that takes them away again.
+
+   explorer/ cannot be hand-edited (check.py gates it against its manifest), so all of this is the
+   generated <details> restyled from here, the way chrome.css does the nav's.  ::details-content is
+   the box a closed <details> keeps its contents in: making it visible is what shows the list at
+   all.  The count in the control is the whole list rather than the remainder because that number is
+   the generated summary's own text -- a remainder would have to come from agentwatch. */
+@supports selector(::details-content) {
+  .head-labels { display: flex; flex-direction: column; }
+  .head-labels::details-content { content-visibility: visible; }
+  /* The summary is a flex row, so its three parts are flex items and the spaces inside content are
+     trimmed; the gap is what separates them. */
+  .head-labels summary { order: 1; gap: 0.35em; color: var(--ui); }
+  .head-labels summary::before { content: "All"; }
+  .head-labels summary::after { content: "\25be"; }
+  .head-labels[open] summary { display: none; }
+
+  /* Whether six lines is the whole list is a question about layout, which only the engine can
+     answer: a scroll timeline on the clipped paragraph is inactive until that paragraph overflows,
+     and an animation on an inactive timeline does not apply, so these three values arrive together
+     exactly when there is something to reveal.  The clamp itself stays out of the animation -- were
+     the animation to change it, the overflow it is measuring would be its own doing. */
+  @supports (animation-timeline: scroll()) {
+    .head-labels {
+      timeline-scope: --head-labels;
+      animation: head-labels-more both;
+      animation-timeline: --head-labels;
+    }
+    /* Six lines, of which the mask paints five: the fifth fades out and the sixth is spent on the
+       control, which the negative margin lifts into it. */
+    .head-labels p { overflow: hidden; }
+    .head-labels:not([open]) p {
+      max-height: 6lh;
+      scroll-timeline: --head-labels block;
+      mask-image: var(--head-labels-fade, none);
+    }
+    .head-labels summary {
+      display: var(--head-labels-control, none);
+      margin-top: var(--head-labels-shift, 0);
+    }
+    @keyframes head-labels-more {
+      from, to {
+        --head-labels-control: flex;
+        --head-labels-shift: -1lh;
+        --head-labels-fade: linear-gradient(to bottom, #000 4lh, transparent 5lh);
+      }
+    }
+  }
+
+  /* No scroll timelines (Safari before 26, Firefox before 144): nothing can measure the lines, so
+     the cut is by name count instead, and the control appears on the same count that makes it. */
+  @supports not (animation-timeline: scroll()) {
+    .head-labels:not([open]) p > a:nth-of-type(n + 21),
+    .head-labels:not([open]) p > span:nth-of-type(n + 20) { display: none; }
+    .head-labels:not(:has(p > a:nth-of-type(21))) summary { display: none; }
+  }
+
+  /* The rest of the list arrives on a clock rather than at once.  interpolate-size is what lets the
+     clamp run from six lines to the content's own height; without it the list opens in one step, as
+     it did when the whole of it was behind the summary. */
+  @supports (interpolate-size: allow-keywords) {
+    .head-labels { interpolate-size: allow-keywords; }
+    .head-labels p { max-height: max-content; transition: max-height 220ms ease-out; }
+  }
+}
+
+/* ---------------------------------------------------------- the thread
+ * The core of the site.  An append renders as flowing page text with a slim gutter marker, so a
+ * page that only ever grew reads top to bottom as it grew.  Anything that removed or replaced a
+ * line renders as a diff block at the same place in the chronology.
+ */
+
+/* The rail is fixed to the right edge, so on a phone the thread has to leave room for it or the
+ * record's own text runs underneath it and is clipped.  Above 56rem the centred 48rem column
+ * already clears the rail by more than its width, so the reservation goes away. */
+.thread { margin: 0; padding: 0 38px 0 0; list-style: none; }
+@media (min-width: 40rem) { .thread { padding-right: 48px; } }
+@media (min-width: 56rem) { .thread { padding-right: 0; } }
+/* One entry is not a thread: no rail to leave room for, nothing for the highlight to pick out. */
+.thread.no-rail { padding-right: 0; }
+.thread.no-rail .entry { opacity: 1; }
+/* An artifact from one of the other sites is a quotation of something found elsewhere, so its text
+   sits on the write-up's quoted-panel fill, and a diff between its versions on the same. */
+.thread.artifact .text { padding: 0.4rem 0.6rem; background: var(--wash); }
+.thread.artifact .diff { background: var(--wash); }
+/* The pack's placeholder for a URL it withheld names the host and a hash of the URL.  The host is
+   what a reader uses; the hash stays in the document for whoever holds the original, and shows on
+   hover. */
+.withheld { cursor: help; }
+.withheld .hash { display: none; }
+/* What nobody reads top to bottom -- a fetched page's furniture, a site's menus, a 7,000-line
+   document -- sits under one line that says what it is. */
+.fold { margin: 0.3rem 0 0; }
+.fold > summary {
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  line-height: 1.5;
+  color: var(--dull-foreground);
+  cursor: pointer;
+}
+.fold > summary:hover { color: var(--ui); }
+.fold .text { margin-top: 0.3rem; }
+
+.entry {
+  position: relative;
+  margin: 0 0 var(--space-m);
+  padding-left: 0.7rem;
+  border-left: 3px solid transparent;
+  scroll-margin-block: 30vh;
+  transition: border-color 300ms ease, opacity 300ms ease;
+}
+.entry.current { border-left-color: var(--ui); }
+.entry:not(.current) { opacity: 0.82; }
+
+.marker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem 0.5rem;
+  margin: 0 0 0.25rem;
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  line-height: 1.4;
+  color: var(--dull-foreground);
+  overflow-wrap: anywhere;
+}
+.marker a { color: var(--dull-foreground); text-decoration: none; }
+.marker a:hover { color: var(--ui); text-decoration: underline; }
+.marker .seq { color: var(--ui); }
+.event-label {
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.text {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  line-height: 1.55;
+  white-space: pre-wrap;
+  /* `break-word`, not `anywhere`: the record is full of URLs long enough to overflow a phone and
+   * those still break, but an ordinary word stops being cut in half mid-line. */
+  overflow-wrap: break-word;
+}
+
+.diff {
+  margin: 0;
+  padding: 0.2rem 0;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--panel);
+}
+.line {
+  display: grid;
+  grid-template-columns: 1.3rem minmax(0, 1fr);
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  line-height: 1.5;
+  min-height: 1.5em;
+}
+.line .g { text-align: center; user-select: none; color: var(--dull-foreground); }
+.line .t { white-space: pre-wrap; overflow-wrap: break-word; padding-right: 0.4rem; }
+.line.add { background: var(--screen-1); }
+.line.rm { background: var(--panel-2); }
+.line.rm .t { text-decoration: line-through; text-decoration-thickness: 1px; }
+.line.ctx .t, .line.skip .t { color: var(--dull-foreground); }
+.line.skip { opacity: 0.6; }
+
+.event {
+  display: block;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  color: var(--dull-foreground);
+  overflow-wrap: anywhere;
+}
+
+/* ------------------------------------------------------------- the rail */
+
+.rail {
+  position: fixed;
+  z-index: 5;
+  right: max(2px, env(safe-area-inset-right));
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  max-height: 66vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.rail::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 16px;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  background: var(--line);
+}
+.tick {
+  position: relative;
+  width: 34px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.tick::before {
+  content: "";
+  position: absolute;
+  right: 13px;
+  top: calc(50% - 3px);
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--vivid-background);
+  transition: width 300ms ease, height 300ms ease, background 300ms ease, border-color 300ms ease;
+}
+.tick.on::before {
+  right: 12px;
+  top: calc(50% - 4px);
+  width: 8px;
+  height: 8px;
+  border-color: var(--ui);
+  background: var(--ui);
+}
+.tick:focus-visible { outline: 2px solid var(--ui); outline-offset: -3px; }
+
+/* --------------------------------------------------------------- search */
+
+.search-results { margin: var(--space-m) 0 0; padding: 0; list-style: none; }
+.search-results li { border-bottom: 1px solid var(--line); padding: 0.5rem 0; }
+.search-results a {
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  overflow-wrap: anywhere;
+}
+.search-results p {
+  margin: 0.2rem 0 0;
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  color: var(--dull-foreground);
+  overflow-wrap: anywhere;
+}
+.search-results .result-meta { display: flex; gap: 0.5rem; }
+.search-results mark { background: var(--screen-2); color: inherit; }
+/* The two sentences the browser is allowed to say (CONTRACT.md §2): why a thread is empty, and
+   what an edit-less row in the index is.  Styled as chrome, never as record: soft ink, no rule on
+   the left, so it cannot be mistaken for the coral-edged deletion event beside it. */
+.notice {
+  margin: 0 0 var(--space-m);
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  line-height: 1.5;
+  color: var(--dull-foreground);
+}
+.rows + .notice, .notice + .rows { margin-top: var(--space-s); }
+
+.state {
+  margin: var(--space-s) 0 0;
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  color: var(--dull-foreground);
+}
+
+/* ------------------------------------------------------- the download page
+ * The blurb is the page's own voice, so it is body serif, not the mono the records use.  The
+ * checksums are folded away because five 64-character hashes shout louder than anything else on
+ * the page, and they are only wanted once, at the moment someone verifies a file.
+ */
+
+.blurb { margin: 0 0 var(--space-m); }
+.blurb:last-of-type { margin-bottom: var(--space-l); }
+
+/* .section-title is margin:0 because the label pages set it against a .counts grid that already
+   carries the gap.  Here it follows the file list, which does not, so the air is added on the
+   pairing rather than the class — the same way .rows and .notice space themselves above. */
+.rows + .section-title { margin-top: var(--space-l); }
+.section-title + .blurb { margin-top: var(--space-s); }
+
+/* These row-meta items are phrases, not the self-labelling atoms ("342 labels", a date) the index
+   rows carry, so gap alone lets them read as one run-on line.  Scoped to .downloads: the index
+   rows' items are set apart by the gap, with one dot after the site (.row-wiki, above). */
+.downloads .row-meta span + span::before {
+  content: "·";
+  padding-right: 0.5rem;   /* matches .row-meta's column gap, so the dot sits centred between items */
+}
+
+/* A third column ahead of the name for the glyph.  The meta line starts at column 2 so it hangs
+   under the filename rather than under the icon. */
+.downloads .row { grid-template-columns: auto minmax(0, 1fr) auto; }
+.downloads .row-meta {
+  grid-column: 2 / -1;
+  font-size: 11.5px;   /* fixed, not --step--1: these are descriptions, and stay well under the
+                          filename at every width.  Only here — the index rows' meta is data. */
+}
+.downloads .row-icon {
+  grid-row: 1 / span 2;    /* spans the name line and the meta line; .row's align-items centres it
+                              over both.  Not 1 / -1: with no explicit rows, -1 is still line 1. */
+  width: 20px;             /* reads against the whole two-line row, not just the filename beside it */
+  height: 20px;
+  color: var(--dull-foreground);
+}
+
+/* The glyph follows the name and the size into the accent (.row, above). */
+.downloads .row:hover .row-icon, .downloads .row:focus-visible .row-icon { color: var(--ui); }
+
+/* Holds the symbol only; never painted. */
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.checksums {
+  margin: var(--space-l) 0 0;
+  font-family: var(--mono);
+  font-size: var(--step--1);
+}
+.checksums summary {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--dull-foreground);
+}
+.checksums p { margin: 0 0 0.6rem; color: var(--dull-foreground); }
+.checksums pre {
+  margin: 0;
+  padding-bottom: 0.4rem;
+  overflow-x: auto;      /* 64 hex + a filename does not fit a phone, and must not be re-wrapped */
+  line-height: 1.7;
+}
+
+@media (min-width: 40rem) {
+  .day-row { grid-template-columns: 5.5rem minmax(0, 1fr) 4.5rem; }
+  .rail { width: 44px; right: max(6px, env(safe-area-inset-right)); }
+  .tick { width: 44px; }
+  .tick::before { right: 18px; }
+  .tick.on::before { right: 17px; }
+  .rail::before { right: 21px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .entry, .tick::before, .head-labels p { transition: none; }
+}
+
+/* ------------------------------------------------------- the other sites
+ * A page from one of the other sites is a thread like any other; what its entries add is a flag
+ * where the pack redacted the text, and a line saying where the text was seen. */
+.flag {
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.sources {
+  margin: 0.3rem 0 0;
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  line-height: 1.4;
+  color: var(--dull-foreground);
+  overflow-wrap: anywhere;
+}
+.sources a { color: inherit; }
+.sources a:hover { color: var(--ui); }
+
+/* Who first reported a site, under its name on its own page. */
+.attribution { margin: 0 0 var(--space-m); }
+.attribution .who {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+.attribution .who a { color: inherit; }
+.attribution .who a:hover { color: var(--ui); }
+
+/* "Also seen on": the URLs a page shares with other pages, in the head under the names; open while
+   the list is short (build_explorer.ALSO_OPEN), folded once it is not.  A URL's own page heads
+   with the URL, which wraps wherever it must. */
+.also {
+  margin: 0.4rem 0 0;
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  line-height: 1.5;
+}
+.also summary {
+  padding: 0.5rem 0;
+  cursor: pointer;
+  color: var(--dull-foreground);
+}
+.also summary:hover { color: var(--ui); }
+.also ul { margin: 0 0 0.4rem; padding: 0; list-style: none; }
+.also li { margin: 0 0 0.3rem; overflow-wrap: anywhere; }
+.also a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
+.also a:hover, .also a:focus-visible { color: var(--ui); border-bottom-color: var(--ui); }
+.also .here, .also .on { color: var(--dull-foreground); }
+.head h1.url { overflow-wrap: anywhere; }

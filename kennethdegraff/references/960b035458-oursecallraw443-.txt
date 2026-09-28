@@ -1,0 +1,102 @@
+Source: https://web.archive.org/web/20260904204919/https://vanderbi.lt/oursecallraw443+
+Retrieved: 2026-09-27T23:51:06.720535+00:00
+
+Statistics for http://vanderbi.lt/oursecallraw443 « YOURLS — Your Own URL Shortener | http://vanderbi.lt/
+
+		YOURLS: Your Own URL Shortener
+
+Admin interface
+Help
+
+https://allorigins.hexlet.app/raw?url=https%3A//www.sec.gov%3A443/files/county.json
+
+Short URL: 
+http://vanderbi.lt/oursecallraw443
+
+Long URL:  https://allorigins.hexlet.app/raw?url=https%3A//www.sec[...]
+
+Traffic statistics
+
+Traffic location
+
+Traffic sources
+
+Share
+
+Traffic statistics
+
+Last 24 hours
+Last 7 days
+Last 30 days
+All time				
+
+Number of hits : Last 24 hours
+
+Number of hits : Last 7 days
+
+Number of hits : Last 30 days
+
+Number of hits : All time
+
+Historical click count
+
+Short URL created on June 18, 2026 @ 6:41 am (about 78  days ago)
+
+Last 24 hours 5 hits 0.21 per hour
+
+Last 7 days 5 hits 0.71 per day
+
+Last 30 days 14 hits 0.47 per day
+
+All time 176 hits 2.26 per day
+
+Best day
+
+162 hits on June 18, 2026. 
+				Click for more details
+
+Year 2026
+June
+18: 162 hits
+
+August
+28: 9 hits
+
+September
+04: 5 hits
+
+Traffic location
+
+Top 5 countries
+
+Click for more details
+
+ US (United States) : 175 hits
+
+ DE (Germany) : 1 hit
+
+Overall traffic
+
+Traffic Sources
+
+No referrer data.
+
+Share
+
+Short link
+
+Long link: https://allorigins.hexlet.app/raw?url=https%3A//www.sec.gov%3A443/files/county.json
+
+Stats: http://vanderbi.lt/oursecallraw443+
+
+Quick Share
+
+				22
+				https://allorigins.hexlet.app/raw?url=https%3A//www.sec.gov%3A443/files/county.json http://vanderbi.lt/oursecallraw443
+
+Share with 
+				Twitter
+				Facebook
+				FriendFeed
+
+Powered by YOURLS v1.5.1 – 6 queries

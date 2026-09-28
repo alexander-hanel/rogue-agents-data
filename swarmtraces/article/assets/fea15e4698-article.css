@@ -1,0 +1,433 @@
+/* Article page: a quiet serif read, dark ink on light paper (one theme). The contents sit in a numbered side rail
+   (1 / a / i) at the left edge with a wide gutter to the text; section numbers hang in the text's own margin; cards
+   on hover/tap; figures in their own dark plate. The research viewer's article.css (article-page branch) with its
+   tokens; the time rail is left out. */
+:root {
+  --ink: #1b1b1b;
+  --ink-soft: #4a4a4a;
+  --ink-mute: #767676;
+  --paper: #fdfdfb;
+  --rule: #d9d6cf;
+  --rule-soft: #e8e5de;
+  --link: #1f4e79;
+  --mark: #b8860b;
+  --miss: #9b2226;
+  --card: #ffffff;
+  --tint: rgba(184, 134, 11, 0.10);
+  --plate: rgba(0, 0, 0, 0.025);
+  --kw: #7a3e9d; --str: #1f6f50; --cm: #8a8a86; --num: #9a6b00; --fn: #1f4e79; --url: #1f4e79;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --measure: 42rem;      /* the text column */
+  --rail-w: 17rem;       /* the contents rail */
+  --rail-gap: 7rem;      /* rail -> text; room for the hanging section numbers */
+  --rail-left: 2.5rem;   /* the page's left margin on wide screens: the rail sits close to the edge */
+  --top: 3rem;           /* where the title and the rail both start */
+  --gutter: 16px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--paper); color-scheme: light; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--serif); font-size: 18px; line-height: 1.6;
+  text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 2px; }
+code { font-family: var(--mono); font-size: 0.86em; }
+::selection { background: var(--tint); }
+
+/* ---------- the page: contents rail + text column ---------- */
+.page { display: grid; grid-template-columns: minmax(0, 1fr); }
+main.article { width: 100%; max-width: calc(var(--measure) + 2 * var(--gutter)); margin: 0 auto; padding: 2rem var(--gutter) 6rem; }
+@media (min-width: 1100px) {
+  .page {
+    grid-template-columns: var(--rail-w) minmax(0, var(--measure));
+    column-gap: var(--rail-gap); justify-content: start; padding: 0 var(--gutter) 0 var(--rail-left);
+  }
+  main.article { max-width: none; margin: 0; padding: var(--top) 0 6rem; }
+}
+
+/* ---------- title, headings, text ---------- */
+h1.title {
+  font-size: 2.15rem; font-weight: 600; font-style: normal; color: var(--ink); line-height: 1.15; letter-spacing: -0.015em;
+  margin: 0 0 2.4rem; text-wrap: wrap;   /* plain greedy wrapping: the same line length as the body text */
+}
+.title-block { margin: 0 0 1.4rem; }
+.title-block .kicker {
+  font-family: var(--sans); text-transform: uppercase; letter-spacing: 0.14em;   /* small caps, all one height */
+  font-size: 0.82rem; font-weight: 600; line-height: 1.3; color: var(--ink-soft); margin: 0 0 0.9rem;
+}
+.title-block h1.title { margin: 0 0 1rem; }
+.title-block .byline { font-size: 0.95rem; line-height: 1.5; color: var(--ink-mute); margin: 0; }
+.title-block .byline .authors { color: var(--ink-soft); }
+.title-block .contact { font-size: 0.9rem; line-height: 1.5; color: var(--ink-mute); margin: 0.35rem 0 0; }
+.title-block .contact a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
+body.social-preview .title-block .contact { display: none; }
+/* affiliation marks after the names; hovering, focusing or tapping a marked name shows its affiliation in a popup
+   (display: none while closed, so a popup near the right edge never widens the page; article.js nudges an open one
+   back inside the screen) */
+.title-block sup.aff-mark { font-size: 0.7em; line-height: 0; margin-left: 0.08em; color: var(--ink-mute); }
+.title-block .has-aff { position: relative; cursor: help; outline: none; }
+.title-block .has-aff:hover, .title-block .has-aff:focus-within, .title-block .has-aff.open { color: var(--ink); }
+.title-block .has-aff:focus-visible { text-decoration: underline; text-decoration-color: var(--mark); text-underline-offset: 3px; }
+.title-block .aff-pop {
+  display: none; position: absolute; left: 0; top: calc(100% + 6px); z-index: 30; width: max-content; max-width: min(20rem, 85vw);
+  padding: 0.4rem 0.65rem; background: var(--paper); border: 1px solid var(--rule); border-radius: 3px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08); font-size: 0.85rem; line-height: 1.4; color: var(--ink-soft); cursor: auto;
+}
+.title-block .aff-pop::before { content: ""; position: absolute; left: 0; right: 0; top: -8px; height: 8px; }   /* bridges the gap so the pointer can reach the link */
+.title-block .has-aff:hover .aff-pop, .title-block .has-aff:focus-within .aff-pop, .title-block .has-aff.open .aff-pop { display: block; }
+.title-block .aff-pop a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
+/* the date runs on after the last author, set off by a dot */
+.title-block .byline time, .title-block .byline .date { font-variant-numeric: oldstyle-nums; white-space: nowrap; }
+.title-block .byline .authors + time::before, .title-block .byline .authors + .date::before { content: "\00a0\00b7\00a0 "; }
+h2, h3, h4 { position: relative; color: var(--ink); text-wrap: wrap; }
+h2 { font-size: 1.45rem; font-weight: 600; line-height: 1.25; margin: 3.2rem 0 1rem; }
+h3 { font-size: 1.12rem; font-weight: 600; line-height: 1.35; margin: 2.4rem 0 0.75rem; }
+h4 { font-size: 1rem; font-weight: 600; font-style: italic; line-height: 1.4; margin: 1.8rem 0 0.6rem; }
+h2 + h3 { margin-top: 1.6rem; }
+
+/* section numbers mirror the contents rail (1 / a / i); on wide screens they hang in the margin */
+article#draft { counter-reset: sec; }
+article#draft h2:not(.unnumbered) { counter-increment: sec; counter-reset: sub; }
+article#draft h3 { counter-increment: sub; counter-reset: subsub; }
+article#draft h4 { counter-increment: subsub; }
+article#draft h2::before, article#draft h3::before, article#draft h4::before {
+  color: var(--ink-mute); font-weight: 400; font-style: normal; font-variant-numeric: tabular-nums; margin-right: 0.55em;
+}
+article#draft h2::before { content: counter(sec); }
+article#draft h2.unnumbered::before { content: none; }
+/* an unnumbered section head (Summary) is a small-caps label, like the kicker over the title */
+article#draft h2.unnumbered {
+  font-family: var(--sans); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.82rem; font-weight: 600;
+  line-height: 1.3; color: var(--ink-soft); margin: 2.6rem 0 1rem;
+}
+article#draft .title-block + h2.unnumbered { margin-top: 0; }
+article#draft h3::before { content: counter(sub, lower-alpha); }
+article#draft h4::before { content: counter(subsub, lower-roman); }
+@media (min-width: 1100px) {
+  article#draft h2::before, article#draft h3::before, article#draft h4::before {
+    position: absolute; right: 100%; margin-right: 1rem; width: 3rem; text-align: right;
+  }
+}
+
+p { margin: 0 0 1.2rem; }
+#intro + p + p + ul + p {
+  margin-bottom: 2rem;
+}
+#intro + p + p + ul + p::after {
+  content: "";
+  display: block;
+  width: 35%;
+  margin: 2rem auto 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+ol, ul { margin: 0 0 1.2rem; padding-left: 1.5rem; }
+li { margin: 0 0 0.45rem; }
+li::marker { color: var(--ink-mute); }
+article#draft ol.limitations { padding-left: 1.8rem; }
+article#draft ol.limitations > li { margin-bottom: 1.4rem; padding-left: 0.2rem; }
+article#draft ol.limitations > li > p { margin: 0 0 0.8rem; }
+article#draft ol.limitations > li > p:last-child { margin-bottom: 0; }
+p.note { color: var(--ink-mute); font-size: 0.95rem; border-left: 2px solid var(--rule); padding-left: 0.8rem; }
+p:has(+ p + #agents-elaborately-chained-together-online-services-in-order),
+p:has(+ #agents-elaborately-chained-together-online-services-in-order) {
+  margin-left: 0.8rem;
+  border-left: 2px solid var(--rule);
+  padding-left: 0.8rem;
+}
+p:has(+ p + #agents-elaborately-chained-together-online-services-in-order) {
+  margin-bottom: 0;
+  padding-bottom: 0.8rem;
+}
+
+/* the line under "New findings": what the build could and could not find in the data */
+p.ann-status { font-size: 0.88rem; line-height: 1.5; color: var(--ink-mute); font-style: italic; margin: -0.25rem 0 1.5rem; }
+#ann-status.ok { color: var(--ink-soft); }
+#ann-status.err { color: var(--miss); }
+
+/* the one button on the page: into the viewer */
+p.cta { margin: 2rem 0 0.5rem; }
+a.button {
+  display: inline-block; font-size: 1.05rem; font-weight: 600; line-height: 1.2; letter-spacing: 0.01em;
+  color: var(--paper); background: var(--ink); border: 1px solid var(--ink); border-radius: 3px; padding: 0.8rem 1.5rem;
+  text-decoration: none; transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+a.button::after { content: "\00a0\2192"; }
+a.button:hover, a.button:focus-visible { background: var(--link); border-color: var(--link); color: var(--paper); text-decoration: none; outline: none; }
+
+/* code blocks: the whole block is the embed; a thin rule in the mark colour, a slightly lighter plate, matched lines
+   tinted, a one-line footer */
+figure.quote { margin: 1.2rem 0 1.5rem; border-left: 2px solid var(--mark); background: var(--plate); }
+figure.quote pre {
+  margin: 0; padding: 0.65rem 0.95rem; font-family: var(--mono); font-size: 0.78rem; line-height: 1.55;
+  white-space: pre-wrap; overflow-wrap: anywhere; background: transparent; color: var(--ink); tab-size: 4;
+  text-decoration: none; cursor: text;
+}
+figure.quote pre .code-line { display: block; min-height: 1.55em; margin: 0 -0.95rem; padding: 0 0.95rem; }
+figure.quote pre .code-line.hit { background: var(--tint); }
+.tk-kw { color: var(--kw); } .tk-str { color: var(--str); } .tk-cm { color: var(--cm); font-style: italic; }
+.tk-num { color: var(--num); } .tk-fn { color: var(--fn); } .tk-url { color: var(--url); }
+.embed-card { font-family: var(--sans); font-size: 0.75rem; line-height: 1.5; color: var(--ink-mute); padding: 0.3rem 0.95rem 0.35rem; border-top: 1px solid var(--rule-soft); }
+.embed-card .pending { font-style: italic; }
+.embed-card .head, .embed-card code { font-family: var(--mono); font-size: 0.78rem; }
+.embed-card .miss { color: var(--miss); }
+.embed-card details { display: inline; }
+.embed-card summary { display: inline; cursor: pointer; }
+.embed-card details[open] > div, .embed-card details ul { display: block; margin: 0.25rem 0 0; color: var(--ink-mute); }
+.embed-card ul { padding-left: 1rem; }
+
+/* redaction labels from the release: quiet monospace marks, nothing more */
+.redact { font-family: var(--mono); font-size: 0.86em; color: var(--ink-mute); white-space: nowrap; }
+.ann-label { font-family: var(--mono); font-size: 0.86em; }
+
+/* annotations in prose: a dotted underline and a small icon, nothing else */
+.ann { text-decoration: underline dotted var(--rule); text-underline-offset: 3px; text-decoration-thickness: 1px; cursor: default; }
+.ann.resolved, .ann.partial { text-decoration-color: var(--mark); }
+.ann.not_found { text-decoration-color: var(--miss); }
+.ann.plain { text-decoration: none; cursor: text; }
+a.ann[href] { color: var(--link); cursor: pointer; }
+.ann:focus { outline: 1px dotted var(--mark); outline-offset: 2px; }
+.ann-hf_token { font-family: var(--mono); font-size: 0.85em; }
+.ico { width: 0.9em; height: 0.9em; vertical-align: -0.1em; margin-right: 0.18em; color: var(--ink-mute); }
+.ann.resolved .ico, .ann.partial .ico { color: var(--mark); }
+.ann.not_found .ico { color: var(--miss); }
+.card .title .ico { color: var(--mark); width: 1em; height: 1em; }
+
+/* hover / tap card */
+.card {
+  position: absolute; z-index: 20; max-width: 26rem; min-width: 16rem; background: var(--card); color: var(--ink);
+  border: 1px solid var(--rule); box-shadow: 0 6px 24px rgba(0, 0, 0, 0.10), 0 1px 3px rgba(0, 0, 0, 0.08); padding: 0.65rem 0.85rem;
+  font-family: var(--sans); font-size: 0.78rem; line-height: 1.5; border-radius: 3px;
+}
+.card .title { margin-bottom: 0.25rem; overflow-wrap: anywhere; }
+.card .row { display: block; margin: 0.1rem 0; }
+.card .lab { color: var(--ink-mute); }
+.card .head, .card code { font-family: var(--mono); font-size: 0.78rem; overflow-wrap: anywhere; }
+.card .miss { color: var(--miss); }
+.card .dim { color: var(--ink-mute); }
+.card a.go { display: inline-block; margin-top: 0.3rem; }
+.card ul { margin: 0.15rem 0 0 1rem; padding: 0; }
+.tech { margin-top: 0.35rem; font-size: 0.7rem; color: var(--ink-mute); }
+.tech summary { cursor: pointer; }
+.tech > div { margin-top: 0.2rem; overflow-wrap: anywhere; }
+.tech a { margin-left: 0.2rem; }
+
+/* embed cards: the matched line inside its neighbours */
+.ctx { margin: 0.3rem 0 0.35rem; border-left: 2px solid var(--rule); padding-left: 0.6rem; }
+.ctx-line { font-family: var(--mono); font-size: 0.72rem; line-height: 1.45; color: var(--ink-mute); white-space: pre-wrap; overflow-wrap: anywhere; }
+.ctx-line.hit { color: var(--ink); }
+.ctx-line mark { background: var(--tint); color: inherit; padding: 0 1px; }
+
+/* explainer figures: the scene renderers draw inline SVG from their own palette (scenes.js THEMES), dark ink on a
+   light plate by default; <html data-fig-theme="dark"> switches both the palette and this plate to the dark scheme */
+:root { --fig-plate: #f3f2ee; --fig-ink: #1b1b1b; --fig-mute: #4c5058; }
+:root[data-fig-theme="dark"] { --fig-plate: #12141a; --fig-ink: #e9e9ea; --fig-mute: #9a9fae; }
+figure.fig { margin: 1.8rem 0 2.2rem; position: relative; }
+figure.fig .fig-sticky { position: static; }
+figure.fig .fig-stage {
+  display: block; width: 100%; aspect-ratio: 960 / 600; margin: 0 auto;
+  border: 1px solid var(--rule); border-radius: 4px; background: var(--fig-plate); overflow: hidden;
+}
+figure.fig.fig-video .fig-stage { aspect-ratio: 1600 / 874; height: auto; }
+figure.fig[data-part="0"] .fig-stage { aspect-ratio: 960 / 382; }
+figure.fig[data-part="0"] .fig-bar { display: none; }
+figure.fig .fig-stage svg { display: block; width: 100%; height: 100%; }
+figure.fig .fig-stage text { font-family: var(--sans); }
+figure.fig .fig-stage .mono { font-family: var(--mono); }
+figure.fig .fig-stage .mute { fill: var(--fig-mute); }
+figure.fig .fig-stage .small { font-size: 12px; }
+figure.fig .fig-stage .big { font-size: 26px; font-weight: 700; }
+figure.fig .fig-stage .huge { font-size: 72px; font-weight: 800; }
+figure.fig .fig-bar { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.4rem; font-family: var(--sans); font-size: 0.72rem; color: var(--ink-mute); min-height: 1.4rem; }
+figure.fig .fig-chapter { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+figure.fig .fig-progress { flex: 0 0 6rem; height: 2px; background: var(--rule); border-radius: 2px; overflow: hidden; }
+figure.fig .fig-progress i { display: block; height: 100%; width: 0; background: var(--mark); }
+figure.fig.static .fig-progress, figure.fig.static .fig-replay { display: none; }
+figure.fig .fig-replay {
+  font: inherit; font-family: var(--sans); font-size: 0.7rem; color: var(--ink-soft); background: transparent; border: 1px solid var(--rule); border-radius: 2px;
+  padding: 0.1rem 0.5rem; cursor: pointer;
+}
+figure.fig .fig-replay:hover { border-color: var(--mark); color: var(--ink); }
+figure.fig figcaption { font-family: var(--sans); font-size: 0.8rem; color: var(--ink-soft); line-height: 1.5; margin-top: 0.55rem; }
+figure.fig figcaption .dim { color: var(--ink-mute); }
+
+/* ---------- contents: numbered 1 / a / i; a sticky rail on wide screens; on narrow ones a fixed list-icon button in
+   the top-left corner that drops the list down as a panel (article.js opens and closes it at the same breakpoint) ---------- */
+.toc { font-family: var(--sans); font-size: 0.78rem; line-height: 1.4; color: var(--ink-soft); }
+.toc summary { cursor: pointer; list-style: none; color: var(--ink-mute); }
+.toc summary::-webkit-details-marker { display: none; }
+.toc .toc-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
+/* ---------- site chrome, shared with the viewer: links in the top-right corner; on narrow screens a sticky bar
+   across the top carrying the site name (and, here, the contents button) ---------- */
+.topbar {
+  position: absolute; top: 0; left: 0; right: 0; height: 2.75rem; z-index: 25;
+  display: flex; align-items: center; padding: 0 var(--gutter) 0 var(--rail-left); pointer-events: none;
+}
+.topbar-brand { display: none; font-family: var(--sans); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; font-weight: 600; color: var(--ink-soft); }
+.site-nav { display: flex; gap: 1.4rem; pointer-events: auto; font-family: var(--sans); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.72rem; font-weight: 500; }
+.site-nav { justify-content: flex-end; width: calc(var(--rail-w) + var(--rail-gap) + var(--measure)); }   /* flush with the text column's right edge */
+.site-nav a { color: var(--ink-mute); text-decoration: none; }
+.site-nav a:hover { color: var(--ink); text-decoration: none; }
+.site-nav a[aria-current="page"] { color: var(--ink); }
+@media (max-width: 1099px) {
+  .topbar {
+    position: fixed; justify-content: space-between; padding-left: 3.4rem; pointer-events: auto;
+    background: var(--paper); border-bottom: 1px solid var(--rule);
+  }
+  .site-nav { width: auto; }
+  .topbar-brand { display: block; }
+  .title-block .kicker { display: none; }      /* the bar already says it */
+  .toc { position: fixed; top: 0; left: 0; z-index: 30; margin: 0; padding: 0; }
+  .toc summary {
+    display: flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem;
+    color: var(--ink-soft); background: transparent;   /* the bar behind it carries the background and the rule */
+  }
+  .toc summary:hover, .toc details[open] > summary { color: var(--ink); }
+  .toc .toc-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .toc .toc-icon { width: 1.35rem; height: 1.35rem; }
+  .toc details > ol {
+    position: absolute; top: 2.75rem; left: 0.5rem; margin: 0; width: min(21rem, calc(100vw - 1rem));
+    max-height: calc(100vh - 3.5rem); overflow-y: auto; overscroll-behavior: contain;
+    background: var(--card); border: 1px solid var(--rule); border-radius: 4px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08); padding: 0.9rem 1rem 0.9rem 2.1rem;
+  }
+  main.article { padding-top: 4rem; }
+}
+.toc ol { margin: 0.5rem 0 0; padding-left: 1.5rem; }
+.toc ol ol { margin: 0.2rem 0 0.1rem; padding-left: 1.25rem; }
+.toc li { margin: 0 0 0.3rem; padding-left: 0.15rem; }
+.toc ol ol li { margin-bottom: 0.2rem; }
+.toc > details > ol { list-style: decimal; }
+.toc ol ol { list-style: lower-alpha; }
+.toc ol ol ol { list-style: lower-roman; }
+.toc li::marker { color: var(--ink-mute); font-variant-numeric: tabular-nums; }
+.toc li.unnumbered { list-style: none; }
+.toc a { color: var(--ink-soft); text-decoration: none; transition: color 0.12s ease; }
+.toc a:hover { color: var(--link); text-decoration: none; }
+.toc a.here { color: var(--ink); font-weight: 600; }
+.toc li::marker { font-family: var(--sans); }
+.toc li:has(> a.here)::marker { color: var(--mark); }
+@media (min-width: 1100px) {
+  .toc {
+    position: sticky; top: 0; align-self: start; max-width: none; margin: 0;
+    max-height: 100vh; overflow-y: auto; overscroll-behavior: contain;
+    scrollbar-width: none;                     /* still scrolls if taller than the window, without a scrollbar */
+    padding: var(--top) 0.5rem 3rem 0;
+  }
+  .toc::-webkit-scrollbar { display: none; }
+  .toc summary { pointer-events: none; margin-bottom: 0.2rem; }
+  .toc .toc-icon { display: none; }
+  .toc ol { padding-left: 1.4rem; }
+  .toc ol ol { padding-left: 1.1rem; }
+}
+
+/* ---------- narrow screens ---------- */
+@media (max-width: 640px) {
+  body { font-size: 17px; }
+  h1.title { font-size: 1.9rem; }
+  .title-block .kicker { font-size: 0.78rem; }
+  .card { max-width: calc(100vw - 2 * var(--gutter)); }
+}
+
+/* markdown drafts: subsections, dropdowns, footnotes and links */
+details.dropdown { margin: 0 0 1.4rem; border: 1px solid var(--rule); border-radius: 3px; padding: 0.25rem 1.1rem; background: var(--plate); }
+details.dropdown > summary { cursor: pointer; color: var(--ink-soft); font-size: 0.92rem; padding: 0.45rem 0; }
+details.dropdown > summary:hover { color: var(--ink); }
+details.dropdown[open] > summary { margin-bottom: 0.7rem; border-bottom: 1px solid var(--rule); }
+
+/* Folded sections (the pattern of collusion.wiki's key facts): every numbered ## section and every ### subsection
+   is a <details> that is closed until the reader opens it, with its heading as the summary; a subsection's fold sits
+   inside its section's. A "+" stands in for the disclosure triangle and turns
+   a quarter-turn into a "×" as the fold opens, so the sign that opened it is the sign that shuts it. The heading keeps
+   its id, its letter and its place in the contents rail; the letter hangs from the summary, not the heading, so it
+   clears the mark on wide screens. */
+details.fold { --fold-mark: 1.3rem; border-top: 1px solid var(--rule); margin: 0; padding: 0.15rem 0 0.35rem; }
+:not(details.fold) + details.fold { margin-top: 2.2rem; }
+details.fold:not(:has(+ details.fold)) { border-bottom: 1px solid var(--rule); margin-bottom: 2.2rem; }
+details.fold > summary { list-style: none; cursor: pointer; display: flex; align-items: baseline; gap: 0.7rem; padding: 0.35rem 0; position: relative; }
+details.fold > summary::-webkit-details-marker { display: none; }
+details.fold > summary::before {
+  content: "+"; font-family: var(--mono); font-size: var(--fold-mark); line-height: 1; font-weight: 400; color: var(--ink-mute);
+  width: 1.1rem; flex: none; text-align: center; transform: translateY(0.02em); transition: transform 0.18s ease;
+}
+details.fold[open] > summary::before { transform: translateY(0.02em) rotate(45deg); }
+details.fold > summary:hover::before { color: var(--ink); }
+details.fold > summary h2, details.fold > summary h3 { position: static; margin: 0.3rem 0; }
+/* a folded heading sits in its summary, so a counter reset on it would not reach the folds after it (a counter's
+   scope is the element, its descendants and its following siblings): the fold resets the counter instead */
+article#draft details.fold.sec { counter-reset: sub; }
+article#draft details.fold:not(.sec) { counter-reset: subsub; }
+article#draft details.fold > summary > h2, article#draft details.fold > summary > h3 { counter-reset: none; }
+details.fold > summary:hover h2, details.fold > summary:hover h3 { text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 4px; }
+details.fold.sec { --fold-mark: 1.6rem; }
+details.fold.sec > summary { padding: 0.5rem 0; }
+/* a section's own text sits flush with the column; only the subsection folds inside it are indented past their mark */
+details.fold.sec > .fold-body { padding-left: 0; }
+details.fold > .fold-body > details.fold:last-child { border-bottom: 0; margin-bottom: 0.4rem; }
+details.fold > summary:focus-visible { outline: 2px solid var(--mark); outline-offset: 4px; border-radius: 2px; }
+details.fold > .fold-body { padding: 0 0 0.6rem 1.8rem; }
+details.fold > .fold-body > :first-child { margin-top: 0.4rem; }
+@media (max-width: 560px) { details.fold > .fold-body { padding-left: 0; } }
+/* Opening and closing are animated where the browser can size a <details>' content box, so the text arrives
+   rather than the page jumping; elsewhere the folds open at once. */
+@supports selector(::details-content) and (interpolate-size: allow-keywords) {
+  details.fold { interpolate-size: allow-keywords; }
+  details.fold::details-content { block-size: 0; overflow: clip; transition: block-size 0.22s ease, content-visibility 0.22s allow-discrete; }
+  details.fold[open]::details-content { block-size: auto; }
+  /* the subsection letters hang 4rem into the margin (h3::before, wide screens); the section's clipped content box
+     is widened by that much on the left so they are not cut off */
+  @media (min-width: 1100px) {
+    details.fold.sec::details-content { margin-left: -4rem; padding-left: 4rem; }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  details.fold > summary::before { transition: none; }
+  details.fold::details-content { transition: none; }
+}
+/* in a fold the number stays inline on wide screens too, so the "+" sits outside it: "+ 1 Heading" */
+@media (min-width: 1100px) {
+  article#draft details.fold > summary > h2::before, article#draft details.fold > summary > h3::before {
+    position: static; width: auto; margin-right: 0.55em; text-align: left;
+  }
+}
+sup.fnref { font-size: 0.7em; line-height: 0; }
+sup.fnref a { padding: 0 0.1em; }               /* footnote references open their note as a hover / tap card */
+.card.fn-card { max-width: 22rem; }
+.card.fn-card .fn-num { color: var(--ink-mute); margin-right: 0.35rem; }
+p.fn { font-size: 0.88rem; color: var(--ink-soft); overflow-wrap: anywhere; }
+p.fn.first { border-top: 1px solid var(--rule); padding-top: 1rem; margin-top: 2.5rem; }
+a.fn-back { color: var(--ink-mute); }
+.ext { color: var(--ink-mute); }
+a.evidence-link { text-decoration: underline; text-underline-offset: 3px; }
+small.source-links { font-size: 0.84em; color: var(--ink-soft); }
+a.download { text-decoration: underline; text-underline-offset: 3px; }
+a.ann-chain { color: var(--link); text-decoration: underline; text-decoration-color: var(--mark); text-underline-offset: 3px; cursor: pointer; }
+
+/* ---------- the social card (site/social-preview.html): the header over figure 1, screenshot at 1200x630 / 1200x600 ---------- */
+body.social-preview { overflow: hidden; }
+body.social-preview .sp { box-sizing: border-box; width: 1200px; height: 100vh; padding: 56px 84px 0; display: flex; flex-direction: column; }
+body.social-preview .sp-kicker { font-family: var(--sans); text-transform: uppercase; letter-spacing: 0.16em; font-size: 20px; font-weight: 600; color: var(--ink-soft); margin: 0 0 20px; }
+body.social-preview .sp-title { font-family: var(--serif); font-size: 50px; line-height: 1.1; letter-spacing: -0.015em; font-weight: 600; color: var(--ink); margin: 0; max-width: 1000px; text-wrap: wrap; }
+body.social-preview .sp-byline { font-family: var(--serif); font-size: 21px; line-height: 1.35; color: var(--ink-soft); margin: 18px 0 0; max-width: 1000px; }
+body.social-preview .sp-fig { flex: 1; min-height: 0; margin: 28px 0 0; position: relative; }
+body.social-preview .sp-fig .fig-stage {
+  display: block; width: 100%; height: 100%; aspect-ratio: auto; margin: 0;
+  border: 1px solid var(--rule); border-bottom: 0; border-radius: 4px 4px 0 0; background: var(--fig-plate);
+}
+
+/* social-preview.html only: no contents rail, so the page is one full-width column */
+body.social-preview .page { grid-template-columns: minmax(0, 1fr); padding: 0 var(--gutter); }
+body.social-preview main.article { max-width: none; width: 100%; }
+
+/* on a phone the bar has no room for the name and all three links: drop the name (the kicker above the title
+   comes back) and shorten "Download dataset" to "Download" */
+@media (max-width: 560px) {
+  .topbar-brand { display: none; }
+  .site-nav { margin-left: auto; }
+  .nav-more { display: none; }
+  .title-block .kicker { display: block; }
+}

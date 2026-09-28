@@ -1,0 +1,14 @@
+{
+  "files_checked": 18,
+  "format_checks": {
+    "article/links.json": {
+      "json": "valid"
+    },
+    "backup-manifest.json": {
+      "json": "valid"
+    },
+    "data/redacted.jsonl.gz": {
+      "json_records": 189579
+    }
+  }
+}

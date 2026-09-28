@@ -1,0 +1,1037 @@
+.wsc {
+  color-scheme: light;
+  --bg: #f4f6f8;
+  --surface: #fff;
+  --surface2: #f8fafc;
+  --text: #172033;
+  --muted: #637083;
+  --line: #d8dee8;
+  --accent: var(--color-primary, #589885);
+  --shadow: 0 10px 32px #19243a14;
+}
+.wsc * {
+  box-sizing: border-box;
+}
+.wsc {
+  color: var(--text);
+  font: 18px/1.45 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.wsc .app {
+  max-width: 1680px;
+  margin: auto;
+  padding: 24px;
+}
+.wsc .head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 26px;
+  margin-bottom: 23px;
+}
+.wsc .head h1 {
+  font-size: 33px;
+  letter-spacing: -.02em;
+  margin: 0;
+}
+.wsc .layout {
+  display: grid;
+  grid-template-columns: 386px minmax(0, 1fr);
+  gap: 23px;
+}
+.wsc .panel,
+.wsc .chart-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.wsc .panel {
+  padding: 21px;
+  align-self: start;
+  position: sticky;
+  top: 12px;
+  max-height: calc(100vh - 24px);
+  overflow: auto;
+}
+.wsc .control {
+  margin-bottom: 19px;
+}
+.wsc .control>label,
+.wsc .control-title {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .055em;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.wsc select {
+  width: 100%;
+  padding: 10px 34px 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background-color: var(--surface2);
+  color: var(--text);
+  font: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%23637083' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round' d='M1 1.5 6 6.5l5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px 8px;
+  transition: border-color .12s ease, box-shadow .12s ease;
+}
+.wsc select:hover {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+}
+.wsc select:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+.wsc .compact-select {
+  width: auto;
+  min-width: 141px;
+}
+/* The descendant combinator, not a child one: the option sits inside
+   .purpose-body in some layouts, and this has to keep out-specifying
+   `.control>label` either way. */
+.wsc .conditional-option,
+.wsc .control .conditional-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: var(--muted);
+  cursor: pointer;
+}
+.wsc .conditional-option input {
+  margin: 0;
+}
+.wsc input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+.wsc input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.wsc .conditional-option[hidden],
+.wsc .control[hidden] {
+  display: none;
+}
+.wsc button {
+  font: inherit;
+  color: var(--text);
+  border: 1px solid var(--line);
+  background: var(--surface2);
+  border-radius: 10px;
+  padding: 9px 12px;
+  cursor: pointer;
+}
+.wsc button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.wsc button:hover {
+  border-color: var(--accent);
+}
+.wsc button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+.wsc button:disabled:hover {
+  border-color: var(--line);
+}
+.wsc .button-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 9px;
+}
+.wsc .button-row button {
+  font-size: 16px;
+  padding: 6px 9px;
+}
+.wsc .checks {
+  display: grid;
+}
+.wsc .checks.scroll {
+  max-height: 334px;
+  overflow: auto;
+  padding-right: 5px;
+}
+.wsc .check {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  padding: 2px 0;
+}
+.wsc .check input {
+  margin-top: 0.5px;
+}
+.wsc .check label {
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1.1;
+  margin: 1.5px 0 -2.5px;
+}
+.wsc .chart-column {
+  min-width: 0;
+}
+.wsc .chart-card {
+  padding: 21px;
+  container-type: inline-size;
+}
+/* Slot beside the legend. Empty (and so hidden) unless a view moves a control
+   into it; stacked by default, side by side once the card is wide enough. */
+.wsc .chart-legend-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.wsc .chart-aside:empty {
+  display: none;
+}
+/* Beside the legend, the purpose list opens as a panel over the chart instead
+   of in flow. The header row is already as tall as the legend, so an in-flow
+   list would only start pushing once it outgrew that — shifting the bin
+   selector and the plot down on every toggle. Out of flow, the row's height is
+   the legend's height and nothing below moves. Narrow layouts stack the header
+   into a block, where there is no fixed-height row to preserve, so they keep
+   the ordinary in-flow disclosure. */
+@media (min-width: 901px) {
+  .wsc .chart-top .purpose-control {
+    position: relative;
+  }
+  .wsc .chart-top .purpose-control[open]>.purpose-body {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 4;
+    width: max-content;
+    max-width: 340px;
+    margin-top: 2px;
+    padding: 6px 16px 8px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+}
+.wsc .chart-aside .control {
+  margin-bottom: 0;
+}
+@container (min-width: 720px) {
+  .wsc .chart-legend-row {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 28px;
+  }
+  .wsc .chart-aside {
+    flex: 0 0 auto;
+    max-width: 320px;
+  }
+  .wsc .chart-legend-row .legend {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+.wsc .chart-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.wsc .chart-total {
+  flex: 0 0 auto;
+}
+.wsc .chart-bins {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -6px;
+}
+.wsc .chart-total .value {
+  font-size: 28px;
+  font-weight: 750;
+}
+/* Pinned to the plot's top-right corner, over the SVG. --plot-top is published
+   by drawChart so this tracks the axis margin instead of duplicating it. The
+   translucent backing keeps the number legible where it crosses a gridline, and
+   it must not steal pointer events from the chart's hover target underneath. */
+.wsc .chart-total.in-chart {
+  position: absolute;
+  top: calc(var(--plot-top, 23px) + 12px);
+  right: 0;
+  padding: 3px 9px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  pointer-events: none;
+}
+/* Track the SVG's own scale so the number takes the same share of the plot on a
+   narrow card as it does on a wide one. --plot-scale is 1 above 720px. */
+.wsc .chart-total.in-chart .value {
+  font-size: calc(28px * var(--plot-scale, 1));
+}
+.wsc .chart-total .unit {
+  font-weight: 400;
+}
+/* Views that lift the legend into the header sit it opposite the message total
+   and on the same line; on a card too narrow for both it wraps underneath
+   rather than crushing the total. */
+.wsc .chart-top.has-legend {
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.wsc .chart-top.has-legend .legend {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.wsc .chart-total>.chart-aside {
+  margin-top: 12px;
+}
+/* Both rows carry an author display value, which beats the UA rule for
+   [hidden], so emptied rows need switching off explicitly. */
+.wsc .chart-top[hidden],
+.wsc .chart-legend-row[hidden] {
+  display: none;
+}
+.wsc .legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  justify-content: flex-end;
+}
+.wsc .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+}
+.wsc .swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  outline: 0.5px solid color-mix(in srgb, currentColor 80%, black);
+}
+.wsc .chart-wrap {
+  position: relative;
+  min-height: 580px;
+}
+.wsc svg {
+  width: 100%;
+  height: 580px;
+  display: block;
+}
+/* drawChart pins the viewBox width to a 720 minimum, so on a narrower card the
+   SVG scales down and `meet` letterboxes it inside the fixed 580px height —
+   about 117px of blank space above and below on a phone. Sizing the box by the
+   viewBox's own ratio makes it exactly as tall as the scaled drawing. Must come
+   after the rules it overrides: a container query adds no specificity. */
+@container (max-width: 719px) {
+  .wsc .chart-wrap {
+    min-height: 0;
+  }
+  .wsc svg {
+    height: auto;
+    aspect-ratio: 720 / 580;
+  }
+}
+.wsc .axis {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.wsc .day-boundary {
+  stroke: var(--muted);
+  stroke-width: 1;
+  stroke-opacity: .45;
+  pointer-events: none;
+}
+.wsc .axis-text {
+  fill: var(--muted);
+  font-size: 16px;
+}
+.wsc .area {
+  stroke: var(--surface);
+  stroke-width: .55;
+  transition: opacity .2s ease;
+}
+.wsc .area:hover {
+  opacity: .8;
+}
+/* Every purpose band carries a hatch overlay that is transparent until the band
+   is picked out — by the pointer (.is-hovered) or by hovering the matching
+   Communicative purpose row, which applyChartFocus targets by data-purpose. */
+.wsc .area-hatch-overlay {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+}
+.wsc .area-hatch-overlay.is-hovered {
+  opacity: 1;
+}
+.wsc .hover-line {
+  stroke: var(--text);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+  pointer-events: none;
+}
+/* Named .chart-tooltip, not .tooltip: the site framework styles a bare
+   .tooltip (dark, Montserrat, and opacity: 0 until a reveal class is
+   added). This one never gets that class, so under the plain name it was
+   fully transparent on the site while looking correct in isolation. */
+.wsc .chart-tooltip {
+  position: absolute;
+  display: none;
+  z-index: 5;
+  pointer-events: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  border-radius: 12px;
+  padding: 12px 14px;
+  min-width: 257px;
+  max-width: 386px;
+  font-size: 16px;
+}
+.wsc .chart-tooltip strong {
+  display: block;
+  margin-bottom: 5px;
+}
+.wsc .tip-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 19px;
+}
+@media (max-width: 900px) {
+  .wsc .layout {
+    grid-template-columns: 1fr;
+  }
+  .wsc .panel {
+    position: static;
+    max-height: none;
+  }
+  .wsc .legend {
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+  .wsc .chart-top {
+    display: block;
+  }
+  .wsc .app {
+    padding: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wsc * {
+    transition: none !important;
+  }
+}
+.wsc .button-row.wrap {
+  flex-wrap: wrap;
+}
+.wsc .checks.workstreams {
+  gap: 5px;
+  max-height: 501px;
+}
+.wsc .workstream-group {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface2);
+  overflow: hidden;
+}
+.wsc .workstream-row,
+.wsc .subgroup-row {
+  display: grid;
+  grid-template-columns: 32px 30px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  cursor: pointer;
+  transition: background-color .12s ease;
+}
+.wsc .workstream-row:hover,
+.wsc .subgroup-row:hover {
+  background: color-mix(in srgb, var(--text) 5%, transparent);
+}
+/* Master "select all" rows. The workstream one mirrors .workstream-row's grid
+   (plus 1px for the group's border) so its box lines up with the checkboxes in
+   the list below; the purpose one just reuses .check. */
+.wsc .select-all-row {
+  display: grid;
+  grid-template-columns: 32px 30px minmax(0, 1fr);
+  align-items: center;
+  gap: 6px;
+  padding: 0 8px 8px 9px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid var(--line);
+}
+.wsc .select-all-buttons {
+  justify-content: flex-end;
+  margin-bottom: 0;
+}
+.wsc .select-all-check {
+  margin-bottom: 4px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+}
+.wsc .check-hit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.wsc .check-hit:hover {
+  background: color-mix(in srgb, var(--text) 9%, transparent);
+}
+.wsc .workstream-row input,
+.wsc .subgroup-row input,
+.wsc .leaf-check input {
+  margin: 0;
+}
+.wsc .workstream-label,
+.wsc .subgroup-label,
+.wsc .leaf-check label {
+  font-size: 16px;
+  cursor: pointer;
+  min-width: 0;
+}
+.wsc .expand-toggle {
+  width: 32px;
+  height: 32px;
+  padding: 0 0 5px 2px;
+  transform-origin: calc(50% + 1.5px) calc(50% + 0.5px);
+  border: 0;
+  background: transparent;
+  font-size: 36px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --rot: 0deg;
+  --tx: 0px;
+  --ty: 0px;
+  transform: translate(var(--tx), var(--ty)) rotate(var(--rot));
+  transition: transform .15s ease-out;
+}
+.wsc .expand-toggle[aria-expanded="true"] {
+  --rot: 90deg;
+}
+.wsc .workstream-row:hover .expand-toggle {
+  --tx: 2px;
+}
+.wsc .workstream-row:hover .expand-toggle[aria-expanded="true"] {
+  --tx: 0px;
+  --ty: -2px;
+}
+.wsc .expand-toggle:hover {
+  background: var(--surface);
+  border-color: transparent;
+}
+.wsc .selection-count {
+  font-size: 16px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.wsc .leaf-checks {
+  display: grid;
+  gap: 5px;
+  padding: 3px 9px 10px 52px;
+  border-top: 1px solid var(--line);
+}
+/* .family-children already contributes 37px of the indent */
+.wsc .family-children>.leaf-checks {
+  padding-left: 15px;
+}
+.wsc .family-children {
+  display: grid;
+  gap: 5px;
+  padding: 6px 9px 10px 37px;
+  border-top: 1px solid var(--line);
+}
+.wsc .subgroup {
+  border-left: 3px solid var(--line);
+}
+.wsc .subgroup-row {
+  padding: 4px 6px;
+}
+.wsc .subgroup-leaves {
+  display: grid;
+  gap: 5px;
+  padding: 0 6px 9px 50px;
+}
+.wsc .leaf-check {
+  display: grid;
+  grid-template-columns: 23px minmax(0, 1fr);
+  align-items: start;
+  gap: 6px;
+  padding-top: 5px;
+}
+.wsc .leaf-check label {
+  line-height: 1.1;
+}
+.wsc .legend {
+  align-items: flex-start;
+  max-height: 321px;
+  overflow: auto;
+  padding: 4px 8px;
+}
+.wsc .legend-group {
+  display: grid;
+  gap: 4px;
+  min-width: 193px;
+  max-width: 334px;
+}
+.wsc .legend-family {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 3px 7px;
+  margin: -3px -7px;
+  border-radius: 6px;
+}
+/* Hovering the chart marks the matching legend entry and the matching Visible
+   workstreams row. Background and outline only: outline is drawn outside the
+   border box and reflows nothing, so these rows keep their alignment. */
+.wsc .legend-family.chart-hovered,
+.wsc .legend-item.chart-hovered,
+.wsc .workstream-row.chart-hovered,
+.wsc .subgroup-row.chart-hovered,
+.wsc .leaf-check.chart-hovered {
+  background-color: color-mix(in srgb, var(--family-color) 16%, var(--surface));
+  outline: 0.5px solid color-mix(in srgb, var(--family-color) 80%, black);
+}
+.wsc .leaf-check.chart-hovered {
+  border-radius: 6px;
+}
+.wsc .legend-children {
+  display: grid;
+  gap: 4px;
+  padding-left: 18px;
+}
+.wsc .legend-subgroup {
+  display: grid;
+  gap: 3px;
+}
+.wsc .legend-subgroup-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.wsc .legend-subgroup-children {
+  display: grid;
+  gap: 3px;
+  padding-left: 13px;
+}
+.wsc .legend-count {
+  color: var(--muted);
+  font-weight: 400;
+}
+.wsc .legend-item {
+  line-height: 1.25;
+  padding: 3px 7px;
+  margin: -3px -7px;
+  border-radius: 6px;
+}
+@media (max-width: 900px) {
+  .wsc .checks.workstreams {
+    max-height: none;
+  }
+  .wsc .legend {
+    max-height: none;
+  }
+}
+.wsc .legend-group.collapsed {
+  min-width: 0;
+  max-width: none;
+}
+.wsc .legend-group.collapsed .legend-family {
+  white-space: nowrap;
+}
+.wsc .layout {
+  display: block;
+}
+.wsc .panel {
+  position: static;
+  max-height: none;
+  overflow: visible;
+  padding: 0;
+  margin-bottom: 15px;
+}
+.wsc .controls-panel>summary,
+.wsc .explanation-panel>summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+.wsc .purpose-control>summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+.wsc .controls-panel>summary::-webkit-details-marker,
+.wsc .explanation-panel>summary::-webkit-details-marker,
+.wsc .purpose-control>summary::-webkit-details-marker {
+  display: none;
+}
+.wsc .controls-panel>summary::before,
+.wsc .explanation-panel>summary::before,
+.wsc .purpose-control>summary::before {
+  content: "\25B8";
+  --rot: 0deg;
+  --tx: 0px;
+  --ty: 0px;
+  flex: 0 0 auto;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 38px;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0 0 5px 2px;
+  transform-origin: calc(50% + 1.75px) calc(50% + 1.25px);
+  transform: translate(var(--tx), var(--ty)) rotate(var(--rot));
+  transition: transform .15s ease-out;
+}
+.wsc details[open]>summary::before {
+  --rot: 90deg;
+}
+.wsc .controls-panel>summary:hover::before,
+.wsc .explanation-panel>summary:hover::before,
+.wsc .purpose-control>summary:hover::before {
+  --tx: 2px;
+}
+.wsc details[open]>summary:hover::before {
+  --tx: 0px;
+  --ty: -2px;
+}
+.wsc .controls-panel>summary:hover,
+.wsc .explanation-panel>summary:hover,
+.wsc .purpose-control>summary:hover {
+  color: var(--accent);
+}
+.wsc .controls-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(231px, 1fr));
+  gap: 5px 23px;
+  padding: 10px 18px 3px;
+  border-top: 1px solid var(--line);
+}
+.wsc .controls-grid .control {
+  margin-bottom: 15px;
+}
+.wsc .controls-grid .control:nth-last-child(2),
+.wsc .controls-grid .control:last-child {
+  grid-column: span 2;
+}
+.wsc .checks.workstreams {
+  max-height: 411px;
+}
+.wsc .explanation-panel {
+  margin-top: 15px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.wsc .category-guide {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0 15px 15px;
+}
+.wsc .guide-family {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface2);
+  text-wrap-style: pretty;
+}
+.wsc .guide-family>summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 5px 14px;
+}
+.wsc .guide-family>summary .swatch {
+  margin-left: 13px;
+}
+.wsc .guide-family-content {
+  padding: 0 14px 13px;
+}
+.wsc .guide-family-content>p {
+  color: var(--muted);
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+.wsc .guide-subgroup {
+  margin-top: 13px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+.wsc .guide-subgroup h4 {
+  font-size: 16px;
+  margin: 0 0 5px;
+}
+.wsc .guide-subgroup>p {
+  color: var(--muted);
+  font-size: 16px;
+  margin: 0 0 9px;
+}
+.wsc .guide-family dl {
+  display: grid;
+  grid-template-columns: minmax(154px, .7fr) minmax(0, 1.3fr);
+  gap: 8px 13px;
+  margin: 0;
+}
+.wsc .guide-family dt {
+  font-size: 16px;
+  font-weight: 600;
+}
+.wsc .guide-family dd {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0;
+}
+.wsc {
+  --bg: #fff;
+  --surface: #fff;
+  --surface2: #fff;
+  --text: #111827;
+  --muted: #4b5563;
+  --line: #d1d5db;
+}
+.wsc.render-mode .controls-panel,
+.wsc.render-mode .explanation-panel {
+  display: none;
+}
+.wsc.render-mode .app {
+  max-width: none;
+  padding: 24px 30px;
+}
+.wsc.render-mode .head {
+  margin-bottom: 15px;
+}
+.wsc.render-mode .head h1 {
+  font-size: 57px;
+}
+.wsc.render-mode .chart-card {
+  box-shadow: none;
+  padding: 21px 23px 13px;
+}
+.wsc.render-mode .chart-wrap {
+  min-height: 600px;
+}
+.wsc.render-mode svg {
+  height: 600px;
+}
+.wsc.render-mode .legend {
+  max-width: 100%;
+  max-height: none;
+  gap: 13px 26px;
+  overflow: visible;
+}
+.wsc.render-mode .legend-family,
+.wsc.render-mode .legend-item {
+  font-size: 23px;
+}
+.wsc.render-mode .swatch {
+  width: 18px;
+  height: 18px;
+}
+.wsc.render-mode .axis-text {
+  font-size: 23px;
+}
+@media (max-width: 1100px) {
+  .wsc .controls-grid {
+    grid-template-columns: repeat(2, minmax(231px, 1fr));
+  }
+  .wsc .controls-grid .control:nth-last-child(2),
+  .wsc .controls-grid .control:last-child {
+    grid-column: span 1;
+  }
+  .wsc .category-guide {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 650px) {
+  .wsc .controls-grid {
+    grid-template-columns: 1fr;
+  }
+  .wsc .category-guide {
+    grid-template-columns: 1fr;
+  }
+  .wsc .guide-family dl {
+    grid-template-columns: 1fr;
+  }
+  .wsc .guide-family dd {
+    margin-bottom: 5px;
+  }
+}
+.wsc .definition-target {
+  cursor: help;
+  text-decoration: underline dotted;
+  text-decoration-color: var(--muted);
+  text-underline-offset: 3px;
+}
+/* Portaled to <body> on mount, so it must be styled outside .wsc and carry the
+   tokens it needs. A transformed ancestor (the .breakout-wider figure the chart
+   sits in) becomes the containing block for position: fixed, which resolved the
+   viewport coordinates below against the figure and threw the tooltip hundreds
+   of px off. Moving it to <body> removes any such ancestor. */
+.wsc-definition-tooltip {
+  --surface: #fff;
+  --line: #d8dee8;
+  --text: #172033;
+  --shadow: 0 10px 32px #19243a14;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  position: fixed;
+  display: none;
+  z-index: 1000;
+  width: max-content;
+  max-width: min(463px, calc(100vw - 24px));
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  pointer-events: none;
+}
+.wsc-definition-tooltip.visible {
+  display: block;
+}
+.wsc.render-mode .definition-target {
+  text-decoration: none;
+}
+.wsc .check.purpose-hovered {
+  border-radius: 8px;
+  background-color: color-mix(in srgb, var(--purpose-color) 16%, var(--surface));
+  background-image: repeating-linear-gradient(45deg, transparent 0 5.5px, color-mix(in srgb, var(--purpose-color) 45%, var(--surface)) 5.5px 7px);
+  outline: 0.5px solid var(--purpose-color);
+}
+.wsc .check.purpose-hovered label {
+  background-color: color-mix(in srgb, var(--surface) 80%, transparent);
+  border-radius: 5px;
+  padding: 3px 5px;
+  margin: -1.5px -5px -5.5px;
+}
+.wsc .workstream-boundary {
+  fill: none;
+  stroke: var(--surface);
+  stroke-width: 1.1;
+  pointer-events: none;
+}
+.wsc .purpose-boundary {
+  fill: none;
+  transition: opacity .2s ease;
+  stroke-opacity: .75;
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+  stroke-linecap: butt;
+  pointer-events: none;
+}
+.wsc .controls-grid {
+  display: block;
+}
+/* A wrapping flex row: every control takes only the width its content needs
+   and drops to the next line when the row runs out of room. (A grid with fr
+   columns instead stretched the purpose control ~330px wider than its
+   content.) */
+.wsc .primary-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 5px 28px;
+}
+.wsc .primary-filters .control {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 100%;
+}
+/* Pinned basis so expanding a family's leaf labels can't widen the column.
+   Selector must match .primary-filters .control's specificity to win. */
+.wsc .primary-filters .workstreams-control {
+  flex: 0 1 460px;
+  min-width: 300px;
+}
+@media (max-width: 650px) {
+  .wsc .primary-filters {
+    gap: 5px;
+  }
+}
+
+/* --- embedded-in-post overrides (component is a figure, not a page) --- */
+.wsc {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.wsc .app {
+  max-width: none;
+  padding: 18px;
+}
+.wsc .head {
+  margin-bottom: 14px;
+  display: block;
+}
+.wsc .head h1 {
+  font-size: 26px;
+  line-height: 1.25;
+}
+.wsc .chart-subtitle {
+  color: var(--muted);
+  font-size: 16px;
+  margin: 6px 0 0;
+}
+.wsc .chart-card {
+  box-shadow: none;
+}
+.wsc .panel,
+.wsc .chart-card {
+  border-radius: 12px;
+}
+@media (max-width: 900px) {
+  .wsc .app {
+    padding: 12px;
+  }
+  .wsc .head h1 {
+    font-size: 22px;
+  }
+}
+
+/* Guide restricted to a single family renders flat — the per-family
+   <details> would be redundant inside the guide's own <details>. */
+.wsc .category-guide.single {
+  grid-template-columns: 1fr;
+}
+.wsc .guide-family.flat {
+  background: transparent;
+  border: 0;
+}
+.wsc .guide-family.flat .guide-family-content {
+  padding: 0;
+}

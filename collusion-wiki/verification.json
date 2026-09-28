@@ -1,0 +1,61 @@
+{
+  "files_checked": 147,
+  "format_checks": {
+    "article/links.json": {
+      "json": "valid"
+    },
+    "backup-manifest.json": {
+      "json": "valid"
+    },
+    "data/events.jsonl.gz": {
+      "json_records": 19913
+    },
+    "data/extracted/manifest.json": {
+      "json": "valid"
+    },
+    "data/extracted/other-wikis.json": {
+      "json": "valid"
+    },
+    "data/extracted/shortener-logs.json": {
+      "json": "valid"
+    },
+    "data/full-wiki-logs.zip": {
+      "zip_members": 6,
+      "crc": "valid",
+      "publisher_hashes_verified": 5
+    },
+    "data/labels.jsonl.gz": {
+      "json_records": 3103
+    },
+    "data/links.jsonl.gz": {
+      "json_records": 23877
+    },
+    "data/manifest.json.gz": {
+      "json": "valid",
+      "gzip": "valid"
+    },
+    "data/other-wikis.json.gz": {
+      "json": "valid",
+      "gzip": "valid"
+    },
+    "data/pages.jsonl.gz": {
+      "json_records": 4579
+    },
+    "data/records.jsonl.gz": {
+      "json_records": 13703
+    },
+    "data/revisions.jsonl.gz": {
+      "json_records": 14591
+    },
+    "data/shortener-logs.json.gz": {
+      "json": "valid",
+      "gzip": "valid"
+    },
+    "references/2869273e2d-OpenAI-Hugging-Face-Incident-Technical-Report.pdf": {
+      "pdf_header": "valid"
+    },
+    "references/fda088c254-chatgpt-user.json": {
+      "json": "valid"
+    }
+  }
+}

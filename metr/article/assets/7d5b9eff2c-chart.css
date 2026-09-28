@@ -1,0 +1,555 @@
+/* Interactive agent run timeline (_includes/agent_timeline/include.html).
+ *
+ * Ported from the standalone page's stylesheet. Every rule is scoped under
+ * .atl so nothing leaks into the article around it; the original's page-level
+ * rules (*, html, body, main, bare h1) are dropped for the same reason, and
+ * the prefers-color-scheme block is dropped because the site is light-only.
+ * Color names are kept as custom properties because chart.js reads them back
+ * out with getComputedStyle to paint the canvas. */
+
+.atl {
+  color-scheme: light;
+
+  /* Data colors. chart.js reads these back with getComputedStyle to paint the
+     canvas, so they have to live here rather than in the script. The set is the
+     original's Okabe-Ito-style ramp, with one change: --gray was #9a9a9a, only
+     ΔE 5.6 from --green under protanopia (14.6 with normal vision) — below the
+     floor, and that pair carries the chart's central distinction, "hasn't found
+     the board yet" versus "has written to it". A slight cool cast takes that
+     pair to 10.5, comfortably over the ΔE 8 target, while staying visibly a
+     gray — more chroma buys little and starts reading as periwinkle.
+     The remaining floor is green↔red at 10.1 under deuteranopia, which is a
+     property of the ramp itself and above the ΔE 8 target. */
+  --gray: #a4a7b8;
+  --gold: #e69f00;
+  --green: #009e73;
+  --red: #c62828;
+  --blue: #0072b2;
+  --pink: #cc79a7;
+
+  /* Chrome. These are the workstream chart's tokens, so the two interactive
+     figures in this report read as one family rather than two products.
+     --line and --muted are also read by chart.js, for the gridlines and the
+     axis labels. */
+  --bg: #f4f6f8;
+  --surface: #fff;
+  --surface2: #f8fafc;
+  --text: #172033;
+  --fg: #172033;
+  --muted: #637083;
+  --line: #d8dee8;
+  --border: #d8dee8;
+  --panel: #f8fafc;
+  --accent: var(--color-primary, #589885);
+
+  color: var(--text);
+  font: 16px/1.45 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.atl * {
+  box-sizing: border-box;
+}
+.atl .app {
+  min-width: 0;
+}
+/* Type scale matched to the workstream chart: 26px title dropping to 22px on a
+   narrow card, 16px controls and legend. */
+.atl .head h1 {
+  font-size: 26px;
+  line-height: 1.25;
+  letter-spacing: -.02em;
+  margin: 0 0 5px;
+}
+.atl .subtitle {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.4;
+  margin: 0 0 16px;
+}
+.atl .toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: end;
+  margin-bottom: 12px;
+  min-width: 0;
+}
+.atl .checks {
+  display: flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-width: 0;
+}
+.atl .checks label {
+  white-space: nowrap;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* Jump to one of the report's phases. Drag on the plot refines from there, and
+   the status line under it reads back whatever interval you land on. */
+.atl .presets {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.atl .presets-label {
+  font-size: 16px;
+  color: var(--muted);
+}
+/* The buttons are appended by script, so there are no whitespace text nodes
+   between them to space them out — the gap has to come from the container. */
+.atl .presets-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.atl .presets button {
+  padding: 2px 12px;
+}
+.atl .presets button.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.atl button {
+  font: inherit;
+  font-size: 16px;
+  color: var(--text);
+  background: var(--surface2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: border-color .12s ease, box-shadow .12s ease;
+}
+.atl button:hover {
+  border-color: var(--accent);
+}
+.atl button:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+.atl input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+  cursor: pointer;
+  vertical-align: -3px;
+  margin-right: 2px;
+}
+.atl input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.atl .layout {
+  display: block;
+}
+.atl .side {
+  min-width: 0;
+  margin: 0 0 14px;
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface2);
+}
+.atl .side summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+.atl .side h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: .055em;
+  color: var(--muted);
+  margin: 10px 0 6px;
+}
+.atl .h2-hint {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+/* Collapsed by default. Open, it costs ~200px of a figure that is already
+   competing with the viewport, so the search, sampling and notable-agent
+   controls sit one click behind the summary. They stay compact when opened —
+   search and sampling share a row rather than taking a heading each. */
+.atl .side-rows {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 10px;
+}
+.atl .side-rows .search-row {
+  flex: 1 1 320px;
+  margin-bottom: 0;
+  max-width: none;
+}
+/* 150px, not 210px: the 19 buttons then lay out in 7 columns rather than 5 at
+   the full card width, which is what actually saves a row — 6 columns still
+   needs 4 rows for 19 items, the same as 5. The floor clears the widest label
+   ("PHASEONE10841", 133px including padding) so nothing wraps to two lines and
+   the row rhythm holds. */
+.atl .featured {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 5px;
+}
+.atl .featured button {
+  text-align: left;
+  width: 100%;
+  font-size: 14px;
+  padding: 6px 9px;
+}
+.atl .featured button.active {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.atl .search-row {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+  max-width: 620px;
+}
+.atl .search-row input {
+  min-width: 0;
+  width: 100%;
+  font: inherit;
+  font-size: 16px;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+.atl .search-row input:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+.atl .search-row button {
+  white-space: nowrap;
+}
+.atl .chart-column {
+  min-width: 0;
+}
+/* A container so the annotation cards can size themselves against the plot.
+   The original page sized them in vw, where the chart happened to be nearly
+   viewport-wide; embedded in an article column that would be far too large. */
+.atl .chart-wrap {
+  position: relative;
+  width: 100%;
+  /* Fixed, not an aspect ratio. The annotation cards sit in the plot's own
+     empty regions rather than in gutters beside it, so the plot no longer has
+     to grow tall enough to stack them — and a chart wants to fit the viewport.
+     The slot table in chart.js was packed at 798px, but both the agent rows and
+     the slots scale with this height while the cards keep a fixed 13px type, so
+     raising it only adds slack — at 2000 the row pitch is 1.46px, enough that
+     individual runs are followable. Lowering it below 798 would not be safe
+     without re-running the packing. */
+  height: 2000px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  overflow: hidden;
+  container-type: inline-size;
+}
+.atl canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* pan-y, not none: a vertical swipe has to keep scrolling the article. That
+     costs drag-to-select-rows on touch, which is the right trade — a reader
+     stuck mid-page is a worse failure than a missing power feature. */
+  touch-action: pan-y;
+}
+/* Shown for a moment when someone scrolls the page over the plot without the
+   zoom modifier, so the chart explains why it did nothing instead of either
+   swallowing the scroll or silently ignoring it. */
+.atl .scroll-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .18s ease;
+  background: color-mix(in srgb, var(--text) 30%, transparent);
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  padding: 0 24px;
+  z-index: 6;
+}
+.atl .scroll-hint.visible {
+  opacity: 1;
+}
+/* Shown only while the view is narrowed — the way back out, in the corner of
+   the plot rather than in a paragraph of instructions nobody reads. Sits above
+   the top-right annotation slot, which starts lower down. */
+.atl .reset-chip {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 5;
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: var(--muted);
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  border: 1px solid var(--line);
+}
+.atl .reset-chip:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+.atl .reset-chip[hidden] {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .atl .scroll-hint {
+    transition: none;
+  }
+}
+/* Named .chart-tooltip, not .tooltip: the site framework styles a bare
+   .tooltip (dark, Montserrat, and opacity: 0 until a reveal class is
+   added). This one never gets that class, so under the plain name it was
+   fully transparent on the site while looking correct in isolation. */
+.atl .chart-tooltip {
+  position: absolute;
+  display: none;
+  max-width: min(420px, calc(100% - 12px));
+  pointer-events: none;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 7px 9px;
+  font-size: 12px;
+  z-index: 5;
+}
+/* The readout for the current view — row count, interval, what's focused. It
+   replaces the pair of datetime inputs that used to double as the readout, so
+   it carries more weight than the original's 12px gray. */
+.atl .status {
+  color: var(--text);
+  font-size: 15px;
+  margin: 9px 0 0;
+}
+.atl .annotation-rail {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.atl .annotation-rail[hidden],
+.atl .annotation[hidden] {
+  display: none;
+}
+.atl .annotation {
+  position: absolute;
+  display: block;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--red);
+  border-radius: 3px;
+  background: #fff8f6;
+  padding: .46cqw .56cqw;
+  cursor: pointer;
+  text-align: left;
+  color: #222;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  pointer-events: auto;
+  /* Pinned, not fluid. The in-plot slots are packed against measured card
+     heights, so the type must not grow with the canvas or the cards would
+     outgrow their slots on a wide screen. 13px is also the floor these quotes
+     need to be readable. */
+  font-size: 13px;
+  line-height: 1.3;
+}
+.atl .annotation.probe,
+.atl .annotation.board {
+  border-left-color: var(--green);
+  background: #f3fbf7;
+}
+.atl .annotation.board {
+  border-left-color: var(--pink);
+  background: #fff7fb;
+}
+.atl .annotation.handoff,
+.atl .annotation.hf-end {
+  border-left-color: var(--blue);
+  background: #f4f8fc;
+}
+.atl .annotation b {
+  display: block;
+  font-size: 1.05em;
+  margin-bottom: .18em;
+}
+.atl .annotation span {
+  display: block;
+  color: #555;
+  font-size: .9em;
+}
+.atl .annotation q,
+.atl .annotation .paraphrase,
+.atl .annotation .quotation {
+  display: block;
+  font-size: .94em;
+  margin-top: .3em;
+}
+.atl .annotation q,
+.atl .annotation .quotation {
+  font-style: italic;
+}
+.atl .legend {
+  display: grid;
+  gap: 6px;
+  font-size: 16px;
+  margin: 9px 0;
+  min-width: 0;
+}
+.atl .legend-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  min-width: 0;
+}
+.atl .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.atl .dot.sol {
+  background: var(--blue);
+}
+.atl .dot.hpim {
+  background: var(--pink);
+}
+.atl .swatch {
+  display: inline-block;
+  width: 23px;
+  height: 3px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.atl .swatch.gray {
+  background: var(--gray);
+}
+.atl .swatch.gold {
+  background: var(--gold);
+}
+.atl .swatch.green {
+  background: var(--green);
+}
+.atl .swatch.red {
+  background: var(--red);
+}
+.atl .stage-mark {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.atl .stage-mark.diamond {
+  background: var(--gold);
+  transform: rotate(45deg);
+}
+.atl .stage-mark.square {
+  background: var(--green);
+}
+.atl .stage-mark.circle {
+  background: var(--red);
+  border-radius: 50%;
+}
+.atl .stage-mark.hollow-circle {
+  border: 2px solid var(--red);
+  border-radius: 50%;
+}
+/* Narrow card: the flanking annotation rail becomes a grid underneath the
+   plot, and the canvas turns portrait so the rows stay legible. Capped at
+   70vh — at 4/5 of a 1120px card this figure ran to three screens, and the
+   annotation grid still has to fit under it. */
+.atl .chart-wrap.annotations-stacked {
+  /* Height comes from the canvas plus the card grid below it, not the fixed
+     800px of the in-plot layout. */
+  height: auto;
+  overflow: visible;
+}
+.atl .chart-wrap.annotations-stacked canvas {
+  height: auto;
+  aspect-ratio: 1/1;
+  max-height: 70vh;
+}
+/* Column count against the plot's own width (.chart-wrap is an inline-size
+   container). A quote card needs ~300px to read; below that one wide column
+   beats two cramped ones, even though it makes the figure taller. */
+.atl .annotation-rail.stacked {
+  position: static;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding: 10px 0 0;
+  background: var(--bg);
+}
+@container (min-width: 600px) {
+  .atl .annotation-rail.stacked {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@container (min-width: 900px) {
+  .atl .annotation-rail.stacked {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.atl .annotation-rail.stacked[hidden] {
+  display: none;
+}
+.atl .annotation-rail.stacked .annotation {
+  position: static;
+  width: auto !important;
+  height: auto !important;
+  min-height: 0;
+  font-size: 13px;
+  overflow: visible;
+  padding: 9px 11px;
+  border-radius: 8px;
+}
+@media (max-width: 900px) {
+  .atl .head h1 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 760px) {
+  .atl .featured {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 500px) {
+  .atl .featured {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* The in-plot annotation slots are solved against breakout-wider at its 1140px
+   cap. That cap is only reached at a 1462px viewport (78vw), which would leave
+   common 1440-wide windows on the stacked fallback and its extra ~600px of
+   height — so for this figure alone the cap arrives a little sooner. A 1140px
+   box centered on the offset content column still clears the right edge by
+   ~40px at 1440px, well inside the ~20px slack the shared rule leaves at its
+   own tightest point. */
+@media (min-width: 1425px) {
+  .content .breakout-wider:has(.atl) {
+    /* Set the shared variable rather than width/margin-left, so the centering
+       offset stays derived from the width — see .content .breakout-wider in
+       _sass/theme/_custom.scss. */
+    --breakout-width: 1140px;
+  }
+}

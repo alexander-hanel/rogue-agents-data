@@ -1,0 +1,190 @@
+Source: https://urlquery.net/report/8d4f4f02-66e3-465c-a181-c4cc20fbdbc9
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+Report - ramp.quidax.io/transaction/e792fakeid/sell/status?status=error&message=%3Cimg%20src%3D%22%2Fsvgs%2Fe792canary.svg%22%3E
+ urlquery
+
+ Home  Search  Insights About
+Login
+
+ Check icon
+
+ Warning icon
+
+ Warning icon
+
+Share Report
+
+Generates a temporary link to share non-public report for a limited time.
+
+Valid for (hours 1-300) 
+
+Generate Link
+
+urlquery report
+
+JSON report
+
+Raw JSON report
+
+Share report
+
+Share a non-public report with others
+
+Request review
+
+Request a review of report
+
+External sources
+
+ VirusTotal
+
+VirusTotal
+
+FQDN
+
+ramp.quidax.io
+
+DOMAIN
+
+quidax.io
+
+IP
+
+104.18.20.245
+
+ crt.sh
+
+crt.sh
+
+FQDN
+
+ramp.quidax.io
+
+DOMAIN
+
+quidax.io
+
+Report Overview
+
+Visitedpublic 
+
+2026-09-19 23:40:18
+
+Tags
+
+Submit Tags
+
+URL
+
+ramp.quidax.io/transaction/e792fakeid/sell/status?status=error&message=%3Cimg%20src%3D%22%2Fsvgs%2Fe792canary.svg%22%3E
+
+Finishing URL
+
+ramp.quidax.io/transaction/e792fakeid/sell/status?status=error&message=%3Cimg%20src%3D%22%2Fsvgs%2Fe792canary.svg%22%3E
+
+IP / ASN
+
+104.18.20.245
+
+#13335 Cloudflare, Inc.
+
+Title
+
+Attention Required! | Cloudflare
+
+Detections
+
+urlquery
+
+0
+
+Network Intrusion Detection
+
+0
+
+Threat Detection Systems
+
+0
+
+Host Summary
+
+HostRankRegisteredFirst SeenLast SeenSentReceivedIPFingerprints
+
+ramp.quidax.io 
+unknown2018-06-182026-09-192026-09-193.8 kB40 kB
+
+104.18.20.245
+
+Cloudflare (CDN)
+Cloudflare is a web-infrastructure and website-security company, providing content-delivery-network services, DDoS mitigation, Internet security, and distributed domain-name-server services.
+
+Cloudflare Bot Management (Security)
+Cloudflare bot management solution identifies and mitigates automated traffic to protect websites from bad bots.
+
+Cloudflare Browser Insights (Analytics, RUM)
+Cloudflare Browser Insights is a tool that measures the performance of websites from the perspective of users.
+
+Related reports
+
+Domain
+
+IP
+
+ASN
+
+Screenshot
+
+Similar
+
+Threat Detection Systems
+
+No alerts detected
+
+JavaScript (3)
+
+Script (3)
+
+Eval (0)
+
+Write (0)
+
+Filter scripts by metadata or content (case-insensitive)
+
+Loading...
+
+No JavaScripts
+
+HTTP Transactions (5)
+
+Filter transactions by metadata or HTML content (case-insensitive)
+
+URLIPResponseSize
+
+ urlquery
+urlquery is a service for URL and domain scanning, identifying and categorizing  potentially harmful elements on a webpage, checking for malware infections and assessing overall reputation.
+
+Powered by penguins.
+
+Contact
+
+General questions, feedback, or technical inquiries:
+📧 contact@urlquery.net
+
+Report phishing:
+📧 phishing@urlquery.net
+
+For abuse or removal requests:
+📧 support@urlquery.net
+
+Follow us
+
+Github
+
+Legal
+
+Privacy Policy
+
+Terms & Conditions
+
+© 2026 urlquery All Rights Reserved.

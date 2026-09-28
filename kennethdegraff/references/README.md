@@ -1,0 +1,36 @@
+# Cited articles and evidence
+
+Source: [https://www.kennethdegraff.com/swarm](https://www.kennethdegraff.com/swarm) · [Source overview](../README.md). Split-off documentation for this backup; the primary description, provenance and gaps are in the [source README](../README.md).
+
+Directly cited pages selected for this backup; this is not a recursive mirror of every external link. Original URLs and retrieval details are in [the manifest](../backup-manifest.json).
+
+- [http://web.archive.org/web/20240709202334/https://www.vanderbilt.edu/houseorgan/2011/08/of-jfk-u2-telephones-and-security/](6682837d71-of-jfk-u2-telephones-and-security.html)
+- [http://web.archive.org/web/20260904190301/https://uoft.me/maagentxyz99999+](b54c3c0708-maagentxyz99999-.html)
+- [http://web.archive.org/web/20260904190413/https://uoft.me/mafresh91011+](7678810afd-mafresh91011-.html)
+- [https://casar.house.gov/sites/evo-subsites/casar.house.gov/files/evo-media-document/oversight-letter-to-openai-openai-hugging-face-incident-1.pdf](4a24bf12f5-oversight-letter-to-openai-openai-hugging-face-incident-1.pdf)
+- [https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf](2869273e2d-OpenAI-Hugging-Face-Incident-Technical-Report.pdf)
+- [https://fi-le.net/vanderbilt](625cbb20bc-vanderbilt.html)
+- [https://helppeer.app/research/bridges](5313f0382c-bridges.html)
+- [https://raw.githubusercontent.com/fbi-cde/crime-data-frontend/master/README.md](e2a607d75b-README.md)
+- [https://raw.githubusercontent.com/fbi-cde/crime-data-frontend/master/public/swagger/main.js](7d3e2a31b7-main.js)
+- [https://web.archive.org/web/20260609114840/https://vanderbi.lt/](6b2a8087a4-vanderbi.lt)
+- [https://web.archive.org/web/20260904190543/https://vanderbi.lt/iyg1y+](ab2752a9d7-iyg1y-.html)
+- [https://web.archive.org/web/20260904204918/https://vanderbi.lt/agf623d+](aec6bb102f-agf623d-.html)
+- [https://web.archive.org/web/20260904204918/https://vanderbi.lt/highallmap260622+](507cbcfafd-highallmap260622-.html)
+- [https://web.archive.org/web/20260904204918/https://vanderbi.lt/jqinv11method+](ad457c9ec2-jqinv11method-.html)
+- [https://web.archive.org/web/20260904204918/https://vanderbi.lt/jqinv11raw+](e9b43cd77d-jqinv11raw-.html)
+- [https://web.archive.org/web/20260904204918/https://vanderbi.lt/jsallwrap260618+](87eca861d7-jsallwrap260618-.html)
+- [https://web.archive.org/web/20260904204918/https://vanderbi.lt/ourjsget26abc+](500e6027d0-ourjsget26abc-.html)
+- [https://web.archive.org/web/20260904204919/https://vanderbi.lt/allregrawx260622+](23c9846d0e-allregrawx260622-.html)
+- [https://web.archive.org/web/20260904204919/https://vanderbi.lt/countgf260623c+](45ca0e1619-countgf260623c-.html)
+- [https://web.archive.org/web/20260904204919/https://vanderbi.lt/countrf260623c+](59ea6d5636-countrf260623c-.html)
+- [https://web.archive.org/web/20260904204919/https://vanderbi.lt/mainsource623+](21cc5b2224-mainsource623-.html)
+- [https://web.archive.org/web/20260904204919/https://vanderbi.lt/masecjs260619+](d4503d7621-masecjs260619-.html)
+- [https://web.archive.org/web/20260904204919/https://vanderbi.lt/mdgood778+](34c39cd82f-mdgood778-.html)
+- [https://web.archive.org/web/20260904204919/https://vanderbi.lt/openaipovertycompacttest+](324bc7b9e1-openaipovertycompacttest-.html)
+- [https://web.archive.org/web/20260904204919/https://vanderbi.lt/oursecallraw443+](960b035458-oursecallraw443-.html)
+- [https://web.archive.org/web/20260906031931/https://vanderbi.lt/ourseccounty+](622948bc80-ourseccounty-.html)
+- [https://web.archive.org/web/20260906093354/https://vanderbi.lt/massjson715+](96f7016c8c-massjson715-.html)
+- [https://web.archive.org/web/20260906205549/https://u.ethz.ch/nB1nv+](9a2549f864-nB1nv-.html)
+- [https://web.archive.org/web/20260909023754/https://goto.unm.edu/7t6-o+](314ada8895-7t6-o-.html)
+- [https://web.archive.org/web/20260909030411/https://2dd.pl/p9279729+](dc0aa855fb-p9279729-.html)

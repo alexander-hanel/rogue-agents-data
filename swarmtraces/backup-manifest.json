@@ -1,0 +1,139 @@
+{
+  "source_url": "https://swarmtraces.org/",
+  "checked_at": "2026-09-27T22:38:03.766386+00:00",
+  "scope": "Source articles, their directly linked first-party assets, public download bundles, and selected directly cited articles/evidence. No recursive crawl of citations or operational endpoints.",
+  "downloads": [
+    {
+      "url": "https://swarmtraces.org/",
+      "path": "article/index.html",
+      "kind": "article",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://swarmtraces.org/",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 79690,
+      "sha256": "b043f447ef8e3360b1f704aa05da50344cce94b999a8e55084398f732f065a65",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://swarmtraces.org/favicon.ico?v=2021a12",
+      "path": "article/assets/451e3dbe7c-favicon.ico",
+      "kind": "asset",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://swarmtraces.org/favicon.ico?v=2021a12",
+      "content_type": "image/vnd.microsoft.icon",
+      "bytes": 24976,
+      "sha256": "7e7d10f14e42a89c0a13e49c18f51ebd56d510a0ef04f865aefe2b943556f4e2",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://swarmtraces.org/article/article.css",
+      "path": "article/assets/fea15e4698-article.css",
+      "kind": "asset",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://swarmtraces.org/article/article.css",
+      "content_type": "text/css; charset=utf-8",
+      "bytes": 27509,
+      "sha256": "1abc566541d1f855360fda989fe2519874e289818fafd4a1a36c62c13a8ac53e",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://swarmtraces.org/article/figures/chain-assembly.mp4",
+      "path": "article/assets/24b91ef2af-chain-assembly.mp4",
+      "kind": "asset",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://swarmtraces.org/article/figures/chain-assembly.mp4",
+      "content_type": "video/mp4",
+      "bytes": 502467,
+      "sha256": "af928e10becd298ca174101a77a2accab14705ae8322e74ca258821700170a24",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://swarmtraces.org/article/figures/chain-assembly.png",
+      "path": "article/assets/4ef665dbdd-chain-assembly.png",
+      "kind": "asset",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://swarmtraces.org/article/figures/chain-assembly.png",
+      "content_type": "image/png",
+      "bytes": 160881,
+      "sha256": "97bf83c618519930a6024bcfc25a0233294672d8a3793c1edae4fd696e0d8d56",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://swarmtraces.org/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+      "path": "article/assets/7f24669b37-email-decode.min.js",
+      "kind": "asset",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://swarmtraces.org/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+      "content_type": "application/javascript",
+      "bytes": 1239,
+      "sha256": "2595496fe48df6fcf9b1bc57c29a744c121eb4dd11566466bc13d2e52e6bbcc8",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://swarmtraces.org/article/data.js",
+      "path": "article/assets/869dbf4620-data.js",
+      "kind": "asset",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://swarmtraces.org/article/data.js",
+      "content_type": "application/javascript; charset=utf-8",
+      "bytes": 15721,
+      "sha256": "c6ed19be183db364580c6c2b28d5d936009ee02e653aaefe66a49373a35fe7fd",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://swarmtraces.org/article/scenes.js",
+      "path": "article/assets/dc6a9964e0-scenes.js",
+      "kind": "asset",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://swarmtraces.org/article/scenes.js",
+      "content_type": "application/javascript; charset=utf-8",
+      "bytes": 29493,
+      "sha256": "04e7861f2c24f0952ab5a88ee32d6fe4394d51305cecd6c4d80563f46faf7673",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://swarmtraces.org/article/story.js",
+      "path": "article/assets/d3f5825888-story.js",
+      "kind": "asset",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://swarmtraces.org/article/story.js",
+      "content_type": "application/javascript; charset=utf-8",
+      "bytes": 27495,
+      "sha256": "1903cc631961a10b85bb6c05aa79281be214a6eda74742da3b6888c3dbab4a0e",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://swarmtraces.org/article/article.js",
+      "path": "article/assets/ac29fddf11-article.js",
+      "kind": "asset",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://swarmtraces.org/article/article.js",
+      "content_type": "application/javascript; charset=utf-8",
+      "bytes": 34337,
+      "sha256": "d5f4be0b27e8f13239ffeabbf7729ac41e64122d5decb2d91304d0da4f8c65c9",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://swarmtraces.org/data/final/redacted.jsonl.gz",
+      "path": "data/redacted.jsonl.gz",
+      "kind": "dataset",
+      "checked_at": "2026-09-27T22:38:03.766386+00:00",
+      "http_status": "200",
+      "final_url": "https://swarmtraces.org/data/final/redacted.jsonl.gz",
+      "content_type": "application/octet-stream",
+      "bytes": 15214685,
+      "sha256": "7b66ab21674de52fcd3f557652f68b1801170c998e2f266862124e6edf283488",
+      "status": "verified-existing"
+    }
+  ]
+}

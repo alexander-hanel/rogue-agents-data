@@ -1,0 +1,534 @@
+Source: http://github.com/rubygems/rubygems.org/pull/6486
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+Require confirmed email for API access by mensfeld · Pull Request #6486 · rubygems/rubygems.org · GitHub
+
+      Skip to content
+
+Navigation Menu
+
+Sign in
+Appearance settings
+
+Platform
+
+AI CODE CREATION
+GitHub CopilotWrite better code with AI
+
+GitHub Copilot appDirect agents from issue to merge
+
+MCP RegistryIntegrate external tools
+
+DEVELOPER WORKFLOWS
+ActionsAutomate any workflow
+
+CodespacesInstant dev environments
+
+IssuesPlan and track work
+
+Code ReviewManage code changes
+
+Code QualityEnforce quality at merge
+
+APPLICATION SECURITY
+GitHub Advanced SecurityFind and fix vulnerabilities
+
+Code securitySecure your code as you build
+
+Secret protectionStop leaks before they start
+
+EXPLORE
+Why GitHub
+
+Documentation
+
+Blog
+
+Changelog
+
+Marketplace
+
+View all features
+
+Solutions
+
+BY COMPANY SIZE
+Enterprises
+
+Small and medium teams
+
+Startups
+
+Nonprofits
+
+BY USE CASE
+App Modernization
+
+DevSecOps
+
+DevOps
+
+CI/CD
+
+View all use cases
+
+BY INDUSTRY
+Healthcare
+
+Financial services
+
+Manufacturing
+
+Government
+
+View all industries
+
+View all solutions
+
+Resources
+
+EXPLORE BY TOPIC
+AI
+
+Software Development
+
+DevOps
+
+Security
+
+View all topics
+
+EXPLORE BY TYPE
+Customer stories
+
+Events & webinars
+
+Ebooks & reports
+
+Business insights
+
+GitHub Skills
+
+SUPPORT & SERVICES
+Documentation
+
+Customer support
+
+Community forum
+
+Trust center
+
+Partners
+
+View all resources
+
+Open Source
+
+COMMUNITY
+GitHub SponsorsFund open source developers
+
+PROGRAMS
+Security Lab
+
+Maintainer Community
+
+GitHub Stars
+
+Archive Program
+
+REPOSITORIES
+Topics
+
+Trending
+
+Collections
+
+Enterprise
+
+ENTERPRISE SOLUTIONS
+Enterprise platformAI-powered developer platform
+
+AVAILABLE ADD-ONS
+GitHub Advanced SecurityEnterprise-grade security features
+
+Copilot for BusinessEnterprise-grade AI features
+
+Premium SupportEnterprise-grade 24/7 support
+
+Pricing
+
+Search/
+
+Sign in
+Sign up
+Appearance settings
+
+        You signed in with another tab or window. Reload to refresh your session.
+        You signed out in another tab or window. Reload to refresh your session.
+        You switched accounts on another tab or window. Reload to refresh your session.
+
+Dismiss alert
+
+{{ message }}
+
+        rubygems
+
+    /
+
+      rubygems.org
+
+    Public
+
+        Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Notifications
+    You must be signed in to change notification settings
+
+Fork
+    1k
+
+          Star
+          2.4k
+
+        Code
+
+        Issues
+          53
+
+        Pull requests
+          40
+
+        Discussions
+
+        Actions
+
+        Wiki
+
+        Security and quality
+          17
+
+        Insights
+
+Additional navigation options
+
+          Code
+
+          Issues
+
+          Pull requests
+
+          Discussions
+
+          Actions
+
+          Wiki
+
+          Security and quality
+
+          Insights
+
+Require confirmed email for API access - #6486
+#6486
+
+Merged
+
+jenshenny merged 2 commits into
+masterrubygems/rubygems.org:masterfrom 
+mensfeld/require-confirmed-email-for-apirubygems/rubygems.org:mensfeld/require-confirmed-email-for-apiCopy head branch name to clipboard
+
+May 11, 2026
+
+ConversationCommits2 (2)ChecksFiles changed
+
+Merged
+
+Require confirmed email for API access#6486
+
+jenshenny merged 2 commits into
+masterrubygems/rubygems.org:masterfrom 
+mensfeld/require-confirmed-email-for-apirubygems/rubygems.org:mensfeld/require-confirmed-email-for-apiCopy head branch name to clipboard
+
+Conversation
+
+            mensfeld
+
+      commented
+
+        May 11, 2026
+
+              Copy link
+
+              Copy Markdown
+
+  Member
+
+Unconfirmed email accounts could create API keys and push gems via the API because the email confirmation check only applied to web UI sign-in (Clearance guard), not to API key authentication or HTTP Basic auth used for key creation.
+
+Add email confirmation checks to both API paths:
+
+authenticate_with_api_key in Api::BaseController (covers all API key-authenticated endpoints, including gem push)
+
+check_mfa in Api::V1::ApiKeysController (covers key creation, retrieval, and update via HTTP Basic auth)
+
+    Sorry, something went wrong.
+
+        Uh oh!
+
+There was an error while loading. Please reload this page.
+
+    All reactions
+
+          mensfeld
+
+        added 2 commits
+        May 11, 2026 16:53
+
+          Require confirmed email for API access
+
+                  …
+
+          55f1e02
+
+Unconfirmed email accounts could create API keys and push gems via the
+API because the email confirmation check only applied to web UI sign-in
+(Clearance guard), not to API key authentication or HTTP Basic auth
+used for key creation. This allowed spam packages to be pushed from
+accounts registered with fake emails that were never confirmed.
+
+Add email confirmation checks to both API paths:
+- authenticate_with_api_key in Api::BaseController (covers all API
+  key-authenticated endpoints including gem push)
+- check_mfa in Api::V1::ApiKeysController (covers key creation,
+  retrieval, and update via HTTP Basic auth)
+
+          fill missing keys
+
+          59367cd
+
+            mensfeld
+
+            marked this pull request as ready for review
+
+        May 11, 2026 16:01        
+
+            mensfeld
+
+              requested review from
+    colby-swandale and 
+    jenshenny
+
+        May 11, 2026 16:01        
+
+mensfeld
+
+              self-assigned this
+
+      May 11, 2026
+
+            codecov
+    Bot
+
+      commented
+
+        May 11, 2026
+
+              Copy link
+
+              Copy Markdown
+
+Codecov Report
+
+✅ All modified and coverable lines are covered by tests.
+
+✅ Project coverage is 97.06%. Comparing base (0c877dd) to head (59367cd).
+
+Additional details and impacted files
+
+@@            Coverage Diff             @@
+##           master    #6486      +/-   ##
+==========================================
+- Coverage   97.07%   97.06%   -0.01%     
+==========================================
+  Files         494      494              
+  Lines       10514    10518       +4     
+==========================================
++ Hits        10206    10209       +3     
+- Misses        308      309       +1     
+
+☔ View full report in Codecov by Sentry.
+
+📢 Have feedback on the report? Share it here.
+
+ 🚀 New features to boost your workflow: 
+
+❄️ Test Analytics: Detect flaky tests, report on failures, and find test suite problems.
+
+📦 JS Bundle Analysis: Save yourself from yourself by tracking and limiting bundle sizes in JS merges.
+
+    All reactions
+
+    Sorry, something went wrong.
+
+        Uh oh!
+
+There was an error while loading. Please reload this page.
+
+                    jenshenny
+
+              approved these changes
+
+                    May 11, 2026
+
+    View reviewed changes
+
+            Hide details
+          View details
+
+              jenshenny
+
+            merged commit f1ebb5f
+          into
+
+    master
+
+        May 11, 2026
+
+            18 of 19 checks passed
+
+        Uh oh!
+
+There was an error while loading. Please reload this page.
+
+            jenshenny
+
+    deleted the
+
+        mensfeld/require-confirmed-email-for-api
+
+    branch
+
+        May 11, 2026 16:45        
+
+            rubygems-org-shipit
+Bot
+
+                temporarily deployed
+      to
+        staging
+
+        May 11, 2026 16:53                    
+    Inactive
+
+            rubygems-org-shipit
+Bot
+
+                temporarily deployed
+      to
+        production
+
+        May 12, 2026 03:36                    
+    Inactive
+
+    Hide environments
+          Show environments
+
+This branch was previously deployed
+
+        2 inactive
+        deployments
+
+              production
+
+                —
+                59367cdd
+                Deployed
+
+              May 12, 2026 by
+
+                rubygems-org-shipit[bot]
+
+              staging
+
+                —
+                59367cdd
+                Deployed
+
+              May 11, 2026 by
+
+                rubygems-org-shipit[bot]
+
+      This file contains hidden or bidirectional Unicode text that may be interpreted or compiled differently than what appears below. To review, open the file in an editor that reveals hidden Unicode characters.
+      Learn more about bidirectional Unicode characters
+
+            Show hidden characters
+
+    Sign up for free
+    to join this conversation on GitHub.
+    Already have an account?
+    Sign in to comment
+
+    Reviewers
+
+    jenshenny
+
+    jenshenny approved these changes
+
+    colby-swandale
+
+Awaiting requested review from colby-swandale
+
+    Assignees
+
+    mensfeld
+
+    Labels
+
+    None yet
+
+    Projects
+
+    None yet
+
+    Milestone
+
+      No milestone
+
+    Development
+
+Successfully merging this pull request may close these issues.
+
+        Uh oh!
+
+There was an error while loading. Please reload this page.
+
+      2 participants
+
+Add this suggestion to a batch that can be applied as a single commit.This suggestion is invalid because no changes were made to the code.Suggestions cannot be applied while the pull request is closed.Suggestions cannot be applied while viewing a subset of changes.Only one suggestion per line can be applied in a batch.Add this suggestion to a batch that can be applied as a single commit.Applying suggestions on deleted lines is not supported.You must change the existing code in this line in order to create a valid suggestion.Outdated suggestions cannot be applied.This suggestion has been applied or marked resolved.Suggestions cannot be applied from pending reviews.Suggestions cannot be applied on multi-line comments.Suggestions cannot be applied while the pull request is queued to merge.Suggestion cannot be applied right now. Please check back later.
+
+Footer
+
+        © 2026 GitHub, Inc.
+
+Footer navigation
+
+            Terms
+
+            Privacy
+
+              Security
+
+              Status
+
+            Community
+
+            Docs
+
+            Contact
+
+      Manage cookies
+
+        Do not share my personal information
+
+    You can’t perform that action at this time.

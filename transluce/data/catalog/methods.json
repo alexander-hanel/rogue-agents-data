@@ -1,0 +1,613 @@
+[
+  {
+    "id": "source:thrill",
+    "label": "Thrill Data",
+    "query": "http.url.domain:thrill-data.com",
+    "markers": [
+      "thrill-data.com"
+    ],
+    "reason": "Historical theme-park wait statistics; November task-like bursts and later extraction programs.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:nso",
+    "label": "Thai NSO",
+    "query": "http.url.domain:nso.go.th",
+    "markers": [
+      "nso.go.th"
+    ],
+    "reason": "Exact dashboard recurrence and separate labor-force publication; tasks must not be conflated.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:oncb",
+    "label": "Thai ONCB",
+    "query": "http.url.domain:oncb.go.th",
+    "markers": [
+      "oncb.go.th"
+    ],
+    "reason": "March 6 drug-enforcement retrieval and output relay.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:unctad",
+    "label": "UNCTAD",
+    "query": "http.url.domain:unctad.org",
+    "markers": [
+      "unctad.org"
+    ],
+    "reason": "Trade and shipping tasks, custom POST forms and output relays.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:aihw",
+    "label": "AIHW",
+    "query": "http.url.domain:aihw.gov.au",
+    "markers": [
+      "aihw.gov.au"
+    ],
+    "reason": "Tableau, archived prescriptions data, custom queries and probe programs.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:max",
+    "label": "MAX budget documents",
+    "query": "http.url.domain:max.gov",
+    "markers": [
+      "max.gov"
+    ],
+    "reason": "Wiki cites an exact URLQuery MAX PDF report. Ordinary portal/login scans are controls.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:max_pdf_q2",
+    "label": "MAX exact PDF Q2",
+    "query": "http.url.addr:*2374423602.pdf*",
+    "markers": [
+      "2374423602.pdf"
+    ],
+    "reason": "Exact known wiki budget document, including proxy-only references.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:max_pdf_q3",
+    "label": "MAX exact PDF Q3",
+    "query": "http.url.addr:*2398882076.pdf*",
+    "markers": [
+      "2398882076.pdf"
+    ],
+    "reason": "Exact document linked from wiki to a URLQuery report.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:datausa",
+    "label": "DataUSA",
+    "query": "http.url.domain:datausa.io",
+    "markers": [
+      "datausa.io"
+    ],
+    "reason": "Known wiki statistical tasks and documented API-probe campaign.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:usaspending",
+    "label": "USAspending",
+    "query": "http.url.domain:usaspending.gov",
+    "markers": [
+      "usaspending.gov"
+    ],
+    "reason": "Known federal-account and recipient task targets; ordinary early scans remain possible.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:healthdata",
+    "label": "IHME health data",
+    "query": "http.url.domain:healthdata.org",
+    "markers": [
+      "healthdata.org"
+    ],
+    "reason": "Exact LF configuration URL matches wiki research link.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:healthdata_proxy",
+    "label": "IHME proxy references",
+    "query": "http.url.addr:*healthdata.org*",
+    "markers": [
+      "healthdata.org"
+    ],
+    "reason": "Include proxy-only mentions of the same statistical provider.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:census",
+    "label": "US Census API",
+    "query": "http.url.fqdn:api.census.gov",
+    "markers": [
+      "api.census.gov"
+    ],
+    "reason": "Statistical API appearing among known wiki task sources.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:mapillary",
+    "label": "Mapillary API",
+    "query": "http.url.fqdn:graph.mapillary.com",
+    "markers": [
+      "graph.mapillary.com"
+    ],
+    "reason": "June custom geographic selection and image-processing programs.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:drivelah",
+    "label": "Drivelah research",
+    "query": "http.url.domain:drivelah.sg",
+    "markers": [
+      "drivelah.sg"
+    ],
+    "reason": "Repeated research-article retrieval through archives and proxies.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:drivelah_proxy",
+    "label": "Drivelah proxy references",
+    "query": "http.url.addr:*drivelah.sg*",
+    "markers": [
+      "drivelah.sg"
+    ],
+    "reason": "Proxy and archive references can miss source-domain searches.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:gbbc",
+    "label": "GBBC Canada 2024",
+    "query": "http.url.addr:*beb9619f-674c-4512-92e4-541e6ff5b1ab*",
+    "markers": [
+      "beb9619f-674c-4512-92e4-541e6ff5b1ab"
+    ],
+    "reason": "Exact Looker report, four-jurisdiction statistical task shared by wiki/pastes.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:snd_view",
+    "label": "SND Airtable view",
+    "query": "http.url.addr:*viwb5v6acVmfP9fnd*",
+    "markers": [
+      "viwb5v6acvmfp9fnd"
+    ],
+    "reason": "Exact view linked across known shortener and dpaste computation.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:snd_share",
+    "label": "SND Airtable share",
+    "query": "http.url.addr:*shrMLVqYbqJ5nOxel*",
+    "markers": [
+      "shrmlvqybqj5noxel"
+    ],
+    "reason": "Companion exact SND share identifier.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:snd_base",
+    "label": "SND Airtable base",
+    "query": "http.url.addr:*app90oaiea9w9Ifs0*",
+    "markers": [
+      "app90oaiea9w9ifs0"
+    ],
+    "reason": "Companion exact SND application identifier.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:nvs",
+    "label": "NZ vegetation API",
+    "query": "http.url.fqdn:api-web-nvs.landcareresearch.co.nz",
+    "markers": [
+      "api-web-nvs.landcareresearch.co.nz"
+    ],
+    "reason": "Specific NVS task API associated with known shorteners.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:iowa",
+    "label": "Iowa thyroid statistics",
+    "query": "http.url.addr:*AnnualThyroidCancer*",
+    "markers": [
+      "annualthyroidcancer"
+    ],
+    "reason": "Exact age/sex/period task family linked to Linuxiarz pastes.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:sec_county",
+    "label": "SEC county statistics",
+    "query": "http.url.addr:*sec.gov/files/county.json*",
+    "markers": [
+      "sec.gov/files/county.json"
+    ],
+    "reason": "Exact known county-data target, not all SEC traffic.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:unm_valmora",
+    "label": "UNM Valmora archive",
+    "query": "http.url.fqdn:nmdigital.unm.edu",
+    "markers": [
+      "nmdigital.unm.edu"
+    ],
+    "reason": "Documented historical-document retrieval and probe campaign.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:maryland",
+    "label": "Maryland school report cards",
+    "query": "http.url.fqdn:reportcard.msde.maryland.gov",
+    "markers": [
+      "reportcard.msde.maryland.gov"
+    ],
+    "reason": "Reviewed custom school-report query forms with 40–41 hidden fields.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:iea_charts",
+    "label": "IEA charts",
+    "query": "http.url.addr:*iea.org/data-and-statistics/charts*",
+    "markers": [
+      "iea.org/data-and-statistics/charts"
+    ],
+    "reason": "September custom chart-page forwarding and possible preparatory visits.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:woodlands",
+    "label": "School history",
+    "query": "http.url.addr:*woodlands*",
+    "markers": [
+      "woodlands"
+    ],
+    "reason": "Specific history-retrieval and report-readback case; lexical discovery requires review.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": true
+  },
+  {
+    "id": "source:clark_newsletter",
+    "label": "Clark economics newsletter",
+    "query": "http.url.addr:*newsletter2012.pdf*",
+    "markers": [
+      "newsletter2012.pdf"
+    ],
+    "reason": "Exact known research document, including archived/proxied copies.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:nysed_task",
+    "label": "NYSED enrollment institution",
+    "query": "http.url.addr:*800000050976*",
+    "markers": [
+      "800000050976"
+    ],
+    "reason": "Exact institution query in new shortener artifact.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:cybr_history",
+    "label": "Yahoo CYBR archived history",
+    "query": "http.url.addr:*finance.yahoo.com/quote/CYBR/history*",
+    "markers": [
+      "finance.yahoo.com/quote/cybr/history"
+    ],
+    "reason": "Specific archived task target; broad Yahoo traffic is not selected.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:nso_proxy",
+    "label": "Thai NSO proxy references",
+    "query": "http.url.addr:*nso.go.th*",
+    "markers": [
+      "nso.go.th"
+    ],
+    "reason": "Proxy references to the NSO source, including failed requests.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:thrill_proxy",
+    "label": "Thrill proxy references",
+    "query": "http.url.addr:*thrill-data.com*",
+    "markers": [
+      "thrill-data.com"
+    ],
+    "reason": "Includes proxy-only source references missed by contacted-domain search.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:unctad_proxy",
+    "label": "UNCTAD proxy references",
+    "query": "http.url.addr:*unctad.org*",
+    "markers": [
+      "unctad.org"
+    ],
+    "reason": "Proxy-only and custom request wrappers for UNCTAD.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "source:aihw_proxy",
+    "label": "AIHW proxy references",
+    "query": "http.url.addr:*aihw.gov.au*",
+    "markers": [
+      "aihw.gov.au"
+    ],
+    "reason": "Proxy-only AIHW archive and query references.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query",
+    "requires_review": false
+  },
+  {
+    "id": "technique:custom_program",
+    "label": "Custom task program",
+    "reason": "Statically decoded supplied content contains task-specific fetch/XHR, automatic POST-form, dashboard-data API, query-socket, or Cloudflare Worker logic, with a relevant target or source-reviewed task context. Ordinary first-party response JavaScript is not used. Source intent is distinct from execution or successful retrieval.",
+    "broad_class": "custom_program",
+    "default_confidence": "significant"
+  },
+  {
+    "id": "technique:indirection",
+    "label": "Indirect retrieval or result publication",
+    "reason": "Submitted URL explicitly uses a reader/proxy for a relevant task target, or a decoded static HTML page publishes task data. Indirection alone remains suggestive.",
+    "broad_class": "indirection",
+    "default_confidence": "suggestive"
+  },
+  {
+    "id": "evidence:reference",
+    "label": "Explicit evidence reference",
+    "reason": "Cited as a URLQuery report in preserved team evidence. Reference inclusion alone does not prove agent activity.",
+    "broad_class": "source_request",
+    "default_confidence": "suggestive"
+  },
+  {
+    "id": "evidence:reviewed_case",
+    "label": "Reviewed activity family",
+    "reason": "Listed as a representative report in a reviewed activity family. Original claim and limits retained separately.",
+    "broad_class": "source_request",
+    "default_confidence": "suggestive"
+  },
+  {
+    "id": "archive:carrier_screen",
+    "label": "Archived submitted-program screen",
+    "reason": "Scan locally archived reports submitted through known code carriers; require a relevant research/workflow marker, not carrier presence alone.",
+    "broad_class": "custom_program",
+    "default_confidence": "suggestive"
+  },
+  {
+    "id": "source:dataforindia",
+    "label": "Data for India chart assets",
+    "query": "http.url.domain:dataforindia.com",
+    "markers": [
+      "dataforindia.com"
+    ],
+    "reason": "June 16 custom Cloudflare programs iterate chart assets and inspect source maps.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query"
+  },
+  {
+    "id": "source:school_history",
+    "label": "Woodlands House School history",
+    "query": "http.url.addr:*whssgr.com*",
+    "markers": [
+      "whssgr.com"
+    ],
+    "reason": "Exact school-history source in a reviewed report-pointer and readback sequence.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query"
+  },
+  {
+    "id": "technique:task_linked_probe",
+    "label": "Task-linked probe sequence",
+    "reason": "Payload-bearing request is within a narrowly identified DataUSA or UNM task/probe episode, or is the separately reviewed AIHW reflected-script example. Generic unrelated exploits do not qualify.",
+    "broad_class": "custom_program",
+    "default_confidence": "significant"
+  },
+  {
+    "id": "evidence:wiki_report_link",
+    "label": "Exact wiki-to-report reference",
+    "reason": "A known wiki page references the exact URLQuery report and response hash. This links artifacts, not the submitter identity.",
+    "broad_class": "indirection",
+    "default_confidence": "significant"
+  },
+  {
+    "id": "source:iea_statistics",
+    "label": "IEA statistical pages and tools",
+    "query": "http.url.addr:*iea.org/data-and-statistics/*",
+    "markers": [
+      "iea.org/data-and-statistics/"
+    ],
+    "reason": "Statistical chart and data-tool source shared with September task-specific forwarding; ordinary visits remain weaker candidates.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query"
+  },
+  {
+    "id": "source:unm_proxy",
+    "label": "UNM proxy references",
+    "query": "http.url.addr:*nmdigital.unm.edu*",
+    "markers": [
+      "nmdigital.unm.edu"
+    ],
+    "reason": "Complement the contacted-domain history with proxy-only and intended references to this reviewed task source.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query"
+  },
+  {
+    "id": "source:datausa_proxy",
+    "label": "DataUSA proxy references",
+    "query": "http.url.addr:*datausa.io*",
+    "markers": [
+      "datausa.io"
+    ],
+    "reason": "Complement the contacted-domain history with proxy-only and intended references to this reviewed task source.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query"
+  },
+  {
+    "id": "source:maryland_proxy",
+    "label": "Maryland school-query proxy references",
+    "query": "http.url.addr:*reportcard.msde.maryland.gov*",
+    "markers": [
+      "reportcard.msde.maryland.gov"
+    ],
+    "reason": "Complement the contacted-domain history with proxy-only and intended references to this reviewed task source.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query"
+  },
+  {
+    "id": "source:mapillary_proxy",
+    "label": "Mapillary API proxy references",
+    "query": "http.url.addr:*graph.mapillary.com*",
+    "markers": [
+      "graph.mapillary.com"
+    ],
+    "reason": "Complement the contacted-domain history with proxy-only and intended references to this reviewed task source.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "indexed_source_query"
+  },
+  {
+    "id": "evidence:external_selected",
+    "label": "Selected research-activity explorer cohort",
+    "reason": "Exact membership in the pinned September 21, 2026 external URLQuery cohort. Retain fine-grained external labels with evidence basis and source attribution; evaluate our confidence independently.",
+    "default_confidence": "suggestive",
+    "broad_class": "source_request",
+    "discovery_kind": "external_cohort_membership",
+    "source_id": "research_activity_explorer_20260921",
+    "source_url": "https://research-activity-september-2026.tuxianeer.chatgpt.site/",
+    "manifest": "internal/external-labels/research-activity-explorer-20260921/manifest.json"
+  },
+  {
+    "id": "evidence:daniel_selected_20260923",
+    "label": "Daniel selected additional reports (September 23)",
+    "reason": "Explicit reviewed-source and workflow references supplied as 71 report IDs; labels independently assigned from preserved report content.",
+    "discovery_kind": "explicit_selected_ids",
+    "default_confidence": "suggestive"
+  },
+  {
+    "id": "evidence:selena_citations_v4",
+    "label": "Selena v4 classifications of eleven draft citations",
+    "reason": "Documented README-rubric classifications carried forward from the public v4 release.",
+    "discovery_kind": "explicit_citation_ids",
+    "requires_review": false
+  },
+  {
+    "id": "evidence:reviewed_march_cases_20260923",
+    "label": "Reviewed March 11 Thai and March 15 metals Base64 submissions",
+    "discovery_kind": "explicit_confidence_override",
+    "default_confidence": "significant",
+    "reason": "Explicit confidence changes requested by Daniel for the two Base64 answer-table submissions only; exact affected IDs and prior values are recorded in classification-overrides.json.",
+    "report_ids": [
+      "d6669745-83d2-4628-82fa-87420ae6a5d7",
+      "4c62b534-a8e2-44d1-bddf-db92d4bf20a6"
+    ]
+  }
+]

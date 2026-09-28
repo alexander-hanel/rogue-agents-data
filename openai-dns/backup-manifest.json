@@ -1,0 +1,126 @@
+{
+  "source_url": "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/",
+  "checked_at": "2026-09-28T00:31:14.423433+00:00",
+  "scope": "Source articles, their directly linked first-party assets, public download bundles, and selected directly cited articles/evidence. No recursive crawl of citations or operational endpoints.",
+  "downloads": [
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/",
+      "path": "article/index.html",
+      "kind": "article",
+      "checked_at": "2026-09-28T00:31:14.423433+00:00",
+      "http_status": "200",
+      "final_url": "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 56284,
+      "sha256": "bab2a07ec36fa542f9929339cc0cf4926481d64bd18cdb3b026ab36334234738",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://alignment.openai.com/assets/site.css",
+      "path": "article/assets/41ae996dfc-site.css",
+      "kind": "asset",
+      "checked_at": "2026-09-28T00:31:14.423433+00:00",
+      "http_status": "200",
+      "final_url": "https://alignment.openai.com/assets/site.css",
+      "content_type": "text/css; charset=utf-8",
+      "bytes": 13174,
+      "sha256": "caa728c5decdc00819a6b6526d006b02f4d970cdd843d92397862666e8df4d03",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://alignment.openai.com/assets/fonts/OpenAISans-Regular.woff2",
+      "path": "article/assets/7085499235-OpenAISans-Regular.woff2",
+      "kind": "asset",
+      "checked_at": "2026-09-28T00:31:14.423433+00:00",
+      "http_status": "200",
+      "final_url": "https://alignment.openai.com/assets/fonts/OpenAISans-Regular.woff2",
+      "content_type": "font/woff2",
+      "bytes": 53228,
+      "sha256": "6b99d0284d5ed15733ea855fdacc8503d1f5e1b3945b02317d27773daa21d9dc",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://alignment.openai.com/assets/site.js",
+      "path": "article/assets/c547902b22-site.js",
+      "kind": "asset",
+      "checked_at": "2026-09-28T00:31:14.423433+00:00",
+      "http_status": "200",
+      "final_url": "https://alignment.openai.com/assets/site.js",
+      "content_type": "application/javascript; charset=utf-8",
+      "bytes": 1610,
+      "sha256": "f510cf76111d878478a41b403804f97301a19bf95cfb6f400fcdcf5a89db2c68",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://alignment.openai.com/assets/navigation.css",
+      "path": "article/assets/052730416e-navigation.css",
+      "kind": "asset",
+      "checked_at": "2026-09-28T00:31:14.423433+00:00",
+      "http_status": "200",
+      "final_url": "https://alignment.openai.com/assets/navigation.css",
+      "content_type": "text/css; charset=utf-8",
+      "bytes": 3041,
+      "sha256": "fda8c1086a52e7fe2b35cc0e79ecb51f23fe58135b39b5e37bd97024b1c6df8a",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://alignment.openai.com/assets/navigation.js",
+      "path": "article/assets/769f073204-navigation.js",
+      "kind": "asset",
+      "checked_at": "2026-09-28T00:31:14.423433+00:00",
+      "http_status": "200",
+      "final_url": "https://alignment.openai.com/assets/navigation.js",
+      "content_type": "application/javascript; charset=utf-8",
+      "bytes": 1167,
+      "sha256": "10d3e5b98f13ba3ffe97d797f063402f58b288665bbb017f807b47f3031ade66",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://alignment.openai.com/favicon.ico",
+      "path": "article/assets/9cba71bf09-favicon.ico",
+      "kind": "asset",
+      "checked_at": "2026-09-28T00:31:14.423433+00:00",
+      "http_status": "200",
+      "final_url": "https://alignment.openai.com/favicon.ico",
+      "content_type": "image/x-icon",
+      "bytes": 16664,
+      "sha256": "47aafab7d76a62cf6f693f5526ce8ad8ed896428bdd394eccdb267e727850a67",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://alignment.openai.com/assets/report-fonts.css",
+      "path": "article/assets/349ab13a81-report-fonts.css",
+      "kind": "asset",
+      "checked_at": "2026-09-28T00:31:14.423433+00:00",
+      "http_status": "200",
+      "final_url": "https://alignment.openai.com/assets/report-fonts.css",
+      "content_type": "text/css; charset=utf-8",
+      "bytes": 193,
+      "sha256": "bb07b7160b4c7381ee6c5cc4774cd506ee6cb41ac4d40c45a66d9ca19712f13c",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://alignment.openai.com/assets/brand/openai-blossom-black.svg",
+      "path": "article/assets/05872654ad-openai-blossom-black.svg",
+      "kind": "asset",
+      "checked_at": "2026-09-28T00:31:14.423433+00:00",
+      "http_status": "200",
+      "final_url": "https://alignment.openai.com/assets/brand/openai-blossom-black.svg",
+      "content_type": "image/svg+xml",
+      "bytes": 1878,
+      "sha256": "8e6957905cee45dfae731964c35162202adb1be2b835cb500247c04c4582f160",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+      "path": "references/d8e6fd2ea6-hugging-face-incident-and-the-road-ahead.html",
+      "kind": "reference",
+      "checked_at": "2026-09-28T00:31:14.423433+00:00",
+      "http_status": "403",
+      "final_url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+      "content_type": "text/html; charset=UTF-8",
+      "status": "unavailable",
+      "error": "curl: (22) The requested URL returned error: 403"
+    }
+  ]
+}

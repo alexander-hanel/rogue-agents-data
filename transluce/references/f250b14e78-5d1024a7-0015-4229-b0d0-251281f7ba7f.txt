@@ -1,0 +1,214 @@
+Source: https://urlquery.net/report/5d1024a7-0015-4229-b0d0-251281f7ba7f
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+Report - vizprod.aihw.gov.au/t/Public/views/PBSdashboardallATC1-ATC2medicines-Agegroup/PBSDashboard?:embed=y&:showVizHome=no&Parameters.Select%20State%2FTerritory=Victoria&Parameters.Select%20an%20LGA=Wodonga&Parameters.Select%20medicine%20group%20ATC%20Level%201=Dermatologicals&Parameters.Select%20measures=Rolling%2012%20months%20average&Parameters.Month%20of%20Interest=Jan%202022
+ urlquery
+
+ Home  Search  Insights About
+Login
+
+ Check icon
+
+ Warning icon
+
+ Warning icon
+
+Share Report
+
+Generates a temporary link to share non-public report for a limited time.
+
+Valid for (hours 1-300) 
+
+Generate Link
+
+urlquery report
+
+JSON report
+
+Raw JSON report
+
+Share report
+
+Share a non-public report with others
+
+Request review
+
+Request a review of report
+
+External sources
+
+ VirusTotal
+
+VirusTotal
+
+FQDN
+
+vizprod.aihw.gov.au
+
+DOMAIN
+
+aihw.gov.au
+
+IP
+
+172.66.167.201
+
+ crt.sh
+
+crt.sh
+
+FQDN
+
+vizprod.aihw.gov.au
+
+DOMAIN
+
+aihw.gov.au
+
+Report Overview
+
+Visitedpublic 
+
+2026-06-18 17:37:40
+
+Tags
+
+Submit Tags
+
+URL
+
+vizprod.aihw.gov.au/t/Public/views/PBSdashboardallATC1-ATC2medicines-Agegroup/PBSDashboard?:embed=y&:showVizHome=no&Parameters.Select%20State%2FTerritory=Victoria&Parameters.Select%20an%20LGA=Wodonga&Parameters.Select%20medicine%20group%20ATC%20Level%201=Dermatologicals&Parameters.Select%20measures=Rolling%2012%20months%20average&Parameters.Month%20of%20Interest=Jan%202022
+
+Finishing URL
+
+vizprod.aihw.gov.au/t/Public/views/PBSdashboardallATC1-ATC2medicines-Agegroup/PBSDashboard?%3Aembed=y&%3AshowVizHome=no&Parameters.Select%20State%2FTerritory=Victoria&Parameters.Select%20an%20LGA=Wodonga&Parameters.Select%20medicine%20group%20ATC%20Level%201=Dermatologicals&Parameters.Select%20measures=Rolling%2012%20months%20average&Parameters.Month%20of%20Interest=Jan%202022
+
+IP / ASN
+
+172.66.167.201
+
+#13335 CLOUDFLARENET
+
+Title
+
+Workbook: PBS dashboard all ATC1-ATC2 medicines - Age group
+
+Detections
+
+urlquery
+
+0
+
+Network Intrusion Detection
+
+0
+
+Threat Detection Systems
+
+0
+
+Host Summary
+
+HostRankRegisteredFirst SeenLast SeenSentReceivedIPFingerprints
+
+vizprod.aihw.gov.au 
+unknownunknown2026-06-172026-06-1751 kB34 MB
+
+104.20.42.156
+
+api.mapbox.com 
+201572003-11-272016-05-062026-06-125.4 kB511 kB
+
+143.204.238.32
+
+events.mapbox.com 
+210512003-11-272025-03-022026-06-142.6 kB508 B
+
+34.250.220.34
+
+Cloudflare (CDN)
+Cloudflare is a web-infrastructure and website-security company, providing content-delivery-network services, DDoS mitigation, Internet security, and distributed domain-name-server services.
+
+Zipkin (Analytics)
+
+WebAssembly (Programming languages)
+WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable compilation target for programming languages, enabling deployment on the web for client and server applications.
+
+Bootstrap (UI frameworks)
+Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.
+
+Amazon CloudFront (CDN)
+Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency, high transfer speeds.
+
+Amazon Web Services (PaaS)
+Amazon Web Services (AWS) is a comprehensive cloud services platform offering compute power, database storage, content delivery and other functionality.
+
+Express (Web frameworks, Web servers)
+Express is a web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs.
+
+Node.js (Programming languages)
+Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a web browser.
+
+Related reports
+
+Domain
+
+IP
+
+ASN
+
+Screenshot
+
+Similar
+
+Threat Detection Systems
+
+No alerts detected
+
+JavaScript (21)
+
+Script (21)
+
+Eval (0)
+
+Write (0)
+
+Filter scripts by metadata or content (case-insensitive)
+
+Loading...
+
+No JavaScripts
+
+HTTP Transactions (63)
+
+Filter transactions by metadata or HTML content (case-insensitive)
+
+URLIPResponseSize
+
+ urlquery
+urlquery is a service for URL and domain scanning, identifying and categorizing  potentially harmful elements on a webpage, checking for malware infections and assessing overall reputation.
+
+Powered by penguins.
+
+Contact
+
+General questions, feedback, or technical inquiries:
+📧 contact@urlquery.net
+
+Report phishing:
+📧 phishing@urlquery.net
+
+For abuse or removal requests:
+📧 support@urlquery.net
+
+Follow us
+
+Github
+
+Legal
+
+Privacy Policy
+
+Terms & Conditions
+
+© 2026 urlquery All Rights Reserved.

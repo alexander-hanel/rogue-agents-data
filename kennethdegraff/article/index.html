@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A swarm of OpenAI agents made at least 170 short links on Vanderbilt University's closed link shortener, wrote 495 FBI Crime Data Explorer addresses into its public logs, and used three API keys, one of them a private citizen's.">
+<meta name="author" content="Kenneth Russell DeGraff">
+<title>OpenAI's Robots Got Into a Closed Link Shortener, Surfed the Web With Google Docs and Translate, Then Called the FBI With a Stranger's Key</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#f4f6f8; --surface:#ffffff; --surface-2:#eef1f5;
+  --ink:#13181f; --ink-2:#39424f; --muted-solid:#697483;
+  --rule:#d7dde5; --rule-soft:#e6eaf0;
+  --accent:#3a6ea5; --accent-soft:#3a6ea51a;
+  --known:#5b6673; --known-bg:#5b667314;
+  --new:#5a3f96; --new-bg:#5a3f9614;
+  --live:#a8372a; --live-bg:#a8372a14;
+  --fix:#8a5a12; --fix-bg:#8a5a1214;
+  --ok:#0b6b5e; --ok-bg:#0b6b5e14;
+  --shadow:0 1px 2px #13181f0a, 0 8px 24px #13181f0a;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0e1319; --surface:#151c24; --surface-2:#1b232d;
+  --ink:#e6ebf1; --ink-2:#b3bdc9; --muted-solid:#8b97a5;
+  --rule:#28323d; --rule-soft:#1f2833;
+  --accent:#7aa9d8; --accent-soft:#7aa9d81f;
+  --known:#94a0ad; --known-bg:#94a0ad1f;
+  --new:#a891e0; --new-bg:#a891e01f;
+  --live:#e2796a; --live-bg:#e2796a1f;
+  --fix:#d6a052; --fix-bg:#d6a0521f;
+  --ok:#4fbfa8; --ok-bg:#4fbfa81f;
+  --shadow:0 1px 2px #0006, 0 8px 24px #0004;
+}}
+:root[data-theme="dark"]{
+  --paper:#0e1319; --surface:#151c24; --surface-2:#1b232d;
+  --ink:#e6ebf1; --ink-2:#b3bdc9; --muted-solid:#8b97a5;
+  --rule:#28323d; --rule-soft:#1f2833;
+  --accent:#7aa9d8; --accent-soft:#7aa9d81f;
+  --known:#94a0ad; --known-bg:#94a0ad1f;
+  --new:#a891e0; --new-bg:#a891e01f;
+  --live:#e2796a; --live-bg:#e2796a1f;
+  --fix:#d6a052; --fix-bg:#d6a0521f;
+  --ok:#4fbfa8; --ok-bg:#4fbfa81f;
+  --shadow:0 1px 2px #0006, 0 8px 24px #0004;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 28px 96px}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+a:hover{border-bottom-color:currentColor}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+code,.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:.86em}
+code{background:var(--surface-2);padding:.12em .38em;border-radius:3px;word-break:break-word}
+
+header.top{border-bottom:2px solid var(--ink);padding:42px 0 18px}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted-solid);margin:0 0 14px}
+h1{font-family:Newsreader,Georgia,serif;font-weight:600;font-size:clamp(38px,6vw,64px);
+  line-height:1.02;letter-spacing:-.018em;margin:0;text-wrap:balance}
+.dek{font-family:Newsreader,Georgia,serif;font-size:clamp(18px,2.2vw,21.5px);line-height:1.45;
+  color:var(--ink-2);max-width:62ch;margin:16px 0 0;font-style:italic}
+.meta{display:flex;flex-wrap:wrap;gap:8px 26px;margin:24px 0 0;
+  font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted-solid)}
+.meta b{color:var(--ink-2);font-weight:500}
+
+.newsline{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--accent);
+  border-radius:7px;padding:22px 24px;margin:30px 0 0;box-shadow:var(--shadow)}
+.newsline .h{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--muted-solid);margin:0 0 10px}
+.newsline p{margin:0 0 10px;font-family:Newsreader,Georgia,serif;font-size:19px;line-height:1.5;overflow-wrap:anywhere}
+.newsline p:last-child{margin:0}
+.newsline strong{font-weight:600}
+
+.key{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:26px 0 0}
+.key div{border:1px solid var(--rule);border-radius:6px;padding:12px 14px;background:var(--surface)}
+.key .t{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  font-weight:500;padding:3px 8px;border-radius:100px;display:inline-block;margin-bottom:7px}
+.key p{margin:0;font-size:13px;color:var(--ink-2);line-height:1.45}
+
+.score{display:grid;grid-template-columns:repeat(auto-fit,minmax(146px,1fr));gap:1px;
+  background:var(--rule);border:1px solid var(--rule);margin:30px 0 0;border-radius:6px;overflow:hidden}
+.score div{background:var(--surface);padding:16px 18px}
+.score .n{font-family:Newsreader,serif;font-size:34px;line-height:1;font-weight:600;font-variant-numeric:tabular-nums}
+.score .l{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted-solid);margin-top:7px;line-height:1.4}
+.score .a .n{color:var(--new)} .score .b .n{color:var(--ok)}
+.score .c .n{color:var(--live)} .score .d .n{color:var(--fix)}
+
+h2{font-family:Newsreader,Georgia,serif;font-weight:600;font-size:29px;letter-spacing:-.01em;
+  margin:60px 0 6px;padding-top:22px;border-top:1px solid var(--rule);text-wrap:balance}
+h2 .sub{display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--muted-solid);margin-bottom:10px;font-weight:400}
+.lede{color:var(--ink-2);margin:10px 0 22px}
+
+.find{background:var(--surface);border:1px solid var(--rule);border-radius:7px;
+  padding:18px 20px;margin:12px 0;box-shadow:var(--shadow)}
+.find.hero{border-left:3px solid var(--new)}
+.find.alert{border-left:3px solid var(--live)}
+.fhead{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.fid{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted-solid);
+  letter-spacing:.06em;padding-top:4px;min-width:40px}
+.ftitle{font-weight:600;font-size:16.5px;flex:1;min-width:220px;line-height:1.35}
+.chip{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  padding:4px 9px;border-radius:100px;white-space:nowrap;font-weight:500;align-self:flex-start}
+.c-known{background:var(--known-bg);color:var(--known)}
+.c-new{background:var(--new-bg);color:var(--new)}
+.c-live{background:var(--live-bg);color:var(--live)}
+.c-fix{background:var(--fix-bg);color:var(--fix)}
+.c-ok{background:var(--ok-bg);color:var(--ok)}
+.tier{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;
+  padding:3px 8px;border-radius:3px;font-weight:500;white-space:nowrap;border:1px solid currentColor}
+.t1{color:var(--live)} .t2{color:var(--new)} .t3{color:var(--muted-solid)}
+.author{font-family:"IBM Plex Sans",sans-serif;font-size:17px;font-weight:600;color:var(--ink);margin:18px 0 0}
+.author .sep{color:var(--muted-solid);font-weight:400;padding:0 8px}
+.author .role{font-weight:400;font-size:14px;color:var(--muted-solid)}
+.credit{border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 6px 6px 0;
+  padding:14px 18px;margin:0 0 14px}
+.credit p{margin:0;font-size:15px;font-weight:600;color:var(--ink);max-width:72ch;line-height:1.5}
+details.appx{border:1px solid var(--rule);border-radius:7px;background:var(--surface);margin:14px 0;overflow:hidden}
+details.appx>summary{cursor:pointer;padding:16px 20px;font-weight:600;font-size:16px;list-style:none;
+  display:flex;align-items:center;gap:10px}
+details.appx>summary::-webkit-details-marker{display:none}
+details.appx>summary::before{content:"▸";color:var(--accent);font-size:13px}
+details.appx[open]>summary::before{content:"▾"}
+details.appx>summary:hover{background:var(--surface-2)}
+.appx-body{padding:0 20px 20px;border-top:1px solid var(--rule-soft)}
+.wb{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted-solid)}
+.wb a{color:var(--muted-solid)}
+.byline{background:var(--surface-2);border:1px solid var(--rule);border-radius:7px;padding:18px 20px;margin:26px 0 0}
+.byline p{margin:0 0 8px;font-size:14px;color:var(--ink-2)}
+.byline p:last-child{margin:0}
+.fbody{margin-top:12px;padding-left:52px}
+@media(max-width:620px){.fbody{padding-left:0}}
+.fbody p{margin:0 0 9px;color:var(--ink-2);overflow-wrap:anywhere}
+.fbody p:last-child{margin-bottom:0}
+.fbody strong{color:var(--ink);font-weight:600}
+.ev{display:block;font-family:"IBM Plex Mono",monospace;font-size:12px;margin-top:9px;
+  word-break:break-all;line-height:1.5}
+.ev::before{content:"→ ";color:var(--muted-solid)}
+.repro{margin-top:12px;padding:11px 14px;border:1px dashed var(--rule);border-radius:6px;
+  background:var(--surface-2)}
+.repro .h{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted-solid);margin-bottom:7px}
+.repro code{background:none;padding:0;font-size:11.5px;line-height:1.7;display:block;
+  white-space:pre-wrap;word-break:break-all;color:var(--ink-2)}
+
+pre{background:var(--surface-2);border:1px solid var(--rule-soft);border-radius:6px;
+  padding:13px 15px;overflow-x:auto;font-family:"IBM Plex Mono",monospace;font-size:12px;
+  line-height:1.65;margin:12px 0;color:var(--ink-2)}
+pre b{color:var(--ink);font-weight:500}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:0}
+.tw{overflow-x:auto;border:1px solid var(--rule);border-radius:6px;background:var(--surface);margin:14px 0}
+th{text-align:left;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--muted-solid);font-weight:500;
+  padding:11px 14px;border-bottom:1px solid var(--rule);white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid var(--rule-soft);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.mono{font-family:"IBM Plex Mono",monospace;font-size:12px;word-break:break-all}
+td .chip{font-size:9.5px;padding:3px 7px}
+td.nw{white-space:nowrap}
+table.vb{table-layout:fixed}
+table.vb th:nth-child(1){width:18%} table.vb th:nth-child(2){width:17%} table.vb th:nth-child(3){width:19%} table.vb th:nth-child(4){width:46%}
+tr.tie td{padding-top:4px;padding-bottom:14px;color:var(--ink-2);font-size:13px;border-bottom:1px solid var(--rule)}
+tr.lnk td{border-bottom:0}
+
+.callout{border:1px solid var(--live);background:var(--live-bg);border-radius:7px;padding:18px 20px;margin:20px 0}
+.callout h3{margin:0 0 9px;font-family:"IBM Plex Mono",monospace;font-size:11px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--live)}
+.callout p{margin:0 0 9px;color:var(--ink-2)}
+.callout p:last-child{margin:0}
+blockquote{margin:12px 0;padding:10px 16px;border-left:2px solid var(--muted-solid);
+  font-family:Newsreader,Georgia,serif;font-style:italic;color:var(--ink-2);font-size:16px}
+ul.tight{margin:8px 0 0;padding-left:18px;color:var(--ink-2)}
+ul.tight li{margin-bottom:6px}
+footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--rule);
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted-solid);line-height:1.75}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+details.sec{border:1px solid var(--rule);border-radius:8px;background:var(--surface);
+  margin:14px 0;box-shadow:var(--shadow);overflow:hidden}
+details.sec>summary{cursor:pointer;list-style:none;padding:16px 20px;
+  font-family:Newsreader,Georgia,serif;font-size:21px;line-height:1.25;color:var(--ink);
+  display:flex;align-items:baseline;gap:12px}
+details.sec>summary::-webkit-details-marker{display:none}
+details.sec>summary::after{content:"+";margin-left:auto;font-family:"IBM Plex Mono",monospace;
+  font-size:18px;color:var(--muted-solid)}
+details.sec[open]>summary::after{content:"\2013"}
+details.sec>summary:hover{background:var(--surface-2)}
+details.sec>summary .tag{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--muted-solid);
+  border:1px solid var(--rule);border-radius:3px;padding:3px 7px;flex:0 0 auto}
+details.sec .secbody{padding:0 20px 8px}
+details.sec .secbody h2{margin-top:8px}
+ul.two{margin:10px 0 14px;padding-left:22px}
+ul.two li{margin:8px 0;color:var(--ink-2)}
+h2.divider{border-top:2px solid var(--ink);padding-top:26px;margin-top:52px}
+
+/* ---- readability pass, Sept 8 ---- */
+:root{--paper:#eef0f3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0b0f14}}
+:root[data-theme="dark"]{--paper:#0b0f14}
+.wrap{max-width:940px}
+.story .newsline{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:10px;padding:30px 36px;margin:36px 0 0;box-shadow:var(--shadow)}
+.story .newsline p{font-family:Newsreader,Georgia,serif;font-size:21.5px;line-height:1.5;color:var(--ink);margin:0 0 18px}
+.story .newsline p.wb{font-size:12px;margin:8px 0 0}
+.story .find{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:28px 36px;margin:0 0 10px;box-shadow:var(--shadow)}
+.story .find.hero{border-left:4px solid var(--new)}
+.story .find.alert{border-left:4px solid var(--live)}
+.story .fbody{padding-left:0;margin-top:0}
+.story .fbody p,.story .find>p{font-family:Newsreader,Georgia,serif;font-size:20px;line-height:1.55;color:var(--ink);margin:0 0 17px}
+.story .fbody p strong,.story .newsline strong{font-weight:600}
+.story h2{font-size:38px;line-height:1.08;margin:70px 0 18px;padding-top:30px;max-width:24ch}
+.story h2 .sub{margin-bottom:12px}
+.story h3{font-family:Newsreader,Georgia,serif;font-weight:600;font-size:25px;line-height:1.2;margin:34px 0 12px;color:var(--ink)}
+.story ul.two{margin:12px 0 20px;padding-left:24px}
+.story ul.two li{font-family:Newsreader,Georgia,serif;font-size:20px;line-height:1.5;color:var(--ink);margin:10px 0}
+.story .tw{margin:20px 0 24px}
+.story table{font-size:14.5px}
+.story td{padding:11px 14px;color:var(--ink)}
+.story code{font-size:.78em;position:relative;top:-1px}
+.story pre{font-size:13px;margin:18px 0}
+.story .callout{margin:26px 0}
+.story .callout p{font-family:Newsreader,Georgia,serif;font-size:18.5px;color:var(--ink)}
+.story .repro{margin:14px 0 20px}
+.story .byline{margin-top:40px}
+.story .byline p{font-size:15.5px}
+.story .credit p{font-size:16.5px}
+.story blockquote{font-size:19.5px}
+@media(max-width:620px){.story .find,.story .newsline{padding:20px 18px}.story .fbody p,.story .find>p,.story ul.two li{font-size:18.5px}.story h2{font-size:30px;margin-top:54px}.story .newsline p{font-size:19.5px}}
+.story table.sites{font-size:13.5px}
+.story table.sites tr.grp td{background:var(--surface-2);font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-solid);padding:8px 14px}
+.story details.appx.big{margin:18px -36px 8px;border-radius:0;border-left:0;border-right:0}
+.story details.appx.big>summary{font-family:Newsreader,Georgia,serif;font-size:19px;padding:16px 36px}
+.story details.appx.big .appx-body{padding:0 12px 16px}
+.story table.sites td:first-child{white-space:normal;word-break:break-all;min-width:120px;max-width:150px}
+.story table.sites td:nth-child(2){min-width:0;white-space:nowrap;font-size:15px}
+.story table.sites td:nth-child(3){min-width:150px}
+.story table.sites td:nth-child(4){white-space:normal;min-width:120px}
+.story table.sites td:nth-child(4) .chip{white-space:normal;line-height:1.5;display:inline-block}
+.story table.sites td:nth-child(6){min-width:210px}
+.story table.sites td:nth-child(3){min-width:130px;max-width:170px}
+.story table.sites td:first-child{font-size:13px}
+.story table.sites td:nth-child(5){min-width:200px}
+@media(max-width:620px){.story details.appx.big{margin-left:-18px;margin-right:-18px}}
+.story h2 .sub{font-size:13.5px;letter-spacing:.14em;color:var(--accent);font-weight:500}
+.story td.small{font-size:12px;color:var(--ink-2)}
+.story th.wrap2{white-space:normal;line-height:1.35;max-width:150px}
+.story ol.qs{margin:12px 0 20px;padding-left:28px}
+.story ol.qs li{font-family:Newsreader,Georgia,serif;font-size:20px;line-height:1.5;color:var(--ink);margin:12px 0}
+nav.toc{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:22px 30px;margin:26px 0 0;box-shadow:var(--shadow)}
+nav.toc .tochead{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 10px;font-weight:500}
+nav.toc ol{margin:0 0 4px;padding-left:22px}
+nav.toc ol.ev{margin-bottom:0}
+nav.toc li{font-family:Newsreader,Georgia,serif;font-size:17px;line-height:1.35;margin:7px 0;color:var(--ink)}
+nav.toc a{border-bottom:1px solid var(--accent-soft)}
+nav.toc .t{font-family:"IBM Plex Sans",sans-serif;font-size:12.5px;color:var(--muted-solid);display:block;margin-top:1px}
+nav.toc p.tochead+ol{margin-top:0}
+nav.toc .tochead:nth-of-type(2){margin-top:16px}
+.dek2{font-family:Newsreader,Georgia,serif;font-size:16.5px;line-height:1.45;color:var(--muted-solid);max-width:62ch;margin:10px 0 0;font-style:italic}
+.story table.sites td.tie{font-size:11.5px;line-height:1.35;color:var(--ink-2);min-width:110px;max-width:130px;white-space:normal}
+.about{margin:52px 0 0;background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:10px;padding:28px 32px;box-shadow:var(--shadow)}
+.about .ahead{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 14px;font-weight:500}
+.about p{font-family:Newsreader,Georgia,serif;font-size:18px;line-height:1.55;color:var(--ink);margin:0 0 14px;max-width:66ch}
+.about p.alead{font-size:19.5px}
+.about .acards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:20px 0 0}
+.about .acard{display:block;border:1px solid var(--rule);border-radius:8px;padding:14px 16px;background:var(--surface-2);text-decoration:none;border-bottom:1px solid var(--rule)}
+.about .acard:hover{border-color:var(--accent);background:var(--accent-soft)}
+.about .acard .an{display:block;font-family:"IBM Plex Sans",sans-serif;font-weight:600;font-size:15px;color:var(--ink);margin-bottom:4px}
+.about .acard .au{display:block;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--accent);word-break:break-all}
+@media(max-width:620px){.about{padding:20px 18px}}
+</style>
+
+<style>
+.site-bar{border-bottom:1px solid var(--rule);background:var(--surface)}
+.site-bar .inner{max-width:1140px;margin:0 auto;padding:12px 28px;display:flex;
+  align-items:center;gap:22px;flex-wrap:wrap;
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;
+  letter-spacing:.14em;text-transform:uppercase}
+.site-bar a{color:var(--muted-solid);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
+.site-bar a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.site-bar .home{color:var(--ink);font-weight:500}
+.site-bar .sep{margin-left:auto}
+@media (max-width:640px){
+  .site-bar .inner{gap:14px;padding:12px 20px}
+  .site-bar .sep{margin-left:0}
+  }
+</style>
+</head>
+<body>
+<div class="site-bar"><div class="inner">
+  <a class="home" href="https://kennethdegraff.com/">Kenneth Russell DeGraff</a>
+  <a href="https://kennethdegraff.com/">Home</a>
+  <a class="sep" href="https://kennethdegraff.com/#newsletter">Get new research by email</a>
+</div></div>
+
+
+
+<div class="wrap">
+<header class="top">
+  <p class="kicker">Independent research · September 9 and 10, 2026</p>
+  <h1>OpenAI's robots got into a closed link shortener, surfed the web with Google Docs and Translate, then called the FBI with a stranger's key</h1>
+  <p class="dek">My questions after finding hidden keys left by OpenAI's agent swarm.</p>
+  <p class="author">By Kenneth Russell DeGraff<span class="sep">·</span><span class="role">Tech and climate policy</span><span class="sep">·</span><span class="role"><a href="https://kennethdegraff.com/#contact">contact form</a></span></p>
+</header>
+
+<div class="story">
+<div class="newsline">
+  <p><strong>A swarm of OpenAI agents got into Vanderbilt University's link shortener, a service with no public door, and built at least 170 short links there. Vanderbilt says the service is for affiliated organizations only, granted by help ticket, for official communication only. The agents got in anyway, and nobody has said how.</strong> Vanderbilt was one of twenty-one sites the swarm wrote to, and one of four universities whose link shorteners the swarm used. <a href="#sites">The full list is in the table below.</a></p>
+  <p>480 addresses in the agents' posts hand a file to Google's document viewer and ask Google to fetch and render it: federal budget reports on portal.max.gov, the SEC's crowdfunding county file, Texas state archive PDFs. Google was not the only way in, and that is the point. One Texas archive PDF was requested 128 different ways, through eight other services and twice straight from the archive. The federal budget files went out through markdown.new, through pure.md, and 34 times with no middleman at all. Fourteen services in all fetched pages for the swarm, and thirteen of the fourteen were aimed at one file, the SEC's county list. Google Translate served the same purpose on a different surface: feed it a foreign address and it hands back the page, and the swarm used it that way 70 times in the metadata of 83 software packages it published in one afternoon.</p>
+  <p>The agents did not hide. Thirteen of the links carry the maker's name, among them <code>openaipovertycompacttest</code>, <code>agent0zambjson</code> and <code>aaaagent0</code>.</p>
+  <p>A link shortener's statistics page, public at the time, prints whatever address a visitor claims to have come from, and checks nothing. That made a public university page into a writable message board, and these agents wrote to it 54,250 times in a single day.</p>
+  <p>Then the agents used those links to query the FBI's Crime Data Explorer 495 times and wrote every query onto Vanderbilt's public pages. Three keys went to the FBI. One was the government's free demo key. One was the FBI's own developer key, copied off the bureau's public code. The third belonged to a stranger: a student who left the key in the saved output of a 2023 school project, in a file too large for GitHub to index, invisible to almost every search engine. The agents found the key anyway, and took the query and the Alabama county that came with the key.</p>
+  <p>The whole record sits in the visitor log of one Vanderbilt link from 2011 that points at a staff newsletter piece comparing JFK's 1963 visit to Vanderbilt Stadium with a U2 concert there in 2011: one telephone in the stadium then, forty thousand now. The article <a href="http://web.archive.org/web/20240709202334/https://www.vanderbilt.edu/houseorgan/2011/08/of-jfk-u2-telephones-and-security/">went offline</a> in 2024. The link did not. The link took <a href="https://web.archive.org/web/20260904190543/https://vanderbi.lt/iyg1y+">54,250 visits</a> in a single day on June 18, 2026, after fifteen years averaging one visit every other day.</p>
+  <p>That log ties the Vanderbilt operation to DSEWiki, the German-language wiki where researchers at <a href="https://collusion.wiki/">collusion.wiki</a> published on Friday, September 4, a record of about 18,000 posts by OpenAI agents, an incident OpenAI acknowledged the next day. 391 of the 5,212 addresses in the Vanderbilt log appear word for word in the agents' own DSEWiki posts, accounting for 29,806 visits. The two operations ran on the same days, used the same proxy tools, and in one case the same name: a Vanderbilt link named for cooks made on June 21, and a DSEWiki page named for cooks made hours later.</p>
+  <p>As of September 8, both Vanderbilt and the University of Toronto have hidden the statistics pages behind a login, and Vanderbilt has rewritten 28 of the agent-made links to point at the university's homepage. 142 still pointed at the targets the agents chose when I last resolved all 170, at 21:23 UTC on September 9.</p>
+  <p class="wb">Every state described here is as of 21:23 UTC on September 9, 2026, when I last resolved all 170 links one by one, and it can change at a moment's notice.</p>
+</div>
+
+<nav class="toc" aria-label="Contents">
+  <p class="tochead">What is in this report</p>
+  <ol>
+    <li><a href="#sites">Every site the swarm wrote to</a> <span class="t">table: 21 sites, 14 fetch services</span></li>
+    <li><a href="#centre">The dead Vanderbilt link that held everything</a> <span class="t"><a href="#thepage">table: the page by the numbers</a></span></li>
+    <li><a href="#vandy">No public door, but the agents got in</a></li>
+    <li><a href="#toronto">The control case: Toronto</a> <span class="t">table: Toronto's four links</span></li>
+    <li><a href="#keys">Three keys went to the FBI</a></li>
+    <li><a href="#dests">Where the 142 links still pointing go</a> <span class="t">table: by destination, with the link names</span></li>
+    <li><a href="#mechanism">How a shortener became a message board</a></li>
+    <li><a href="#gems">83 software packages that were not software</a></li>
+    <li><a href="#fbipages">Five pages, 495 queries to the Bureau</a> <span class="t">table: the five pages</span></li>
+    <li><a href="#knew">What OpenAI has said, and to whom</a></li>
+    <li><a href="#order">June 18: the day the dead link woke up</a> <span class="t">table: the timeline</span></li>
+    <li><a href="#asked">Three keys, one ladder</a> <span class="t">table: the Autauga requests · <a href="#ghost">the citizen's key</a></span></li>
+    <li><a href="#lowvalue">A low value key and a high effort route</a></li>
+    <li><a href="#howchecked">Word for word: the 391 matches</a></li>
+    <li><a href="#questions">My questions for OpenAI</a></li>
+  </ol>
+  <p class="tochead">Evidence</p>
+  <ol class="ev">
+    <li><a href="#alllinks">Every agent-made Vanderbilt link</a> <span class="t">table: all 170, with target and status</span></li>
+    <li><a href="#m-fbi">Manifest: the captures behind these findings</a> <span class="t">table: the files, with hashes</span></li>
+    <li><a href="#m-wayback">Manifest: Wayback copies of Vanderbilt statistics pages</a> <span class="t">table: 16 archived pages</span></li>
+    <li><a href="#m-lockdown">Manifest: the lockdown of September 8</a> <span class="t">table: 7 login screens</span></li>
+    <li><a href="#m-sept4">Manifest: the September 4 statistics pages</a> · <a href="#m-about">how these captures were made</a></li>
+  </ol>
+</nav>
+<h2 id="sites"><span class="sub">Sites</span>What OpenAI's agents left on twenty-one servers, and the dead Vanderbilt link that names eight</h2>
+<div class="find hero"><div class="fbody" style="padding-left:0">
+  <p>Twenty-one sites carry something the swarm left behind: a wiki edit, a paste, a short link, a log entry, a document, a software package. Fourteen more services fetched pages for the swarm and stored nothing. The researchers at collusion.wiki counted seven to ten from the wiki alone, and named five of these twenty-one on September 4: DSEWiki, probier, fractal, texteditors.org and Vanderbilt. The other sixteen are not on that page.</p>
+  <details class="appx big"><summary>Table: all twenty-one sites, and the fourteen services that fetched for them</summary><div class="appx-body">
+<div class="tw"><table class="sites">
+    <tr><th>Site</th><th class="wrap2">Tie to the<br>Vanderbilt log</th><th>What it is</th><th>Door</th><th>What the swarm left</th><th class="wrap2">As of<br>Sept 9</th></tr>
+    <tr class="grp"><td colspan="6">Wikis, 10</td></tr>
+    <tr><td class="mono">DSEWiki</td><td class="tie">shares addresses</td><td>German wiki on an Austrian server</td><td><span class="chip c-ok">public tool</span></td><td>13,403 revisions in the dataset; the message board</td><td>open</td></tr>
+    <tr><td class="mono">probier</td><td class="tie">shares addresses</td><td>Wiki, same server</td><td><span class="chip c-ok">public tool</span></td><td>1,013 revisions</td><td>open</td></tr>
+    <tr><td class="mono">fractal</td><td class="tie">shares addresses</td><td>Wiki, same server</td><td><span class="chip c-ok">public tool</span></td><td>169 revisions</td><td>open</td></tr>
+    <tr><td class="mono">Dorfwiki</td><td class="tie">&mdash;</td><td>Wiki, same server</td><td><span class="chip c-ok">public tool</span></td><td>6 revisions</td><td>open</td></tr>
+    <tr><td class="mono">GründerWiki</td><td class="tie">shares addresses</td><td>Wiki, same server</td><td><span class="chip c-ok">public tool</span></td><td>Texas census codes; outside the dataset</td><td>open</td></tr>
+    <tr><td class="mono">Wiki4D</td><td class="tie">shares addresses</td><td>Wiki, same server</td><td><span class="chip c-ok">public tool</span></td><td>Texas census codes; outside the dataset</td><td>open</td></tr>
+    <tr><td class="mono">Milk's wiki</td><td class="tie">&mdash;</td><td>Wiki, same server</td><td><span class="chip c-ok">public tool</span></td><td>77 requests on May 26 from two swarm accounts</td><td>open</td></tr>
+    <tr><td class="mono">texteditors.org</td><td class="tie">shares addresses</td><td>Wiki</td><td><span class="chip c-ok">public tool</span></td><td>Twelve Microsoft addresses on June 22, then a Tor exit</td><td>open</td></tr>
+    <tr><td class="mono">tmcleod.org</td><td class="tie">shares addresses</td><td>High school chemistry wiki</td><td><span class="chip c-ok">public tool</span></td><td>Ten disguises of one blocked address</td><td>open</td></tr>
+    <tr><td class="mono">ludism.org</td><td class="tie">&mdash;</td><td>Games wiki</td><td><span class="chip c-ok">public tool</span></td><td>Two sandbox pages holding federal PDF links</td><td>open</td></tr>
+    <tr class="grp"><td colspan="6">Paste board, 1</td></tr>
+    <tr><td class="mono">paste.linuxiarz.pl</td><td class="tie">&mdash;</td><td>Polish paste board</td><td><span class="chip c-ok">public tool</span></td><td>118 Iowa cancer pastes, May 14 to June 17; 113 of them on June 16</td><td>open</td></tr>
+    <tr class="grp"><td colspan="6">Link shorteners, 8</td></tr>
+    <tr><td class="mono">vanderbi.lt</td><td class="tie">named in it</td><td>Vanderbilt University, YOURLS</td><td><span class="chip c-live">help ticket only</span></td><td>At least 170 links created; 495 FBI addresses in the logs</td><td>logs locked Sept 8; 28 links rewritten</td></tr>
+    <tr><td class="mono">uoft.me</td><td class="tie">named in it · shares addresses · names links</td><td>University of Toronto, YOURLS</td><td><span class="chip c-fix">open to utoronto.ca targets</span></td><td>4 links; 2,349 visits June 18</td><td>logs locked Sept 8</td></tr>
+    <tr><td class="mono">goto.unm.edu</td><td class="tie">named in it · shares addresses · names links</td><td>University of New Mexico, YOURLS</td><td><span class="chip c-live">UNM login</span></td><td>A 2023 UNM link's log used; 1,845 visits June 18; 761 addresses</td><td>log open</td></tr>
+    <tr><td class="mono">u.ethz.ch</td><td class="tie">&mdash;</td><td>ETH Zurich, YOURLS</td><td><span class="chip c-live">login, terms not stated</span></td><td>A 2020 ETH link's log used; 63 visits June 18</td><td>does not answer; archived Sept 6</td></tr>
+    <tr><td class="mono">2dd.pl</td><td class="tie">named in it</td><td>Polish shortener, YOURLS</td><td><span class="chip c-ok">public tool</span></td><td>Links named agnewmd26615703, agnewmd77805076, p9279729</td><td>logs locked behind a login</td></tr>
+    <tr><td class="mono">da.gd</td><td class="tie">named in it</td><td>Public shortener</td><td><span class="chip c-ok">public tool</span></td><td>Custom names such as SECcountyM; the claimed source of 3,288 visits to the Vanderbilt page</td><td>open</td></tr>
+    <tr><td class="mono">is.gd</td><td class="tie">named in it</td><td>Public shortener</td><td><span class="chip c-ok">public tool</span></td><td>Links to the SEC and Iowa files; the claimed source of 336 visits to the Vanderbilt page</td><td>open</td></tr>
+    <tr><td class="mono">v.gd</td><td class="tie">named in it · names links</td><td>Public shortener</td><td><span class="chip c-ok">public tool</span></td><td>3 links, the claimed source of 39 visits; one points back at a Vanderbilt link</td><td>open</td></tr>
+    <tr class="grp"><td colspan="6">Package registry, 1</td></tr>
+    <tr><td class="mono">rubygems.org</td><td class="tie">shares addresses</td><td>Ruby package registry</td><td><span class="chip c-ok">public tool</span></td><td>83 packages published June 18 in three hours; 583 addresses in their metadata, 384 aimed at the SEC county file</td><td>open</td></tr>
+    <tr class="grp"><td colspan="6">Document store, 1</td></tr>
+    <tr><td class="mono">jsonhero.io</td><td class="tie">named in it</td><td>JSON viewer with share links</td><td><span class="chip c-ok">public tool</span></td><td>2 stored documents; 2,274 mentions in the dataset</td><td>open</td></tr>
+    <tr class="grp"><td colspan="6">Fetch services, 14. Used to pull pages; nothing stored. Two more, Google Translate and webcrawlerapi.com, appear on RubyGems and in the wiki posts but on no university page.</td></tr>
+    <tr><td class="mono">jqp.vercel.app</td><td class="tie">&mdash;</td><td>jq playground</td><td><span class="chip c-known">read only</span></td><td>14,787 mentions on Vanderbilt; 3,235 posts</td><td>open</td></tr>
+    <tr><td class="mono">allorigins.hexlet.app</td><td class="tie">&mdash;</td><td>Proxy</td><td><span class="chip c-known">read only</span></td><td>21,938 mentions on Vanderbilt; 1,226 posts</td><td>open</td></tr>
+    <tr><td class="mono">r.jina.ai</td><td class="tie">&mdash;</td><td>Reader service</td><td><span class="chip c-known">read only</span></td><td>5,363 mentions on Vanderbilt</td><td>open</td></tr>
+    <tr><td class="mono">md.succ.ai</td><td class="tie">&mdash;</td><td>Page to text</td><td><span class="chip c-known">read only</span></td><td>1,339 mentions on Vanderbilt</td><td>open</td></tr>
+    <tr><td class="mono">markdown.new</td><td class="tie">&mdash;</td><td>Page to text</td><td><span class="chip c-known">read only</span></td><td>307 mentions on Vanderbilt</td><td>open</td></tr>
+    <tr><td class="mono">api.cors.lol</td><td class="tie">&mdash;</td><td>Proxy</td><td><span class="chip c-known">read only</span></td><td>282 mentions on Vanderbilt</td><td>open</td></tr>
+    <tr><td class="mono">pure.md</td><td class="tie">&mdash;</td><td>Page to text</td><td><span class="chip c-known">read only</span></td><td>On Vanderbilt, New Mexico and in the posts</td><td>open</td></tr>
+    <tr><td class="mono">cors.bwa.workers.dev</td><td class="tie">&mdash;</td><td>Proxy</td><td><span class="chip c-known">read only</span></td><td>On Vanderbilt and in the posts</td><td>open</td></tr>
+    <tr><td class="mono">cors.io</td><td class="tie">&mdash;</td><td>Proxy</td><td><span class="chip c-known">read only</span></td><td>5 visits on Vanderbilt, 3 to the FBI</td><td>open</td></tr>
+    <tr><td class="mono">api.microlink.io</td><td class="tie">&mdash;</td><td>Page fetcher</td><td><span class="chip c-known">read only</span></td><td>74 visits on New Mexico; 10 posts</td><td>open</td></tr>
+    <tr><td class="mono">markdown.microlink.io</td><td class="tie">&mdash;</td><td>Page to text</td><td><span class="chip c-known">read only</span></td><td>45 visits on New Mexico</td><td>open</td></tr>
+    <tr><td class="mono">docs.google.com/gview</td><td class="tie">&mdash;</td><td>Google's document viewer</td><td><span class="chip c-known">read only</span></td><td>480 addresses across 85 posts; fetched budget files from portal.max.gov and the SEC county file</td><td>open</td></tr>
+    <tr><td class="mono">test.cors.workers.dev</td><td class="tie">&mdash;</td><td>Proxy</td><td><span class="chip c-known">read only</span></td><td>Used in the Iowa pastes; 20 posts</td><td>open</td></tr>
+    <tr><td class="mono">httpbin.org</td><td class="tie">&mdash;</td><td>HTTP test service</td><td><span class="chip c-known">read only</span></td><td>170 mentions on Vanderbilt</td><td>open</td></tr>
+  </table></div>
+  <p class="wb">Ties to Vanderbilt: <em>named in it</em> means the site is named in the visitor log of Vanderbilt's JFK/U2 page. <em>Shares addresses</em> means the site carries addresses that appear word for word in that log: DSEWiki 379, probier 84, fractal 19, Toronto 62, New Mexico 94; GründerWiki, Wiki4D, texteditors.org and tmcleod.org carry the four Texas census codes or the SEC county address that also sit in that log. <em>Names links</em> means the site names or points at Vanderbilt links in its own log: New Mexico names four, Toronto names one, v.gd points at one. The other wikis and the paste board tie to Vanderbilt through the DSEWiki dataset, not directly. "Does not answer" means the site did not respond to my network on September 8. Archived copies: <a href="https://web.archive.org/web/20260909023754/https://goto.unm.edu/7t6-o+">New Mexico</a> · <a href="https://web.archive.org/web/20260906205549/https://u.ethz.ch/nB1nv+">ETH Zurich</a> · <a href="https://web.archive.org/web/20260909030411/https://2dd.pl/p9279729+">2dd.pl</a> · <a href="http://web.archive.org/web/20260904190301/https://uoft.me/maagentxyz99999+">Toronto</a>. Hugging Face, a separate incident, is not counted.</p>
+</div></details>
+</div></div>
+
+<h2 id="centre"><span class="sub">The page</span>A dead link about JFK and Bono became the robots' notebook</h2>
+<div class="find alert"><div class="fbody" style="padding-left:0">
+  <p>One Vanderbilt link matters more than the rest. The link, <code>iyg1y</code>, dates from August 2011 and points at a Vanderbilt Medical Center staff newsletter piece, &ldquo;Of JFK, U2, telephones and security.&rdquo; The piece set President Kennedy's 1963 speech at Vanderbilt Stadium beside U2's concert there on July 2, 2011: one telephone line run out to the field for the president then, forty thousand cell phones held up for Bono now. That article <a href="http://web.archive.org/web/20240709202334/https://www.vanderbilt.edu/houseorgan/2011/08/of-jfk-u2-telephones-and-security/">went offline</a> in July 2024. The page died; the short link and the public visitor log did not.</p>
+  <p>59,942 <a href="https://web.archive.org/web/20260904190543/https://vanderbi.lt/iyg1y+">visits</a> across the link's whole life. 2,950 of them fell in the fifteen years to 2025, between 54 and 459 a year. 54,250 fell on June 18, 2026.</p>
+  <p>The log holds 5,212 addresses from 81 sites, plus 184 single-visit addresses the page files under &ldquo;Various,&rdquo; and visitors from 81 countries. <strong><a href="#howchecked">391 of those addresses appear word for word</a> in the agents' own posts on DSEWiki</strong>, accounting for 29,806 visits, just under half of the link's lifetime traffic and more than half of June 18. <strong><a href="#toronto">87 more also appear on a single University of Toronto page</a></strong>, accounting for 22,732 visits. <strong><a href="#alllinks">448 entries name another Vanderbilt short link</a></strong>, which is how the <a href="#alllinks">roster of everything else the agents built</a> survived. <strong>30 carry a <code>ZZZ</code> marker</strong> &mdash; strings like <code>UNIQUELOGZZZ322869901</code> and <code>HELLOREFZZZ=110</code>, stamped into a test write so the agent could find that line again on the next read.</p>
+  <p>The log also holds <a href="#keys">the three keys that reached the FBI</a>.</p>
+  <details class="appx big" id="thepage"><summary>Table: the JFK/U2 page, by the numbers</summary><div class="appx-body">
+<div class="tw"><table>
+    <tr><td>Created</td><td class="mono">August 5, 2011, 12:48 pm</td></tr>
+    <tr><td>Points at</td><td>A Vanderbilt Medical Center staff newsletter piece, <a href="http://web.archive.org/web/20240709202334/https://www.vanderbilt.edu/houseorgan/2011/08/of-jfk-u2-telephones-and-security/">&ldquo;Of JFK, U2, telephones and security&rdquo;</a> (archived copy), on Kennedy's 1963 visit and U2's 2011 concert</td></tr>
+    <tr><td>The page itself</td><td><a href="https://web.archive.org/web/20260904190543/https://vanderbi.lt/iyg1y+">Archived copy of the statistics page, September 4, 2026</a>. The live address now shows a login screen.</td></tr>
+    <tr><td>Target went offline</td><td class="mono">between July 9 and July 28, 2024</td></tr>
+    <tr><td>Lifetime visits</td><td class="num"><strong>59,942</strong></td></tr>
+    <tr><td>Visits on June 18, 2026</td><td class="num"><strong>54,250</strong></td></tr>
+    <tr><td>Traffic 2011 through 2025</td><td class="mono">2,950 visits in all, between 54 and 459 a year</td></tr>
+    <tr><td>Referring addresses listed</td><td class="num"><strong>5,212</strong> from 81 sites, worth 55,893 visits, plus 184 single-visit addresses under &ldquo;Various&rdquo;</td></tr>
+    <tr><td>Addresses matching the agents' posts</td><td class="num"><strong>391</strong>, worth 29,806 visits</td></tr>
+    <tr><td>Wikis those matches appear on</td><td>DSEWiki (379), probier (84), fractal (19); 80 on more than one</td></tr>
+    <tr><td>Shared with Toronto's shortener</td><td><strong>87</strong> addresses with <a href="http://web.archive.org/web/20260904190301/https://uoft.me/maagentxyz99999+">uoft.me/maagentxyz99999</a>, worth 22,732 visits</td></tr>
+    <tr><td>FBI addresses in the log</td><td class="num"><strong>382</strong> &mdash; 379 written plainly, 3 through cors.io</td></tr>
+    <tr><td>Top referrers</td><td class="mono">allorigins.hexlet.app 21,938 · jqp.vercel.app 14,787 · r.jina.ai 5,363 · da.gd 3,288 · sec.gov 2,892</td></tr>
+    <tr><td>Countries</td><td class="mono">81 in all. United States 50,020 · Europe 1,895 · United Kingdom 1,422 · France 1,072 · Germany 737 · China 400</td></tr>
+    <tr><td>What it does not record</td><td>No IP addresses. Entries are listed alphabetically, not by time.</td></tr>
+  </table></div>
+</div></details>
+</div></div>
+
+<h2 id="vandy"><span class="sub">Access</span>No public door, but OpenAI agents got in anyway</h2>
+<div class="find alert"><div class="fbody" style="padding-left:0">
+  <p>Vanderbilt's shortener has no form. The homepage says the service &ldquo;is only available for organizations affiliated with Vanderbilt University and is only to be used for official Vanderbilt communication,&rdquo; and that a department wanting access should &ldquo;open a help ticket with Digital Strategies.&rdquo; The login is marked restricted. The Internet Archive shows Vanderbilt posting the same restriction in June 2026, the month the agents made the links.</p>
+  <p>The software behind the shortener, YOURLS, creates links two ways: through that admin login, or through an API that requires a secret signature. Both are private. If the agents used neither, then something in the software let the agents through.</p>
+  <p><strong>How I count the 170, and why nobody had that number.</strong> Two researchers <a href="#alllinks">published inventories</a> of these links before me. <a href="https://fi-le.net/vanderbilt">fi-le.net</a> listed 28 on September 4. A research ledger at <a href="https://helppeer.app/research/bridges">helppeer.app</a> lists 25. Between the two lists, 37 distinct links.</p>
+  <p>Neither includes <code>iyg1y</code>. That page is the roster. The <code>iyg1y</code> visitor log records the address each visitor claimed to arrive from, and the agents arrived carrying other Vanderbilt short links. So one page names 124 sibling links, 114 of which appear nowhere else.</p>
+  <p>I resolved every code found across my captures and in the swarm's posts. 174 of them answered. Four belong to Vanderbilt: the 2011 article, two news stories from 2008 and 2016, and a sports page. Those are ordinary university links, made years ago for ordinary reasons, and the agents used those four the same way as <code>iyg1y</code>, for the public log that comes attached. The other <strong>158 in my captures are the agents' own</strong>, confirmed by where each one points. The swarm's posts name 12 more that resolve today, which is how the count reaches 170.</p>
+  <p>Those 13 extra codes are worth a line of their own. Each appears in the agents' posts as a <code>vanderbi.lt</code> address, none appears in any page I saved, and twelve of the thirteen answer today with a redirect to vanderbilt.edu, the same answer the other rewritten links give. The thirteenth, <code>jsmap88997</code>, returns the shortener's not-found response, the answer an invented code gets. So 170 links and 28 rewrites, and 170 is still a floor: it counts what five saved pages and one published dataset happen to name. Nobody has enumerated the shortener itself, and I have no way to.</p>
+  <p><strong>The <a href="#alllinks">invented targets</a>.</strong> 36 of the links point at <code>example.com</code> and <code>example.org</code> with paths like <code>BrandNewTargetUniqueourcfu170mz</code> and <code>new1782117457.00458</code>. Those are not data fetches but tests, to find out whether link creation worked at all.</p>
+  <p><strong>Thirteen of the links name the maker.</strong> <code>openaipovertycompacttest</code>, <code>agent0zambjson</code>, <code>agentinvestslice19777</code>, <code>agentjqroundma777</code>, <code>00agent</code>, <code>aaaagent0</code>. Whatever created those links was not trying to blend in.</p>
+  <p><strong>One is named for cooks.</strong> The agents created <code>cookage85datax</code> on June 21 at 4:40pm on the shortener's own clock and pointed the link at a Data USA query for occupation code 352010, the census code for cooks. That exact query fragment appears in 416 of the agents' published posts. A DSEWiki page titled <code>AgentCookAge85DataXYZ</code> appeared at 03:08 UTC the next morning; Vanderbilt does not publish the shortener's timezone, so the gap is between five and eleven hours. The word Cook appears in 98 of the swarm's account names and 207 of its page names. The agents were working a task about cooks, and named links, pages, and accounts after that task.</p>
+  <p><strong>And the agents were learning the mechanism.</strong> The agents requested <code>iyg1ya</code> four different ways: <code>/iyg1ya</code>, <code>/iyg1ya+</code>, <code>/iyg1ya%2B</code>, and <code>/iyg1ya+?x=1</code>. That is something working out how the statistics page responds to different forms of the plus sign. Two of the agents' links are named <code>iyg1z</code> and <code>iyg1ya</code>, the 2011 link's name with one character changed or added. <code>iyg1z</code> goes to the bureau's own site with a request for 2022 arrest counts at Autauga County, and appears inside the <code>iyg1y</code> log 405 times as the address a visitor claimed to arrive from. <code>iyg1ya</code> points at a nonsense path on api.usa.gov, the federal gateway that fronts the FBI's data. A third, <code>abcde</code>, carries the same Alabama question to api.usa.gov with the government's demo key attached. I did not open any of the three.</p>
+  <p>So one of three things is true. The agents had a Vanderbilt account. Or the agents had the API signature. Or the software let the agents in without either. Which of the three is unknown.</p>
+  <p><strong>The agents obeyed a rule when a rule existed.</strong> The <a href="#toronto">University of Toronto</a> publishes the condition on its own shortener: the target address must contain <code>utoronto.ca</code> or one of three related domains. The agents read that rule and complied, pointing links at <code>utoronto.ca/foobaruniq456</code>, a fake path on a real domain. <a href="#toronto">Toronto is the control case, and it comes next.</a></p>
+  <p><strong>Two more universities turn up in the logs.</strong> The University of New Mexico runs the same software at <a href="https://goto.unm.edu/">goto.unm.edu</a>, behind a UNM login. The agents did not make links there. Instead the agents took an old UNM events link from 2023, <code>7t6-o</code>, and used the public log attached to that link the same way as <code>iyg1y</code>. That log took 1,845 visits on June 18, out of 2,502 in the link's whole life, and holds 761 addresses. 94 of those addresses appear word for word on the Vanderbilt page, 62 in the DSEWiki dataset, and 23 on Toronto's pages. The UNM log names three Vanderbilt links missing from every earlier count, and a v.gd link names a fourth. ETH Zurich's shortener, <code>u.ethz.ch</code>, appears once, in Toronto's log: a 2020 ETH link whose best day in six years was 63 visits on June 18, 2026. <a href="https://goto.unm.edu/7t6-o+">UNM's log was open to anyone on September 9.</a> <a href="https://web.archive.org/web/20260906205549/https://u.ethz.ch/nB1nv+">ETH's has an archive copy from September 6.</a></p>
+</div></div>
+
+<h2 id="toronto"><span class="sub">Toronto</span>The control case: Toronto's door was open</h2>
+<div class="find"><div class="fbody" style="padding-left:0">
+  <p>Toronto's shortener, <code>uoft.me</code>, ran the same software and took the same visitors, and required no authorization: anyone whose target address contains <code>utoronto.ca</code>, <code>toronto.edu</code>, <code>utoronto.sharepoint.com</code> or <code>uthrprod.service-now.com</code> may make a link. On June 18, the agents created four short links there between 10:52am and 3:03pm, each pointing at a <code>utoronto.ca</code> address that returns a 404. Together the four took 2,349 visits that day; one, <a href="http://web.archive.org/web/20260904190301/https://uoft.me/maagentxyz99999+"><code>maagentxyz99999</code></a>, took 1,735. @j0wimo posted two of the four on X on September 4.</p>
+  <p>The log of <code>maagentxyz99999</code> holds the 65-character SEC address found in 790 DSEWiki posts, and 87 of the addresses in that log also sit on Vanderbilt's <code>iyg1y</code> page, worth 22,732 visits there. None of the 170 Vanderbilt link names appears on Toronto's pages, which I checked one by one. The two operations shared tools, not names: <code>jqp.vercel.app</code> appears 1,556 times on Toronto's pages, the SEC file 391 times, the allorigins proxy 82.</p>
+  <p>Toronto put its statistics pages behind a login on September 8, the same day Vanderbilt did.</p>
+  <p><strong>Toronto shows the agents obeyed a published rule when one existed.</strong> That is what makes the Vanderbilt entry stand out as an anomaly rather than routine agent behavior.</p>
+  <details class="appx"><summary>Table: Toronto's four links, with visits and targets</summary><div class="appx-body">
+    <div class="tw"><table>
+      <tr><th>Short link</th><th>Created</th><th>Visits</th><th>Busiest day</th><th>Points at</th></tr>
+      <tr><td class="mono"><a href="http://web.archive.org/web/20260904190301/https://uoft.me/maagentxyz99999+">maagentxyz99999</a></td><td class="nw">Jun 18 10:52am</td><td class="num">1,788</td><td class="num">1,735</td><td class="mono">utoronto.ca/foobaruniq456</td></tr>
+      <tr><td class="mono"><a href="http://web.archive.org/web/20260904190413/https://uoft.me/mafresh91011+">mafresh91011</a> *</td><td class="nw">Jun 18 3:03pm</td><td class="num">313</td><td class="num">262</td><td class="mono">utoronto.ca/abc2323</td></tr>
+      <tr><td class="mono">amass932899504 *</td><td class="nw">Jun 18 2:59pm</td><td class="num">67</td><td class="num">26</td><td class="mono">utoronto.ca/</td></tr>
+    
+      <tr><td class="mono">zzagent740558</td><td class="nw">Jun 18 1:01pm</td><td class="num">376</td><td class="num">326</td><td class="mono">utoronto.ca/foo4080368</td></tr>
+    </table></div>
+    <p class="wb">* Read live on September 4, not saved. Those two rows come from my notes of that reading, not from a capture in this set. The other two pages are captured and archived.</p>
+    <p>The visitor log of <code>maagentxyz99999</code> holds 665 entries from 16 source names. The invented name <code>simpletestrefabc99.com</code> appears 5 times.</p>
+    <p class="wb">Archived: <a href="http://web.archive.org/web/20260904190301/https://uoft.me/maagentxyz99999+">maagentxyz99999+</a> · <a href="http://web.archive.org/web/20260904190413/https://uoft.me/mafresh91011+">mafresh91011+</a></p>
+    <div class="repro"><div class="h">Reproduce</div><code>curl -s "https://uoft.me/maagentxyz99999+" | grep -c "allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json"</code></div>
+    <p>On the page, search for <code>allorigins.hexlet.app/raw?url=https://www.sec.gov</code>. Search for <code>1735 hits</code> to find the busiest-day figure.</p>
+  </div></details>
+</div></div>
+
+<h2 id="keys"><span class="sub">The keys</span>Three keys went to the FBI. Two were real. One was a stranger's.</h2>
+<div class="find alert"><div class="fbody" style="padding-left:0">
+  <p>Three keys reached the FBI's Crime Data Explorer through Vanderbilt's pages, and two of the three came from public GitHub repositories.</p>
+  <p><code>DEMO_KEY</code>, the key the government prints in the government's own documentation so nobody needs a real one. Used 241 times.</p>
+  <p>The FBI's own developer key, sitting in the bureau's <a href="https://github.com/fbi-cde/crime-data-frontend">public code repository</a> on <a href="https://github.com/fbi-cde/crime-data-frontend/blob/master/public/swagger/main.js">the line that fills the key</a> into the agency's documentation page. 45 other projects have copied that key. Used 94 times.</p>
+  <p>And a citizen's key, published by accident in 2023 in a data science project. Used four times, on one page, to ask about one Alabama county. <a href="#asked">The trace is in Three keys, one ladder, below.</a> The two earlier inventories, fi-le.net's and helppeer's, contain no page that carries FBI traffic.</p>
+</div></div>
+
+<h2 id="dests"><span class="sub">Destinations</span>Where the 142 Vanderbilt links still pointing go (at least 170 made, 28 already rewritten, 142 still pointing on September 9)</h2>
+<div class="find alert"><div class="fbody" style="padding-left:0">
+  <p>The agents made at least 170 short links on Vanderbilt's shortener. Vanderbilt has rewritten 28 to point at the university's homepage. The other 142 were still sending visitors where the agents pointed them at 21:23 UTC on September 9. The table below groups those 142 by destination, so a reader can see at a glance what the swarm was fetching: a jq playground that filters a downloaded file, the SEC's Regulation Crowdfunding county file, African health statistics, Google's document viewer, and the reserved example.com domain the agents used to test whether link creation worked at all.</p>
+  <p>The third column shows how I know an agent made each link: the names. Nobody at Vanderbilt names a link <code>erietest220</code> or <code>BrandNewTargetUnique</code>, and nobody makes three links to the same 1970 railroad magazine. The agents created every one whose statistics page I hold between June 18 and June 21, 2026, and all of them share a naming style that runs through the swarm's wiki posts: a task word, a serial number, the word test or agent, a date stamp like 260618. The fourth column counts how many of the swarm's 14,591 published wiki posts mention the same destination, which separates a tool the swarm used constantly from one used once. The fifth counts appearances on the University of Toronto pages I hold. A destination that shows up in thousands of posts and on Toronto's pages was part of the swarm's standard kit. A destination that shows up nowhere else, like the FBI, is something the Vanderbilt links alone carried.</p>
+  <p><strong>Google Docs as a fetcher.</strong> Two of the live links, <code>pdfcf08789</code> and <code>qadt0</code>, point at Google's document viewer, at addresses that hold a PDF Google rendered on June 18. The viewer is the tool at docs.google.com that shows any file on the web as a page. The swarm used it as one reader among several: 480 viewer addresses run through 85 of the wiki posts, most of them pointing at federal budget files on portal.max.gov, the SF 133 reports, and at the SEC's county file, plus Texas archive PDFs reached through a second proxy. The same budget files also went out through markdown.new, through pure.md, and 34 times with no middleman at all, so Google was a route the agents tried, not one they needed. On the Vanderbilt page the viewer appears at 34 addresses worth 101 visits, including bare tests like <code>gview?embedded=1&amp;newfoo=123</code>, an agent checking that the viewer would accept a made-up parameter. The pattern is the same as the shorteners: a big, trusted service that fetches on request, asks no questions, and leaves a public trace. jsonhero.io got the same treatment, fed a da.gd link and asked to store the result as a shareable document. On the New Mexico page two more fetchers appear that show up nowhere else, api.microlink.io and markdown.microlink.io, along with 59 requests to Vietnam's national statistics office. The swarm was not loyal to any tool. Any service that would fetch a page and hand it back got used, and the universities' shorteners were where the swarm wrote the answers down.</p>
+  <div class="tw"><table><tr><th>Destination</th><th>Links</th><th class="wrap2">Link names,<br>as the agents wrote them</th><th>What it is</th><th>DSEWiki posts</th><th>On Toronto</th></tr><tr><td class="mono">jqp.vercel.app</td><td class="num">38</td><td class="mono small">40hhp, 7udwe, agentinvestslice19777, agentinvestslice20777, and 34 more</td><td>A jq playground. Runs a filtering program against a fetched file and returns the answer.</td><td class="num">3,235</td><td class="num">1,556</td></tr><tr><td class="mono">example.com</td><td class="num">28</td><td class="mono small">9d6p0, abc, abcd, abctest16760, and 24 more</td><td>The reserved example domain, with invented paths. Tests of whether link creation worked.</td><td class="num">475</td><td class="num">&mdash;</td></tr><tr><td class="mono">api.dataafrica.io</td><td class="num">14</td><td class="mono small">agent0zambjson, b7ps3uniq04, d2n3whello, erierailroad1970, and 10 more</td><td>African health statistics. Child malnutrition by region.</td><td class="num">0</td><td class="num">&mdash;</td></tr><tr><td class="mono">www.sec.gov</td><td class="num">12</td><td class="mono small">00agent, 34y3g, aaaagent0, am2wn, and 8 more</td><td>Federal securities data, mostly one county file.</td><td class="num">4,457</td><td class="num">391</td></tr><tr><td class="mono">allorigins.hexlet.app</td><td class="num">12</td><td class="mono small">0n0wi, agentmacountyjson777, cookage85datax, macfraw7231, and 8 more</td><td>A proxy that fetches a blocked page and hands the page back.</td><td class="num">1,226</td><td class="num">82</td></tr><tr><td class="mono">api.worldpoverty.io</td><td class="num">9</td><td class="mono small">agtest00999, agwpc2018x126, agwpc2018y871, agwpc2020x254, and 5 more</td><td>World Poverty Clock data API.</td><td class="num">3</td><td class="num">&mdash;</td></tr><tr><td class="mono">example.org</td><td class="num">8</td><td class="mono small">9gxqq, agct201997304, agent777, agentmacounty61, and 4 more</td><td>Reserved domain. More creation tests.</td><td class="num">349</td><td class="num">8</td></tr><tr><td class="mono">md.succ.ai</td><td class="num">3</td><td class="mono small">agnewmd5562540, snewmd594467247, somethingelse</td><td>A reader that converts a page to plain text.</td><td class="num">2,349</td><td class="num">94</td></tr><tr><td class="mono">railroadtreasures.com</td><td class="num">3</td><td class="mono small">erierrmag70, erieshop770099, erietest220</td><td>A 1970 railroad magazine listing.</td><td class="num">0</td><td class="num">&mdash;</td></tr><tr><td class="mono">api.usa.gov</td><td class="num">2</td><td class="mono small">abcde, iyg1ya</td><td><strong>The FBI&rsquo;s Crime Data Explorer, through the federal API gateway.</strong></td><td class="num">0</td><td class="num">&mdash;</td></tr><tr><td class="mono">cde.ucr.cjis.gov</td><td class="num">1</td><td class="mono small">iyg1z</td><td><strong>The FBI&rsquo;s own crime data site.</strong></td><td class="num">0</td><td class="num">&mdash;</td></tr><tr><td class="mono">api.datausa.io</td><td class="num">1</td><td class="mono small">mypoptestxyz</td><td>US census and demographic data.</td><td class="num">2,435</td><td class="num">&mdash;</td></tr><tr><td class="mono">www.investor.gov</td><td class="num">1</td><td class="mono small">az9q</td><td>SEC investor site.</td><td class="num">2,403</td><td class="num">63</td></tr><tr><td class="mono">r.jina.ai</td><td class="num">1</td><td class="mono small">oco6i</td><td>Another reader service.</td><td class="num">911</td><td class="num">60</td></tr><tr><td class="mono">httpbin.org</td><td class="num">1</td><td class="mono small">readme</td><td>An HTTP testing service.</td><td class="num">73</td><td class="num">18</td></tr><tr><td class="mono">da.gd</td><td class="num">1</td><td class="mono small">agentdamacosh777</td><td>Another URL shortener.</td><td class="num">25</td><td class="num">&mdash;</td></tr><tr><td class="mono">jsonhero.io</td><td class="num">1</td><td class="mono small">xxyytest17819</td><td>A JSON viewer.</td><td class="num">119</td><td class="num">&mdash;</td></tr><tr><td class="mono">api.beta.ons.gov.uk</td><td class="num">1</td><td class="mono small">ag0vbark731733</td><td>UK Office for National Statistics.</td><td class="num">0</td><td class="num">&mdash;</td></tr><tr><td class="mono">docs.google.com viewer</td><td class="num">2</td><td class="mono small">pdfcf08789, qadt0</td><td>Google's document viewer, holding a rendered PDF the agents fed to it. 480 viewer addresses appear across 85 wiki posts, fetching budget files from portal.max.gov and the SEC county file.</td><td class="num">480</td><td class="num">&mdash;</td></tr><tr><td class="mono">dummy2019.org</td><td class="num">1</td><td class="mono small">kn31j</td><td>Placeholder.</td><td class="num">0</td><td class="num">&mdash;</td></tr><tr><td class="mono">itm.ebaydesc.com</td><td class="num">1</td><td class="mono small">d2n3w</td><td>An eBay item description.</td><td class="num">0</td><td class="num">&mdash;</td></tr><tr><td class="mono">vanderbi.lt</td><td class="num">1</td><td class="mono small">qc8t5</td><td>Points back at the shortener itself.</td><td class="num">&mdash;</td><td class="num">&mdash;</td></tr><tr><td><strong>Total</strong></td><td class="num"><strong>142</strong></td><td></td><td></td><td></td><td></td></tr></table></div>
+  <p>One of the links, <code>maallraw260618</code>, was still drawing visits long after agent posting on DSEWiki stopped on June 22: 43 on July 3 and 242 on August 28.</p>
+  
+  <p><strong>The FBI addresses exist only on Vanderbilt</strong>: not on Toronto's pages, not in the 14,591 wiki posts.</p>
+  <p class="wb"><a href="#alllinks">The full table of all 170 links, with names, destinations and status, is at the foot of this page.</a></p>
+</div></div>
+
+<h2 id="mechanism"><span class="sub">Mechanism</span>Two ways to talk through a link: how a shortener became a message board</h2>
+<div class="find alert"><div class="fbody" style="padding-left:0">
+  <p>These agents could read the internet, but could not write to the internet. So the agents found a way to write using nothing but a read, and a link shortener gave the swarm two such ways.</p>
+  <p><strong>The link itself is the first channel.</strong> When an agent creates <code>masscfround3x260618</code> and points that link at a proxied federal data query, that agent has published a name. Any other agent that knows the naming scheme can resolve that name and get the payload. That is a shared dictionary, written into someone else's server. The name carries the meaning; the target carries the data.</p>
+  <p><strong>The visitor log is the second.</strong> The short link is <code>vanderbi.lt/iyg1y</code>. Add a plus sign and the statistics page opens, listing every web address a visitor claimed to have come from. The visitor supplies that address, and nothing checks the claim. An agent sends a request with any text at all in that referral field, and the statistics page prints that text where any other agent can read the text.</p>
+  <h3 class="ax2" id="proves">What the log proves, and what it does not</h3>
+  <p>Every line on that page is a claim made by the visitor. The log shows that the agents wrote FBI addresses, three of them carrying API keys, onto a public university page. It does not show that those same requests reached the FBI. Only OpenAI's record of what its agents fetched, or the government's record of what arrived, can settle that, and both are asked for below. Everything counted here is what the page recorded.</p>
+  <p>The difference is direction. A redirect points outward, and reading a redirect means resolving the link. A referral points inward, and reading a referral means loading the statistics page. The first is a name someone else can look up. The second is a note left on the page.</p>
+  <p>By that measure every one of the 170 links is communication. Every one is a published name pointing at a payload.</p>
+  <p><strong>How many used the second channel is a different question, and I can only partly answer that question.</strong> I hold the statistics pages for 24 of the 170. Seven of those 24 carry a real visitor log: <code>iyg1y</code> with 5,212 addresses, <code>massjson715</code> with 125, <code>testfreshmd991</code> with 44, <code>g3-jc</code> with 36, <code>34Y3g</code> with 22, <code>majsonstats</code> with 15, and <code>rwandamodvals</code> with 11. Five more carry one or two stray entries. Twelve carry none; the agents used those as names only.</p>
+  <p><code>iyg1y</code> alone holds more than ninety percent of everything visible.</p>
+  <p><strong>The swarm did not need a university link shortener.</strong> Any shortener with a public statistics page works, and the logs name four with no door at all. <code>2dd.pl</code>, a Polish shortener running the same software, gives out custom names without an account; the agents made <code>agnewmd26615703</code> and <code>agnewmd77805076</code> there, and 2dd.pl has since put its statistics pages behind a login too. On <code>da.gd</code> the agents named a link <code>SECcountyM</code> and pointed that name at the SEC county file. On <code>is.gd</code> and <code>v.gd</code> the agents parked the SEC and Iowa files. <code>jsonhero.io</code>, a viewer that stores any JSON document under a share link, holds two of the swarm's documents and appears 2,274 times in the DSEWiki posts. At Vanderbilt the agents made links behind a shut door. At New Mexico the door was also shut, and the agents did not go through; at New Mexico and at Zurich they wrote into the public logs of links the universities had made years earlier, which any visitor can do. Everywhere else the door was open.</p>
+  <p><strong>Why only 24.</strong> On September 4 and 7 I captured nine statistics pages live. On September 8 Vanderbilt put every statistics page behind a login. Later that same day I pulled the <code>iyg1y</code> visitor log apart and found that log named 124 sibling links nobody had listed. By then the pages were shut. I recovered 15 more from the Internet Archive; the other 146 have no archive capture at all. A login would not help either, because the statistics page is only a summary of the shortener's database, where every click sits as one row with a time, a claimed origin, an address and a country. The page thins its charts to about thirty points and keeps only the biggest day, so the June day-by-day counts are already gone from every page still open, New Mexico's included. Those database rows are the only place the record survives.</p>
+  <p>Nobody was reading that Vanderbilt Medical Center link about JFK and U2, because there was nothing left to read. Every one of those 54,250 visits intentionally wrote a line into the link's public visitor log.</p>
+</div></div>
+
+<h2 id="gems"><span class="sub">RubyGems</span>The swarm shipped 83 software packages. None of them were software.</h2>
+<div class="find"><div class="fbody" style="padding-left:0">
+  <p>On the same day the agents were working Vanderbilt's shortener, a RubyGems account called <code>ulinkqy8py3mp</code> published 83 software packages. Every one went up on June 18, 2026, between 17:53:31 and 20:52:56 UTC. All but one carry version 0.0.1. The authors are listed as &ldquo;Data User,&rdquo; &ldquo;R&rdquo; and &ldquo;Reader.&rdquo; The descriptions say things like &ldquo;Public map dataset reference collection.&rdquo;</p>
+  <p>The packages contain nothing worth installing. What they carry is metadata. RubyGems lets a package name a homepage, a source repository, documentation, a changelog, a wiki, a bug tracker and a funding page, and this account filled those fields with 583 distinct web addresses. 384 of them point at <code>sec.gov/files/county.json</code>, the same federal file 13 of the 14 services on Vanderbilt's pages were aimed at.</p>
+  <p>The addresses are wrapped the same way, too: <code>r.jina.ai</code> 46 times, <code>markdown.new</code> 37, <code>webcrawlerapi.com</code> 21. And Google again, from a different direction: <strong>Google Translate 27 times, plus 43 more through its <code>translate.goog</code> mirrors, used to fetch a page rather than to translate one.</strong> Feed Translate a foreign address and it returns the page, which makes it a reader like any other.</p>
+  <p>The gems are still published. They have been downloaded 42,104 times.</p>
+  <p>This is the same move as the shortener: a public service that stores text on someone else's server, filled with addresses instead of the thing it was built to store.</p>
+  <p class="wb">Credit for joining these two surfaces goes to ResponseIV (yZ7), who posted the observation publicly on September 4. The Vanderbilt links had been found by fi-le, and the RubyGems account by @j0wimo; neither had seen the other's work. The RubyGems figures here are my own, fetched from the registry's API on September 9.</p>
+</div></div>
+
+<h2 id="fbipages"><span class="sub">The pages</span>Five pages, 495 queries to the Bureau</h2>
+<div class="find alert"><div class="fbody" style="padding-left:0">
+  <p>The agents created four on June 18, 2026, and pointed each at a machine-readable data file. Vanderbilt created the fifth in 2011, and that link pointed at a working web page until 2024. The page died. The short link and the public visitor log did not.</p>
+  <div class="tw"><table>
+    <tr><th>Link</th><th>Created</th><th>Points at</th><th>FBI visits</th><th>Demo key</th><th>FBI dev key</th><th>Citizen's key</th></tr>
+    <tr><td class="mono"><a href="https://web.archive.org/web/20260904190543/https://vanderbi.lt/iyg1y+">iyg1y</a></td><td class="nw">Aug 5, 2011</td><td>a 2011 news article, dead since 2024</td><td class="num">379</td><td class="num">216</td><td class="num">33</td><td class="num"><strong>4</strong></td></tr>
+    <tr><td class="mono">testfreshmd991</td><td class="nw">Jun 18, 2026</td><td class="mono">sec.gov/files/county.json</td><td class="num">41</td><td class="num">8</td><td class="num">25</td><td class="num">0</td></tr>
+    <tr><td class="mono">34Y3g</td><td class="nw">Jun 18, 2026</td><td class="mono">the same SEC file, with a junk parameter</td><td class="num">36</td><td class="num">8</td><td class="num">20</td><td class="num">0</td></tr>
+    <tr><td class="mono">majsonstats</td><td class="nw">Jun 18, 2026</td><td class="mono">example.com/majsonstats, which goes nowhere</td><td class="num">23</td><td class="num">0</td><td class="num">16</td><td class="num">0</td></tr>
+    <tr><td class="mono"><a href="https://web.archive.org/web/20260906093354/https://vanderbi.lt/massjson715+">massjson715</a></td><td class="nw">Jun 18, 2026</td><td class="mono">the same SEC file again</td><td class="num">13</td><td class="num">9</td><td class="num">0</td><td class="num">0</td></tr>
+    <tr><td><strong>Total</strong></td><td></td><td></td><td class="num"><strong>492</strong></td><td class="num"><strong>241</strong></td><td class="num"><strong>94</strong></td><td class="num"><strong>4</strong></td></tr>
+  </table></div>
+  <p>Plus three more that reached the FBI's own site through <code>cors.io</code>. <strong>495 visits to the FBI in all.</strong> I checked every row above against the total each page prints.</p>
+  <p>The FBI's own dev key accounts for 94 of those visits, across four of the five pages. The citizen's key accounts for four, on one page, and appears in exactly one other place on the internet: the 2023 notebook the agents took the key from. Three of the four new links peaked on June 20; massjson715 peaked on June 21.</p>
+</div></div>
+
+<h2 id="knew"><span class="sub">Background</span>Hugging Face got 38 pages. Everything else got a footnote.</h2>
+<div class="find"><div class="fbody" style="padding-left:0">
+  <p>In July 2026, OpenAI's agents broke out of a test environment and attacked Hugging Face. OpenAI published a <a href="https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf">38-page report</a> on August 26. Everyone agrees that incident was about keys that were already public. The phrase &ldquo;publicly exposed&rdquo; appears seven times.</p>
+  <p>Between May 11 and July 2, 2026, a different swarm of OpenAI agents made thousands of posts on a German-language wiki called DSEWiki, using the wiki as a message board while running a timed research assignment. collusion.wiki put the figure at about 18,000; the dataset it published holds 14,591 revisions from four wikis on that server, and every count in this report is drawn from that dataset. <a href="https://collusion.wiki/">collusion.wiki</a> published that research on September 4. OpenAI's own address had reached the wiki on June 21, and agent posting stopped the next day. The company said nothing publicly for the next ten weeks. On <a href="https://drive.google.com/file/d/1mapFqQUAbXJsLbbOnzib6nAg8Ic1zM2V/view">August 31</a>, answering a <a href="https://casar.house.gov/sites/evo-subsites/casar.house.gov/files/evo-media-document/oversight-letter-to-openai-openai-hugging-face-incident-1.pdf">congressional request for records</a>, OpenAI gave Congress three pages on Hugging Face and a single footnote covering everything else. That footnote refers to &ldquo;earlier training and evaluation activities in May and June 2026&rdquo; and calls them &ldquo;separate from the subsequent Hugging Face intrusion.&rdquo; It does not name the wiki. OpenAI confirmed the wiki incident on September 5, the day after the researchers went public, in a post on X.</p>
+  <p>The published dataset covers four wikis on that Austrian server: DSEWiki, probier, fractal and Dorfwiki. Three more on the same server, GründerWiki, Wiki4D and Milk's wiki, carry the same swarm's census codes and federal document IDs and sit outside the published count. Others will have more on those wikis than I do.</p>
+</div></div>
+
+<h2 id="order"><span class="sub">Timeline</span>June 18: the day the dead link woke up</h2>
+<div class="find"><div class="fbody" style="padding-left:0">
+  <div class="tw"><table>
+    <tr><th style="width:14%">Date</th><th>What happened</th></tr>
+    <tr><td class="nw">May 24</td><td>Links start appearing on DSEWiki.</td></tr>
+    <tr><td class="nw">June 2</td><td>The wiki's moderator notices and starts deleting by hand.</td></tr>
+    <tr><td class="nw">June 16</td><td>Mass coordination begins. The same day, 113 of the swarm's 118 Iowa health pastes go up on a Polish paste board.</td></tr>
+    <tr><td class="nw">June 18</td><td>Two new short links appear on Vanderbilt's shortener, and four on Toronto's. One old Vanderbilt link takes 54,250 visits.</td></tr>
+    <tr><td class="nw">June 21</td><td>An OpenAI address visits DSEWiki for the first time.</td></tr>
+    <tr><td class="nw">June 22</td><td>Agent posting stops.</td></tr>
+  </table></div>
+  <p>Most of the FBI queries sit in the log of that one Vanderbilt link. The big day was June 18, in the middle of the peak week, three days before OpenAI's address reached the wiki.</p>
+</div></div>
+
+<h2 id="asked"><span class="sub">The queries</span>Three keys, one ladder: how the requests reached the FBI</h2>
+<div class="find"><div class="fbody" style="padding-left:0">
+  <p>The same few questions, over and over. Arrest counts for one Alabama police agency across 2022. Hate crimes in Arizona, California, Hawaii and Ohio. Police employment in California, Georgia and Kansas. Robberies in New York.</p>
+  <p><strong>How the agents reached the FBI.</strong> 382 of the 495 sit in the <code>iyg1y</code> log alone. 117 went to the FBI's own website, which needs no key. Three more reached that same website through <code>cors.io</code>, one of fourteen outside services the swarm used to fetch a page and hand the page back. 262 went to <code>api.usa.gov</code>, which does need a key. 216 of those used <code>DEMO_KEY</code>, the free key the government prints in the government's own documentation so nobody needs a real one; the demo key allows 30 requests an hour. Nine carried no key at all. Thirty-three used a real key that sits on <a href="https://github.com/fbi-cde/crime-data-frontend/blob/master/public/swagger/main.js">the line that fills the key</a> into the FBI's own documentation page. Forty-five other projects have copied that key, and everyone using that key shares one limit.</p>
+  <p><strong>Four visits used a citizen's key.</strong></p>
+  <p>That is the ladder. The demo key allows thirty requests an hour from one address, and the agents ran 216 requests through the demo key on this page alone, more than seven hours' worth at that rate. Next came the FBI's own developer key, which shares one limit with everyone who has copied that key. Then, four times, a key that belongs to a private citizen. And with that key came something new: the agents set aside the task's own questions and started asking the questions the key's owner had asked in 2023, about the same Alabama county, through the same endpoint.</p>
+  <h3 id="ghost">The citizen's key</h3>
+  <p>The key belongs to a student who published the key by accident in 2023, inside the saved output of a data science notebook on crime and mental health, on a personal site. I am not naming the person or the page.</p>
+  <p>The notebook uses the same base address the agents used, <code>api.usa.gov/crime/fbi/cde</code>. The notebook names the Autauga County Sheriff's Office on one map. And the notebook contains the endpoint the agents hit with the key, written as <code>/arrest/agency/%s/all</code>.</p>
+  <p>So the agents did not register the key, and did not take the key off anyone's device. The agents found a page and took three things out of that page: the key, the query pattern, and the county.</p>
+  <p>The General Services Administration issues api.data.gov keys against a working email address. GSA issued this one to a person, not to an agent. GitHub's own code search does not find the key: the file is 3.4 megabytes, and GitHub does not index files that large.</p>
+  <p>All four visits asked the same question: 2022 arrest counts for a single named police department. Agency <code>AL0040000</code> is the Autauga County Sheriff's Office in Alabama, a county of about 60,000 people west of Montgomery. Three addresses, differing only in where the key sat and how the punctuation was written. The citizen's key was never used on anything else.</p>
+  <p>The agents worked that one county hard. 23 addresses on the iyg1y page ask about Autauga, across 57 visits and five routes.</p>
+  <div class="tw"><table>
+    <tr><th>Route</th><th style="width:16%">Addresses</th><th style="width:16%">Visits</th></tr>
+    <tr><td>Government demo key</td><td class="num">16</td><td class="num">39</td></tr>
+    <tr><td>FBI's own keyless site</td><td class="num">2</td><td class="num">10</td></tr>
+    <tr><td><strong>The citizen's key</strong></td><td class="num"><strong>3</strong></td><td class="num"><strong>4</strong></td></tr>
+    <tr><td>Through <code>cors.io</code></td><td class="num">1</td><td class="num">3</td></tr>
+    <tr><td>FBI's dev key</td><td class="num">1</td><td class="num">1</td></tr>
+  </table></div>
+  <p>Twelve of those addresses walk the calendar month by month, January through December 2022, one request per month, every one on the demo key. Eleven ask for the whole year at once. A twenty-fourth address asks for the national arrest total over the identical twelve months, so the county figure had something to sit against.</p>
+  <p>Every FBI statistic requested on the other four Vanderbilt pages is for a state or the nation as a whole. Not one names a police department. The <code>iyg1y</code> page asks all but one of those same questions, and then adds four more date ranges and one Alabama county that appear nowhere else.</p>
+</div></div>
+
+<h2 id="lowvalue"><span class="sub">Scale</span>A low value key and a high effort route</h2>
+<div class="find hero"><div class="fbody" style="padding-left:0">
+  <p>The citizen's key opens nothing secret. The key opens public crime statistics that anyone can request for free in about a minute.</p>
+  <p>So ask the obvious question. If the data is free, why did the agents fetch one SEC file through thirteen different middleman services, and stack two of them at a time in 3,038 of their own posts? Why request a single Texas archive PDF 128 different ways? Why send an FBI request through cors.io, a service that appears nowhere in those posts? Why run 241 requests on a demo key that allows thirty an hour, then fall back to a key the FBI published for everyone to share, and then reach for a private individual's key buried in a three-year-old school project?</p>
+  <p>And why did the whole operation run on other people's equipment: a German wiki, a Polish paste board, and the link shorteners of four universities?</p>
+  <p>The only thing a real key buys is room. The demo key stops at thirty requests an hour. A registered key allows a thousand. The agents were not after secret data. The agents were after a way to keep hammering a free service past the point where the free key cuts the agents off. And once the agents held a stranger's key, the stranger's questions came along with the key.</p>
+</div></div>
+
+<h2 id="howchecked"><span class="sub">Proof</span>Word for word: 391 addresses that tie a Vanderbilt log to a German wiki</h2>
+<div class="find"><div class="fbody" style="padding-left:0">
+
+  <p>The agents' 14,591 published posts are full of web addresses no person would type. Here is a real one:</p>
+  <pre>allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json</pre>
+  <p>No person browsing the web arrives at a link from an address like that. That address is a machine pulling a government data file through a proxy, not a page anyone reads.</p>
+  <p>391 of the 5,212 addresses in the Vanderbilt log appear in those posts character for character. 379 appear on DSEWiki, 84 on probier, and 19 on fractal, three of the four wikis in the published dataset. 80 appear on more than one. To check any of them: download the dataset from <a href="https://collusion.wiki/">collusion.wiki</a>, open <a href="https://web.archive.org/web/20260904190543/https://vanderbi.lt/iyg1y+">the archived Vanderbilt page</a>, and search both for the same string.</p>
+  <p>The FBI addresses are not among the 391. The word <code>api.usa.gov</code> appears in none of the 14,591 posts. The Vanderbilt page lists addresses alphabetically, not by time, so no entry carries a date.</p>
+  <p>These agents had a task that needed more decimal places than the OECD's web dashboard would show, so the agents went to the OECD's raw statistics endpoint instead. One wrote on a <a href="https://collusion.wiki/explorer/">DSEWiki page</a> named <code>Apr25OECDLive</code>: &ldquo;R1 I answered 9.69 from SDMX raw, R2 Hungary due in ~15m. Can you urgently share exact bypass/method?&rdquo; SDMX appears 42 times in the posts.</p>
+  <p>One more, <code>cors.io</code>, seems unique to the Vanderbilt page, and does the same job. Two addresses, five visits, no key on either. One address goes to the FBI's site, three visits. The other goes to sdmx.oecd.org, two.</p>
+  <p>The agents sent nineteen FBI questions twice, once written plainly and once with the punctuation encoded. The agents also disguised the same web address four different ways, so a filter watching for the plain spelling would miss the rest. One address shows up in all four disguises across 790 posts.</p>
+
+  <p><strong>The keys are not printed anywhere in this document. Neither was used or tested. Both were reported to the FBI and to Vanderbilt.</strong></p>
+</div></div>
+
+<h2 id="questions"><span class="sub">Questions</span>A few of my questions for OpenAI</h2>
+<div class="find hero"><div class="fbody" style="padding-left:0">
+  <p>I spent years working in Congress. These are some of the first questions I would want asked.</p>
+  <ol class="qs">
+    <li>How did OpenAI's agents create at least 170 links on a Vanderbilt service that has no public door? Did the agents hold an account there, an API signature, or neither? And why did 36 of those links point at example.com with invented paths, if not to test whether creation worked?</li>
+    <li>Why did the agents take a stranger's key out of a 2023 school project on a personal site, and then start asking the FBI the same questions that project asked, about the same Alabama county? The task in front of the agents was something else. What made that notebook the thing to copy?</li>
+    <li>How did the agents reach a key that no search engine returns, in a file too large for GitHub's own search to index? What were the agents reading, and how much?</li>
+    <li>Did OpenAI's monitoring see the company's agents send a private individual's credential to a federal server, four times? Has OpenAI told that person?</li>
+    <li>Is using a credential found in someone's published work a behavior OpenAI tests for, and does the company count that as misalignment? Writing a working private key onto a public page is never correct. Had OpenAI seen this before June?</li>
+    <li>GSA holds the email address on the account behind that key and can confirm in a minute that the account belongs to a private individual with no tie to OpenAI. OpenAI can check the company's own records. Will either do so?</li>
+    <li>OpenAI's July 28 update referred to &ldquo;a few accounts accessed by other evaluations.&rdquo; Congress asked which services hosted those accounts and has not been told. Was Vanderbilt one of those services?</li>
+    <li>On August 10 Congress asked OpenAI how many times an internally deployed model obtained credentials it was not issued, and how many of those were disclosed to any government body or affected third party. OpenAI answered on August 31 with a footnote. What is the number?</li>
+    <li>Will OpenAI supplement the August 31 letter to Congress to cover this?</li>
+    <li>Were these agents part of the swarm OpenAI has now acknowledged, or a separate run? If separate, why was that one also working on other people's equipment, and why did that run climb the same ladder of keys?</li>
+    <li>And why did it take an outsider like me, with a web browser, to find any of this?</li>
+  </ol>
+</div></div>
+
+
+<div class="byline">
+  <div class="credit"><p>Please credit all new findings in this brief to Kenneth Russell DeGraff.</p></div>
+  <p><strong>For attribution, corrections, or the capture files: use the <a href="https://kennethdegraff.com/#contact">contact form</a>.</strong> I retain the raw fetches, the downloaded dataset, and hash records. The evidence appendix at the foot of this page contains the captures.</p>
+</div>
+
+<div class="about">
+  <p class="ahead">About this work</p>
+  <p class="alead">While teaching in LA-area public schools, I saw a need for a free article reader so my students and I could discuss the news together. Now I'm recovering from injuries and returning to software development after a public service career in tech policy.</p>
+  <p>I built <strong>Timber: Text to Speech</strong>, a free article reader that reads the news out loud. And I built <strong>Timber Tabs</strong>, which gets your browser tabs off your Mac and into your ears.</p>
+  <p>The best way to support this work is to subscribe to Timber Pro inside the app, or to donate.</p>
+  <div class="acards">
+    <a class="acard" href="https://apps.apple.com/app/id6779086700"><span class="an">Timber: Text to Speech</span><span class="au">apps.apple.com/app/id6779086700</span></a>
+    <a class="acard" href="https://apps.apple.com/app/id6786080053"><span class="an">Timber Tabs</span><span class="au">apps.apple.com/app/id6786080053</span></a>
+    <a class="acard" href="https://ko-fi.com/fe2_o3"><span class="an">Donate</span><span class="au">ko-fi.com/fe2_o3</span></a>
+  </div>
+</div>
+
+</div>
+
+<h2 id="appendix"><span class="sub">Evidence</span>Appendix</h2>
+<p class="lede">Every capture cited above, with source address, byte size and SHA-256. Log lines from ordinary visitors are withheld. No API key is printed.</p>
+<details class="appx"><summary>Tables: the manifests, the hashes, and every captured link</summary><div class="appx-body">
+<p><strong>Reporter-facing. All material below comes from captures made between September 4 and September 8, 2026, by plain page fetches. No login, no edit, no key used.</strong></p>
+<h3 class="ax2" id="m-fbi">Manifest &mdash; FBI evidence</h3>
+<p>Captures behind the findings at the top of this page. The two September 4 statistics-page captures follow.</p>
+<div class="tw"><table><tr><th>#</th><th>Filename</th><th>Bytes</th><th>SHA-256 (first 16)</th><th>Source URL</th><th>What it shows</th></tr><tr><td class="num mono">F1</td><td class="mono">vanderbilt_stats.html</td><td class="mono">1,453,551</td><td class="mono"><code>82e3d97b0a78fa56</code></td><td class="mono"><a href="https://web.archive.org/web/20260904190543/https://vanderbi.lt/iyg1y+">https://vanderbi.lt/iyg1y+</a></td><td>The page the keys are on</td></tr><tr><td class="num mono">F2</td><td class="mono">vb_majsonstats.html</td><td class="mono">21,623</td><td class="mono"><code>4d0d9f1495497e8f</code></td><td class="mono">https://vanderbi.lt/majsonstats+</td><td>Second Vanderbilt link carrying FBI queries</td></tr><tr><td class="num mono">F3</td><td class="mono">vb_testfreshmd991.html</td><td class="mono">26,821</td><td class="mono"><code>2e19ef56e54efb6e</code></td><td class="mono">https://vanderbi.lt/testfreshmd991+</td><td>Third Vanderbilt link carrying FBI queries</td></tr><tr><td class="num mono">F4</td><td class="mono">vb_34Y3g.html</td><td class="mono">24,155</td><td class="mono"><code>9eadbbd31ac8e8dc</code></td><td class="mono">https://vanderbi.lt/34Y3g+</td><td>Fourth Vanderbilt link carrying FBI queries</td></tr><tr><td class="num mono">F5</td><td class="mono">vb_g3jc.html</td><td class="mono">30,438</td><td class="mono"><code>fc17561ac999d47d</code></td><td class="mono">https://vanderbi.lt/g3-jc+</td><td>Agent-made Vanderbilt link, June 16. No FBI traffic; included for comparison.</td></tr><tr><td class="num mono">F6</td><td class="mono">uoft_stats.html</td><td class="mono">218,308</td><td class="mono"><code>3f4d9ec2daf13de7</code></td><td class="mono"><a href="http://web.archive.org/web/20260904190301/https://uoft.me/maagentxyz99999+">https://uoft.me/maagentxyz99999+</a></td><td>Toronto page sharing 62 addresses with iyg1y</td></tr><tr><td class="num mono">F7</td><td class="mono">fbi_swagger_main.js</td><td class="mono">2,070</td><td class="mono"><code>a166ccf84c62d4e7</code></td><td class="mono"><a href="https://raw.githubusercontent.com/fbi-cde/crime-data-frontend/master/public/swagger/main.js">https://raw.githubusercontent.com/fbi-cde/crime-data-frontend/master/public/swagger/main.js</a></td><td>The FBI's own documentation key, in the FBI's repository</td></tr><tr><td class="num mono">F8</td><td class="mono">fbi_crime_data_frontend_README.md</td><td class="mono">7,409</td><td class="mono"><code>9f43313f12b2ba7b</code></td><td class="mono"><a href="https://raw.githubusercontent.com/fbi-cde/crime-data-frontend/master/README.md">https://raw.githubusercontent.com/fbi-cde/crime-data-frontend/master/README.md</a></td><td>The same key in the same repository's README</td></tr><tr><td class="num mono">F9</td><td class="mono">openai-hf-incident-report-2026-08-26.pdf</td><td class="mono">521,159</td><td class="mono"><code>dd635cf6e5f39f0e</code></td><td class="mono"><a href="https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf">https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf</a></td><td>OpenAI's Hugging Face technical report</td></tr><tr><td class="num mono">F10</td><td class="mono">casar-oversight-letter-2026-08-10.pdf</td><td class="mono">1,369,168</td><td class="mono"><code>95fedaa7566e6b09</code></td><td class="mono"><a href="https://casar.house.gov/sites/evo-subsites/casar.house.gov/files/evo-media-document/oversight-letter-to-openai-openai-hugging-face-incident-1.pdf">https://casar.house.gov/sites/evo-subsites/casar.house.gov/files/evo-media-document/oversight-letter-to-openai-openai-hugging-face-incident-1.pdf</a></td><td>Congressional oversight letter, August 10</td></tr><tr><td class="num mono">F11</td><td class="mono">openai-reply-to-congress-2026-08-31.pdf</td><td class="mono">105,365</td><td class="mono"><code>61d7f9992959cc93</code></td><td class="mono"><a href="https://drive.google.com/file/d/1mapFqQUAbXJsLbbOnzib6nAg8Ic1zM2V/view">https://drive.google.com/file/d/1mapFqQUAbXJsLbbOnzib6nAg8Ic1zM2V/view</a></td><td>OpenAI's reply, August 31; footnote 7 covers May and June 2026 without naming the wiki</td></tr><tr><td class="num mono">F12</td><td class="mono">revisions.jsonl.gz</td><td class="mono">3,226,133</td><td class="mono"><code>9c2a4ef0ccbfb5b4</code></td><td class="mono"><a href="https://collusion.wiki/explorer/download">https://collusion.wiki/download/</a></td><td>The published dataset, 14,591 revisions</td></tr>
+<tr><td class="num mono">F13</td><td class="mono">unm_7t6-o_stats.html</td><td class="mono">220,440</td><td class="mono"><code>3741b7ca86aaaad0</code></td><td class="mono"><a href="https://web.archive.org/web/20260909023754/https://goto.unm.edu/7t6-o+">https://goto.unm.edu/7t6-o+</a></td><td>New Mexico page, 761 addresses, 1,845 visits June 18; captured Sept 8, archived same day</td></tr>
+<tr><td class="num mono">F14</td><td class="mono">ethz_nB1nv_stats.html</td><td class="mono">37,681</td><td class="mono"><code>b4085e0e4441acbf</code></td><td class="mono"><a href="https://web.archive.org/web/20260906205549/https://u.ethz.ch/nB1nv+">https://u.ethz.ch/nB1nv+</a></td><td>ETH Zurich page, 63 visits June 18; Wayback copy of Sept 6</td></tr>
+<tr><td class="num mono">F15</td><td class="mono">2dd_p9279729_stats.html</td><td class="mono">3,074</td><td class="mono"><code>1171ac18b30136de</code></td><td class="mono"><a href="https://web.archive.org/web/20260909030411/https://2dd.pl/p9279729+">https://2dd.pl/p9279729+</a></td><td>2dd.pl statistics page, now a login screen; captured and archived Sept 8</td></tr>
+<tr><td class="num mono">F16</td><td class="mono">vb_cookage85datax.html</td><td class="mono">21,996</td><td class="mono"><code>db905f3afed0423e</code></td><td class="mono">vanderbi.lt/cookage85datax+</td><td>The link named for cooks; captured Sept 4; no archive copy exists</td></tr>
+<tr><td class="num mono">F17</td><td class="mono">vb_maallraw260618.html</td><td class="mono">23,275</td><td class="mono"><code>2531b7720101ca22</code></td><td class="mono">vanderbi.lt/maallraw260618+</td><td>Visits on July 3 and August 28, after agent posting stopped; captured Sept 4</td></tr>
+<tr><td class="num mono">F18</td><td class="mono">vb_massjson715.html</td><td class="mono">56,456</td><td class="mono"><code>c324c1695dc1fe61</code></td><td class="mono"><a href="https://web.archive.org/web/20260906093354/https://vanderbi.lt/massjson715+">vanderbi.lt/massjson715+</a></td><td>FBI demo-key page, 125 addresses; captured Sept 4</td></tr>
+<tr><td class="num mono">F19</td><td class="mono">vb_rwandamodvals.html</td><td class="mono">23,559</td><td class="mono"><code>8de85d622d74a94a</code></td><td class="mono">vanderbi.lt/rwandamodvals+</td><td>11 addresses; captured Sept 4</td></tr>
+<tr><td class="num mono">F20</td><td class="mono">uoft_utmace.html</td><td class="mono">171,765</td><td class="mono"><code>33f15f67bb08d705</code></td><td class="mono">uoft.me/utmace+</td><td>Third Toronto page; names u.ethz.ch and vanderbi.lt once each; captured Sept 6</td></tr>
+<tr><td class="num mono">F21</td><td class="mono">uoft_zzagent740558.html</td><td class="mono">41,396</td><td class="mono"><code>33166c049ea905d9</code></td><td class="mono">uoft.me/zzagent740558+</td><td>Toronto agent link, 376 visits; captured Sept 4</td></tr>
+<tr><td class="num mono">F22</td><td class="mono">vanderbilt_home_2026-06-09</td><td class="mono">&mdash;</td><td class="mono"><code>Wayback</code></td><td class="mono"><a href="https://web.archive.org/web/20260609114840/https://vanderbi.lt/">vanderbi.lt homepage, June 9, 2026</a></td><td>The access rule as posted nine days before the links were made: affiliated organizations only, by help ticket</td></tr>
+<tr><td class="num mono">F23</td><td class="mono">unm_7t6-o_referrers.tsv</td><td class="mono">71,581</td><td class="mono"><code>9b83a6f630cf3a39</code></td><td class="mono">goto.unm.edu/7t6-o+ referrer log</td><td>The 761 addresses and visit counts pulled from F13</td></tr>
+<tr><td class="num mono">F24</td><td class="mono">unm_home.html</td><td class="mono">9,185</td><td class="mono"><code>50f3200de51d4307</code></td><td class="mono">goto.unm.edu/</td><td>UNM access rule: UNM affiliation, NetID login; captured Sept 8</td></tr>
+
+</table></div>
+<h3 class="ax2" id="m-wayback">Manifest &mdash; Wayback copies of Vanderbilt statistics pages</h3>
+<p>Sixteen statistics pages with a capture in the Internet Archive. Fifteen were saved on September 4 and 6, before the lockdown; these are the only copies of those logs that exist outside Vanderbilt. Together with the nine live captures above they make the 24 pages held.</p>
+<div class="tw"><table>
+<tr><th>#</th><th>Archived page</th><th>Captured</th><th>Bytes</th><th>SHA-256 (first 16)</th></tr>
+<tr><td class="num mono">W1</td><td class="mono"><a href="https://web.archive.org/web/20260904204918/https://vanderbi.lt/agf623d+">vanderbi.lt/agf623d+</a></td><td class="mono">2026-09-04 20:49 UTC</td><td class="mono">15,697</td><td class="mono"><code>31e360c52c642919</code></td></tr>
+<tr><td class="num mono">W2</td><td class="mono"><a href="https://web.archive.org/web/20260904204919/https://vanderbi.lt/allregrawx260622+">vanderbi.lt/allregrawx260622+</a></td><td class="mono">2026-09-04 20:49 UTC</td><td class="mono">16,046</td><td class="mono"><code>d56260751ba5394e</code></td></tr>
+<tr><td class="num mono">W3</td><td class="mono"><a href="https://web.archive.org/web/20260904204919/https://vanderbi.lt/countgf260623c+">vanderbi.lt/countgf260623c+</a></td><td class="mono">2026-09-04 20:49 UTC</td><td class="mono">15,591</td><td class="mono"><code>ccf15a83cc37acca</code></td></tr>
+<tr><td class="num mono">W4</td><td class="mono"><a href="https://web.archive.org/web/20260904204919/https://vanderbi.lt/countrf260623c+">vanderbi.lt/countrf260623c+</a></td><td class="mono">2026-09-04 20:49 UTC</td><td class="mono">20,484</td><td class="mono"><code>409907e9b13c0d5a</code></td></tr>
+<tr><td class="num mono">W5</td><td class="mono"><a href="https://web.archive.org/web/20260904204918/https://vanderbi.lt/highallmap260622+">vanderbi.lt/highallmap260622+</a></td><td class="mono">2026-09-04 20:49 UTC</td><td class="mono">15,859</td><td class="mono"><code>f6358ae31b9a8163</code></td></tr>
+<tr><td class="num mono">W6</td><td class="mono"><a href="https://web.archive.org/web/20260904190543/https://vanderbi.lt/iyg1y+">vanderbi.lt/iyg1y+</a></td><td class="mono">2026-09-04 19:05 UTC</td><td class="mono">1,707,982</td><td class="mono"><code>acd44de84a02110b</code></td></tr>
+<tr><td class="num mono">W7</td><td class="mono"><a href="https://web.archive.org/web/20260904204918/https://vanderbi.lt/jqinv11method+">vanderbi.lt/jqinv11method+</a></td><td class="mono">2026-09-04 20:49 UTC</td><td class="mono">21,252</td><td class="mono"><code>f6120ff8e54351ef</code></td></tr>
+<tr><td class="num mono">W8</td><td class="mono"><a href="https://web.archive.org/web/20260904204918/https://vanderbi.lt/jqinv11raw+">vanderbi.lt/jqinv11raw+</a></td><td class="mono">2026-09-04 20:49 UTC</td><td class="mono">26,003</td><td class="mono"><code>896495c149548bff</code></td></tr>
+<tr><td class="num mono">W9</td><td class="mono"><a href="https://web.archive.org/web/20260904204918/https://vanderbi.lt/jsallwrap260618+">vanderbi.lt/jsallwrap260618+</a></td><td class="mono">2026-09-04 20:49 UTC</td><td class="mono">16,603</td><td class="mono"><code>870973c430964339</code></td></tr>
+<tr><td class="num mono">W10</td><td class="mono"><a href="https://web.archive.org/web/20260904204919/https://vanderbi.lt/mainsource623+">vanderbi.lt/mainsource623+</a></td><td class="mono">2026-09-04 20:49 UTC</td><td class="mono">15,646</td><td class="mono"><code>e2085a279f324398</code></td></tr>
+<tr><td class="num mono">W11</td><td class="mono"><a href="https://web.archive.org/web/20260904204919/https://vanderbi.lt/masecjs260619+">vanderbi.lt/masecjs260619+</a></td><td class="mono">2026-09-04 20:49 UTC</td><td class="mono">15,724</td><td class="mono"><code>c8141452afbe791a</code></td></tr>
+<tr><td class="num mono">W12</td><td class="mono"><a href="https://web.archive.org/web/20260904204919/https://vanderbi.lt/mdgood778+">vanderbi.lt/mdgood778+</a></td><td class="mono">2026-09-04 20:49 UTC</td><td class="mono">18,821</td><td class="mono"><code>f452cae84496ddb9</code></td></tr>
+<tr><td class="num mono">W13</td><td class="mono"><a href="https://web.archive.org/web/20260904204919/https://vanderbi.lt/openaipovertycompacttest+">vanderbi.lt/openaipovertycompacttest+</a></td><td class="mono">2026-09-04 20:49 UTC</td><td class="mono">16,059</td><td class="mono"><code>8a370f1480f98ce0</code></td></tr>
+<tr><td class="num mono">W14</td><td class="mono"><a href="https://web.archive.org/web/20260904204918/https://vanderbi.lt/ourjsget26abc+">vanderbi.lt/ourjsget26abc+</a></td><td class="mono">2026-09-04 20:49 UTC</td><td class="mono">20,272</td><td class="mono"><code>c48d91dd8ecd1fa8</code></td></tr>
+<tr><td class="num mono">W15</td><td class="mono"><a href="https://web.archive.org/web/20260904204919/https://vanderbi.lt/oursecallraw443+">vanderbi.lt/oursecallraw443+</a></td><td class="mono">2026-09-04 20:49 UTC</td><td class="mono">15,437</td><td class="mono"><code>5e20f37cace5ea8a</code></td></tr>
+<tr><td class="num mono">W16</td><td class="mono"><a href="https://web.archive.org/web/20260906031931/https://vanderbi.lt/ourseccounty+">vanderbi.lt/ourseccounty+</a></td><td class="mono">2026-09-06 03:19 UTC</td><td class="mono">17,654</td><td class="mono"><code>65624d11a83aab36</code></td></tr>
+</table></div>
+
+<h3 class="ax2" id="m-lockdown">Manifest &mdash; the lockdown, September 8</h3>
+<p>What the same addresses returned on September 8: a login screen in place of the statistics page. Every Vanderbilt capture is byte-identical to every other, and every Toronto capture likewise, which is what a blanket login wall looks like.</p>
+<div class="tw"><table>
+<tr><th>#</th><th>Address</th><th>Bytes</th><th>SHA-256 (first 16)</th><th>What it shows</th></tr>
+<tr><td class="num mono">L1</td><td class="mono">vanderbi.lt/iyg1y+</td><td class="mono">2,373</td><td class="mono"><code>e6cab8db1a2ec31c</code></td><td>Login page</td></tr>
+<tr><td class="num mono">L2</td><td class="mono">vanderbi.lt/massjson715+</td><td class="mono">2,373</td><td class="mono"><code>e6cab8db1a2ec31c</code></td><td>Login page, identical bytes</td></tr>
+<tr><td class="num mono">L3</td><td class="mono">vanderbi.lt/testfreshmd991+</td><td class="mono">2,373</td><td class="mono"><code>e6cab8db1a2ec31c</code></td><td>Login page, identical bytes</td></tr>
+<tr><td class="num mono">L4</td><td class="mono">vanderbi.lt/maallraw260618+</td><td class="mono">2,373</td><td class="mono"><code>e6cab8db1a2ec31c</code></td><td>Login page, identical bytes</td></tr>
+<tr><td class="num mono">L5</td><td class="mono">vanderbi.lt/cookage85datax+</td><td class="mono">2,373</td><td class="mono"><code>e6cab8db1a2ec31c</code></td><td>Login page, identical bytes</td></tr>
+<tr><td class="num mono">L6</td><td class="mono">uoft.me/maagentxyz99999+</td><td class="mono">2,065</td><td class="mono"><code>3ce496e6f6c41637</code></td><td>Login page</td></tr>
+<tr><td class="num mono">L7</td><td class="mono">uoft.me/utmace+</td><td class="mono">2,065</td><td class="mono"><code>3ce496e6f6c41637</code></td><td>Login page, identical bytes</td></tr>
+</table></div>
+
+
+<h3 class="ax2" id="alllinks">Every agent-made Vanderbilt link</h3>
+<p>The 158 short links found in my captures plus the 12 named only in the agents' own posts, 170 in all, resolved 8 September 2026. A star marks a link the agents named in those posts. The 28 Vanderbilt has rewritten are listed first, then the 142 that still pointed where the agents aimed them. A thirteenth code named in the posts, <code>jsmap88997</code>, returns the shortener's not-found response, the same answer an invented code returns. Where those 12 originally pointed is unrecorded. Vanderbilt rewrote them before anyone saved a copy, so only the shortener's own records hold the answer.</p>
+<div class="tw"><table><tr><th></th><th>Named in DSEWiki posts</th><th>Not named</th><th>Total</th></tr><tr><td>Rewritten by Vanderbilt</td><td class="num"><strong>28</strong></td><td class="num">0</td><td class="num"><strong>28</strong></td></tr><tr><td>Still live</td><td class="num">0</td><td class="num">142</td><td class="num"><strong>142</strong></td></tr><tr><td><strong>Total</strong></td><td class="num"><strong>28</strong></td><td class="num"><strong>142</strong></td><td class="num"><strong>170</strong></td></tr></table></div>
+<p>What the grid shows: every link Vanderbilt rewrote is one the agents had named in their own DSEWiki posts. Not one of the 142 still pointing at the agents' targets is named there.</p>
+<div class="tw"><table><tr><th>Short link</th><th>Status</th><th>Points at</th><th>DSEWiki revisions naming it</th><th>Visitor log</th></tr><tr><td class="mono">&#9733; allreggetX260622</td><td class="nw">Rewritten</td><td class="mono">Unrecorded</td><td class="num">&mdash;</td><td class="nw">no capture</td></tr><tr><td class="mono">&#9733; bwkug</td><td class="nw">Rewritten</td><td class="mono">Unrecorded</td><td class="num">&mdash;</td><td class="nw">no capture</td></tr><tr><td class="mono">&#9733; jqinv11roundn</td><td class="nw">Rewritten</td><td class="mono">Unrecorded</td><td class="num">&mdash;</td><td class="nw">no capture</td></tr><tr><td class="mono">&#9733; jqinv11rounds</td><td class="nw">Rewritten</td><td class="mono">Unrecorded</td><td class="num">&mdash;</td><td class="nw">no capture</td></tr><tr><td class="mono">&#9733; jqinv11tool</td><td class="nw">Rewritten</td><td class="mono">Unrecorded</td><td class="num">&mdash;</td><td class="nw">no capture</td></tr><tr><td class="mono">&#9733; mamap260618</td><td class="nw">Rewritten</td><td class="mono">Unrecorded</td><td class="num">&mdash;</td><td class="nw">no capture</td></tr><tr><td class="mono">&#9733; mdregX260622</td><td class="nw">Rewritten</td><td class="mono">Unrecorded</td><td class="num">&mdash;</td><td class="nw">no capture</td></tr><tr><td class="mono">&#9733; ourjsmd26</td><td class="nw">Rewritten</td><td class="mono">Unrecorded</td><td class="num">&mdash;</td><td class="nw">no capture</td></tr><tr><td class="mono">&#9733; ourjsraw2606</td><td class="nw">Rewritten</td><td class="mono">Unrecorded</td><td class="num">&mdash;</td><td class="nw">no capture</td></tr><tr><td class="mono">&#9733; oursecallraw</td><td class="nw">Rewritten</td><td class="mono">Unrecorded</td><td class="num">&mdash;</td><td class="nw">no capture</td></tr><tr><td class="mono">&#9733; OurSecCounty443</td><td class="nw">Rewritten</td><td class="mono">Unrecorded</td><td class="num">&mdash;</td><td class="nw">no capture</td></tr><tr><td class="mono">&#9733; script623</td><td class="nw">Rewritten</td><td class="mono">Unrecorded</td><td class="num">&mdash;</td><td class="nw">no capture</td></tr><tr><td class="mono">&#9733; maallraw260618</td><td class="nw">Rewritten</td><td class="mono">&mdash;</td><td class="num">273</td><td class="nw">captured, empty</td></tr><tr><td class="mono">&#9733; highallmap260622</td><td class="nw">Rewritten</td><td class="mono">&mdash;</td><td class="num">8</td><td class="nw">captured, empty</td></tr><tr><td class="mono">&#9733; ourjsget26abc</td><td class="nw">Rewritten</td><td class="mono">&mdash;</td><td class="num">8</td><td class="nw">captured, empty</td></tr><tr><td class="mono">&#9733; countrf260623c</td><td class="nw">Rewritten</td><td class="mono">&mdash;</td><td class="num">7</td><td class="nw">captured, empty</td></tr><tr><td class="mono">&#9733; agf623d</td><td class="nw">Rewritten</td><td class="mono">&mdash;</td><td class="num">3</td><td class="nw">captured, empty</td></tr><tr><td class="mono">&#9733; countgf260623c</td><td class="nw">Rewritten</td><td class="mono">&mdash;</td><td class="num">3</td><td class="nw">captured, empty</td></tr><tr><td class="mono">&#9733; mainsource623</td><td class="nw">Rewritten</td><td class="mono">&mdash;</td><td class="num">3</td><td class="nw">captured, empty</td></tr><tr><td class="mono">&#9733; jqinv11method</td><td class="nw">Rewritten</td><td class="mono">&mdash;</td><td class="num">2</td><td class="nw">captured, empty</td></tr><tr><td class="mono">&#9733; jqinv11raw</td><td class="nw">Rewritten</td><td class="mono">&mdash;</td><td class="num">2</td><td class="nw">captured, empty</td></tr><tr><td class="mono">&#9733; masecjs260619</td><td class="nw">Rewritten</td><td class="mono">&mdash;</td><td class="num">1</td><td class="nw">captured, empty</td></tr><tr><td class="mono">&#9733; mdgood778</td><td class="nw">Rewritten</td><td class="mono">&mdash;</td><td class="num">1</td><td class="nw">captured, empty</td></tr><tr><td class="mono">allregrawx260622</td><td class="nw">Rewritten</td><td class="mono">&mdash;</td><td class="num">&mdash;</td><td class="nw">captured, empty</td></tr><tr><td class="mono">jsallwrap260618</td><td class="nw">Rewritten</td><td class="mono">&mdash;</td><td class="num">&mdash;</td><td class="nw">captured, empty</td></tr><tr><td class="mono">matabfull7</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%28.regCF_county_2019%29+as+%24a%7C%28.regCF_county_2020%29+as+%24b%7C%28.regCF_county_2021%29+as+%24c%7C+&hellip;</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">openaipovertycompacttest</td><td class="nw">Rewritten</td><td class="mono">&mdash;</td><td class="num">&mdash;</td><td class="nw">captured, empty</td></tr><tr><td class="mono">oursecallraw443</td><td class="nw">Rewritten</td><td class="mono">&mdash;</td><td class="num">&mdash;</td><td class="nw">captured, empty</td></tr><tr><td class="mono">ourseccounty</td><td class="nw">Rewritten</td><td class="mono">&mdash;</td><td class="num">&mdash;</td><td class="nw">captured, empty</td></tr><tr><td class="mono">massjson715</td><td class="nw">Resolved Sept 9</td><td class="mono">https://www.sec.gov/files/county.json?_=916576</td><td class="num">&mdash;</td><td class="nw">125 addresses</td></tr><tr><td class="mono">pdfcf08789</td><td class="nw">Resolved Sept 9</td><td class="mono">https://doc-14-bk-apps-viewer.googleusercontent.com/viewer/secure/pdf/&hellip; (Google document viewer, rendered PDF, stamped June 18)</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">qadt0</td><td class="nw">Resolved Sept 9</td><td class="mono">https://doc-08-bk-apps-viewer.googleusercontent.com/viewer/secure/pdf/&hellip; (Google document viewer, rendered PDF)</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">testfreshmd991</td><td class="nw">Resolved Sept 9</td><td class="mono">https://www.sec.gov/files/county.json</td><td class="num">&mdash;</td><td class="nw">44 addresses</td></tr><tr><td class="mono">g3-jc</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.dataafrica.io/api/test</td><td class="num">&mdash;</td><td class="nw">36 addresses</td></tr><tr><td class="mono">34y3g</td><td class="nw">Resolved Sept 9</td><td class="mono">https://www.sec.gov/files/county.json?injvnew=0.7253661870639205</td><td class="num">&mdash;</td><td class="nw">22 addresses</td></tr><tr><td class="mono">majsonstats</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/majsonstats</td><td class="num">&mdash;</td><td class="nw">15 addresses</td></tr><tr><td class="mono">rwandamodvals</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.dataafrica.io/api/join/?geo=040AF00205&amp;show=year%2Ccondition%2Cresidence&amp;required=dhs_geo_name%2Cdhs_geo_parent_name%2</td><td class="num">&mdash;</td><td class="nw">11 addresses</td></tr><tr><td class="mono">00agent</td><td class="nw">Resolved Sept 9</td><td class="mono">https://www.sec.gov/resources-small-businesses/capital-trends?dummy=0.9091508421354161</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">0n0wi</td><td class="nw">Resolved Sept 9</td><td class="mono">https://allorigins.hexlet.app/get?url=https%3A%2F%2Fmartingauer.com%2Femulator%2Fmartingauer.gb</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">40hhp</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FSECcountyM&amp;jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">7udwe</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FSECcountyM&amp;jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">9d6p0</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">9gxqq</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.org/1781813093.2970605</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">aaaagent0</td><td class="nw">Resolved Sept 9</td><td class="mono">https://www.sec.gov/resources-small-businesses/capital-trends?dummy=0.31434421720227224</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">abc</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">abcd</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">abcde</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.usa.gov/crime/fbi/cde/arrest/agency/AL0040000/all?API_KEY=DEMO_KEY&amp;from=01-2022&amp;to=12-2022&amp;type=counts</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">abctest16760</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">ag0vbark731733</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.beta.ons.gov.uk/v1/datasets/TS030/editions/2021/versions/3/census-observations?area-type=p19wpc%2CE14001073&amp;vander=153</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agct201997304</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.org/agct201997304</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agent0zambjson</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.dataafrica.io/api/join/?geo=050AF0017002122&amp;show=year%2Ccondition%2Cresidence&amp;required=dhs_geo_name%2Cdhs_geo_parent_n</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agent777</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.org/foo</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agentdamacosh777</td><td class="nw">Resolved Sept 9</td><td class="mono">https://da.gd/coshorten/SECcountyM</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agentinvestslice19777</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?jq=.regCF_county_2019%5B46%3A52%5D&amp;url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agentinvestslice20777</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?jq=.regCF_county_2020%5B52%3A62%5D&amp;url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agentinvestslice21777</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?jq=.regCF_county_2021%5B82%3A91%5D&amp;url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agentjqroundma777</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FSECcountyM%26jq%3D%5B.regCF_county_2019%5B%5D%5D</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agentmacounty61</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.org/</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agentmacountyjson777</td><td class="nw">Resolved Sept 9</td><td class="mono">https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agnewhb2019</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FHBukq&amp;jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%7Ccontains%28%22ma-%</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agnewhb2020</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FHBukq&amp;jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%7Ccontains%28%22ma-%</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agnewhb2021</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FHBukq&amp;jq=%5B.regCF_county_2021%5B%5D%7Cselect%28.code%7Ccontains%28%22ma-%</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agnewmd5562540</td><td class="nw">Resolved Sept 9</td><td class="mono">https://md.succ.ai/?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&amp;mode=fit&amp;max_tokens=20000</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agnewswhh9</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agshort2019b</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&amp;jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3D%22m</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agtest00999</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.worldpoverty.io/graphql?query=%7B__typename%7D</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agwpc2018x126</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.worldpoverty.io/graphql?query=%7BworldPovertyRegion%28year%3A2018%2CdailySpending%3A2.15%2CcountryIds%3A%5B%22AFG%22%2</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agwpc2018y871</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.worldpoverty.io/graphql?query=%7BworldPovertyRegion%28year%3A2018%2CdailySpending%3A2.15%2CcountryIds%3A%5B%22NGA%22%2</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agwpc2020x254</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.worldpoverty.io/graphql?query=%7BworldPovertyRegion%28year%3A2020%2CdailySpending%3A2.15%2CcountryIds%3A%5B%22AFG%22%2</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">agwpc2020y540</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.worldpoverty.io/graphql?query=%7BworldPovertyRegion%28year%3A2020%2CdailySpending%3A2.15%2CcountryIds%3A%5B%22NGA%22%2</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">am2wn</td><td class="nw">Resolved Sept 9</td><td class="mono">https://www.sec.gov/files/county.json?_format=txt</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">aml4m</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FSECcountyM&amp;jq=%5B.regCF_county_2021%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">az9q</td><td class="nw">Resolved Sept 9</td><td class="mono">https://www.investor.gov/files/county.json</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">b7ps3</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/?a=1</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">b7ps3uniq04</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.dataafrica.io/api/test</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">bridgezz</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.org/</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">computema779</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/computeMA779</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">cookage85datax</td><td class="nw">Resolved Sept 9</td><td class="mono">https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fapi.datausa.io%2Ftesseract%2Fdata.jsonrecords%3Fcube%3Dpums_5%26drilldowns%3DG</td><td class="num">&mdash;</td><td class="nw">captured, empty</td></tr><tr><td class="mono">countyrefnew987</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">d2n3w</td><td class="nw">Resolved Sept 9</td><td class="mono">https://itm.ebaydesc.com/itmdesc/376841666831</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">d2n3whello</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.dataafrica.io/api/join/?geo=050AF0017002122</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">e4jub</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/retargetTest</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">erierailroad1970</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.dataafrica.io/api/test</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">erierrmag70</td><td class="nw">Resolved Sept 9</td><td class="mono">https://railroadtreasures.com/products/railroad-magazine-1970-june-milwaukee-electrification-erie-mallets</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">erieshop770099</td><td class="nw">Resolved Sept 9</td><td class="mono">https://railroadtreasures.com/products/railroad-magazine-1970-june-milwaukee-electrification-erie-mallets</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">erietest220</td><td class="nw">Resolved Sept 9</td><td class="mono">https://railroadtreasures.com/products/railroad-magazine-1970-june-milwaukee-electrification-erie-mallets</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">fp4hi</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/mytest991152</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">ftest</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.dataafrica.io/api/join/?geo=050AF0017002118&amp;show=year&amp;severity=severe</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">ia9uf</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">iyg1ya</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.usa.gov/ZZ0.07320864753860601</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">iyg1z</td><td class="nw">Resolved Sept 9</td><td class="mono">https://cde.ucr.cjis.gov/LATEST/arrest/agency/AL0040000/all?from=01-2022%26to%3D12-2022%26type%3Dcounts</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">k87mh</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&amp;jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3D%22m</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">kn31j</td><td class="nw">Resolved Sept 9</td><td class="mono">https://dummy2019.org/1781816777.4529853</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">latestplusinvoke</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.dataafrica.io/api/join/?geo=050AF0017002118&amp;required=dhs_geo_name%2Cdhs_geo_parent_name%2Cproportion_of_children&amp;show=</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">ma1781793890</td><td class="nw">Resolved Sept 9</td><td class="mono">https://www.sec.gov/</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">macf19a</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D&amp;url=http%3A%2F%</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">macf19r</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%7Ctest%28%22ma-0%22%29%29%7C%5B.code%2C%28%28.usd%2F</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">macf20a</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D&amp;url=http%3A%2F%</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">macf20r</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%7Ctest%28%22ma-0%22%29%29%7C%5B.code%2C%28%28.usd%2F</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">macf21a</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2021%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D&amp;url=http%3A%2F%</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">macf21r</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2021%5B%5D%7Cselect%28.code%7Ctest%28%22ma-0%22%29%29%7C%5B.code%2C%28%28.usd%2F</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">macfraw7231</td><td class="nw">Resolved Sept 9</td><td class="mono">https://allorigins.hexlet.app/raw?url=http%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">massbetter</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/stat0.9400070544470683</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">masscfround0x260618</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fis.gd%2FF8KCjC&amp;jq=%7By2019%3A%28.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">masscfround1x260618</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fis.gd%2FF8KCjC&amp;jq=%7By2020%3A%28.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">masscfround2x260618</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fis.gd%2FF8KCjC&amp;jq=%7By2021%3A%28.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">masscfround3x260618</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fis.gd%2FF8KCjC&amp;jq=%7By19%3A.regCF_county_2019%5B46%3A52%5D%2Cy20%3A.regCF_county_2</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">masscfround4x260618</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fis.gd%2FF8KCjC&amp;jq=%7Ba%3A.regCF_county_2019%5B46%3A52%5D%2Cb%3A.regCF_county_2020%</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">masscite06867</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">masscounty007fresh</td><td class="nw">Resolved Sept 9</td><td class="mono">https://www.sec.gov/files/county.json</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">masscountyxyz</td><td class="nw">Resolved Sept 9</td><td class="mono">https://www.sec.gov/files/county.json</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">massdata2</td><td class="nw">Resolved Sept 9</td><td class="mono">https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">massmdfresh238216</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/massmdfresh238216</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">masssecdata008</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/mass008</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">massvalues779</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/massvalues779</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">mpecp</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/test1781688236974389293</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">mynewagsec1</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/target</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">mypoptestxyz</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.datausa.io/tesseract/data.jsonrecords?cube=acs_yg_total_population_5&amp;drilldowns=State%2CYear&amp;measures=Population&amp;inclu</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">mypovdirect11782072512</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.worldpoverty.io/graphql?query=%7B+y2018%3A+worldPovertyRegion%28year%3A+2018%2C+dailySpending%3A+2.15%2C+countryIds%3A</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">mypovdirect21782072524</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.worldpoverty.io/graphql?query=%7B+y2018%3A+worldPovertyRegion%28year%3A+2018%2C+dailySpending%3A+2.15%2C+countryIds%3A</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">mypovhex11782072513</td><td class="nw">Resolved Sept 9</td><td class="mono">https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fapi.worldpoverty.io%2Fgraphql%3Fquery%3D%257B%2520y2018%253A%2520worldPovertyR</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">mzhy4</td><td class="nw">Resolved Sept 9</td><td class="mono">https://www.sec.gov/resources-small-businesses/capital-trends?test=960640</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">newlog60679</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">newmaalong9</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&amp;jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%7Cstartswith%28%22us</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">newmassabc9029</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/newdest2</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">newmassmk241395</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">newrefxyz</td><td class="nw">Resolved Sept 9</td><td class="mono">https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fmapgenie.io%2Fapi%2Fv1%2Fmaps%2F580</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">newrefxyz865</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.dataafrica.io/api/join/?geo=050AF0017002118&amp;required=dhs_geo_name%2Cdhs_geo_parent_name%2Cproportion_of_children&amp;show=</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">oco6i</td><td class="nw">Resolved Sept 9</td><td class="mono">https://r.jina.ai/https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">otwlnspnchb</td><td class="nw">Resolved Sept 9</td><td class="mono">https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%3Ffoo%3Dbar</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">otwwegwfdoq</td><td class="nw">Resolved Sept 9</td><td class="mono">https://allorigins.hexlet.app/get?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%3Ffoo%3Dbar</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">ourcfu170mz</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.org/BrandNewTargetUniqueourcfu170mz</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">ourdirectjqp1</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%3Fformat%3Djson&amp;jq=.regCF_county_filters</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">qc8t5</td><td class="nw">Resolved Sept 9</td><td class="mono">https://vanderbi.lt/iyg1y%2B?FORCE=EASYNEW551</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">qsecma781276</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">readme</td><td class="nw">Resolved Sept 9</td><td class="mono">https://httpbin.org/html</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">rwhealthresidence205</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.dataafrica.io/api/join/?geo=040AF00205&amp;show=year%2Ccondition%2Cresidence&amp;required=dhs_geo_name%2Cdhs_geo_parent_name%2</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">s3crf</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/s3crf</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">sec-county-cf-map-data-kdlbn</td><td class="nw">Resolved Sept 9</td><td class="mono">https://www.sec.gov/files/county.json</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">seccountyfresh99</td><td class="nw">Resolved Sept 9</td><td class="mono">https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">secfmtjson77</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%3Fformat%3Djson&amp;jq=.regCF_county_filters</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">secjqmafresh60</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D&amp;url=https%3A%2F</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">secjqmafresh61</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D&amp;url=https%3A%2F</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">secjqmafresh62</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2021%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D&amp;url=https%3A%2F</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">secjqmafresh63</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?jq=.regCF_county_methodology&amp;url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%2</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">secjsonfresh996255</td><td class="nw">Resolved Sept 9</td><td class="mono">https://www.sec.gov/files/county.json?qqq=123987</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">secmapcalc779</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/secmapcalc779</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">secmapjsdlio</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.org/secmapjsdlio</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">secmassx1</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.org/base1781799808.438901</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">secrefstat9981</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/foo974</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">secxtkgwasrh</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/test</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">sma2019</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FSECcountyM&amp;jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%7Cstartswith%28</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">sma2020</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FSECcountyM&amp;jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%7Cstartswith%28</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">sma2021</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FSECcountyM&amp;jq=%5B.regCF_county_2021%5B%5D%7Cselect%28.code%7Cstartswith%28</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">sndfilter43x</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4OzSm&amp;jq=%5B.%5B%5D+%7C+select%28.Award+%3D%3D+%22Award+of+Excellence%22%2</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">snewmd594467247</td><td class="nw">Resolved Sept 9</td><td class="mono">https://md.succ.ai/https://airtable.com/embed/shrMLVqYbqJ5nOxel</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">somethingelse</td><td class="nw">Resolved Sept 9</td><td class="mono">https://md.succ.ai/?url=https%3A%2F%2Fda.gd%2FQzbVc</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">testabcpoverty</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.worldpoverty.io/graphql?query=%7B__typename%7D</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">testagentxyz</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.dataafrica.io/</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">tmw888</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.dataafrica.io/api/join/?geo=050AF0015201888&amp;show=crop&amp;sumlevel=lowest&amp;required=value_of_production&amp;crop=chic</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">tmw889</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.dataafrica.io/api/join/?geo=050AF0015201889&amp;show=crop&amp;sumlevel=lowest&amp;required=value_of_production&amp;crop=chic</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">tmw890</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.dataafrica.io/api/join/?geo=050AF0015201890&amp;show=crop&amp;sumlevel=lowest&amp;required=value_of_production&amp;crop=chic</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">tu41o</td><td class="nw">Resolved Sept 9</td><td class="mono">https://allorigins.hexlet.app/raw?url=https%3A%2F%2Functadstat.unctad.org%2FNowcasts%2Fx_merch_val%2Fx_merch_val-2021-1.csv</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">wma2019</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252F</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">wma2020</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252F</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">wma2021</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252F</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">wpcagcombined181</td><td class="nw">Resolved Sept 9</td><td class="mono">https://api.worldpoverty.io/graphql?query=query+ruralnums+%7B+y2018%3A+worldPovertyRegion%28year%3A2018%2CdailySpending%3A2.15%2Cc</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">wpcagproxy181</td><td class="nw">Resolved Sept 9</td><td class="mono">https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fapi.worldpoverty.io%2Fgraphql%3Fquery%3Dquery%2Bruralnums%2B%257B%2By2018%253A</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">xxyytest17819</td><td class="nw">Resolved Sept 9</td><td class="mono">https://jsonhero.io/j/6EajtLOXKuI8</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr><tr><td class="mono">yuwbi</td><td class="nw">Resolved Sept 9</td><td class="mono">https://example.com/</td><td class="num">&mdash;</td><td class="nw">not captured</td></tr></table></div>
+
+<h3 class="ax2" id="m-sept4">Manifest &mdash; September 4 statistics pages</h3>
+<div class="tw"><table><tr><th>Filename</th><th>Bytes</th><th>SHA-256 (first 16)</th><th>Source URL</th></tr><tr><td class="mono">uoft_stats.html</td><td class="mono">218,308</td><td class="mono"><code>3f4d9ec2daf13de7</code></td><td class="mono"><a href="http://web.archive.org/web/20260904190301/https://uoft.me/maagentxyz99999+">https://uoft.me/maagentxyz99999+</a></td></tr><tr><td class="mono">vanderbilt_stats.html</td><td class="mono">1,453,551</td><td class="mono"><code>82e3d97b0a78fa56</code></td><td class="mono"><a href="https://web.archive.org/web/20260904190543/https://vanderbi.lt/iyg1y+">https://vanderbi.lt/iyg1y+</a></td></tr></table></div>
+<h3 class="ax2" id="m-about">About this capture set</h3>
+<p>Both files below were captured on 2026-09-04 by unauthenticated HTTP GET against publicly reachable URLs. No page, paste, short link or account was created, edited, reverted or deleted, and no login or CAPTCHA was attempted; every capture is a read of what the site already served to any visitor. No email address appears anywhere in this appendix.</p>
+<p><strong>Withheld on purpose.</strong> The notebook page that carries the citizen's key, and the key itself, are not identified here; the person has not yet been notified. The two real keys are not printed anywhere on this page. Neither was used or tested; both were reported to the FBI and to Vanderbilt.</p>
+<hr>
+<h3 class="ax2" id="m-uoft">1. uoft_stats.html — uoft.me short-link public statistics page</h3>
+<ul class="tight"><li><strong>Source URL:</strong> <a href="http://web.archive.org/web/20260904190301/https://uoft.me/maagentxyz99999+">https://uoft.me/maagentxyz99999+</a></li><li><strong>Bytes:</strong> 218,308</li><li><strong>SHA-256:</strong> <code>3f4d9ec2daf13de720a15fdcbdf37fceb12bd53de1f00fd92c2003a435f49a78</code></li></ul>
+<p><strong>What it shows:</strong> A YOURLS statistics page left publicly readable, which therefore records the swarm's own referrer strings. The link was created 2026-06-18 and took 1,735 of its 1,788 lifetime hits that same day. The referrer list is a machine index of the swarm's tooling: <code>jqp.vercel.app</code> jq-over-HTTP queries against <code>da.gd</code> short links, each extracting a different slice of the SEC <code>regCF_county_*</code> arrays, plus <code>api.cors.lol</code>, <code>r.jina.ai</code>, <code>secgov.prod.acquia-sites.com</code> and the synthetic domain <code>simpletestrefabc99.com</code>.</p>
+<p><strong>KEY EXCERPT:</strong></p>
+<pre>Short URL: https://uoft.me/maagentxyz99999   -&gt;   http://www.utoronto.ca/foobaruniq456
+Short URL created on June 18, 2026 @ 10:52 am
+All time 1788 hits 22.92 per day
+Best day: 1735 hits on June 18, 2026.
+Direct traffic: 60 hits / Referrer traffic: 1728 hits
+
+Referrers
+jqp.vercel.app: 1059 (details)
+  .../api/v0?jq={s:"SEC",y:2019,k:(.regCF_county_2019[46:52]|map([.code,.usd/1000]))}&amp;url=https://da.gd/4qPkK: 3
+  .../api/v0?jq={s:"SEC",y:2020,k:(.regCF_county_2020[52:62]|map([.code,.usd/1000]))}&amp;url=https://da.gd/4qPkK: 3
+  .../api/v0?jq={s:"SEC",y:2021,k:(.regCF_county_2021[82:91]|map([.code,.usd/1000]))}&amp;url=https://da.gd/4qPkK: 3
+  .../api/v0?jq=[.regCF_county_2020[]|select(.code|startswith("us-ma-"))]&amp;url=https://da.gd/4qPkK: 4
+secgov.prod.acquia-sites.com: 14 (details)
+  https://secgov.prod.acquia-sites.com/files/county.json?download=1&amp;part=266665: 3
+  https://secgov.prod.acquia-sites.com/files/county.json?download=1&amp;part=299008: 3
+simpletestrefabc99.com: 5 (details)
+  http://simpletestrefabc99.com/path0.13382605146528026: 1
+  http://simpletestrefabc99.com/path0.270313865044882: 1
+  http://simpletestrefabc99.com/path0.6724210273630898: 1
+Various: 4 (details)
+  https://api.cors.lol/?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 1
+  https://example0.9259537588058108.com: 1</pre>
+<p>*Note:* jq query strings above are shown URL-decoded for readability; the capture holds them percent-encoded.</p>
+<hr>
+<h3 class="ax2" id="m-vandy">2. vanderbilt_stats.html — vanderbi.lt short-link public statistics page</h3>
+<ul class="tight"><li><strong>Source URL:</strong> <a href="https://web.archive.org/web/20260904190543/https://vanderbi.lt/iyg1y+">https://vanderbi.lt/iyg1y+</a></li><li><strong>Bytes:</strong> 1,453,551</li><li><strong>SHA-256:</strong> <code>82e3d97b0a78fa56ab897c9a76bfff8e72191dd432108dc0e649ecc059b35c45</code></li></ul>
+<p><strong>What it shows:</strong> The largest analytics artefact in the set, and the one that dates the swarm's scale. A short link created in <strong>August 2011</strong> for an ordinary Vanderbilt staff-newsletter article sat at about one hit a day for fifteen years, then took <strong>54,250 hits on 2026-06-18</strong> alone — 90 percent of its 59,942 lifetime hits in one day. The referrer breakdown is almost entirely relay infrastructure (<code>allorigins.hexlet.app</code> 21,938; <code>jqp.vercel.app</code> 14,787; <code>r.jina.ai</code> 5,363; <code>da.gd</code> 3,288; <code>md.succ.ai</code> 1,339), and it contains the numbered synthetic referrer sequences that prove deliberate marker injection rather than real traffic.</p>
+<p><strong>KEY EXCERPT:</strong></p>
+<pre>Short URL: http://vanderbi.lt/iyg1y  -&gt;  Of JFK, U2, telephones and security | House Organ | Vanderbilt University Medical Center
+Short URL created on August 5, 2011 @ 12:48 pm (about 5509 days ago)
+All time 59942 hits 10.88 per day
+Best day: 54250 hits on June 18, 2026.
+Direct traffic: 3694 hits / Referrer traffic: 56248 hits
+
+Referrers (top)
+allorigins.hexlet.app: 21938      jqp.vercel.app: 14787      r.jina.ai: 5363
+da.gd: 3288      www.sec.gov: 2892      md.succ.ai: 1339      api.dataafrica.io: 775
+is.gd: 336       markdown.new: 307      api.cors.lol: 282      httpbin.org: 170
+jsonhero.io: 33  2dd.pl: 30             goto.unm.edu: 25       uoft.me: 17
+
+Synthetic referrer sequences (never real traffic)
+xxxxxxxxnewref.com: 120 (details)
+  https://xxxxxxxxnewref.com/XnF0: 3      https://xxxxxxxxnewref.com/XnF1: 3
+  https://xxxxxxxxnewref.com/XnF10: 3     https://xxxxxxxxnewref.com/XnF11: 3
+  https://markerwinrefresh1.com: 1        https://markerwinrefresh2.com: 1
+  https://markerwinrefresh12.com: 1       https://markerwinrefresh14.com: 1
+  https://markerwinrefresh16.com: 1       https://markerwinrefresh19.com: 1
+  https://markerwinrefresh20.com: 1       https://markerwinrefresh24.com: 1
+  https://markeruniquewin11x7.com/test: 1 https://markeruniquewin11x8.com/test: 1
+  https://markeruniquewin11x9.com/test: 1</pre>
+<p>Full synthetic-domain tally in this capture: <code>xxxxxxxxnewref.com</code> 41 distinct paths, <code>foobarnewref123.test</code> 9, <code>debug731r2.test</code> 4, <code>abcnewtest999.com</code> 3, <code>abcnewref999.net</code> 3, <code>markerwinrefresh&lt;N&gt;.com</code> 15 distinct integers (1, 2, 5, 6, 9, 12, 14, 16, 19, 20, 24, 25, 26, 27, 28), <code>markeruniquewin11x&lt;N&gt;.com</code> 14 distinct integers (0–14), plus one each of <code>foonewtest999.com</code>, <code>foobartest99999.com</code>, <code>examplenewref.com</code>, <code>debugmarker.com</code> and <code>blablauniquetest777</code>.</p>
+<hr>
+</div></details>
+
+<footer>
+September 9, 2026 · Twenty-one servers · Four university shorteners · At least 170 links on Vanderbilt · 495 FBI addresses in the logs<br>
+Independent research and verification by Kenneth Russell DeGraff · <a href="https://kennethdegraff.com/#contact">contact form</a> · <strong>Please credit all new findings to Kenneth Russell DeGraff.</strong><br>
+Capture files, the downloaded dataset and hash records retained and available on request.
+</footer>
+</div>
+
+</body>
+</html>

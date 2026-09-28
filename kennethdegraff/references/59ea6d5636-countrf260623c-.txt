@@ -1,0 +1,217 @@
+Source: https://web.archive.org/web/20260904204919/https://vanderbi.lt/countrf260623c+
+Retrieved: 2026-09-27T23:51:06.720535+00:00
+
+Statistics for http://vanderbi.lt/countrf260623c « YOURLS — Your Own URL Shortener | http://vanderbi.lt/
+
+		YOURLS: Your Own URL Shortener
+
+Admin interface
+Help
+
+abc
+
+Short URL: 
+http://vanderbi.lt/countrf260623c
+
+Long URL:  https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww[...]
+
+Traffic statistics
+
+Traffic location
+
+Traffic sources
+
+Share
+
+Traffic statistics
+
+Last 24 hours
+Last 7 days
+Last 30 days
+All time				
+
+Number of hits : Last 24 hours
+
+Number of hits : Last 7 days
+
+Number of hits : Last 30 days
+
+Number of hits : All time
+
+Historical click count
+
+Short URL created on June 18, 2026 @ 8:56 am (about 78  days ago)
+
+Last 24 hours 25 hits 1.04 per hour
+
+Last 7 days 26 hits 3.71 per day
+
+Last 30 days 62 hits 2.07 per day
+
+All time 95 hits 1.22 per day
+
+Best day
+
+25 hits on September 4, 2026. 
+				Click for more details
+
+Year 2026
+June
+18: 13 hits
+
+21: 2 hits
+
+July
+02: 1 hit
+
+03: 4 hits
+
+08: 1 hit
+
+14: 1 hit
+
+20: 1 hit
+
+23: 1 hit
+
+24: 1 hit
+
+25: 2 hits
+
+28: 1 hit
+
+29: 1 hit
+
+30: 1 hit
+
+31: 1 hit
+
+August
+04: 1 hit
+
+05: 1 hit
+
+06: 2 hits
+
+07: 2 hits
+
+08: 1 hit
+
+09: 2 hits
+
+10: 3 hits
+
+11: 1 hit
+
+14: 2 hits
+
+15: 4 hits
+
+16: 2 hits
+
+17: 3 hits
+
+18: 2 hits
+
+21: 1 hit
+
+28: 11 hits
+
+29: 1 hit
+
+September
+04: 25 hits
+
+Traffic location
+
+Top 5 countries
+
+Click for more details
+
+ US (United States) : 43 hits
+
+ DE (Germany) : 5 hits
+
+ BR (Brazil) : 4 hits
+
+ AR (Argentina) : 3 hits
+
+ AT (Austria) : 3 hits
+
+ CA (Canada) : 3 hits
+
+ VN (Vietnam) : 3 hits
+
+ UZ (Uzbekistan) : 2 hits
+
+ SV (El Salvador) : 1 hit
+
+ PL (Poland) : 1 hit
+
+ TN (Tunisia) : 1 hit
+
+ PK (Pakistan) : 1 hit
+
+ VE (Venezuela) : 1 hit
+
+ UA (Ukraine) : 1 hit
+
+ TR (Turkey) : 1 hit
+
+ IT (Italy) : 1 hit
+
+ CN (China) : 1 hit
+
+ BD (Bangladesh) : 1 hit
+
+ AU (Australia) : 1 hit
+
+ CY (Cyprus) : 1 hit
+
+ FR (France) : 1 hit
+
+ MU (Mauritius) : 1 hit
+
+ IQ (Iraq) : 1 hit
+
+ GB (United Kingdom) : 1 hit
+
+ MX (Mexico) : 1 hit
+
+Overall traffic
+
+Traffic Sources
+
+Referrer shares
+
+Referrers
+
+ www.wikiservice.at: 1 (details)
+
+https://www.wikiservice.at: 1
+
+Direct vs Referrer Traffic
+
+Direct traffic: 94 hits 
+
+Referrer traffic: 1 hit 
+
+Share
+
+Short link
+
+Long link: https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json
+
+Stats: http://vanderbi.lt/countrf260623c+
+
+Quick Share
+
+				103
+				abc http://vanderbi.lt/countrf260623c
+
+Share with 
+				Twitter
+				Facebook
+				FriendFeed
+
+Powered by YOURLS v1.5.1 – 6 queries

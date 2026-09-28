@@ -1,0 +1,1132 @@
+Source: https://github.com/rubygems/rubygems.org/commit/6cc3edb09da607d4e6d3dd2bd870653ba70e16c2
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+block users registering with anonymous mail providers (#6510) · rubygems/rubygems.org@6cc3edb · GitHub
+
+      Skip to content
+
+Navigation Menu
+
+Sign in
+Appearance settings
+
+Platform
+
+AI CODE CREATION
+GitHub CopilotWrite better code with AI
+
+GitHub Copilot appDirect agents from issue to merge
+
+MCP RegistryIntegrate external tools
+
+DEVELOPER WORKFLOWS
+ActionsAutomate any workflow
+
+CodespacesInstant dev environments
+
+IssuesPlan and track work
+
+Code ReviewManage code changes
+
+Code QualityEnforce quality at merge
+
+APPLICATION SECURITY
+GitHub Advanced SecurityFind and fix vulnerabilities
+
+Code securitySecure your code as you build
+
+Secret protectionStop leaks before they start
+
+EXPLORE
+Why GitHub
+
+Documentation
+
+Blog
+
+Changelog
+
+Marketplace
+
+View all features
+
+Solutions
+
+BY COMPANY SIZE
+Enterprises
+
+Small and medium teams
+
+Startups
+
+Nonprofits
+
+BY USE CASE
+App Modernization
+
+DevSecOps
+
+DevOps
+
+CI/CD
+
+View all use cases
+
+BY INDUSTRY
+Healthcare
+
+Financial services
+
+Manufacturing
+
+Government
+
+View all industries
+
+View all solutions
+
+Resources
+
+EXPLORE BY TOPIC
+AI
+
+Software Development
+
+DevOps
+
+Security
+
+View all topics
+
+EXPLORE BY TYPE
+Customer stories
+
+Events & webinars
+
+Ebooks & reports
+
+Business insights
+
+GitHub Skills
+
+SUPPORT & SERVICES
+Documentation
+
+Customer support
+
+Community forum
+
+Trust center
+
+Partners
+
+View all resources
+
+Open Source
+
+COMMUNITY
+GitHub SponsorsFund open source developers
+
+PROGRAMS
+Security Lab
+
+Maintainer Community
+
+GitHub Stars
+
+Archive Program
+
+REPOSITORIES
+Topics
+
+Trending
+
+Collections
+
+Enterprise
+
+ENTERPRISE SOLUTIONS
+Enterprise platformAI-powered developer platform
+
+AVAILABLE ADD-ONS
+GitHub Advanced SecurityEnterprise-grade security features
+
+Copilot for BusinessEnterprise-grade AI features
+
+Premium SupportEnterprise-grade 24/7 support
+
+Pricing
+
+Search/
+
+Sign in
+Sign up
+Appearance settings
+
+        You signed in with another tab or window. Reload to refresh your session.
+        You signed out in another tab or window. Reload to refresh your session.
+        You switched accounts on another tab or window. Reload to refresh your session.
+
+Dismiss alert
+
+{{ message }}
+
+        rubygems
+
+    /
+
+      rubygems.org
+
+    Public
+
+        Uh oh!
+
+There was an error while loading. Please reload this page.
+
+Notifications
+    You must be signed in to change notification settings
+
+Fork
+    1k
+
+          Star
+          2.4k
+
+        Code
+
+        Issues
+          53
+
+        Pull requests
+          40
+
+        Discussions
+
+        Actions
+
+        Wiki
+
+        Security and quality
+          17
+
+        Insights
+
+Additional navigation options
+
+          Code
+
+          Issues
+
+          Pull requests
+
+          Discussions
+
+          Actions
+
+          Wiki
+
+          Security and quality
+
+          Insights
+
+Commit 6cc3edb
+
+Browse filesBrowse the repository at this point in the historyBrowse files
+
+colby-swandale
+authored
+
+block users registering with anonymous mail providers (#6510)
+* block users registering with blocked email domains
+
+* harden disposable email domain block + add allowlist
+
+Addresses review feedback on the previous commit:
+
+Sync job (app/jobs/sync_disposable_email_domains_job.rb)
+- Explicit Net::HTTP.start with TLS VERIFY_PEER, open/read timeouts, and
+  bounded redirect follow (was: Net::HTTP.get_response, no timeouts, no
+  redirect handling).
+- Reject syncs outside [MIN_EXPECTED_DOMAINS, MAX_EXPECTED_DOMAINS] and abort
+  when any PROTECTED_PROVIDERS entry appears upstream, so a poisoned or empty
+  upstream cannot wipe the table or lock everyone out.
+- Filter incoming domains through BlockedEmailDomain::DOMAIN_FORMAT so
+  malformed lines never bypass model invariants via upsert_all.
+- Replace `where.not(domain: huge_array).delete_all` with a synced_at
+  watermark to avoid a 5k-element NOT IN.
+- Use on_duplicate: "updated_at = EXCLUDED.updated_at" so admin-promoted
+  manual rows aren't reset to upstream each night.
+
+Avo / policy
+- Hide `source` field on new; model defaults new records to :manual so admins
+  cannot accidentally create source: :upstream rows.
+- Document the act_on? per-record-guard requirement for future bulk actions.
+
+Allowlist
+- New email_domain_allowlists table + EmailDomainAllowlist model.
+- BlockedEmailDomain.blocks?/match consult the allowlist first, so ops can
+  exempt legitimate forwarding services (e.g. privaterelay.appleid.com)
+  without the next sync re-adding them.
+- Avo resource + policy mirroring BlockedEmailDomain.
+
+Observability
+- Validator emits StatsD.increment("email_domain.blocked", tags: { source: }).
+- Low-cardinality source tag (upstream/manual) lets us measure block volume
+  and false-positive impact in Datadog.
+
+Other
+- Bump migration Rails version 7.1 -> 8.0 to match neighboring 2026 migrations.
+
+* address review feedback on blocked email domains
+
+* drop the dead upstream allowlist fetch (file no longer exists upstream)
+  and simplify line parsing
+* default new BlockedEmailDomain records to :manual instead of relying on
+  an after_initialize callback that never fired, so Avo-created rows
+  survive the daily sync cleanup
+* enforce HTTPS on every URL fetched by the sync job, including redirect
+  targets, so a Location-header downgrade cannot bypass VERIFY_PEER
+* cover the MAX_EXPECTED_DOMAINS tripwire with a test
+
+* add concurrency to goodjob task and retry on common errors
+
+* add avo actions to block domains and create allowed domains
+
+* transition to faraday
+
+* remove Arel.sql usage
+
+* Let ActiveModel handle I18n
+
+* Don't allow (g)TLDs to be blocked
+
+* fill locales
+
+* harden disposable email sync against upstream poisoning
+
+* fixup linting
+
+* cover unblock guard, http error tagging, and first-sync delta bypass
+
+1 parent e5f07c3 commit 6cc3edb
+Copy full SHA for 6cc3edb
+
+41 files changed
+
++1,268-2Lines changed: 1268 additions & 2 deletions
+
+File tree
+
+Expand file treeCollapse file tree
+
+Open diff view settings
+
+Filter options
+
+Gemfile.lock
+
+Gemfile
+
+app
+
+avo
+
+actions
+
+allowlist_email_domain.rb
+
+block_email_domain.rb
+
+unallowlist_email_domain.rb
+
+unblock_email_domain.rb
+
+resources
+
+blocked_email_domain.rb
+
+email_domain_allowlist.rb
+
+controllers/avo
+
+blocked_email_domains_controller.rb
+
+email_domain_allowlists_controller.rb
+
+jobs
+
+sync_disposable_email_domains_job.rb
+
+models
+
+blocked_email_domain.rb
+
+concerns
+
+email_domain_normalization.rb
+
+email_domain_allowlist.rb
+
+user.rb
+
+policies/admin
+
+blocked_email_domain_policy.rb
+
+email_domain_allowlist_policy.rb
+
+validators
+
+disposable_email_domain_validator.rb
+
+reserved_domain_validator.rb
+
+config
+
+initializers
+
+good_job.rb
+
+locales
+
+de.yml
+
+en.yml
+
+es.yml
+
+fr.yml
+
+ja.yml
+
+nl.yml
+
+pt-BR.yml
+
+zh-CN.yml
+
+zh-TW.yml
+
+db
+
+migrate
+
+20260514224953_create_blocked_email_domains.rb
+
+20260514235942_create_email_domain_allowlists.rb
+
+schema.rb
+
+test
+
+factories
+
+blocked_email_domain.rb
+
+email_domain_allowlist.rb
+
+jobs
+
+sync_disposable_email_domains_job_test.rb
+
+models
+
+blocked_email_domain_test.rb
+
+email_domain_allowlist_test.rb
+
+user_test.rb
+
+system/avo
+
+blocked_email_domains_test.rb
+
+email_domain_allowlist_test.rb
+
+unit/avo/actions
+
+unblock_email_domain_test.rb
+
+Some content is hidden
+
+Large Commits have some content hidden by default. Use the searchbox below for content that may be hidden.
+
+Dismiss banner
+
+Expand file treeCollapse file tree
+
+Open diff view settings
+
+Collapse file
+
+‎Gemfile‎
+Copy file name to clipboardExpand all lines: Gemfile
+
++1Lines changed: 1 addition & 0 deletions
+
+Original file line numberDiff line numberDiff line change
+
+@@ -33,6 +33,7 @@ gem "omniauth", "~> 2.1"
+
+3333
+gem "omniauth-rails_csrf_protection", "~> 2.0"
+
+3434
+gem "openid_connect", "~> 2.3"
+
+3535
+gem "pg", "~> 1.6"
+
+36+
+gem "public_suffix", "~> 7.0"
+
+3637
+gem "puma", "~> 6.6"
+
+3738
+gem "puma-plugin-statsd", "~> 2.8"
+
+3839
+gem "rack", "~> 3.2"
+
+Collapse file
+
+‎Gemfile.lock‎
+Copy file name to clipboardExpand all lines: Gemfile.lock
+
++2Lines changed: 2 additions & 0 deletions
+
+Original file line numberDiff line numberDiff line change
+
+@@ -983,6 +983,7 @@ DEPENDENCIES
+
+983983
+  prop_initializer (~> 0.2)
+
+984984
+  propshaft (~> 1.3.2)
+
+985985
+  prosopite (~> 2.2)
+
+986+
+  public_suffix (~> 7.0)
+
+986987
+  puma (~> 6.6)
+
+987988
+  puma-plugin-statsd (~> 2.8)
+
+988989
+  pundit (~> 2.5)
+
+@@ -1079,6 +1080,7 @@ CHECKSUMS
+
+10791080
+  brakeman (8.0.4) sha256=7bf921fa9638544835df9aa7b3e720a9a72c0267f34f92135955edd80d4dcf6f
+
+10801081
+  browser (6.2.0) sha256=281d5295788825c9396427c292c2d2be0a5c91875c93c390fde6e5d61a5ace2d
+
+10811082
+  builder (3.3.0) sha256=497918d2f9dca528fdca4b88d84e4ef4387256d984b8154e9d5d3fe5a9c8835f
+
+1083+
+  bundler (4.0.11) sha256=5bcec0fb78302e48d02ee46f10ee6e6942be647ba5b44a6d1ddfda9a240ce785
+
+10821084
+  capybara (3.40.0) sha256=42dba720578ea1ca65fd7a41d163dd368502c191804558f6e0f71b391054aeef
+
+10831085
+  cbor (0.5.10.1) sha256=79cdf79f18dcd9ee97e0b849c6d573e5a2e3ddc1954d180f384d6ed2612b6df0
+
+10841086
+  cgi (0.5.1) sha256=e93fcafc69b8a934fe1e6146121fa35430efa8b4a4047c4893764067036f18e9
+
+Collapse file
+
+‎app/avo/actions/allowlist_email_domain.rb‎
+Copy file name to clipboard
+
++27Lines changed: 27 additions & 0 deletions
+
+Original file line numberDiff line numberDiff line change
+
+@@ -0,0 +1,27 @@
+
+1+
+# frozen_string_literal: true
+
+2+
+
+3+
+class Avo::Actions::AllowlistEmailDomain < Avo::Actions::ApplicationAction
+
+4+
+  self.name = "Allowlist Email Domain"
+
+5+
+  self.visible = lambda {
+
+6+
+    current_user.team_member?("rubygems-org") && view == :index
+
+7+
+  }
+
+8+
+  self.standalone = true
+
+9+
+  self.confirm_button_label = "Allowlist Email Domain"
+
+10+
+
+11+
+  def fields
+
+12+
+    field :domain, as: :text, required: true,
+
+13+
+      help: "The domain to allowlist (e.g., privaterelay.appleid.com). Subdomains will also be allowed."
+
+14+
+    field :notes, as: :textarea,
+
+15+
+      help: "Optional context for this allowlist entry."
+
+16+
+    super
+
+17+
+  end
+
+18+
+
+19+
+  class ActionHandler < Avo::Actions::ActionHandler
+
+20+
+    def handle_standalone
+
+21+
+      EmailDomainAllowlist.create!(
+
+22+
+        domain: fields["domain"],
+
+23+
+        notes: fields["notes"]
+
+24+
+      )
+
+25+
+    end
+
+26+
+  end
+
+27+
+end
+
+Collapse file
+
+‎app/avo/actions/block_email_domain.rb‎
+Copy file name to clipboard
+
++28Lines changed: 28 additions & 0 deletions
+
+Original file line numberDiff line numberDiff line change
+
+@@ -0,0 +1,28 @@
+
+1+
+# frozen_string_literal: true
+
+2+
+
+3+
+class Avo::Actions::BlockEmailDomain < Avo::Actions::ApplicationAction
+
+4+
+  self.name = "Block Email Domain"
+
+5+
+  self.visible = lambda {
+
+6+
+    current_user.team_member?("rubygems-org") && view == :index
+
+7+
+  }
+
+8+
+  self.standalone = true
+
+9+
+  self.confirm_button_label = "Block Email Domain"
+
+10+
+
+11+
+  def fields
+
+12+
+    field :domain, as: :text, required: true,
+
+13+
+      help: "The domain to block (e.g., disposable.example). Suffix matches will also be blocked."
+
+14+
+    field :notes, as: :textarea,
+
+15+
+      help: "Optional context for this manual entry."
+
+16+
+    super
+
+17+
+  end
+
+18+
+
+19+
+  class ActionHandler < Avo::Actions::ActionHandler
+
+20+
+    def handle_standalone
+
+21+
+      BlockedEmailDomain.create!(
+
+22+
+        domain: fields["domain"],
+
+23+
+        source: :manual,
+
+24+
+        notes: fields["notes"]
+
+25+
+      )
+
+26+
+    end
+
+27+
+  end
+
+28+
+end
+
+Collapse file
+
+‎app/avo/actions/unallowlist_email_domain.rb‎
+Copy file name to clipboard
+
++18Lines changed: 18 additions & 0 deletions
+
+Original file line numberDiff line numberDiff line change
+
+@@ -0,0 +1,18 @@
+
+1+
+# frozen_string_literal: true
+
+2+
+
+3+
+class Avo::Actions::UnallowlistEmailDomain < Avo::Actions::ApplicationAction
+
+4+
+  self.name = "Remove from Allowlist"
+
+5+
+  self.visible = lambda {
+
+6+
+    current_user.team_member?("rubygems-org") && view == :show
+
+7+
+  }
+
+8+
+  self.message = lambda {
+
+9+
+    "Are you sure you would like to remove '#{resource.record.domain}' from the allowlist?"
+
+10+
+  }
+
+11+
+  self.confirm_button_label = "Remove from Allowlist"
+
+12+
+
+13+
+  class ActionHandler < Avo::Actions::ActionHandler
+
+14+
+    def handle_record(email_domain_allowlist)
+
+15+
+      email_domain_allowlist.destroy!
+
+16+
+    end
+
+17+
+  end
+
+18+
+end
+
+Collapse file
+
+‎app/avo/actions/unblock_email_domain.rb‎
+Copy file name to clipboard
+
++19Lines changed: 19 additions & 0 deletions
+
+Original file line numberDiff line numberDiff line change
+
+@@ -0,0 +1,19 @@
+
+1+
+# frozen_string_literal: true
+
+2+
+
+3+
+class Avo::Actions::UnblockEmailDomain < Avo::Actions::ApplicationAction
+
+4+
+  self.name = "Unblock Email Domain"
+
+5+
+  self.visible = lambda {
+
+6+
+    current_user.team_member?("rubygems-org") && view == :show && resource.record.manual?
+
+7+
+  }
+
+8+
+  self.message = lambda {
+
+9+
+    "Are you sure you would like to remove '#{resource.record.domain}' from the blocklist?"
+
+10+
+  }
+
+11+
+  self.confirm_button_label = "Unblock Email Domain"
+
+12+
+
+13+
+  class ActionHandler < Avo::Actions::ActionHandler
+
+14+
+    def handle_record(blocked_email_domain)
+
+15+
+      raise "Refusing to unblock upstream-sourced row" if blocked_email_domain.upstream?
+
+16+
+      blocked_email_domain.destroy!
+
+17+
+    end
+
+18+
+  end
+
+19+
+end
+
+Collapse file
+
+‎app/avo/resources/blocked_email_domain.rb‎
+Copy file name to clipboard
+
++37Lines changed: 37 additions & 0 deletions
+
+Original file line numberDiff line numberDiff line change
+
+@@ -0,0 +1,37 @@
+
+1+
+# frozen_string_literal: true
+
+2+
+
+3+
+class Avo::Resources::BlockedEmailDomain < Avo::BaseResource
+
+4+
+  self.title = :domain
+
+5+
+  self.includes = []
+
+6+
+  self.search = {
+
+7+
+    query: lambda {
+
+8+
+             needle = ActiveRecord::Base.sanitize_sql_like(params[:q].to_s)
+
+9+
+             query.where("domain ILIKE ?", "%#{needle}%")
+
+10+
+           }
+
+11+
+  }
+
+12+
+
+13+
+  class SourceFilter < Avo::Filters::ScopeBooleanFilter; end
+
+14+
+
+15+
+  def filters
+
+16+
+    filter SourceFilter, arguments: { default: { manual: true, upstream: true } }
+
+17+
+  end
+
+18+
+
+19+
+  def actions
+
+20+
+    action Avo::Actions::BlockEmailDomain
+
+21+
+    action Avo::Actions::UnblockEmailDomain
+
+22+
+  end
+
+23+
+
+24+
+  def fields
+
+25+
+    field :id, as: :id, hide_on: :index
+
+26+
+
+27+
+    field :domain, as: :text, link_to_resource: true, only_on: %i[index show]
+
+28+
+    field :source, as: :select,
+
+29+
+      enum: ::BlockedEmailDomain.sources,
+
+30+
+      only_on: %i[index show],
+
+31+
+      readonly: true
+
+32+
+    field :notes, as: :textarea, only_on: %i[show]
+
+33+
+
+34+
+    field :created_at, as: :date_time, sortable: true, readonly: true, only_on: %i[index show]
+
+35+
+    field :updated_at, as: :date_time, sortable: true, readonly: true, only_on: %i[index show]
+
+36+
+  end
+
+37+
+end
+
+Collapse file
+
+‎app/avo/resources/email_domain_allowlist.rb‎
+Copy file name to clipboard
+
++27Lines changed: 27 additions & 0 deletions
+
+Original file line numberDiff line numberDiff line change
+
+@@ -0,0 +1,27 @@
+
+1+
+# frozen_string_literal: true
+
+2+
+
+3+
+class Avo::Resources::EmailDomainAllowlist < Avo::BaseResource
+
+4+
+  self.title = :domain
+
+5+
+  self.includes = []
+
+6+
+  self.search = {
+
+7+
+    query: lambda {
+
+8+
+             needle = ActiveRecord::Base.sanitize_sql_like(params[:q].to_s)
+
+9+
+             query.where("domain ILIKE ?", "%#{needle}%")
+
+10+
+           }
+
+11+
+  }
+
+12+
+
+13+
+  def actions
+
+14+
+    action Avo::Actions::AllowlistEmailDomain
+
+15+
+    action Avo::Actions::UnallowlistEmailDomain
+
+16+
+  end
+
+17+
+
+18+
+  def fields
+
+19+
+    field :id, as: :id, hide_on: :index
+
+20+
+
+21+
+    field :domain, as: :text, link_to_resource: true, only_on: %i[index show]
+
+22+
+    field :notes, as: :textarea, only_on: %i[show]
+
+23+
+
+24+
+    field :created_at, as: :date_time, sortable: true, readonly: true, only_on: %i[index show]
+
+25+
+    field :updated_at, as: :date_time, sortable: true, readonly: true, only_on: %i[index show]
+
+26+
+  end
+
+27+
+end
+
+Collapse file
+
+‎app/controllers/avo/blocked_email_domains_controller.rb‎
+Copy file name to clipboard
+
++4Lines changed: 4 additions & 0 deletions
+
+Original file line numberDiff line numberDiff line change
+
+@@ -0,0 +1,4 @@
+
+1+
+# frozen_string_literal: true
+
+2+
+
+3+
+class Avo::BlockedEmailDomainsController < Avo::ResourcesController
+
+4+
+end
+
+Collapse file
+
+‎app/controllers/avo/email_domain_allowlists_controller.rb‎
+Copy file name to clipboard
+
++4Lines changed: 4 additions & 0 deletions
+
+Original file line numberDiff line numberDiff line change
+
+@@ -0,0 +1,4 @@
+
+1+
+# frozen_string_literal: true
+
+2+
+
+3+
+class Avo::EmailDomainAllowlistsController < Avo::ResourcesController
+
+4+
+end
+
+0 commit comments
+
+Comments
+0 (0)
+
+Footer
+
+        © 2026 GitHub, Inc.
+
+Footer navigation
+
+            Terms
+
+            Privacy
+
+              Security
+
+              Status
+
+            Community
+
+            Docs
+
+            Contact
+
+      Manage cookies
+
+        Do not share my personal information
+
+    You can’t perform that action at this time.

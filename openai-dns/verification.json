@@ -1,0 +1,11 @@
+{
+  "files_checked": 15,
+  "format_checks": {
+    "article/links.json": {
+      "json": "valid"
+    },
+    "backup-manifest.json": {
+      "json": "valid"
+    }
+  }
+}

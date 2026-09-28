@@ -1,0 +1,135 @@
+Source: https://my.diffend.io/gems/amdvar152054/0.0.1
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+RubyGems - Mend - Supply Chain Defender
+
+RubyGems
+
+npm
+
+PyPI
+
+Organizations
+
+Log in
+
+RubyGems
+
+cocoapods-lynx-library
+
+Last diff:
+September 27, 2026 22:12
+
+solid-redis
+
+Last diff:
+September 27, 2026 21:32
+
+kettle-dev
+
+Last diff:
+September 27, 2026 21:32
+
+rbs-sentinel
+
+Last diff:
+September 27, 2026 21:22
+
+late-sdk
+
+Last diff:
+September 27, 2026 21:20
+
+zernio-sdk
+
+Last diff:
+September 27, 2026 21:19
+
+resmarkable
+
+Last diff:
+September 27, 2026 21:17
+
+duva-mail
+
+Last diff:
+September 27, 2026 21:03
+
+pixar-ruby-extensions
+
+Last diff:
+September 27, 2026 20:56
+
+usps_flags
+
+Last diff:
+September 27, 2026 20:51
+
+gman
+
+Last diff:
+September 27, 2026 20:43
+
+mailkube-rails
+
+Last diff:
+September 27, 2026 20:39
+
+aireview
+
+Last diff:
+September 27, 2026 20:27
+
+cybrid_api_bank_ruby
+
+Last diff:
+September 27, 2026 20:14
+
+cybrid_api_organization_ruby
+
+Last diff:
+September 27, 2026 20:14
+
+cybrid_api_id_ruby
+
+Last diff:
+September 27, 2026 20:10
+
+moduler
+
+Last diff:
+September 27, 2026 20:02
+
+xero-kiwi
+
+Last diff:
+September 27, 2026 19:56
+
+repull
+
+Last diff:
+September 27, 2026 19:36
+
+seams
+
+Last diff:
+September 27, 2026 19:34
+
+pico_phone
+
+Last diff:
+September 27, 2026 18:56
+
+‹ Prev
+
+Next ›
+
+Contact Us
+
+Terms of Service
+
+Privacy Policy
+
+Docs
+
+Copyright © 2026 Mend Software

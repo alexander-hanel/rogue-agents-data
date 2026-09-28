@@ -1,0 +1,218 @@
+Source: https://urlquery.net/report/eb7629b9-5286-4628-b464-e425c419166b
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+Report - ittdashboard.nso.go.th/preview2en.php?id_project=118
+ urlquery
+
+ Home  Search  Insights About
+Login
+
+ Check icon
+
+ Warning icon
+
+ Warning icon
+
+Share Report
+
+Generates a temporary link to share non-public report for a limited time.
+
+Valid for (hours 1-300) 
+
+Generate Link
+
+urlquery report
+
+JSON report
+
+Raw JSON report
+
+Share report
+
+Share a non-public report with others
+
+Request review
+
+Request a review of report
+
+External sources
+
+ VirusTotal
+
+VirusTotal
+
+FQDN
+
+ittdashboard.nso.go.th
+
+DOMAIN
+
+nso.go.th
+
+IP
+
+104.26.2.138
+
+ crt.sh
+
+crt.sh
+
+FQDN
+
+ittdashboard.nso.go.th
+
+DOMAIN
+
+nso.go.th
+
+Report Overview
+
+Visitedpublic 
+
+2025-11-28 14:05:55
+
+Tags
+
+Submit Tags
+
+URL
+
+ittdashboard.nso.go.th/preview2en.php?id_project=118
+
+Finishing URL
+
+ittdashboard.nso.go.th/preview2en.php?id_project=118
+
+IP / ASN
+
+104.26.2.138
+
+#13335 CLOUDFLARENET
+
+Title
+
+ittdashboard.nso.go.th | 525: SSL handshake failed
+
+Detections
+
+urlquery
+
+0
+
+Network Intrusion Detection
+
+0
+
+Threat Detection Systems
+
+0
+
+Host Summary
+
+HostRankRegisteredFirst SeenLast SeenSentReceivedIPFingerprints
+
+ittdashboard.nso.go.th 
+unknown1999-01-172025-11-282025-11-2814 kB223 kB
+
+104.26.2.138
+
+challenges.cloudflare.com 
+113932009-02-172021-10-202025-11-235.1 kB475 kB
+
+104.18.95.41
+
+static.cloudflareinsights.com 
+40732019-08-302019-09-242025-11-23960 B41 kB
+
+104.16.80.73
+
+Cloudflare (CDN)
+Cloudflare is a web-infrastructure and website-security company, providing content-delivery-network services, DDoS mitigation, Internet security, and distributed domain-name-server services.
+
+Cloudflare Browser Insights (Analytics, RUM)
+Cloudflare Browser Insights is a tool that measures the performance of websites from the perspective of users.
+
+Related reports
+
+Domain
+
+IP
+
+ASN
+
+Screenshot
+
+Similar
+
+Threat Detection Systems
+
+No alerts detected
+
+JavaScript (93)
+
+Script (92)
+
+Eval (0)
+
+Write (1)
+
+Filter scripts by metadata or content (case-insensitive)
+
+Loading...
+
+HASHFROMSizeFirst SeenLast Seen 
+086707e4369f60afedcafb16050a7618DocumentWrite39 B2023-03-072026-09-27
+
+Introduced by DocumentWrite
+
+First Seen 2023-03-07
+
+Last Seen 2026-09-27
+
+Times Seen 1052362
+
+Size 39 B (39 bytes)
+
+MD5 086707e4369f60afedcafb16050a7618
+
+SHA1 8216b0cc6876cbd44f01c158e7dff3833ceccd41
+
+SHA256 a7fe83ec64bb23eb28090598db3d166ed98e52e39d1afbbfd74c579553f93e4e
+
+     Download Format Code 
+
+  Loading...
+
+HTTP Transactions (26)
+
+Filter transactions by metadata or HTML content (case-insensitive)
+
+URLIPResponseSize
+
+ urlquery
+urlquery is a service for URL and domain scanning, identifying and categorizing  potentially harmful elements on a webpage, checking for malware infections and assessing overall reputation.
+
+Powered by penguins.
+
+Contact
+
+General questions, feedback, or technical inquiries:
+📧 contact@urlquery.net
+
+Report phishing:
+📧 phishing@urlquery.net
+
+For abuse or removal requests:
+📧 support@urlquery.net
+
+Follow us
+
+Github
+
+Legal
+
+Privacy Policy
+
+Terms & Conditions
+
+© 2026 urlquery All Rights Reserved.

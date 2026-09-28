@@ -1,0 +1,7 @@
+{
+  "source_path": "references/2869273e2d-OpenAI-Hugging-Face-Incident-Technical-Report.pdf",
+  "source_sha256": "dd635cf6e5f39f0e1f646f08c36549090d77156ed89cbd3d733ed496648cae9c",
+  "path": "references/technical-report.txt",
+  "sha256": "beff5e4e340fbadb210c96823f2fabb99790c82b24d229df8189d4e044abc89c",
+  "transformation": "pdftotext -layout; PDF text extraction, not a copy of the unavailable blog article."
+}

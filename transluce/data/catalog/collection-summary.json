@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-09-24T01:04:45.699737+00:00",
+  "version": 3,
+  "public_release_version": 5,
+  "total_reports": 38160,
+  "raw_json_preserved": 38160,
+  "counts": {
+    "disposition": {
+      "review_required": 432,
+      "included": 37649,
+      "background": 79
+    },
+    "confidence": {
+      "None": 511,
+      "suggestive": 31182,
+      "significant": 6467
+    }
+  },
+  "main_catalog_rows": 38078,
+  "additional_rows": 82,
+  "main_rows_unchanged": false,
+  "missing_raw_reports": 0,
+  "plotted_reports": 37638,
+  "plotted_confidence_counts": {
+    "suggestive": 31171,
+    "significant": 6467
+  },
+  "date_range": {
+    "start": "2025-11-01",
+    "end": "2026-09-21"
+  },
+  "included_before_plot": 11,
+  "activity_package_revision": "v5-reviewed-confidence",
+  "confidence_override_count": 2,
+  "source_assignment_rows": 37649,
+  "source_display_buckets": 40,
+  "raw_preservation_provenance": "raw_json_preserved and missing_raw_reports are carried from upstream v5 metadata about its private archive; this package contains report links and research metadata only."
+}

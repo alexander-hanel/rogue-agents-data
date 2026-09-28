@@ -1,0 +1,112 @@
+Source: https://web.archive.org/web/20260904204918/https://vanderbi.lt/highallmap260622+
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+Statistics for http://vanderbi.lt/highallmap260622 « YOURLS — Your Own URL Shortener | http://vanderbi.lt/
+
+		YOURLS: Your Own URL Shortener
+
+Admin interface
+Help
+
+https://code.highcharts.com/mapdata/countries/us/us-all-all-highres.geo.json
+
+Short URL: 
+http://vanderbi.lt/highallmap260622
+
+Long URL:  https://code.highcharts.com/mapdata/countries/us/us-all[...]
+
+Traffic statistics
+
+Traffic location
+
+Traffic sources
+
+Share
+
+Traffic statistics
+
+Last 24 hours
+Last 7 days
+Last 30 days
+All time				
+
+Number of hits : Last 24 hours
+
+Number of hits : Last 7 days
+
+Number of hits : Last 30 days
+
+Number of hits : All time
+
+Historical click count
+
+Short URL created on June 18, 2026 @ 7:05 am (about 78  days ago)
+
+Last 24 hours 18 hits 0.75 per hour
+
+Last 7 days 19 hits 2.71 per day
+
+Last 30 days 27 hits 0.9 per day
+
+All time 86 hits 1.1 per day
+
+Best day
+
+59 hits on June 18, 2026. 
+				Click for more details
+
+Year 2026
+June
+18: 59 hits
+
+August
+28: 8 hits
+
+29: 1 hit
+
+September
+04: 18 hits
+
+Traffic location
+
+Top 5 countries
+
+Click for more details
+
+ US (United States) : 78 hits
+
+ AR (Argentina) : 2 hits
+
+ DE (Germany) : 2 hits
+
+ AT (Austria) : 1 hit
+
+ PL (Poland) : 1 hit
+
+ FR (France) : 1 hit
+
+Overall traffic
+
+Traffic Sources
+
+No referrer data.
+
+Share
+
+Short link
+
+Long link: https://code.highcharts.com/mapdata/countries/us/us-all-all-highres.geo.json
+
+Stats: http://vanderbi.lt/highallmap260622+
+
+Quick Share
+
+				28
+				https://code.highcharts.com/mapdata/countries/us/us-all-all-highres.geo.json http://vanderbi.lt/highallmap260622
+
+Share with 
+				Twitter
+				Facebook
+				FriendFeed
+
+Powered by YOURLS v1.5.1 – 6 queries

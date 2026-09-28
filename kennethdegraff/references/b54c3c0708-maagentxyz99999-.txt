@@ -1,0 +1,1585 @@
+Source: http://web.archive.org/web/20260904190301/https://uoft.me/maagentxyz99999+
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+Statistics for https://uoft.me/maagentxyz99999 « YOURLS — Your Own URL Shortener | https://uoft.me/
+
+		YOURLS: Your Own URL Shortener
+
+Admin interface
+Help
+
+YOURLS version 1.8.2 is available. Please update!
+
+http://www.utoronto.ca/foobaruniq456
+
+Short URL: 
+https://uoft.me/maagentxyz99999 
+
+Long URL:  http://www.utoronto.ca/foobaruniq456
+
+Traffic statistics
+
+Traffic location
+
+Traffic sources
+
+Share
+
+Traffic statistics
+
+Last 24 hours
+Last 7 days
+Last 30 days
+All time				
+
+Number of hits : Last 24 hours
+
+Number of hits : Last 7 days
+
+Number of hits : Last 30 days
+
+Number of hits : All time
+
+Historical click count
+
+Short URL created on June 18, 2026 @ 10:52 am (about 78 days ago)
+
+Last 24 hours 21 hits 0.88 per hour
+
+Last 7 days 22 hits 3.14 per day
+
+Last 30 days 28 hits 0.93 per day
+
+All time 1802 hits 23.1 per day
+
+Best day
+
+1735 hits on June 18, 2026.
+				Click for more details
+
+Year 2026
+June
+18: 1735 hits
+
+19: 1 hit
+
+21: 1 hit
+
+22: 1 hit
+
+23: 1 hit
+
+28: 1 hit
+
+July
+03: 1 hit
+
+04: 1 hit
+
+05: 1 hit
+
+08: 2 hits
+
+11: 1 hit
+
+12: 1 hit
+
+13: 2 hits
+
+14: 1 hit
+
+15: 1 hit
+
+16: 2 hits
+
+18: 2 hits
+
+20: 5 hits
+
+21: 3 hits
+
+22: 2 hits
+
+23: 1 hit
+
+25: 1 hit
+
+26: 2 hits
+
+27: 1 hit
+
+29: 1 hit
+
+30: 1 hit
+
+August
+04: 1 hit
+
+05: 1 hit
+
+07: 1 hit
+
+14: 1 hit
+
+18: 1 hit
+
+20: 1 hit
+
+22: 1 hit
+
+28: 1 hit
+
+September
+01: 1 hit
+
+04: 21 hits
+
+Traffic location
+
+Top 5 countries
+
+Click for more details
+
+ US (United States) : 1609 hits
+
+ BE (Belgium) : 47 hits
+
+ GB (United Kingdom) : 45 hits
+
+ FR (France) : 28 hits
+
+ DE (Germany) : 15 hits
+
+ IN (India) : 9 hits
+
+ SE (Sweden) : 8 hits
+
+ VN (Vietnam) : 6 hits
+
+ IE (Ireland) : 5 hits
+
+ BR (Brazil) : 3 hits
+
+ EC (Ecuador) : 2 hits
+
+ MX (Mexico) : 2 hits
+
+ UY (Uruguay) : 2 hits
+
+ CN (China) : 2 hits
+
+ AR (Argentina) : 2 hits
+
+ AT (Austria) : 1 hit
+
+ BD (Bangladesh) : 1 hit
+
+ PK (Pakistan) : 1 hit
+
+ PE (Peru) : 1 hit
+
+ OM (Oman) : 1 hit
+
+ JP (Japan) : 1 hit
+
+ MD (Moldova, Republic of) : 1 hit
+
+ EG (Egypt) : 1 hit
+
+ IR (Iran, Islamic Republic of) : 1 hit
+
+ IQ (Iraq) : 1 hit
+
+ CH (Switzerland) : 1 hit
+
+ ES (Spain) : 1 hit
+
+ AM (Armenia) : 1 hit
+
+Overall traffic
+
+Traffic sources
+
+Referrer shares
+
+Referrers
+
+ jqp.vercel.app: 1059 (details)
+
+https://jqp.vercel.app/api/v0?jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D&url=https%3A%2F%2Fda.gd%2F4qPkK: 4
+
+https://jqp.vercel.app/api/v0?jq=%5B2019%2C%5Brange%28270%3B340%29as%24i%7Cselect%28.%5B%24i%5D%5B%5D%3F%7Ctest%28%22m%22%29%3F%29%7C.%5B%24i%2C%24i%2B2%5D%5D%5D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%5B2019%2C%5Brange%28270%3B341%29as%24i%7Cselect%28.%5B%24i%5D%5B%5D%3F%7Ctest%28%22m%22%29%3F%29%7C.%5B%24i%2C%24i%2B2%5D%5D%5D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%5B2019%2C%5Brange%28270%3B342%29as%24i%7Cselect%28.%5B%24i%5D%5B%5D%3F%7Ctest%28%22m%22%29%3F%29%7C.%5B%24i%2C%24i%2B2%5D%5D%5D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%5B2020%2C%5Brange%281030%3B1120%29as%24i%7Cselect%28.%5B%24i%5D%5B%5D%3F%7Ctest%28%22m%22%29%3F%29%7C.%5B%24i%2C%24i%2B2%5D%5D%5D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%5B2020%2C%5Brange%281030%3B1121%29as%24i%7Cselect%28.%5B%24i%5D%5B%5D%3F%7Ctest%28%22m%22%29%3F%29%7C.%5B%24i%2C%24i%2B2%5D%5D%5D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%5B2020%2C%5Brange%281030%3B1122%29as%24i%7Cselect%28.%5B%24i%5D%5B%5D%3F%7Ctest%28%22m%22%29%3F%29%7C.%5B%24i%2C%24i%2B2%5D%5D%5D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%5B2021%2C%5Brange%282e3%3B2100%29as%24i%7Cselect%28.%5B%24i%5D%5B%5D%3F%7Ctest%28%22m%22%29%3F%29%7C.%5B%24i%2C%24i%2B2%5D%5D%5D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%5B2021%2C%5Brange%282e3%3B2101%29as%24i%7Cselect%28.%5B%24i%5D%5B%5D%3F%7Ctest%28%22m%22%29%3F%29%7C.%5B%24i%2C%24i%2B2%5D%5D%5D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%5B2021%2C%5Brange%282e3%3B2102%29as%24i%7Cselect%28.%5B%24i%5D%5B%5D%3F%7Ctest%28%22m%22%29%3F%29%7C.%5B%24i%2C%24i%2B2%5D%5D%5D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22county+table%22%2Cl%3A%28.%5B128%3A145%5D%7Cmap%28%5B.%5B%5D%5D%7Cflatten%7Cjoin%28%22%2C%22%29%29%29%7D&url=https%3A%2F%2Fda.gd%2FOAU4q: 7
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2019%2Ck%3A%28.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D&url=http%3A: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2020%2Ck%3A%28.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D&url=http%3A: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22SEC%22%2Cy%3A2019%2Ck%3A%28.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D&url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%3A%2F%2F: 1
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22SEC%22%2Cy%3A2019%2Ck%3A%28.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22SEC%22%2Cy%3A2020%2Ck%3A%28.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D&url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%253A%252: 1
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22SEC%22%2Cy%3A2020%2Ck%3A%28.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22SEC%22%2Cy%3A2021%2Ck%3A%28.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22SEC+county.json%22%2Cy%3A2019%2Cd%3A.regCF_county_2019%5B46%3A52%5D%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22SEC+county.json%22%2Cy%3A2020%2Cd%3A.regCF_county_2020%5B52%3A62%5D%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22SEC+county.json%22%2Cy%3A2021%2Cd%3A.regCF_county_2021%5B82%3A91%5D%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22SEC-county%22%2Cy%3A2019%2Cr%3A%28.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%29%29%7D&url=https%3A%2F%2Fda.gd%2FAyg: 7
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22SEC-county%22%2Cy%3A2020%2Cr%3A%28.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%29%29%7D&url=https%3A%2F%2Fda.gd%2FAyg: 7
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22SEC-county%22%2Cy%3A2021%2Cr%3A%28.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%29%29%7D&url=https%3A%2F%2Fda.gd%2FAyg: 7
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22SEC-main.js%22%2Cl%3A%28.%5B295%3A317%5D%7Cmap%28%5B.%5B%5D%5D%7Cflatten%7Cjoin%28%22%2C%22%29%29%29%7D&url=https%3A%2F%2Fda.gd%2FOAU4q: 6
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cr%3A.regCF_county_2019%5B46%3A52%5D%7Cmap%28.usd%3D%28.usd%2A.1%7Cround%29%2F100%29%7D&url=https%3A%2F%2Fda.gd%2FAyg: 6
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cr%3A.regCF_county_2020%5B52%3A62%5D%7Cmap%28.usd%3D%28.usd%2A.1%7Cround%29%2F100%29%7D&url=https%3A%2F%2Fda.gd%2FAyg: 6
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cr%3A.regCF_county_2021%5B82%3A91%5D%7Cmap%28.usd%3D%28.usd%2A.1%7Cround%29%2F100%29%7D&url=https%3A%2F%2Fda.gd%2FAyg: 6
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22www.sec.gov%22%2Cy%3A2019%2Ck%3A%28.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22www.sec.gov%22%2Cy%3A2020%2Ck%3A%28.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22www.sec.gov%22%2Cy%3A2021%2Ck%3A%28.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2019%2Ca%3A%5Brange%286%29as%24i%7C.%5B%24i%2A6%2B285%2C%24i%2A6%2B287%5D%5D%7D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2019%2Cb%3A%5Brange%286%29as%24i%7C.%5B%24i%2A6%2B285%2C%24i%2A6%2B287%5D%5D%7D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2019%2Cc%3A%5Brange%286%29as%24i%7C.%5B%24i%2A6%2B285%2C%24i%2A6%2B287%5D%5D%7D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2020%2Ca%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1051%2C%24i%2A6%2B1053%5D%5D%7D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2020%2Cb%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1051%2C%24i%2A6%2B1053%5D%5D%7D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2020%2Cc%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1051%2C%24i%2A6%2B1053%5D%5D%7D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2021%2Ca%3A%5Brange%289%29as%24i%7C.%5B%24i%2A6%2B2019%2C%24i%2A6%2B2021%5D%5D%7D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2021%2Cb%3A%5Brange%289%29as%24i%7C.%5B%24i%2A6%2B2019%2C%24i%2A6%2B2021%5D%5D%7D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2021%2Cc%3A%5Brange%289%29as%24i%7C.%5B%24i%2A6%2B2019%2C%24i%2A6%2B2021%5D%5D%7D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A.status.url%2Ca%3A%28.contents%7Cfromjson%7C.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D&url=https%3A%2F%2Fda.gd%2FJ7cAQ: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A.status.url%2Ca%3A%28.contents%7Cfromjson%7C.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D&url=https%3A%2F%2Fda.gd%2FJ7cAQ: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A.status.url%2Ca%3A%28.contents%7Cfromjson%7C.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D&url=https%3A%2F%2Fda.gd%2FJ7cAQ: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A.status.url%2Ce%3A%28.contents%7Cfromjson%7C%5B.regCF_county_2019%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%5D%29%7D&url=https%3A%2F%2Fda.gd%2FJ7cAQ&ma: 4
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A.status.url%2Ce%3A%28.contents%7Cfromjson%7C%5B.regCF_county_2020%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%5D%29%7D&url=https%3A%2F%2Fda.gd%2FJ7cAQ&ma: 4
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A.status.url%2Ce%3A%28.contents%7Cfromjson%7C%5B.regCF_county_2021%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%5D%29%7D&url=https%3A%2F%2Fda.gd%2FJ7cAQ&ma: 4
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A.status.url%2Ce%3A%28.contents%7Cfromjson%7C.regCF_county_2019%5B46%3A52%5D%29%7D&url=https%3A%2F%2Fda.gd%2FJ7cAQ: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A.status.url%2Ce%3A%28.contents%7Cfromjson%7C.regCF_county_2020%5B52%3A62%5D%29%7D&url=https%3A%2F%2Fda.gd%2FJ7cAQ: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A.status.url%2Ce%3A%28.contents%7Cfromjson%7C.regCF_county_2021%5B82%3A91%5D%29%7D&url=https%3A%2F%2Fda.gd%2FJ7cAQ: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A.status.url%2Cm%3A%28.contents%7Cfromjson%7C.regCF_county_methodology%29%7D&url=https%3A%2F%2Fda.gd%2FJ7cAQ&mark=WIN9m: 4
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A.status.url%2Cr%3A%28.contents%7Cfromjson%7C.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%29%29%7D&url=https%3A%2F%2Fda.gd: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A.status.url%2Cr%3A%28.contents%7Cfromjson%7C.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%29%29%7D&url=https%3A%2F%2Fda.gd: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A.status.url%2Cr%3A%28.contents%7Cfromjson%7C.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%29%29%7D&url=https%3A%2F%2Fda.gd: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A.status.url%2Cy%3A2019%2Ck%3A%28.contents%7Cfromjson%7C%5B.regCF_county_2019%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%7C%5B.code%2C%28.usd%2F1000%2A10: 4
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A.status.url%2Cy%3A2020%2Ck%3A%28.contents%7Cfromjson%7C%5B.regCF_county_2020%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%7C%5B.code%2C%28.usd%2F1000%2A10: 4
+
+https://jqp.vercel.app/api/v0?jq=%7Bs%3A.status.url%2Cy%3A2021%2Ck%3A%28.contents%7Cfromjson%7C%5B.regCF_county_2021%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%7C%5B.code%2C%28.usd%2F1000%2A10: 4
+
+https://jqp.vercel.app/api/v0?jq=%7Bs:%22SEC%22,y:2019,k:(.regCF_county_2019[46:52]|map([.code,((.usd/10|round)/100)]))%7D&url=http://api.cors.lol/?url=https://www.sec.gov/files/county.json: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs:%22SEC%22,y:2019,k:(.regCF_county_2019[46:52]|map([.code,((.usd/10|round)/100)]))%7D&url=https://api.cors.lol/?url=https://www.sec.gov/files/county.json: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs:%22SEC%22,y:2019,k:(.regCF_county_2019[46:52]|map([.code,.usd/1000]))%7D&url=http://api.cors.lol/?url=https://www.sec.gov/files/county.json: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs:%22SEC%22,y:2019,k:(.regCF_county_2019[46:52]|map([.code,.usd/1000]))%7D&url=https://api.cors.lol/?url=https://www.sec.gov/files/county.json: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs:%22SEC%22,y:2020,k:(.regCF_county_2020[52:62]|map([.code,((.usd/10|round)/100)]))%7D&url=http://api.cors.lol/?url=https://www.sec.gov/files/county.json: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs:%22SEC%22,y:2020,k:(.regCF_county_2020[52:62]|map([.code,((.usd/10|round)/100)]))%7D&url=https://api.cors.lol/?url=https://www.sec.gov/files/county.json: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs:%22SEC%22,y:2020,k:(.regCF_county_2020[52:62]|map([.code,.usd/1000]))%7D&url=http://api.cors.lol/?url=https://www.sec.gov/files/county.json: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs:%22SEC%22,y:2020,k:(.regCF_county_2020[52:62]|map([.code,.usd/1000]))%7D&url=https://api.cors.lol/?url=https://www.sec.gov/files/county.json: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs:%22SEC%22,y:2021,k:(.regCF_county_2021[82:91]|map([.code,((.usd/10|round)/100)]))%7D&url=http://api.cors.lol/?url=https://www.sec.gov/files/county.json: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs:%22SEC%22,y:2021,k:(.regCF_county_2021[82:91]|map([.code,((.usd/10|round)/100)]))%7D&url=https://api.cors.lol/?url=https://www.sec.gov/files/county.json: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bs:%22SEC%22,y:2021,k:(.regCF_county_2021[82:91]|map([.code,.usd/1000]))%7D&url=http://api.cors.lol/?url=https://www.sec.gov/files/county.json: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bs:%22SEC%22,y:2021,k:(.regCF_county_2021[82:91]|map([.code,.usd/1000]))%7D&url=https://api.cors.lol/?url=https://www.sec.gov/files/county.json: 3
+
+https://jqp.vercel.app/api/v0?jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2019%5B46%3A52%5D%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2020%5B52%3A62%5D%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2021%5B82%3A91%5D%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cyear%3A2019%2Crows%3A%28.regCF_county_2019%5B46%3A52%5D%7Cmap%28.usd%3D%28.usd%2A.1%7Cround%29%2F10: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cyear%3A2020%2Crows%3A%28.regCF_county_2020%5B52%3A62%5D%7Cmap%28.usd%3D%28.usd%2A.1%7Cround%29%2F10: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cyear%3A2021%2Crows%3A%28.regCF_county_2021%5B82%3A91%5D%7Cmap%28.usd%3D%28.usd%2A.1%7Cround%29%2F10: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov+map+main.js+mirrored+at+investor.gov%22%2Csnippet%3A%28.%5B295%3A317%5D%7Cmap%28to_entries%5B0%5D.value+%2B+%28%28.__parsed_ex: 6
+
+https://jqp.vercel.app/api/v0?jq=%7Bsource%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2019%5B46%3A52%5D%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bsource%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2020%5B52%3A62%5D%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bsource%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2021%5B82%3A91%5D%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bsource%3A%22SEC.gov%2Ffiles%2Fcounty.json%22%2Cyear%3A2019%2Cthousands%3A%5B.regCF_county_2019%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%7C%7Bcode%3A.code%: 4
+
+https://jqp.vercel.app/api/v0?jq=%7Bsource%3A%22SEC.gov%2Ffiles%2Fcounty.json%22%2Cyear%3A2020%2Cthousands%3A%5B.regCF_county_2020%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%7C%7Bcode%3A.code%: 4
+
+https://jqp.vercel.app/api/v0?jq=%7Bsource%3A%22SEC.gov%2Ffiles%2Fcounty.json%22%2Cyear%3A2021%2Cthousands%3A%5B.regCF_county_2021%5B%5D%7Cselect%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%7C%7Bcode%3A.code%: 4
+
+https://jqp.vercel.app/api/v0?jq=%7Bsource%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2019%5B46%3A52%5D%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bsource%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2020%5B52%3A62%5D%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bsource%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2021%5B82%3A91%5D%7D&url=https%3A%2F%2Fda.gd%2F4qPkK: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bsrc%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cyr%3A2019%2Cdata%3A%5B.%5B278%3A325%5D%5B%5D%7C.%5B%5D%7Cselect%28type%3D%3D%22string%22%20and%20%28co: 4
+
+https://jqp.vercel.app/api/v0?jq=%7Bsrc%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cyr%3A2020%2Cdata%3A%5B.%5B1045%3A1115%5D%5B%5D%7C.%5B%5D%7Cselect%28type%3D%3D%22string%22%20and%20%28: 4
+
+https://jqp.vercel.app/api/v0?jq=%7Bsrc%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cyr%3A2021%2Cdata%3A%5B.%5B2010%3A2075%5D%5B%5D%7C.%5B%5D%7Cselect%28type%3D%3D%22string%22%20and%20%28: 4
+
+https://jqp.vercel.app/api/v0?jq=%7Bsrc%3A%22SEC+county.json+USD+thousands%22%2Cyr%3A2021%2Cdata%3A%5Brange%289%29as%24i%7C.%5B%24i%2A6%2B2019%2C%24i%2A6%2B2021%5D%5B%5D%5D%7D&url=https%3A%2F%2Fda.gd%: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bsrc%3A%22SECcounty.json%22%2Cyr%3A2019%2Cdata%3A%5Brange%286%29as%24i%7C.%5B%24i%2A6%2B285%2C%24i%2A6%2B287%5D%5B%5D%5D%7D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 4
+
+https://jqp.vercel.app/api/v0?jq=%7Bsrc%3A%22SECcounty.json%22%2Cyr%3A2020%2Cdata%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1051%2C%24i%2A6%2B1053%5D%5B%5D%5D%7D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 4
+
+https://jqp.vercel.app/api/v0?jq=%7Bsrc%3A%22SECcounty.json%22%2Cyr%3A2021%2Cdata%3A%5Brange%289%29as%24i%7C.%5B%24i%2A6%2B2019%2C%24i%2A6%2B2021%5D%5B%5D%5D%7D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 4
+
+https://jqp.vercel.app/api/v0?jq=%7Bsrc%3A%22SEC_codes_usd%22%2Cyr%3A2019%2Cdata%3A%5Brange%286%29as%24i%7C.%5B%24i%2A6%2B285%2C%24i%2A6%2B287%5D%5B%5D%5D%7D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 6
+
+https://jqp.vercel.app/api/v0?jq=%7Bsrc%3A%22SEC_codes_usd%22%2Cyr%3A2020%2Cdata%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1051%2C%24i%2A6%2B1053%5D%5B%5D%5D%7D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 6
+
+https://jqp.vercel.app/api/v0?jq=%7Bsrc%3A%22SEC_codes_usd%22%2Cyr%3A2021%2Cdata%3A%5Brange%289%29as%24i%7C.%5B%24i%2A6%2B2019%2C%24i%2A6%2B2021%5D%5B%5D%5D%7D&url=https%3A%2F%2Fda.gd%2Fw1YIK: 6
+
+https://jqp.vercel.app/api/v0?jq=%7Bsrc%3A%22SEC_Official_county_json%22%2Cyr%3A2019%2Cdata%3A%5B.%5B278%3A325%5D%5B%5D%7C.%5B%5D%7Cselect%28type%3D%3D%22string%22%20and%20%28contains%28%22us-ma%22%29: 6
+
+https://jqp.vercel.app/api/v0?jq=%7Bsrc%3A%22SEC_Official_county_json%22%2Cyr%3A2020%2Cdata%3A%5B.%5B1045%3A1115%5D%5B%5D%7C.%5B%5D%7Cselect%28type%3D%3D%22string%22%20and%20%28contains%28%22us-ma%22%: 6
+
+https://jqp.vercel.app/api/v0?jq=%7Bsrc%3A%22SEC_Official_county_json%22%2Cyr%3A2021%2Cdata%3A%5B.%5B2010%3A2075%5D%5B%5D%7C.%5B%5D%7Cselect%28type%3D%3D%22string%22%20and%20%28contains%28%22us-ma%22%: 6
+
+https://jqp.vercel.app/api/v0?jq=%7Bsrc%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cyr%3A2019%2Cdata%3A%5Brange%286%29as%24i%7C.%5B%24i%2A6%2B285%2C%24i%2A6%2B287%5D%5B%5D%5D%7D&url=https%3A%2F%2Fda.g: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bsrc%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cyr%3A2020%2Cdata%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1051%2C%24i%2A6%2B1053%5D%5B%5D%5D%7D&url=https%3A%2F%2Fd: 2
+
+https://jqp.vercel.app/api/v0?jq=%7Bsrc%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cyr%3A2021%2Cdata%3A%5Brange%289%29as%24i%7C.%5B%24i%2A6%2B2019%2C%24i%2A6%2B2021%5D%5B%5D%5D%7D&url=https%3A%2F%2Fda: 2
+
+https://jqp.vercel.app/api/v0?jq=%7By19%3A.regCF_county_2019%5B46%3A52%5D%7D&url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fsec.gov%2Ffiles%2Fcounty.json: 4
+
+https://jqp.vercel.app/api/v0?jq=%7By20%3A.regCF_county_2020%5B52%3A62%5D%7D&url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fsec.gov%2Ffiles%2Fcounty.json: 4
+
+https://jqp.vercel.app/api/v0?jq=%7By21%3A.regCF_county_2021%5B82%3A91%5D%7D&url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fsec.gov%2Ffiles%2Fcounty.json: 4
+
+https://jqp.vercel.app/api/v0?jq=.%5B285%3A321%5D&url=https%3A%2F%2Fmd.succ.ai%2Fhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 1
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29&url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 3
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29&url=https%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 3
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29&url=https%3A%2F%2Fda.gd%2F4qPkK: 3
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2019%5B46%3A52%5D&url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json: 2
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2019%5B46%3A52%5D&url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 2
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2019%5B46%3A52%5D&url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 2
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2019%5B46%3A52%5D&url=https%3A%2F%2Fda.gd%2F4qPkK: 3
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29&url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 3
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29&url=https%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 3
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29&url=https%3A%2F%2Fda.gd%2F4qPkK: 3
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2020%5B52%3A62%5D&url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json: 2
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2020%5B52%3A62%5D&url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 2
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2020%5B52%3A62%5D&url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 2
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2020%5B52%3A62%5D&url=https%3A%2F%2Fda.gd%2F4qPkK: 3
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29&url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 2
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29&url=https%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 3
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29&url=https%3A%2F%2Fda.gd%2F4qPkK: 3
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2021%5B82%3A91%5D&url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json: 2
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2021%5B82%3A91%5D&url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 2
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2021%5B82%3A91%5D&url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 2
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_2021%5B82%3A91%5D&url=https%3A%2F%2Fda.gd%2F4qPkK: 3
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_filters&url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json: 2
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_filters&url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 2
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_filters&url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 2
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_methodology&url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json: 2
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_methodology&url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 2
+
+https://jqp.vercel.app/api/v0?jq=.regCF_county_methodology&url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 2
+
+https://jqp.vercel.app/api/v0?jq=s:https://www.sec.gov/files/county.json,y:2020,k:(.regCF_county_2020[52:62]|map([.code,.usd/1000]))&url=http://api.cors.lol/?url=https://www.sec.gov/files/county.j: 1
+
+https://jqp.vercel.app/api/v0?jq=s:SEC,y:2019,k:(.regCF_county_2019[46:52]|map([.code,.usd/1000]))&url=http://api.cors.lol/?url=https://www.sec.gov/files/county.json: 1
+
+https://jqp.vercel.app/api/v0?jq=s:SEC,y:2020,k:(.regCF_county_2020[52:62]|map([.code,.usd/1000]))&url=http://api.cors.lol/?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 1
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json&jq=.regCF_county_2019%5B46%3A52%5D: 2
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json&jq=.regCF_county_2020%5B52%3A62%5D: 2
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json&jq=.regCF_county_2021%5B82%3A91%5D: 2
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json&jq=.regCF_county_filters: 2
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json&jq=.regCF_county_methodology: 2
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2019%5B46%3A52%5D: 2
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2020%5B52%3A62%5D: 2
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2021%5B82%3A91%5D: 2
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_filters: 2
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fapi.cors.lol%2F%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_methodology: 2
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fda.gd%2Fn3a2M&jq=%7B%22https%3A%2F%2Fsec.gov%22%3A%28.regCF_county_2019%5B46%3A52%5D%7Cmap%28.usd%3D%28.usd%2F10%7Cround%29%2F100%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fda.gd%2Fn3a2M&jq=%7B%22https%3A%2F%2Fsec.gov%22%3A%28.regCF_county_2020%5B52%3A62%5D%7Cmap%28.usd%3D%28.usd%2F10%7Cround%29%2F100%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fda.gd%2Fn3a2M&jq=%7B%22https%3A%2F%2Fsec.gov%22%3A%28.regCF_county_2021%5B82%3A91%5D%7Cmap%28.usd%3D%28.usd%2F10%7Cround%29%2F100%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fda.gd%2Fn3a2M&jq=%7B%22https%3A%2F%2Fwww.sec.gov%22%3A%28.regCF_county_2019%5B46%3A52%5D%7Cmap%28.usd%3D%28.usd%2F10%7Cround%29%2F100%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fda.gd%2Fn3a2M&jq=%7B%22https%3A%2F%2Fwww.sec.gov%22%3A%28.regCF_county_2020%5B52%3A62%5D%7Cmap%28.usd%3D%28.usd%2F10%7Cround%29%2F100%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fda.gd%2Fn3a2M&jq=%7B%22https%3A%2F%2Fwww.sec.gov%22%3A%28.regCF_county_2021%5B82%3A91%5D%7Cmap%28.usd%3D%28.usd%2F10%7Cround%29%2F100%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fda.gd%2Fn3a2M&jq=%7B%22SEC.gov%2Ffiles%2Fcounty.json%22%3A%28.regCF_county_2019%5B46%3A52%5D%7Cmap%28.usd%3D%28.usd%2F10%7Cround%29%2F100%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fda.gd%2Fn3a2M&jq=%7B%22SEC.gov%2Ffiles%2Fcounty.json%22%3A%28.regCF_county_2020%5B52%3A62%5D%7Cmap%28.usd%3D%28.usd%2F10%7Cround%29%2F100%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fda.gd%2Fn3a2M&jq=%7B%22SEC.gov%2Ffiles%2Fcounty.json%22%3A%28.regCF_county_2021%5B82%3A91%5D%7Cmap%28.usd%3D%28.usd%2F10%7Cround%29%2F100%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fda.gd%2Fn3a2M&jq=%7B%22www.sec.gov%2Ffiles%2Fcounty.json%22%3A%28.regCF_county_2019%5B46%3A52%5D%7Cmap%28.usd%3D%28.usd%2F10%7Cround%29%2F100%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fda.gd%2Fn3a2M&jq=%7B%22www.sec.gov%2Ffiles%2Fcounty.json%22%3A%28.regCF_county_2020%5B52%3A62%5D%7Cmap%28.usd%3D%28.usd%2F10%7Cround%29%2F100%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=http%3A%2F%2Fda.gd%2Fn3a2M&jq=%7B%22www.sec.gov%2Ffiles%2Fcounty.json%22%3A%28.regCF_county_2021%5B82%3A91%5D%7Cmap%28.usd%3D%28.usd%2F10%7Cround%29%2F100%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json&jq=.regCF_county_2019%5B46%3A52%5D&uniq=8891: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json&jq=.regCF_county_2020%5B52%3A62%5D&uniq=8891: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json&jq=.regCF_county_2021%5B82%3A91%5D&uniq=8891: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=%2EregCF_county_2019%5b46%3a52%5d: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=%2EregCF_county_2020%5b52%3a62%5d: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=%2EregCF_county_2021%5b82%3a91%5d: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=%2EregCF_county_filters: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=%2EregCF_county_methodology: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2019%5B46%3A52%5D: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2020%5B52%3A62%5D: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2021%5B82%3A91%5D: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_filters: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_methodology: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fcode.highcharts.com%2Fmapdata%2Fcountries%2Fus%2Fus-ma-all.geo.json&jq=%5B.features%5B%5D.properties%7C%5B.%22hc-key%22%2C.name%5D%5D: 11
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fcode.highcharts.com%2Fmapdata%2Fcountries%2Fus%2Fus-ma-all.geo.json&jq=%5B.features%5B%5D.properties%7C%7Bcode%3A.%22hc-key%22%2Cname%3A.name%7D%5D: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fcode.highcharts.com%2Fmapdata%2Fcountries%2Fus%2Fus-ma-all.geo.json&jq=.title: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D: 1
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%7Ctest%28%22ma%22%29%29%7C%5B.code%2C%28.usd/10%7Cround/100%29%5D%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%7Ctest%28%22ma%22%29%29%7C%5B.code%2C%28.usd/10%7Cround/100%29%5D%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%5B.regCF_county_2021%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%5B.regCF_county_2021%5B%5D%7Cselect%28.code%7Ctest%28%22ma%22%29%29%7C%5B.code%2C%28.usd/10%7Cround/100%29%5D%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7B%22source_SEC.gov%20county%202019%22%3A.regCF_county_2019%7Cmap%28select%28.code%7Ctest%28%22ma%22%29%29%29%7D: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7B%22source_SEC.gov%20county%202020%22%3A.regCF_county_2020%7Cmap%28select%28.code%7Ctest%28%22ma%22%29%29%29%7D: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7B%22source_SEC.gov%20county%202021%22%3A.regCF_county_2021%7Cmap%28select%28.code%7Ctest%28%22ma%22%29%29%29%7D: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bs%3A%22SEC%22%2Cy%3A2019%2Ck%3A%28.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bs%3A%22SEC%22%2Cy%3A2020%2Ck%3A%28.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bs%3A%22SEC%22%2Cy%3A2021%2Ck%3A%28.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bs%3A%22SEC+county.json%22%2Cy%3A2019%2Cd%3A.regCF_county_2019%5B46%3A52%5D%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bs%3A%22SEC+county.json%22%2Cy%3A2020%2Cd%3A.regCF_county_2020%5B52%3A62%5D%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bs%3A%22SEC+county.json%22%2Cy%3A2021%2Cd%3A.regCF_county_2021%5B82%3A91%5D%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bs%3A%22www.sec.gov%22%2Cy%3A2019%2Ck%3A%28.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bs%3A%22www.sec.gov%22%2Cy%3A2020%2Ck%3A%28.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bs%3A%22www.sec.gov%22%2Cy%3A2021%2Ck%3A%28.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2019%5B46%3A52%5D%7D: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2020%5B52%3A62%5D%7D: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2021%5B82%3A91%5D%7D: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bsource%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2019%5B46%3A52%5D%7D: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bsource%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2020%5B52%3A62%5D%7D: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bsource%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2021%5B82%3A91%5D%7D: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bsource%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2019%5B46%3A52%5D%7D: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bsource%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2020%5B52%3A62%5D%7D: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Bsource%3A%22www.sec.gov%2Ffiles%2Fcounty.json%22%2Cdata%3A.regCF_county_2021%5B82%3A91%5D%7D: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Byear%3A%222019%22%2Cunits%3A%22thousand%20dollars%22%2CSEC_county_code_and_total%3A%28.regCF_county_2019%7Cmap%28select%28.code%7Cst: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Byear%3A%222020%22%2Cunits%3A%22thousand%20dollars%22%2CSEC_county_code_and_total%3A%28.regCF_county_2020%7Cmap%28select%28.code%7Cst: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Byear%3A%222021%22%2Cunits%3A%22thousand%20dollars%22%2CSEC_county_code_and_total%3A%28.regCF_county_2021%7Cmap%28select%28.code%7Cst: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2019%5B46%3A52%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2019%7Cmap%28select%28.code%7Cstartswith%28%22us-ma-%22%29%29%29: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2019%7Cmap%28select%28.code%7Cstartswith%28%22us-ma-%22%29%29%7C%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%29: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2020%5B52%3A62%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2020%7Cmap%28select%28.code%7Cstartswith%28%22us-ma-%22%29%29%29: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2020%7Cmap%28select%28.code%7Cstartswith%28%22us-ma-%22%29%29%7C%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%29: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2021%5B82%3A91%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2021%7Cmap%28select%28.code%7Cstartswith%28%22us-ma-%22%29%29%29: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2021%7Cmap%28select%28.code%7Cstartswith%28%22us-ma-%22%29%29%7C%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%29: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_methodology: 1
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FAyg&jq=%7B%22https%3A%2F%2Fsec.gov%2Ffiles%2Fcounty.json%22%3A.regCF_county_2019%5B46%3A52%5D%7Cmap%28.usd%3D%28.usd%2A.1%7Cround%29%2F100%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FAyg&jq=%7B%22https%3A%2F%2Fsec.gov%2Ffiles%2Fcounty.json%22%3A.regCF_county_2020%5B52%3A62%5D%7Cmap%28.usd%3D%28.usd%2A.1%7Cround%29%2F100%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FAyg&jq=%7B%22https%3A%2F%2Fsec.gov%2Ffiles%2Fcounty.json%22%3A.regCF_county_2021%5B82%3A91%5D%7Cmap%28.usd%3D%28.usd%2A.1%7Cround%29%2F100%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FAyg&jq=%7Bs%3A%22SEC-county%22%2Cy%3A2019%2Cr%3A%28.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%29%29%7D: 7
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FAyg&jq=%7Bs%3A%22SEC-county%22%2Cy%3A2020%2Cr%3A%28.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%29%29%7D: 7
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FAyg&jq=%7Bs%3A%22SEC-county%22%2Cy%3A2021%2Cr%3A%28.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%29%29%7D: 7
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FAyg&jq=%7Bs%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cr%3A.regCF_county_2019%5B46%3A52%5D%7Cmap%28.usd%3D%28.usd%2A.1%7Cround%29%2F100%29%7D: 6
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FAyg&jq=%7Bs%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cr%3A.regCF_county_2020%5B52%3A62%5D%7Cmap%28.usd%3D%28.usd%2A.1%7Cround%29%2F100%29%7D: 7
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FAyg&jq=%7Bs%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cr%3A.regCF_county_2021%5B82%3A91%5D%7Cmap%28.usd%3D%28.usd%2A.1%7Cround%29%2F100%29%7D: 6
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FJ7cAQ&jq=%7Bs%3A.status.url%2Ca%3A%28.contents%7Cfromjson%7C.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D: 5
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FJ7cAQ&jq=%7Bs%3A.status.url%2Ca%3A%28.contents%7Cfromjson%7C.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D: 5
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FJ7cAQ&jq=%7Bs%3A.status.url%2Ca%3A%28.contents%7Cfromjson%7C.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D: 5
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FJ7cAQ&jq=%7Bs%3A.status.url%2Ce%3A%28.contents%7Cfromjson%7C.regCF_county_2019%5B46%3A52%5D%29%7D: 5
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FJ7cAQ&jq=%7Bs%3A.status.url%2Ce%3A%28.contents%7Cfromjson%7C.regCF_county_2020%5B52%3A62%5D%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FJ7cAQ&jq=%7Bs%3A.status.url%2Ce%3A%28.contents%7Cfromjson%7C.regCF_county_2021%5B82%3A91%5D%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FJ7cAQ&jq=%7Bs%3A.status.url%2Cf%3A%28.contents%7Cfromjson%7C.regCF_county_filters%29%7D: 5
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FJ7cAQ&jq=%7Bs%3A.status.url%2Cl%3A%28.contents%7Cfromjson%7C.regCF_county_legend%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FJ7cAQ&jq=%7Bs%3A.status.url%2Cm%3A%28.contents%7Cfromjson%7C.regCF_county_methodology%29%7D: 5
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FJ7cAQ&jq=%7Bs%3A.status.url%2Cr%3A%28.contents%7Cfromjson%7C.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FJ7cAQ&jq=%7Bs%3A.status.url%2Cr%3A%28.contents%7Cfromjson%7C.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FJ7cAQ&jq=%7Bs%3A.status.url%2Cr%3A%28.contents%7Cfromjson%7C.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FJ7cAQ&jq=.contents%7Cfromjson%7C.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%29: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FJ7cAQ&jq=.contents%7Cfromjson%7C.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%29: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FJ7cAQ&jq=.contents%7Cfromjson%7C.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%29: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FOAU4q&jq=%7Bs%3A%22county+table%22%2Cl%3A%28.%5B128%3A145%5D%7Cmap%28%5B.%5B%5D%5D%7Cflatten%7Cjoin%28%22%2C%22%29%29%29%7D: 7
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2FOAU4q&jq=%7Bs%3A%22SEC-main.js%22%2Cl%3A%28.%5B295%3A317%5D%7Cmap%28%5B.%5B%5D%5D%7Cflatten%7Cjoin%28%22%2C%22%29%29%29%7D: 6
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2019%2Cl%3A%28.%5B284%3A320%5D%7Cmap%28to_entries%5B0%5D.value%29%29: 5
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2019%2Cl%3A%5Brange%286%29as%24i%7C.%5B%24i%2A6%2B286%2C%24i%2A6%2B2: 5
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2020%2Cl%3A%28.%5B1050%3A1110%5D%7Cmap%28to_entries%5B0%5D.value%29%: 5
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2020%2Cl%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1049%2C%24i%2A6%2: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2020%2Cl%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1050%2C%24i%2A6%2: 9
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2020%2Cl%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1051%2C%24i%2A6%2: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2020%2Cl%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1053%2C%24i%2A6%2: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2020%2Cl%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1054%2C%24i%2A6%2: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2021%2Cl%3A%28.%5B2018%3A2072%5D%7Cmap%28to_entries%5B0%5D.value%29%: 5
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2021%2Cl%3A%5Brange%289%29as%24i%7C.%5B%24i%2A6%2B2020%2C%24i%2A6%2B: 5
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22SEC%22%2Cy%3A2019%2Cl%3A%5Brange%286%29as%24i%7C.%5B%24i%2A6%2B286%2C%24i%2A6%2B288%5D%5B%5D%5D%7D: 7
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22SEC%22%2Cy%3A2020%2Cl%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1052%2C%24i%2A6%2B1054%5D%5B%5D%5D%7D: 6
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22SEC%22%2Cy%3A2021%2Cl%3A%5Brange%289%29as%24i%7C.%5B%24i%2A6%2B2020%2C%24i%2A6%2B2022%5D%5B%5D%5D%7D: 6
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22sec.gov%22%2Cy%3A2020%2Cl%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1049%2C%24i%2A6%2B1051%5D%5B%5D%5D%7D: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22sec.gov%22%2Cy%3A2020%2Cl%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1050%2C%24i%2A6%2B1052%5D%5B%5D%5D%7D: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22sec.gov%22%2Cy%3A2020%2Cl%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1051%2C%24i%2A6%2B1053%5D%5B%5D%5D%7D: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22sec.gov%22%2Cy%3A2020%2Cl%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1053%2C%24i%2A6%2B1055%5D%5B%5D%5D%7D: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22sec.gov%22%2Cy%3A2020%2Cl%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1054%2C%24i%2A6%2B1056%5D%5B%5D%5D%7D: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2019%2Cl%3A%5Brange%286%29as%24i%7C.%5B%24i%2A6%2B286%2C%24i%2A6%2B288%5D%5B%5D%5D%7D: 5
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2020%2Cl%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1050%2C%24i%2A6%2B1054%5D%5B%5D%5D%: 5
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2020%2Cl%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1052%2C%24i%2A6%2B1054%5D%5B%5D%5D%: 8
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cy%3A2021%2Cl%3A%5Brange%289%29as%24i%7C.%5B%24i%2A6%2B2020%2C%24i%2A6%2B2022%5D%5B%5D%5D%7: 5
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22www.sec.gov%22%2Cy%3A2019%2Cl%3A%5Brange%286%29as%24i%7C.%5B%24i%2A6%2B286%2C%24i%2A6%2B288%5D%5B%5D%5D%7D: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22www.sec.gov%22%2Cy%3A2020%2Cl%3A%5Brange%2810%29as%24i%7C.%5B%24i%2A6%2B1052%2C%24i%2A6%2B1054%5D%5B%5D%5D%7D: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2Fw1YIK&jq=%7Bs%3A%22www.sec.gov%22%2Cy%3A2021%2Cl%3A%5Brange%289%29as%24i%7C.%5B%24i%2A6%2B2020%2C%24i%2A6%2B2022%5D%5B%5D%5D%7D: 4
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Finvestor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cr%3A.regCF_county_2019%5B46%3A52%5D%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Finvestor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cr%3A.regCF_county_2020%5B52%3A62%5D%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Finvestor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cr%3A.regCF_county_2021%5B82%3A91%5D%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Finvestor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22SEC.gov%22%2Cr%3A.regCF_county_2019%5B46%3A52%5D%7Cmap%28.usd%3D%28.usd%2A.1%7Cround%29%2F100%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Finvestor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22SEC.gov%22%2Cr%3A.regCF_county_2019%5B46%3A52%5D%7Cmap%28.usd%7C%3D%28.%2A.1%7Cround%29%2F100%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Finvestor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22SEC.gov%22%2Cr%3A.regCF_county_2020%5B52%3A62%5D%7Cmap%28.usd%3D%28.usd%2A.1%7Cround%29%2F100%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Finvestor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22SEC.gov%22%2Cr%3A.regCF_county_2020%5B52%3A62%5D%7Cmap%28.usd%7C%3D%28.%2A.1%7Cround%29%2F100%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Finvestor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22SEC.gov%22%2Cr%3A.regCF_county_2021%5B82%3A91%5D%7Cmap%28.usd%3D%28.usd%2A.1%7Cround%29%2F100%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Finvestor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22SEC.gov%22%2Cr%3A.regCF_county_2021%5B82%3A91%5D%7Cmap%28.usd%7C%3D%28.%2A.1%7Cround%29%2F100%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fmd.succ.ai%2F%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%26mode%3Dfit%26max_tokens%3D18000&jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov%2Ffi: 15
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%5B.regCF_county_2021%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cf%3A.regCF_county_filters%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cm%3A.regCF_county_methodology%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cr%3A.regCF_county_2019%5B46%3A52%5D%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cr%3A.regCF_county_2020%5B52%3A62%5D%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cr%3A.regCF_county_2021%5B82%3A91%5D%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22SEC%20county%22%2Cr%3A.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22SEC%20county%22%2Cr%3A.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22SEC%20county%22%2Cr%3A.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C%28.usd%2F10%7Cround%2F100%: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22SEC.gov%22%2Cr%3A.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22SEC.gov%22%2Cr%3A.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22SEC.gov%22%2Cr%3A.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cr%3A.regCF_county_2019%5B46%3A52%5D%7Cmap%28.usd%2F%3D1000%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cr%3A.regCF_county_2020%5B52%3A62%5D%7Cmap%28.usd%2F%3D1000%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bs%3A%22sec.gov%2Ffiles%2Fcounty.json%22%2Cr%3A.regCF_county_2021%5B82%3A91%5D%7Cmap%28.usd%2F%3D1000%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cyear%3A2019%2Crows%3A%5B.regCF_county_2019: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cyear%3A2019%2Cthousands%3A%5B.regCF_county: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cyear%3A2020%2Crows%3A%5B.regCF_county_2020: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cyear%3A2020%2Cthousands%3A%5B.regCF_county: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cyear%3A2021%2Crows%3A%5B.regCF_county_2021: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%22%2Cyear%3A2021%2Cthousands%3A%5B.regCF_county: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_filters: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_methodology: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fwww.investor.gov%2Fmodules%2Fcustom%2Fsec_custom_blocks%2Fjs%2Foasb_raising_capital_map%2Fmain.js%3Fv%3D1.2&jq=%7Bsource%3A%22https%3A%2F%2Fwww.sec.gov+: 6
+
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw%3Furl%3Dhttps://www.sec.gov/files/county.json&jq=.regCF_county_2019%5B46:52%5D: 4
+
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw%3Furl%3Dhttps://www.sec.gov/files/county.json&jq=.regCF_county_2020%5B52:62%5D: 4
+
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw%3Furl%3Dhttps://www.sec.gov/files/county.json&jq=.regCF_county_2021%5B82:91%5D: 4
+
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=%7Bsource%3A%22SEC%20county.json%22%2Cyears%3A.regCF_county_filters%7D: 4
+
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2019%5B46%3A52%5D: 4
+
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2019%7Cmap%28select%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%29: 4
+
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2020%5B52%3A62%5D: 4
+
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2020%7Cmap%28select%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%29: 4
+
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2021%5B82%3A91%5D: 4
+
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2021%7Cmap%28select%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%29: 4
+
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_filters: 4
+
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_methodology: 4
+
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json&jq=.regCF_county_2019%7Cmap%28select%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%29: 4
+
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json&jq=.regCF_county_2020%7Cmap%28select%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%29: 4
+
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json&jq=.regCF_county_2021%7Cmap%28select%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%29: 4
+
+https://jqp.vercel.app/newref1: 1
+
+https://jqp.vercel.app/newref2: 1
+
+https://jqp.vercel.app/newref3: 1
+
+https://jqp.vercel.app/newref4: 1
+
+ uoft.me: 297 (details)
+
+https://uoft.me: 1
+
+https://uoft.me/amass932899504: 4
+
+https://uoft.me/amass932899504+: 3
+
+https://uoft.me/index.php?url=https%3A%2F%2Fwww.utoronto.ca&keyword=amass932899504: 3
+
+https://uoft.me/maagentxyz99999+?fresh=99881: 2
+
+https://uoft.me/maagentxyz99999+?new=5533: 3
+
+https://uoft.me/mafresh91011: 3
+
+https://uoft.me/mafresh91011+: 3
+
+https://uoft.me/yourls-infos.php/NEWSEG777?id=mafresh91011: 3
+
+https://uoft.me/yourls-infos.php/seg0?id=amass932899504: 2
+
+https://uoft.me/yourls-infos.php/seg1?id=amass932899504: 2
+
+https://uoft.me/yourls-infos.php?abc=777&id=mafresh91011: 3
+
+https://uoft.me/yourls-infos.php?id=amass932899504: 3
+
+https://uoft.me/yourls-infos.php?id=amass932899504&v=freshabc0: 2
+
+https://uoft.me/yourls-infos.php?id=amass932899504&v=freshabc1: 2
+
+https://uoft.me/yourls-infos.php?id=amass932899504&v=freshabc2: 2
+
+https://uoft.me/yourls-infos.php?id=amass932899504&v=freshabc3: 2
+
+https://uoft.me/yourls-infos.php?id=amass932899504&v=freshabc4: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999: 9
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999%26new=5533: 3
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&addnow=2490350: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&addnow=2490351: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&addnow=2490352: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&clicknew=8801: 3
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&clicknew=8802: 3
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&cu5642730: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&cu5642731: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&finalnew=7701: 3
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&finalnew=7702: 3
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&forceNEW11=11: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&forceNEW11=12: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&forceNEW11=14: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&forceNEW11=15: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&forceNEW11=17: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&forceNEW11=18: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&forceNEW11=2: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&forceNEW11=5: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&forceNEW11=9: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh2=900000: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh2=900001: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh2=900002: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh2=900003: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh2=900004: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh2=900005: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh2=900006: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh2=900007: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh2=900008: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh2=900009: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh=15862: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh=20422: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh=24068: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh=27838: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh=32893: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh=33797: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh=355756: 3
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh=374880: 3
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh=402323: 3
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh=62812: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh=72662: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh=73345: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh=88372: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh=99881: 7
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&freshwin13=13001: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&freshwin13=13002: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&freshwin9=ABC0: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&freshwin9=ABC1: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&freshwin9=ABC2: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&freshwin9=ABC3: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&freshwin9=ABC4: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&futurepart=0: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&futurepart=1: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&futurepart=2: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&futurepart=3: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&futurepart=4: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&hcNEW0: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&hcNEW1: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsnew=13000: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsnew=13001: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsnew=13002: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsnew=13003: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsnew=13004: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsnew=13005: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsnew=13006: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsnew=13007: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsnew=13008: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsnew=13009: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsshort=14000: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsshort=14001: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsshort=14002: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsshort=14003: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsshort=14004: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsshort=14005: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsshort=14006: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsshort=14007: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jstable=15000: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jstable=15001: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jstable=15002: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jstable=15003: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jstable=15004: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jstable=15005: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jstable=15006: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&key=111: 3
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&key=112: 3
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&lastshort=0: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&lastshort=1: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&lastshort=2: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&mdnew=11000: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&mdnew=11001: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&mdnew=11002: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&mdnew=11003: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&mdnew=11004: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&new=5533: 3
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&newref=0: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&newref=1: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&newref=2: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&newref=3: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&newref=4: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&newref=5: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&neww=1200: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&neww=1201: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&neww=1202: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&neww=1203: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&neww=1204: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&objshort=17000: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&objshort=17001: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&objshort=17002: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&objshort=17003: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&objshort=17004: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&objshort=17005: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&objshort=17006: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&objshort=17007: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&objshort=17008: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&r=NEW800: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&r=NEW801: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&r=NEW802: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&r=NEW803: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&r=NEW804: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&roundnew=8110: 3
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&roundnew=8111: 3
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&roundnew=8112: 4
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&roundnew=8113: 3
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&shNEW0: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&shNEW1: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&shNEW2: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&shortmd=700: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&shortmd=701: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&shortmd=702: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&shortmd=703: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&transshort=16000: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&transshort=16001: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&transshort=16002: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&transshort=16003: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&transshort=16004: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&transshort=16005: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&transshort=16006: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&transshort=16007: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&transshort=16008: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&upd=9901: 3
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&upd=9902: 3
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&x=2299: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&znew7710: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&znew7711: 1
+
+https://uoft.me/yourls-infos.php?id=mafresh91011: 3
+
+https://uoft.me/yourls-infos.php?id=utmace&fresher=99000: 2
+
+https://uoft.me/yourls-infos.php?id=utmace&fresher=99001: 1
+
+https://uoft.me/yourls-infos.php?id=utmace&fresher=99002: 3
+
+https://uoft.me/yourls-infos.php?id=utmace&fresher=99003: 4
+
+https://uoft.me/yourls-infos.php?id=utmace&fresher=99004: 1
+
+https://uoft.me/yourls-infos.php?id=utmace&fresher=99005: 2
+
+https://uoft.me/yourls-infos.php?id=utmace&fresher=99006: 3
+
+https://uoft.me/yourls-infos.php?id=utmace&fresher=99007: 1
+
+https://uoft.me/yourls-infos.php?id=utmace&fresher=99008: 2
+
+https://uoft.me/yourls-infos.php?id=utmace&fresher=99009: 2
+
+https://uoft.me/yourls-infos.php?id=utmace&fresher=99010: 5
+
+https://uoft.me/yourls-infos.php?id=utmace&fresher=99011: 2
+
+ www.sec.gov: 123 (details)
+
+https://www.sec.gov//sites//default//files//county.json: 2
+
+https://www.sec.gov/api/media/63176: 2
+
+https://www.sec.gov/file/63176: 2
+
+https://www.sec.gov/file/63176/download: 2
+
+https://www.sec.gov/file/countyjson?%78: 2
+
+https://www.sec.gov/file/countyjson?foobar: 2
+
+https://www.sec.gov/file/countyjson?qwerty=1: 2
+
+https://www.sec.gov/file/countyjson?testabc: 2
+
+https://www.sec.gov/file/countyjson?utm_source=abc: 2
+
+https://www.sec.gov/file/countyjson?x: 2
+
+https://www.sec.gov/file/countyjson?x&y: 2
+
+https://www.sec.gov/file/countyjson?z=123: 2
+
+https://www.sec.gov/file/countyjson?_=2: 2
+
+https://www.sec.gov/file/countyjson?_format=json: 2
+
+https://www.sec.gov/files/county.json/.txt: 2
+
+https://www.sec.gov/files/county.json;.txt: 2
+
+https://www.sec.gov/files/county.json?.html: 8
+
+https://www.sec.gov/files/county.json?ab=.html: 2
+
+https://www.sec.gov/files/county.json?abc=.: 2
+
+https://www.sec.gov/files/county.json?abc=.pdf: 1
+
+https://www.sec.gov/files/county.json?abc=.txt: 20
+
+https://www.sec.gov/files/county.json?abc=.txt&a=2: 1
+
+https://www.sec.gov/files/county.json?abc=.txt&unique=3: 1
+
+https://www.sec.gov/files/county.json?agent2=.txt: 2
+
+https://www.sec.gov/files/county.json?agentfresh=551: 3
+
+https://www.sec.gov/files/county.json?alt=media: 2
+
+https://www.sec.gov/files/county.json?callback=x: 2
+
+https://www.sec.gov/files/county.json?download=2: 2
+
+https://www.sec.gov/files/county.json?dummy=.text: 1
+
+https://www.sec.gov/files/county.json?foo=.html: 2
+
+https://www.sec.gov/files/county.json?injectref=viaUoft: 1
+
+https://www.sec.gov/files/county.json?new=.txt: 2
+
+https://www.sec.gov/files/county.json?p=.txt: 1
+
+https://www.sec.gov/files/county.json?raw=999xyz: 2
+
+https://www.sec.gov/files/county.json?response-content-type=text/plain: 2
+
+https://www.sec.gov/files/county.json?test=.txt: 1
+
+https://www.sec.gov/files/county.json?zzzz=.txt: 1
+
+https://www.sec.gov/files/county.json?_format=json: 1
+
+https://www.sec.gov/jsonapi/media/static_file: 2
+
+https://www.sec.gov/jsonapi/media/static_file/63176: 2
+
+https://www.sec.gov/media/63176: 2
+
+https://www.sec.gov/media/63176.json: 2
+
+https://www.sec.gov/media/63176/download: 2
+
+https://www.sec.gov/media/63176?_format=json: 2
+
+https://www.sec.gov/node/63176: 2
+
+https://www.sec.gov/sites/default/files/./county.json: 2
+
+https://www.sec.gov/sites/default/files/county.json: 2
+
+https://www.sec.gov/sites/default/files/county.json.txt: 2
+
+https://www.sec.gov/sites/default/files/county.json;.txt: 2
+
+https://www.sec.gov/sites/default/files/county.json?download=1: 2
+
+https://www.sec.gov/sites/default/files/county.json?format=txt: 2
+
+https://www.sec.gov/sites/default/files/county.json?raw=1: 2
+
+https://www.sec.gov/sites/default/files/county.json?response-content-type=text/plain: 2
+
+https://www.sec.gov/TESTREFCOUNTNEW0.8462654683883736: 1
+
+ markdown.new: 51 (details)
+
+https://markdown.new/TESTmaagentxyz99999: 3
+
+https://markdown.new/www.investor.gov//files/county.json?method=ai&uniqmk13=9841026: 2
+
+https://markdown.new/www.investor.gov//files/county.json?method=regular&uniqmk13=7803120: 2
+
+https://markdown.new/www.investor.gov//files/county.json?mode=fit%26max_tokens=100000&uniqmk13=2719970: 2
+
+https://markdown.new/www.investor.gov//files/county.json?mode=fit&max_tokens=10000&uniqmk13=230293: 2
+
+https://markdown.new/www.investor.gov//files/county.json?mode=fit&max_tokens=100000&uniqmk13=9829548: 2
+
+https://markdown.new/www.investor.gov//files/county.json?mode=fit&max_tokens=20000&uniqmk13=3900977: 2
+
+https://markdown.new/www.investor.gov//files/county.json?mode=fit&max_tokens=50000&uniqmk13=4288101: 2
+
+https://markdown.new/www.investor.gov//files/county.json?uniqmk13=5703125: 2
+
+https://markdown.new/www.investor.gov/sites/default/files/county.json?method=ai&uniqmk13=6643786: 2
+
+https://markdown.new/www.investor.gov/sites/default/files/county.json?method=regular&uniqmk13=5148150: 2
+
+https://markdown.new/www.investor.gov/sites/default/files/county.json?mode=fit%26max_tokens=100000&uniqmk13=1841621: 2
+
+https://markdown.new/www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=10000&uniqmk13=2429725: 2
+
+https://markdown.new/www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=100000&uniqmk13=2742133: 2
+
+https://markdown.new/www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=20000&uniqmk13=7907634: 2
+
+https://markdown.new/www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=50000&uniqmk13=1285854: 2
+
+https://markdown.new/www.investor.gov/sites/default/files/county.json?uniqmk13=5286874: 2
+
+https://markdown.new/www.sec.gov/files/county.json?method=ai&uniqmk13=3712319: 2
+
+https://markdown.new/www.sec.gov/files/county.json?method=regular&uniqmk13=7748438: 2
+
+https://markdown.new/www.sec.gov/files/county.json?mode=fit%26max_tokens=100000&uniqmk13=3765358: 2
+
+https://markdown.new/www.sec.gov/files/county.json?mode=fit&max_tokens=10000&uniqmk13=1036919: 2
+
+https://markdown.new/www.sec.gov/files/county.json?mode=fit&max_tokens=100000&uniqmk13=2268889: 2
+
+https://markdown.new/www.sec.gov/files/county.json?mode=fit&max_tokens=20000&uniqmk13=6669125: 2
+
+https://markdown.new/www.sec.gov/files/county.json?mode=fit&max_tokens=50000&uniqmk13=3370399: 2
+
+https://markdown.new/www.sec.gov/files/county.json?uniqmk13=9982694: 2
+
+ allorigins.hexlet.app: 51 (details)
+
+https://allorigins.hexlet.app: 3
+
+https://allorigins.hexlet.app/get?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 6
+
+https://allorigins.hexlet.app/raw?url=http%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 3
+
+https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.investor.gov%2Fsites%2Fdefault%2Ffiles%2Fcounty.json&method=ai&uniqmk13=7010070: 2
+
+https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.investor.gov%2Fsites%2Fdefault%2Ffiles%2Fcounty.json&method=regular&uniqmk13=9842657: 2
+
+https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.investor.gov%2Fsites%2Fdefault%2Ffiles%2Fcounty.json&mode=fit%26max_tokens=100000&uniqmk13=7540681: 2
+
+https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.investor.gov%2Fsites%2Fdefault%2Ffiles%2Fcounty.json&mode=fit&max_tokens=10000&uniqmk13=8899817: 2
+
+https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.investor.gov%2Fsites%2Fdefault%2Ffiles%2Fcounty.json&mode=fit&max_tokens=100000&uniqmk13=9470202: 2
+
+https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.investor.gov%2Fsites%2Fdefault%2Ffiles%2Fcounty.json&mode=fit&max_tokens=20000&uniqmk13=7811286: 2
+
+https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.investor.gov%2Fsites%2Fdefault%2Ffiles%2Fcounty.json&mode=fit&max_tokens=50000&uniqmk13=6065199: 2
+
+https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.investor.gov%2Fsites%2Fdefault%2Ffiles%2Fcounty.json&uniqmk13=8008065: 2
+
+https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 9
+
+https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%3Ffoo%3D.txt: 2
+
+https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%3Ffoo%3Dag8891: 2
+
+https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json%3Fformat%3Dtxt: 2
+
+https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Fsites%2Fdefault%2Ffiles%2Fcounty.json: 2
+
+https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json: 6
+
+ www.investor.gov: 35 (details)
+
+http://www.investor.gov/files/county.json?agentfresh=551: 2
+
+https://www.investor.gov/files/county.json?.html: 2
+
+https://www.investor.gov/files/county.json?agentfresh=551: 3
+
+https://www.investor.gov/files/county.json?foo=.html: 2
+
+https://www.investor.gov/files/county.json?invest=.html: 2
+
+https://www.investor.gov/files/county.json?newuniq=92340: 1
+
+https://www.investor.gov/files/county.json?newuniq=92342: 1
+
+https://www.investor.gov/files/county.json?newuniq=92343: 1
+
+https://www.investor.gov/sites/default/files/county.json?.html: 2
+
+https://www.investor.gov/sites/default/files/county.json?abc=.txt: 2
+
+https://www.investor.gov/sites/default/files/county.json?foo=.html: 1
+
+https://www.investor.gov/sites/default/files/county.json?method=ai&uniqmk13=9650287: 2
+
+https://www.investor.gov/sites/default/files/county.json?method=regular&uniqmk13=8875730: 2
+
+https://www.investor.gov/sites/default/files/county.json?mode=fit%26max_tokens=100000&uniqmk13=6415585: 2
+
+https://www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=10000&uniqmk13=4680668: 2
+
+https://www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=100000&uniqmk13=7272335: 2
+
+https://www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=20000&uniqmk13=2805881: 2
+
+https://www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=50000&uniqmk13=6458603: 2
+
+https://www.investor.gov/sites/default/files/county.json?uniqmk13=9837537: 2
+
+ md.succ.ai: 34 (details)
+
+https://md.succ.ai/?url=https://www.sec.gov/files/county.json: 1
+
+https://md.succ.ai/https://www.investor.gov/sites/default/files/county.json?method=ai&uniqmk13=1863944: 2
+
+https://md.succ.ai/https://www.investor.gov/sites/default/files/county.json?method=regular&uniqmk13=2775955: 2
+
+https://md.succ.ai/https://www.investor.gov/sites/default/files/county.json?mode=fit%26max_tokens=100000&uniqmk13=4863605: 2
+
+https://md.succ.ai/https://www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=10000&uniqmk13=8105802: 2
+
+https://md.succ.ai/https://www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=100000&uniqmk13=1167844: 2
+
+https://md.succ.ai/https://www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=20000&uniqmk13=2391713: 2
+
+https://md.succ.ai/https://www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=50000&uniqmk13=3016814: 2
+
+https://md.succ.ai/https://www.investor.gov/sites/default/files/county.json?uniqmk13=9128380: 3
+
+https://md.succ.ai/www.investor.gov/sites/default/files/county.json?method=ai&uniqmk13=591389: 2
+
+https://md.succ.ai/www.investor.gov/sites/default/files/county.json?method=regular&uniqmk13=3485740: 2
+
+https://md.succ.ai/www.investor.gov/sites/default/files/county.json?mode=fit%26max_tokens=100000&uniqmk13=9778814: 2
+
+https://md.succ.ai/www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=10000&uniqmk13=956135: 2
+
+https://md.succ.ai/www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=100000&uniqmk13=3753741: 2
+
+https://md.succ.ai/www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=20000&uniqmk13=9263433: 2
+
+https://md.succ.ai/www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=50000&uniqmk13=7611781: 2
+
+https://md.succ.ai/www.investor.gov/sites/default/files/county.json?uniqmk13=1937124: 2
+
+ r.jina.ai: 31 (details)
+
+https://r.jina.ai/: 3
+
+https://r.jina.ai/http://r.jina.ai/https://www.sec.gov/files/county.json: 3
+
+https://r.jina.ai/http://www.investor.gov/sites/default/files/county.json?method=ai&uniqmk13=7978510: 2
+
+https://r.jina.ai/http://www.investor.gov/sites/default/files/county.json?method=regular&uniqmk13=2323671: 2
+
+https://r.jina.ai/http://www.investor.gov/sites/default/files/county.json?mode=fit%26max_tokens=100000&uniqmk13=3862672: 2
+
+https://r.jina.ai/http://www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=10000&uniqmk13=7457868: 2
+
+https://r.jina.ai/http://www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=100000&uniqmk13=3540545: 2
+
+https://r.jina.ai/http://www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=20000&uniqmk13=2190342: 2
+
+https://r.jina.ai/http://www.investor.gov/sites/default/files/county.json?mode=fit&max_tokens=50000&uniqmk13=1190153: 2
+
+https://r.jina.ai/http://www.investor.gov/sites/default/files/county.json?uniqmk13=5923090: 2
+
+https://r.jina.ai/http://www.sec.gov/files/county.json: 3
+
+https://r.jina.ai/https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 3
+
+https://r.jina.ai/https://www.sec.gov/files/county.json: 3
+
+ secgov.prod.acquia-sites.com: 14 (details)
+
+https://secgov.prod.acquia-sites.com/files/county.json: 2
+
+https://secgov.prod.acquia-sites.com/files/county.json?download=1: 2
+
+https://secgov.prod.acquia-sites.com/files/county.json?download=1&part=266665: 3
+
+https://secgov.prod.acquia-sites.com/files/county.json?download=1&part=299008: 3
+
+https://secgov.prod.acquia-sites.com/files/county.json?download=1&part=875364: 3
+
+https://secgov.prod.acquia-sites.com/sites/default/files/county.json: 1
+
+ is.gd: 12 (details)
+
+https://is.gd/8f8uYq: 2
+
+https://is.gd/9KRtY2: 2
+
+https://is.gd/gfHDiw: 2
+
+https://is.gd/mxz9eB: 2
+
+https://is.gd/wr94bt: 2
+
+https://is.gd/XWF7UJ: 2
+
+ docs.google.com: 12 (details)
+
+https://docs.google.com/gview?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 4
+
+https://docs.google.com/viewerng/text?id=ACFrOgAibayHa7VO5RlJ3XJ8DOaSQ2-F59litpZo-wWvFGZnnc-vwWOtC0z9i1JUh6AB0hyO_DeQfVMvVQXYu0sasbAmfxhaJoS4m2Zeij5zoWLex4GNoseKOblqAkdL2bzzyp2i1LHuut-yO65O: 4
+
+https://docs.google.com/viewerng/viewer?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 4
+
+ simpletestrefabc99.com: 5 (details)
+
+http://simpletestrefabc99.com/path0.13382605146528026: 1
+
+http://simpletestrefabc99.com/path0.270313865044882: 1
+
+http://simpletestrefabc99.com/path0.6724210273630898: 1
+
+http://simpletestrefabc99.com/path0.8586244644905029: 1
+
+http://simpletestrefabc99.com/path0.8638889624068599: 1
+
+Various: 4 (details)
+
+https://api.cors.lol/?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 1
+
+https://example.org/testref777: 1
+
+https://example0.9259537588058108.com: 1
+
+https://platform.lemino.ai/api/url2md/https://www.investor.gov//files/county.json?AAlem=19: 1
+
+Direct vs Referrer Traffic
+
+Direct traffic: 69 hits 
+
+Referrer traffic: 1733 hits 
+
+Share
+
+Short link
+
+Long link: http://www.utoronto.ca/foobaruniq456
+
+Stats: https://uoft.me/maagentxyz99999+
+
+Quick Share
+
+				72
+				http://www.utoronto.ca/foobaruniq456 https://uoft.me/maagentxyz99999
+
+Share with				Twitter
+				Facebook
+
+		Powered by YOURLS v 1.7.6 – 0 queries

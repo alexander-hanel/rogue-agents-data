@@ -1,0 +1,445 @@
+Source: http://web.archive.org/web/20260904190413/https://uoft.me/mafresh91011+
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+Statistics for https://uoft.me/mafresh91011 « YOURLS — Your Own URL Shortener | https://uoft.me/
+
+		YOURLS: Your Own URL Shortener
+
+Admin interface
+Help
+
+YOURLS version 1.8.2 is available. Please update!
+
+https://www.utoronto.ca/abc2323
+
+Short URL: 
+https://uoft.me/mafresh91011
+
+Long URL:  https://www.utoronto.ca/abc2323
+
+Traffic statistics
+
+Traffic location
+
+Traffic sources
+
+Share
+
+Traffic statistics
+
+Last 24 hours
+Last 7 days
+Last 30 days
+All time				
+
+Number of hits : Last 24 hours
+
+Number of hits : Last 7 days
+
+Number of hits : Last 30 days
+
+Number of hits : All time
+
+Historical click count
+
+Short URL created on June 18, 2026 @ 3:03 pm (about 78 days ago)
+
+Last 24 hours 3 hits 0.13 per hour
+
+Last 7 days 4 hits 0.57 per day
+
+Last 30 days 10 hits 0.33 per day
+
+All time 314 hits 4.03 per day
+
+Best day
+
+262 hits on June 18, 2026.
+				Click for more details
+
+Year 2026
+June
+18: 262 hits
+
+19: 1 hit
+
+21: 1 hit
+
+24: 1 hit
+
+28: 1 hit
+
+July
+03: 1 hit
+
+05: 1 hit
+
+06: 1 hit
+
+08: 1 hit
+
+09: 1 hit
+
+11: 1 hit
+
+12: 1 hit
+
+13: 1 hit
+
+14: 1 hit
+
+15: 2 hits
+
+16: 1 hit
+
+17: 1 hit
+
+18: 2 hits
+
+19: 1 hit
+
+20: 3 hits
+
+21: 2 hits
+
+22: 2 hits
+
+23: 2 hits
+
+24: 3 hits
+
+25: 1 hit
+
+26: 1 hit
+
+27: 2 hits
+
+28: 1 hit
+
+29: 2 hits
+
+August
+01: 1 hit
+
+04: 1 hit
+
+05: 1 hit
+
+07: 1 hit
+
+17: 1 hit
+
+20: 1 hit
+
+22: 1 hit
+
+25: 1 hit
+
+28: 1 hit
+
+September
+01: 1 hit
+
+04: 3 hits
+
+Traffic location
+
+Top 5 countries
+
+Click for more details
+
+ US (United States) : 247 hits
+
+ BE (Belgium) : 13 hits
+
+ GB (United Kingdom) : 8 hits
+
+ CN (China) : 7 hits
+
+ FR (France) : 7 hits
+
+ DE (Germany) : 4 hits
+
+ ZA (South Africa) : 2 hits
+
+ BR (Brazil) : 2 hits
+
+ MX (Mexico) : 2 hits
+
+ IN (India) : 2 hits
+
+ KE (Kenya) : 1 hit
+
+ UZ (Uzbekistan) : 1 hit
+
+ SN (Senegal) : 1 hit
+
+ SE (Sweden) : 1 hit
+
+ MD (Moldova, Republic of) : 1 hit
+
+ MA (Morocco) : 1 hit
+
+ AM (Armenia) : 1 hit
+
+ JO (Jordan) : 1 hit
+
+ IR (Iran, Islamic Republic of) : 1 hit
+
+ AR (Argentina) : 1 hit
+
+ HK (Hong Kong) : 1 hit
+
+ CR (Costa Rica) : 1 hit
+
+ CO (Colombia) : 1 hit
+
+ CL (Chile) : 1 hit
+
+ BD (Bangladesh) : 1 hit
+
+ IE (Ireland) : 1 hit
+
+Overall traffic
+
+Traffic sources
+
+Referrer shares
+
+Referrers
+
+ jqp.vercel.app: 113 (details)
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json&jq=%7Bsrc%3A%22SEC+county%22%2Cy%3A2019%2Cdata%3A.regCF_co: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json&jq=%7Bsrc%3A%22SEC+county%22%2Cy%3A2020%2Cdata%3A.regCF_co: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json&jq=%7Bsrc%3A%22SEC+county%22%2Cy%3A2021%2Cdata%3A.regCF_co: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json&jq=.regCF_county_2019%5B46%3A52%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json&jq=.regCF_county_2019%5B46%3A52%5D%7Cmap%28%7Bcode%3A.code: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json&jq=.regCF_county_2020%5B52%3A62%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json&jq=.regCF_county_2020%5B52%3A62%5D%7Cmap%28%7Bcode%3A.code: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json&jq=.regCF_county_2021%5B82%3A91%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%253A%252F%252Fwww.sec.gov%252Ffiles%252Fcounty.json&jq=.regCF_county_2021%5B82%3A91%5D%7Cmap%28%7Bcode%3A.code: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=%7Bsrc%3A%22SEC+county%22%2Cy%3A2019%2Cdata%3A.regCF_county_2019%: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=%7Bsrc%3A%22SEC+county%22%2Cy%3A2020%2Cdata%3A.regCF_county_2020%: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=%7Bsrc%3A%22SEC+county%22%2Cy%3A2021%2Cdata%3A.regCF_county_2021%: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2019%5B46%3A52%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2019%5B46%3A52%5D%7Cmap%28%7Bcode%3A.code%2Cusd%3A.: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2020%5B52%3A62%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2020%5B52%3A62%5D%7Cmap%28%7Bcode%3A.code%2Cusd%3A.: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2021%5B82%3A91%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_2021%5B82%3A91%5D%7Cmap%28%7Bcode%3A.code%2Cusd%3A.: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_filters: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fallorigins.hexlet.app%2Fraw%3Furl%3Dhttps%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json&jq=.regCF_county_methodology: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%5B.regCF_county_2019%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%7C%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%5D: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%5B.regCF_county_2020%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%7C%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%5D: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%5B.regCF_county_2021%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%5D: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%5B.regCF_county_2021%5B%5D%7Cselect%28.code%7Cstartswith%28%22us-ma-%22%29%29%7C%5B.code%2C%28.usd%2F10%7Cround%2F100%29%5D%5D: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7By%3A2019%2Ck%3A%28.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7By%3A2020%2Ck%3A%28.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7By%3A2021%2Ck%3A%28.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29%29%7D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Byear%3A%222019%22%2Cunit%3A%22thousand%20usd%22%2Ccounties%3A%28.regCF_county_2019%7Cmap%28select%28.code%7Cstartswith%28%22us-ma-%2: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Byear%3A%222020%22%2Cunit%3A%22thousand%20usd%22%2Ccounties%3A%28.regCF_county_2020%7Cmap%28select%28.code%7Cstartswith%28%22us-ma-%2: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=%7Byear%3A%222021%22%2Cunit%3A%22thousand%20usd%22%2Ccounties%3A%28.regCF_county_2021%7Cmap%28select%28.code%7Cstartswith%28%22us-ma-%2: 2
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2019%5B46%3A52%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2019%5B46%3A52%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2019%7Cmap%28select%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%7C%7Bcode%3Ac%2Cusd%3A.usd%7D%29: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2020%5B52%3A62%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2020%5B52%3A62%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2020%7Cmap%28select%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%7C%7Bcode%3Ac%2Cusd%3A.usd%7D%29: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2021%5B82%3A91%5D: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2021%5B82%3A91%5D%7Cmap%28%5B.code%2C.usd%2F1000%5D%29: 3
+
+https://jqp.vercel.app/api/v0?url=https%3A%2F%2Fda.gd%2F4qPkK&jq=.regCF_county_2021%7Cmap%28select%28.code%5B3%3A5%5D%3D%3D%22ma%22%29%7C%7Bcode%3Ac%2Cusd%3A.usd%7D%29: 3
+
+https://jqp.vercel.app/testX: 1
+
+ da.gd: 67 (details)
+
+https://da.gd/SEC19vals: 2
+
+https://da.gd/SEC2019cf: 3
+
+https://da.gd/SEC2020cf: 3
+
+https://da.gd/SEC2021cf: 3
+
+https://da.gd/SEC20vals: 3
+
+https://da.gd/SEC21vals: 3
+
+https://da.gd/SECc19OK: 3
+
+https://da.gd/SECc20OK: 3
+
+https://da.gd/SECc21OK: 3
+
+https://da.gd/SECcrowd19: 3
+
+https://da.gd/SECcrowd20: 3
+
+https://da.gd/SECcrowd21: 3
+
+https://da.gd/SECgov19: 3
+
+https://da.gd/SECgov20: 3
+
+https://da.gd/SECgov21: 3
+
+https://da.gd/SECmap19: 3
+
+https://da.gd/SECmap20: 3
+
+https://da.gd/SECmap21: 3
+
+https://da.gd/SECv19map: 3
+
+https://da.gd/SECv21map: 2
+
+https://da.gd/SECvals19x: 3
+
+https://da.gd/SECvals20x: 3
+
+https://da.gd/SECvals21x: 3
+
+ uoft.me: 53 (details)
+
+https://uoft.me: 1
+
+https://uoft.me/mafresh91011+?abc=777: 2
+
+https://uoft.me/mafresh91011+?fresh=3697: 8
+
+https://uoft.me/yourls-infos.php/NEWSEG777?id=mafresh91011: 2
+
+https://uoft.me/yourls-infos.php/REFRESH2?id=mafresh91011: 9
+
+https://uoft.me/yourls-infos.php/REFRESH3?id=mafresh91011: 6
+
+https://uoft.me/yourls-infos.php/REFRESH4?id=mafresh91011: 3
+
+https://uoft.me/yourls-infos.php?abc=777&id=mafresh91011: 2
+
+https://uoft.me/yourls-infos.php?abc=888&id=mafresh91011: 2
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&fresh=62812: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&jsnew=13007: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&newref=1: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&objshort=17001: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&objshort=17007: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&shNEW2: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&transshort=16008: 1
+
+https://uoft.me/yourls-infos.php?id=maagentxyz99999&x=2299: 1
+
+https://uoft.me/yourls-infos.php?id=mafresh91011&fresh=18812: 9
+
+ www.sec.gov: 14 (details)
+
+https://www.sec.gov//modules//custom//sec_custom_blocks//js//oasb_raising_capital_map//main.js: 2
+
+https://www.sec.gov/files/county.json?_format=json: 6
+
+https://www.sec.gov/modules/custom/sec_custom_blocks/js/oasb_raising_capital_map/main.js: 2
+
+https://www.sec.gov/modules/custom/sec_custom_blocks/js/oasb_raising_capital_map/main.js?agentx=1: 2
+
+https://www.sec.gov/modules/custom/sec_custom_blocks/js/oasb_raising_capital_map/main.js?v=1.2: 2
+
+ r.jina.ai: 9 (details)
+
+https://r.jina.ai/http://example.com: 3
+
+https://r.jina.ai/http://www.sec.gov/files/county.json: 2
+
+https://r.jina.ai/https://www.sec.gov/files/county.json: 2
+
+https://r.jina.ai/https://www.sec.gov/modules/custom/sec_custom_blocks/js/oasb_raising_capital_map/main.js?v=1.2: 2
+
+ allorigins.hexlet.app: 6 (details)
+
+https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Ffiles%2Fcounty.json: 2
+
+https://allorigins.hexlet.app/raw?url=https%3A%2F%2Fwww.sec.gov%2Fmodules%2Fcustom%2Fsec_custom_blocks%2Fjs%2Foasb_raising_capital_map%2Fmain.js%3Fv%3D1.2: 2
+
+https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json: 2
+
+Various: 3 (details)
+
+https://is.gd/SECgov_county_json_data: 1
+
+https://md.succ.ai/?url=https://www.sec.gov/files/county.json: 1
+
+https://v.gd/SECgovCrowdfundingCountyData: 1
+
+Direct vs Referrer Traffic
+
+Direct traffic: 44 hits 
+
+Referrer traffic: 270 hits 
+
+Share
+
+Short link
+
+Long link: https://www.utoronto.ca/abc2323
+
+Stats: https://uoft.me/mafresh91011+
+
+Quick Share
+
+				80
+				https://www.utoronto.ca/abc2323 https://uoft.me/mafresh91011
+
+Share with				Twitter
+				Facebook
+
+		Powered by YOURLS v 1.7.6 – 0 queries

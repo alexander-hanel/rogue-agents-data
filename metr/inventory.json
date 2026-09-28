@@ -1,0 +1,280 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 3687,
+      "sha256": "b7df0154a654978756ee70a61f3c07ca2f489d2248ed71402143c6dda8fb4d71"
+    },
+    "article/assets/0b4111c869-chart.js": {
+      "bytes": 50973,
+      "sha256": "9830ca9588d4fe8150d1870babfe77bd49834220bf871df3470b6f6b1fcd5049"
+    },
+    "article/assets/1730453ed9-data.js": {
+      "bytes": 191538,
+      "sha256": "b92cb6f42e141781b748c7051ccaff49653ce68426b56be7b3938defaaf314ad"
+    },
+    "article/assets/296348926c-data.js": {
+      "bytes": 47791,
+      "sha256": "56c9d973c6277cce3c9b5febbb046530bed2791c2c3c13b24c3a7e10d89294af"
+    },
+    "article/assets/33fa575662-image6.png": {
+      "bytes": 104666,
+      "sha256": "7010732f189bb78bd7a192de8f84a82095e52c1411640fc886c224b28b3c27f1"
+    },
+    "article/assets/37bd468a46-image18.png": {
+      "bytes": 72562,
+      "sha256": "3330614c4ac270ad799fcdf169c7954aceab1abdd09d040a2604b127ba74e038"
+    },
+    "article/assets/3a7b34b02e-favicon.png": {
+      "bytes": 5455,
+      "sha256": "1858cfa6489ac502da4c4cb1172bc175eff9937670c70c872bbbf8d46a902db3"
+    },
+    "article/assets/3d80095360-image13.png": {
+      "bytes": 107499,
+      "sha256": "86b108b634aed9c5a0d422f1244ac2ec421082879d074fd51c5533d3a48afbf7"
+    },
+    "article/assets/4adefea76d-image9.png": {
+      "bytes": 71733,
+      "sha256": "482dca1a7daecaaa623f5cf275ba9c5b942a9b9ca24bed44934f51fe38d6dd32"
+    },
+    "article/assets/4c1b9b6b4b-image22.png": {
+      "bytes": 123755,
+      "sha256": "e78a081a9263b4f644181871c0426f2462d5c7dda67184456c26dd15c43e1714"
+    },
+    "article/assets/5dc7e95ab5-image21.png": {
+      "bytes": 84452,
+      "sha256": "eb59e1816ba2a84fb7492ed519ca751935cc1b8dc42ed316cf6ae6e6aa6e2b0c"
+    },
+    "article/assets/5e08e88d41-image20.png": {
+      "bytes": 118631,
+      "sha256": "6347af7e7ea5357a9c89f8a9948d85dd613b61e2a785e105ee8ec92b10375043"
+    },
+    "article/assets/67b407a5a1-scripts.js": {
+      "bytes": 101447,
+      "sha256": "809416b1133a15701e6464ba2942199499ca50a1d2bf1e99103cc079bee83a3a"
+    },
+    "article/assets/738b1c258a-littlefoot.css": {
+      "bytes": 4840,
+      "sha256": "fb426bd3ae88ddc96256b2fd4e8d13fd0c04fdb5665317ad444f76c5d47c8088"
+    },
+    "article/assets/745483bb05-image15.png": {
+      "bytes": 28626,
+      "sha256": "2bbf499c294772cfe038d435bda214b508f8d72dc2c970d7132d9da58c64c7af"
+    },
+    "article/assets/7d5b9eff2c-chart.css": {
+      "bytes": 15162,
+      "sha256": "3d5c866a2fbf36d2d9fc08e1beb433d5c6f135443b7277579ca7f553ca30ac5e"
+    },
+    "article/assets/80dcc359d6-image11.png": {
+      "bytes": 136309,
+      "sha256": "edc9a9e25b40f9cf18a64b278929c415478df3f0111bb9ed8f2c70473e9665e2"
+    },
+    "article/assets/8166841554-image10.png": {
+      "bytes": 65195,
+      "sha256": "0a323570293bcf0fd82354aa84ccd90d9351239e65554476e390ebea1070365d"
+    },
+    "article/assets/825fe31365-logo.svg": {
+      "bytes": 5988,
+      "sha256": "8c7aa4ca5083383de3523496d05a88aac1e44e695c0e1dcc7afd95ac2c204c50"
+    },
+    "article/assets/8d176767b1-image19.png": {
+      "bytes": 94875,
+      "sha256": "7156eb6932400d50df7303acabf8dd1d714fa02d58b68bdcc7221992244c3c05"
+    },
+    "article/assets/8e58c3bea7-chart.css": {
+      "bytes": 24062,
+      "sha256": "2bb478fc4f232e17283291be4a75fb8ae155728189e5aafd2ee8d37ff2cb8270"
+    },
+    "article/assets/96c7622e2b-evals-logo-slideable.svg": {
+      "bytes": 10456,
+      "sha256": "d5d9938a5a42913f559248b9d0cb607e5a13733f2ba80937402c60094248afa1"
+    },
+    "article/assets/96e24b2350-image4.png": {
+      "bytes": 131274,
+      "sha256": "35b6cad479bb0a08473709dbe18f3ad644bf41ee3cf9992979e658e504f36c7d"
+    },
+    "article/assets/98eebf44f5-headline.png": {
+      "bytes": 83660,
+      "sha256": "ea3f99acff155f0ce9dc16f880e5c96a6f2393a61cb08aaf2eb1b33737ec759d"
+    },
+    "article/assets/b2cdec91b6-image17.png": {
+      "bytes": 79567,
+      "sha256": "8dd110dcbadbef0748f9b64d9a93daa0b00cb6272352688edd4c32780e29f90d"
+    },
+    "article/assets/bd6baed22b-image14.png": {
+      "bytes": 155158,
+      "sha256": "00866c75951ef48768660181fee3a2ca461fd621c9f90b113efa1b5b4b6cc01e"
+    },
+    "article/assets/c29d92d063-image3.png": {
+      "bytes": 102508,
+      "sha256": "0bc829e1132a76b90b43ef773d7a64c93c537f118cdb62c071138403e0401f26"
+    },
+    "article/assets/c8a9334f16-image23.png": {
+      "bytes": 153065,
+      "sha256": "ab69f8e430c5574a469cac8bc988480092df90ff2b6f03068a1ac53a893d038c"
+    },
+    "article/assets/cd488ab97f-time-horizons-increasing.png": {
+      "bytes": 48199,
+      "sha256": "8054431632261feec94c3e83753eaaad78511bb8db01572551ba166c3aa9b429"
+    },
+    "article/assets/d486b7c4e0-chart.js": {
+      "bytes": 46933,
+      "sha256": "22c8d0c473314c97bb0ae00ec06f91a77e3cc39365457659bf0de47b62ee6982"
+    },
+    "article/assets/de5def771e-tocbot.js": {
+      "bytes": 10764,
+      "sha256": "c88a479d8ab91db275727d545dc5284c7a734c0968cb30fbba49ea8c969a1028"
+    },
+    "article/assets/e10205f3c7-time_horizon_ratio_non_visible_reasoning.png": {
+      "bytes": 404241,
+      "sha256": "323a40184a5bcbbe57149fafa7500b59e7c163d33a3d911239cf39287596fe66"
+    },
+    "article/assets/e187f12eb7-main.css": {
+      "bytes": 264974,
+      "sha256": "d33c1dfd895b8e371367a018084301bc0b8e0eac3bba7bfbf6b9b223009dc81a"
+    },
+    "article/assets/e4289ac7b4-image2.png": {
+      "bytes": 136517,
+      "sha256": "c6bc0ef3655c207cf42ef4fe6bc43033ee24129d47645c9eb6049bba3cb9939a"
+    },
+    "article/assets/e84b203de0-image1.svg": {
+      "bytes": 380948,
+      "sha256": "442d58037d20e3d095dc91e594486bfdf9094709c320cb0c93c77904dfad9b0c"
+    },
+    "article/assets/edd0326eb7-language-preference.js": {
+      "bytes": 10313,
+      "sha256": "dd176aa4a1cd94a9c60f567da5da566ce7225736ea23778c9df00ffed63fc400"
+    },
+    "article/index.html": {
+      "bytes": 429995,
+      "sha256": "405de9f2b28d6b431fae6d5bbdddf0b1ce5d764b0fa4360b8fb24da1203ba565"
+    },
+    "article/index.txt": {
+      "bytes": 218200,
+      "sha256": "8b7626eae6fd04d8ce0052102b227e1f54886d3fa6a6df939b33bba37bde7ad7"
+    },
+    "article/links.json": {
+      "bytes": 2027,
+      "sha256": "43ff7e314744d2d6a9a00f9329d6809f60ab27046ffddae01bf6c115d8bc9b3f"
+    },
+    "backup-manifest.json": {
+      "bytes": 27496,
+      "sha256": "d55897ff435bea557b71d182cee83dca04ede1aa3f0cc8a5cdc62a5bcca34a6f"
+    },
+    "data/README.md": {
+      "bytes": 1365,
+      "sha256": "a8732826c73ac52fe86ff6b0587dd2be5d98603c88bc54c3bb782943da973036"
+    },
+    "data/agent-timeline-handles.json": {
+      "bytes": 1508,
+      "sha256": "64929a08c9a2dbaca377f7e30c4fa16b755179b4ff625ee03a3a7fdba62a7a53"
+    },
+    "data/agent-timeline.json": {
+      "bytes": 289546,
+      "sha256": "ba88a4cd101b575b40636c899c5c91b9a7527b56aafafe6baecd8d6002118752"
+    },
+    "data/derived-manifest.json": {
+      "bytes": 1521,
+      "sha256": "d6392d3116fd2c958e6b7f7c0e74b36e84bc2f4bb99470a8a456cca33c134086"
+    },
+    "data/workstream-traffic.json": {
+      "bytes": 228002,
+      "sha256": "9df2ebc0f68ed06951cae3a6de4aea2d6f7a939610b598f92e34393c066f406f"
+    },
+    "references/32bf1a9a07-hugging-face-incident-report-aug-2026.pdf": {
+      "bytes": 7443085,
+      "sha256": "f7e87133833363da6eee661df0c86926ef852f8b202ad87695ea6596b92d3c73"
+    },
+    "references/40841b6a42-2026-05-19-frontier-risk-report.html": {
+      "bytes": 1944383,
+      "sha256": "792ba1bba1759a08c5b2a7777f68f4e810497b2ac2b1277ddea6c06aff974dd1"
+    },
+    "references/40841b6a42-2026-05-19-frontier-risk-report.txt": {
+      "bytes": 606625,
+      "sha256": "10068694f50111c0c0e3082ebcbb77a31098815850738b275e58e37c546ba8ff"
+    },
+    "references/8088c1dfd6-agent-intrusion-technical-timeline.html": {
+      "bytes": 726240,
+      "sha256": "961fddaf01cdfc04cae421e89cbd56b0a4925e522ec38895b2c7eeb6e0184d90"
+    },
+    "references/8088c1dfd6-agent-intrusion-technical-timeline.txt": {
+      "bytes": 57204,
+      "sha256": "36b036ac98bd68232279e3cfe94cc705f691eac9c8ffb151749830b425968df6"
+    },
+    "references/README.md": {
+      "bytes": 2402,
+      "sha256": "8a61fa62f5d13f55f89944e8d5c14517ffbb4007ad644ea99df66f9261d6b3c3"
+    },
+    "references/a39a47a3fd-2026-07-28-investigating-ai-propensities-after-incidents.html": {
+      "bytes": 76746,
+      "sha256": "06d088ad371d60d5a4c0f975ec297e439a2b67ea3dc127fba9c818a92008fbe5"
+    },
+    "references/a39a47a3fd-2026-07-28-investigating-ai-propensities-after-incidents.txt": {
+      "bytes": 20252,
+      "sha256": "d9d1a6a84483b32c0d19590962770ce743dc28104a5adf8f55f45246a59e916f"
+    },
+    "references/bbddedc6f1-2605.11086": {
+      "bytes": 45540,
+      "sha256": "61cadf85901e1452fa43779335236086d9c230e23d330180df4d0ea6214c300c"
+    },
+    "references/bbddedc6f1-2605.txt": {
+      "bytes": 6606,
+      "sha256": "5ebb515f8b7d932a0686bf392c9ece41c46d06a03b3a4acef149913da92919e4"
+    },
+    "references/bed2516844-2026-05-11-ai-usage-survey.html": {
+      "bytes": 85196,
+      "sha256": "b7e1981bd364e902b350da45d59468a049a620d22f9a80b21ab84fd4b508be79"
+    },
+    "references/bed2516844-2026-05-11-ai-usage-survey.txt": {
+      "bytes": 30483,
+      "sha256": "3340109110a39a04888d362c92ac85ed95e9a8c13d668f0b8dc8026e827b8689"
+    },
+    "references/beeb71f0ee-brief-notes-on-the-openaihugging.html": {
+      "bytes": 106433,
+      "sha256": "88624ce097bcd207b6b74e47f2baed1cdae9b1a8fae7e847748167f6bfb2c6d9"
+    },
+    "references/beeb71f0ee-brief-notes-on-the-openaihugging.txt": {
+      "bytes": 4371,
+      "sha256": "0f49d69ecd66eff325157e4b56293c17a2017e4dfb7327535cc75c1e14ef8e1b"
+    },
+    "references/c42cad5897-2026-01-19-early-work-on-monitorability-evaluations.html": {
+      "bytes": 99401,
+      "sha256": "232ed3b9ea40548ed7f8f3f4d6e470eae4520e68d94d1cd853358477dc95df29"
+    },
+    "references/c42cad5897-2026-01-19-early-work-on-monitorability-evaluations.txt": {
+      "bytes": 40350,
+      "sha256": "b1687e4d180f459a3a2376fb45309ef50ccc96474f5abee28e07b5854392845f"
+    },
+    "references/cfcc94691b-model-organisms-of-misalignment-the-case-for-a-new-pillar-of-1.html": {
+      "bytes": 997129,
+      "sha256": "6802635780f264beca104357318e270c2dc66455a85e81333088a65bce4f45ca"
+    },
+    "references/cfcc94691b-model-organisms-of-misalignment-the-case-for-a-new-pillar-of-1.txt": {
+      "bytes": 58763,
+      "sha256": "fbcdf7e57122efb15b09f6dfe3f23949555ce5d93c301ee72b6edb9a77554fee"
+    },
+    "references/ea3ed5b003-2025-07-14-how-does-time-horizon-vary-across-domains.html": {
+      "bytes": 121327,
+      "sha256": "06438b04e86e93e583046449ac9a921f0969a68fb8f9e5fa78f61a190ecd2edc"
+    },
+    "references/ea3ed5b003-2025-07-14-how-does-time-horizon-vary-across-domains.txt": {
+      "bytes": 38763,
+      "sha256": "2891a04cba3bbe72d4294d9f8f4e4128ebf1da3c24a25497fd81c2f738817ef2"
+    },
+    "references/f87e14ef06-multiagent-systems.html": {
+      "bytes": 215738,
+      "sha256": "e7adb071a6529f693ab5ce03c4e26bc8359423718b79e1fb4f7d3e65a72beab9"
+    },
+    "references/f87e14ef06-multiagent-systems.txt": {
+      "bytes": 29542,
+      "sha256": "9e0f5d758c3e93d50bfca551502065aa9fbad782f3959176073f810d793f9338"
+    },
+    "references/fa32b7ceb7-incident-report-unsanctioned-agent-behaviour-during-cyber-testing.html": {
+      "bytes": 41426,
+      "sha256": "d877ecd7c74dcf9b667aadb79c49e784e11f4a87eda89f287089038b8584350c"
+    },
+    "references/fa32b7ceb7-incident-report-unsanctioned-agent-behaviour-during-cyber-testing.txt": {
+      "bytes": 18801,
+      "sha256": "15b4d9542fe5091cf9038bbcf2d33edb6c7be597bce5f7f30ba83d9d71095dd8"
+    }
+  }
+}

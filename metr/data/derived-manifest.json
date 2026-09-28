@@ -1,0 +1,29 @@
+[
+  {
+    "path": "data/workstream-traffic.json",
+    "sha256": "9df2ebc0f68ed06951cae3a6de4aea2d6f7a939610b598f92e34393c066f406f",
+    "source_path": "article/assets/296348926c-data.js",
+    "source_url": "https://metr.org/assets/js/workstream_chart/data.js",
+    "source_sha256": "56c9d973c6277cce3c9b5febbb046530bed2791c2c3c13b24c3a7e10d89294af",
+    "variable": "WORKSTREAM_TRAFFIC_DATA",
+    "transformation": "Parse the assigned JSON literal and serialize with indentation; no JavaScript execution."
+  },
+  {
+    "path": "data/agent-timeline.json",
+    "sha256": "ba88a4cd101b575b40636c899c5c91b9a7527b56aafafe6baecd8d6002118752",
+    "source_path": "article/assets/1730453ed9-data.js",
+    "source_url": "https://metr.org/assets/js/agent_timeline/data.js",
+    "source_sha256": "b92cb6f42e141781b748c7051ccaff49653ce68426b56be7b3938defaaf314ad",
+    "variable": "AGENT_TIMELINE_DATA",
+    "transformation": "Parse the assigned JSON literal and serialize with indentation; no JavaScript execution."
+  },
+  {
+    "path": "data/agent-timeline-handles.json",
+    "sha256": "64929a08c9a2dbaca377f7e30c4fa16b755179b4ff625ee03a3a7fdba62a7a53",
+    "source_path": "article/assets/1730453ed9-data.js",
+    "source_url": "https://metr.org/assets/js/agent_timeline/data.js",
+    "source_sha256": "b92cb6f42e141781b748c7051ccaff49653ce68426b56be7b3938defaaf314ad",
+    "variable": "AGENT_TIMELINE_HANDLES",
+    "transformation": "Parse the assigned JSON literal and serialize with indentation; no JavaScript execution."
+  }
+]

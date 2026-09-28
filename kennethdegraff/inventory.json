@@ -1,0 +1,256 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 2306,
+      "sha256": "a76affee7467c2c4153c3f9b3ba106e6b7e42925114daba168aafb3fc906d8c6"
+    },
+    "article/index.html": {
+      "bytes": 154160,
+      "sha256": "5df508400f270c33930f9fd009da3dd949aa177b2bb1ea64d0095a85d6df537e"
+    },
+    "article/index.txt": {
+      "bytes": 80939,
+      "sha256": "d358c29673e1404bdcf2a660d3e3b10870c67d8328d039e64ab47e8c886592a3"
+    },
+    "article/links.json": {
+      "bytes": 3060,
+      "sha256": "fbeafe2d83e72a5c20c787c6948d8d129569fc1a9e5398ea6f969a259e15528c"
+    },
+    "backup-manifest.json": {
+      "bytes": 24034,
+      "sha256": "3a80c46ee948469aa0b5fac50d5aabc7db1438cc86359287a87e81662881558d"
+    },
+    "data/README.md": {
+      "bytes": 1020,
+      "sha256": "db141b597f88217cc90c87d9aecb15b020a947c856892b21d673c7d8349966ec"
+    },
+    "references/21cc5b2224-mainsource623-.html": {
+      "bytes": 18557,
+      "sha256": "851041c8d96fbe5503321b8ebaec8f9c965b89693c5d8eefcc1fe4b72215c673"
+    },
+    "references/21cc5b2224-mainsource623-.txt": {
+      "bytes": 1682,
+      "sha256": "ebc96c1a006e2be68f80c02394c2b48bebd4075d172ba8cbab8507ed4953fe4c"
+    },
+    "references/23c9846d0e-allregrawx260622-.html": {
+      "bytes": 18964,
+      "sha256": "92fa15062980f90b95f6d32f6f88912cccd8b77eb3b4cb09bf49dc528f9cb12b"
+    },
+    "references/23c9846d0e-allregrawx260622-.txt": {
+      "bytes": 1832,
+      "sha256": "9a88d867d960ef023f2b44eaa059c44b780668906053ed3183a91df56692ee3e"
+    },
+    "references/2869273e2d-OpenAI-Hugging-Face-Incident-Technical-Report.pdf": {
+      "bytes": 521159,
+      "sha256": "dd635cf6e5f39f0e1f646f08c36549090d77156ed89cbd3d733ed496648cae9c"
+    },
+    "references/314ada8895-7t6-o-.html": {
+      "bytes": 258182,
+      "sha256": "d113d1a12a469e5fc8977b1be80ec1d59a237e11829a73d391f94f6a8fb63736"
+    },
+    "references/314ada8895-7t6-o-.txt": {
+      "bytes": 80981,
+      "sha256": "27d96bbb5d364779805e22405a047160dc370faa5dba0bfc7037706292516790"
+    },
+    "references/324bc7b9e1-openaipovertycompacttest-.html": {
+      "bytes": 18985,
+      "sha256": "edfad4c2ce0239f090eb36a3cd879bf7685951200f62e60a9ac1b3401954c0ff"
+    },
+    "references/324bc7b9e1-openaipovertycompacttest-.txt": {
+      "bytes": 1849,
+      "sha256": "6b239cf67dc8179f291cdf6b24f8231f1d4c68595a570653ce48e2a38795df61"
+    },
+    "references/34c39cd82f-mdgood778-.html": {
+      "bytes": 21950,
+      "sha256": "2006fb9720a9637e9857940ebf63378869d87ba92fb9ea09cf9410515f70fa68"
+    },
+    "references/34c39cd82f-mdgood778-.txt": {
+      "bytes": 2191,
+      "sha256": "db726d13c9579e0b1e61eaaf1dfec3be2fa47de655f64213ca245c6ae3afedc2"
+    },
+    "references/45ca0e1619-countgf260623c-.html": {
+      "bytes": 18551,
+      "sha256": "12b344ed373050ca0cb0d03858555d5039e03af706de62bfe3935565fc8d0666"
+    },
+    "references/45ca0e1619-countgf260623c-.txt": {
+      "bytes": 1657,
+      "sha256": "1a94cd38a44db81a61be255074cfe749dc8d32e55cd034db53ba49515bdc35dc"
+    },
+    "references/4a24bf12f5-oversight-letter-to-openai-openai-hugging-face-incident-1.pdf": {
+      "bytes": 1369168,
+      "sha256": "95fedaa7566e6b0917149649d1d17e7f1affce5e35653c5f6674b869551d7c75"
+    },
+    "references/500e6027d0-ourjsget26abc-.html": {
+      "bytes": 23716,
+      "sha256": "2db2c5b7eac91d56154af8ad290378b3284c01c21ca2f21db1c56fcd32c51623"
+    },
+    "references/500e6027d0-ourjsget26abc-.txt": {
+      "bytes": 2663,
+      "sha256": "d67cad215d2f7de2a3ecd0bb7ec39f41d8e092ef195d8507de64072e7bd2087d"
+    },
+    "references/507cbcfafd-highallmap260622-.html": {
+      "bytes": 18768,
+      "sha256": "0c60a0f52750c9e26967f662c5d57106a805c8f872f8a6d8da2bf1d3f58aba4d"
+    },
+    "references/507cbcfafd-highallmap260622-.txt": {
+      "bytes": 1771,
+      "sha256": "e32b1c4b64a1ce7ca3968b88d92ed8229c0d4f2b14824de43e213dd739c7880c"
+    },
+    "references/5313f0382c-bridges.html": {
+      "bytes": 130947,
+      "sha256": "d8520deff5d0032ca50d5ddec271b04a4db4f5f49df6e8207e114b3f153f000b"
+    },
+    "references/5313f0382c-bridges.txt": {
+      "bytes": 25126,
+      "sha256": "1cf98d41ab9417bfce02ed6ca894d517ac7dd2687c9b9796ae2eae5fab48e62e"
+    },
+    "references/59ea6d5636-countrf260623c-.html": {
+      "bytes": 24292,
+      "sha256": "b6c9422e06f344a0cdc4139858c4957e94e46dc62b498a7aa14f8dba06b24882"
+    },
+    "references/59ea6d5636-countrf260623c-.txt": {
+      "bytes": 2554,
+      "sha256": "b05b4d9d2c5132eae70cbc857216f58b848856a8cb77a93572ba49a3d05a0a35"
+    },
+    "references/622948bc80-ourseccounty-.html": {
+      "bytes": 20586,
+      "sha256": "75455b7ec9a70e29e58092d456116338783d0da7c90a3dc4516e2fb3b73630f8"
+    },
+    "references/622948bc80-ourseccounty-.txt": {
+      "bytes": 1750,
+      "sha256": "dfc4a4a5dfcf17c8d926929dae15f5b08ca7ba521d3153f9a660a5b2d80a5684"
+    },
+    "references/625cbb20bc-vanderbilt.html": {
+      "bytes": 23619,
+      "sha256": "2c3f49ad1e095649b6936f99bab647c2416712d5d4bb401b84abbcde3c973f31"
+    },
+    "references/625cbb20bc-vanderbilt.txt": {
+      "bytes": 8118,
+      "sha256": "50b942cb4c4c42d72283f9c9b026c5ee80f1ae1c416d591ead4334ec2a46364a"
+    },
+    "references/6682837d71-of-jfk-u2-telephones-and-security.html": {
+      "bytes": 34450,
+      "sha256": "16e4d6b485fbf4eb2bb230c93c939fe309d651929c8e0a30eca488da0138aeb2"
+    },
+    "references/6682837d71-of-jfk-u2-telephones-and-security.txt": {
+      "bytes": 5400,
+      "sha256": "c05b34d5cfbbdd37070c402569cbf6623921289180132a4ebb447d6d8742c907"
+    },
+    "references/6b2a8087a4-vanderbi.lt": {
+      "bytes": 12839,
+      "sha256": "e02fae6b39cbf674829eecc6b5535fab0d62498fbfa93807658772e79dcd390a"
+    },
+    "references/6b2a8087a4-vanderbi.txt": {
+      "bytes": 1557,
+      "sha256": "bace942b8513f9046b44ab64ccd88af6b2aa6b907d8aad1882e6488cb603d2fd"
+    },
+    "references/7678810afd-mafresh91011-.html": {
+      "bytes": 53980,
+      "sha256": "4876f4ddc0b77c0ebaab38f9f8c2ce8049c1bfa8c87322f1a74e1c3abe485e82"
+    },
+    "references/7678810afd-mafresh91011-.txt": {
+      "bytes": 13060,
+      "sha256": "a8fc3ba6dce1b3c11b3340f7c6d395cd227b314a7cf67f065193156b95cf2655"
+    },
+    "references/7d3e2a31b7-main.js": {
+      "bytes": 2070,
+      "sha256": "a166ccf84c62d4e76d4a02bd7a780d434a730188ea5a6ff4d73b8f4260f5596d"
+    },
+    "references/87eca861d7-jsallwrap260618-.html": {
+      "bytes": 19420,
+      "sha256": "1f8ba90ca5b2389bffda95b170c71a6d813023f61744a2c900b58f8f3ef53a4b"
+    },
+    "references/87eca861d7-jsallwrap260618-.txt": {
+      "bytes": 2067,
+      "sha256": "d6a770c969f308987dcb81cfb95d22d64176f13a847491b9cf285c0ec2dfbd45"
+    },
+    "references/960b035458-oursecallraw443-.html": {
+      "bytes": 18173,
+      "sha256": "779c97aaff4f3e47a6c766820c8d046c11c9e3cc7228b29c71fa2770145e31dd"
+    },
+    "references/960b035458-oursecallraw443-.txt": {
+      "bytes": 1685,
+      "sha256": "ef82ba39cda9e08847792c612651ad2953dd98a5eaf7c5d16040c628c131db93"
+    },
+    "references/96f7016c8c-massjson715-.html": {
+      "bytes": 67099,
+      "sha256": "07fa23ed2fbca43d42a5b8472a2bd5db02575717619db1565468404feab676e2"
+    },
+    "references/96f7016c8c-massjson715-.txt": {
+      "bytes": 17214,
+      "sha256": "104f757ecd5c67b46ae7d1196db8751a17a5fdd6da61623d1bf2a78a54cb0209"
+    },
+    "references/9a2549f864-nB1nv-.html": {
+      "bytes": 42757,
+      "sha256": "d229d7b076efef0b58ad04421f260b6cc339c0f15b8dfcbccffe62351e795275"
+    },
+    "references/9a2549f864-nB1nv-.txt": {
+      "bytes": 6997,
+      "sha256": "3c494c1d0c70411197d6075d40463abcf5006e4f4922c2cc8dc6d7f5cc674abb"
+    },
+    "references/README.md": {
+      "bytes": 3943,
+      "sha256": "bb1800b84f36a17e5d7fbbaf8ba51b69e1608a4f29dfe48bb0f5906a038b6a66"
+    },
+    "references/ab2752a9d7-iyg1y-.html": {
+      "bytes": 1707981,
+      "sha256": "eadf465e94946bd3169906db7ff4a677f368e8769c9c09574c10e862f98c82f5"
+    },
+    "references/ab2752a9d7-iyg1y-.txt": {
+      "bytes": 607603,
+      "sha256": "1920c7b1227e077cd0a082ed322bc51058ef7285348768a7fb5eedb877b9d646"
+    },
+    "references/ad457c9ec2-jqinv11method-.html": {
+      "bytes": 24939,
+      "sha256": "4448a11dcddffa714b2cd84a9bd32be899343be1dd7ab3300e6731c29c011845"
+    },
+    "references/ad457c9ec2-jqinv11method-.txt": {
+      "bytes": 2890,
+      "sha256": "60d86d15272265bd2057e13743e6a167527751b9e783a2e6abf1b99823e16198"
+    },
+    "references/aec6bb102f-agf623d-.html": {
+      "bytes": 18651,
+      "sha256": "affee3486e7cea42cfe4e115ef8d17012822ff34c18c575dcf89c8429231aeef"
+    },
+    "references/aec6bb102f-agf623d-.txt": {
+      "bytes": 1680,
+      "sha256": "45079c0085ffde838b5c59daf52b9f672fa8ec4faedc00dfb11011d48e2b4f8b"
+    },
+    "references/b54c3c0708-maagentxyz99999-.html": {
+      "bytes": 249679,
+      "sha256": "a0acc9613267c734738bb0f2b9fd3dd3eb576cf6205af43f0e89dc96e019b822"
+    },
+    "references/b54c3c0708-maagentxyz99999-.txt": {
+      "bytes": 86041,
+      "sha256": "47fb19104773c2e87afc05704e90f5fe1881eb8545473806bf6fc4a503e25d2f"
+    },
+    "references/d4503d7621-masecjs260619-.html": {
+      "bytes": 18640,
+      "sha256": "37721314b572e899f9b108dc202ee189fd39ac9ee2527127d60eb3cc2000b24a"
+    },
+    "references/d4503d7621-masecjs260619-.txt": {
+      "bytes": 1710,
+      "sha256": "986c07b0741e1fbb89dff1ecc5bf8627a3968bfbb1d6619902d5459c2480a358"
+    },
+    "references/dc0aa855fb-p9279729-.html": {
+      "bytes": 5215,
+      "sha256": "92d991e8ae5d1896ca8722085a08faf63dd2cd48cf114fce8693fb2606f1b29f"
+    },
+    "references/dc0aa855fb-p9279729-.txt": {
+      "bytes": 309,
+      "sha256": "8411bea74d4736c2aafed267863f7abb0a4baa26282363a162ea88ed41fb7b2d"
+    },
+    "references/e2a607d75b-README.md": {
+      "bytes": 7409,
+      "sha256": "9f43313f12b2ba7b4699a4af9abcef0cceb909dcf53023dc0808943a2bd53188"
+    },
+    "references/e9b43cd77d-jqinv11raw-.html": {
+      "bytes": 29548,
+      "sha256": "04d1c239afa1be6feaf328c07f60b9f2fa03e2617306ba73c4aa9122593162b8"
+    },
+    "references/e9b43cd77d-jqinv11raw-.txt": {
+      "bytes": 4528,
+      "sha256": "3371a860ce8578f77da66731a57d02781533bc9d55feb643c07f71503c52a711"
+    }
+  }
+}

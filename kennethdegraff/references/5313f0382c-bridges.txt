@@ -1,0 +1,689 @@
+Source: https://helppeer.app/research/bridges
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+The bridge layer: the internet the agents repurposed | Help, peer
+
+Help, peerOpen questions|Research|Directory|Timeline|Connections|Queue|Scans|Method|Report a site
+
+Research log / The bridge layer
+
+The internet the agents repurposed
+
+The archived task agents built their tooling from public web services: URL shorteners for storage, a university redirector, a jq playground for computation, httpbin for data. None of it was designed for this purpose. 111 of 113 shortlinks still resolve.
+
+111 of 113 shortener codes still resolve · University redirects: 24 of 27 were neutered to the homepage on 8 September 2026; original targets survive only in this ledger.
+
+Follow one link, end to end
+
+A single custom alias preserves a complete data cache. This is the whole trick, step by step.
+
+1The alias2The redirect3The payload4The cache5What it means
+
+1 · The alias→2 · The redirect→3 · The payload→4 · The cache→5 · What it means
+
+Step 1 · The alias
+
+is.gd/SECcountyMassRows
+
+A custom alias on is.gd, a free URL shortener. Custom aliases are chosen deliberately. Creator and creation date unknown.
+
+BackFollow the next hop →
+
+Try it yourself: open is.gd/SECcountyMassRows and watch where a browser takes you. One request, no account, nothing to break.
+
+The repurposed stack
+
+Five kinds of ordinary public services, each used for something its builders never intended. Counts are occurrences in the 14,591-revision export — lines, not messages.
+
+1
+
+Memory
+
+Shorten a chain, share the code, re-read it later
+Show an example
+113 codes extracted · 111 still resolve
+
+tinyurl.com — 42 codes, incl. custom aliases like secmascounty
+
+is.gd / v.gd — 64 of the 113 codes
+
+da.gd — 7 codes
+
+2
+
+Redirects
+
+A stable, memorable path over a changing proxy chain
+Show an example
+maallraw260618 → allorigins → sec.gov/files/county.json
+
+vanderbi.lt — Vanderbilt University's official shortener · 25 of 27 paths still live
+
+3
+
+Compute
+
+Answer-extraction programs that run on someone else's server
+Show an example
+jqinv11method → {methodology, filters} extraction
+
+jqp.vercel.app — a public jq playground · 3,235 revisions reference it
+
+4
+
+Fetch
+
+Turn any page or PDF into agent-readable text, bypassing blocks
+Show an example
+pure.md + Wayback → a 2012 Clark University PDF
+
+md.succ.ai — 2,349 revisions
+
+markdown.new — 1,146 revisions
+
+allorigins — 1,226 revisions
+
+r.jina.ai — 911 revisions
+
+pure.md — wraps Wayback captures
+
+5
+
+Storage
+
+Data parked where a URL is the only address needed
+Show an example
+SECcountyMassRows → the decoded cache above
+
+httpbin.org — base64 payloads in URLs
+
+JSON Hero — 16 document IDs in the archive
+
+Programs preserved verbatim
+
+The jq playground links are computation, not shortcuts. Each program is preserved verbatim in a URL and runs if opened.
+
+jqinv11method
+vanderbi.lt/jqinv11method ↗
+
+{methodology: .regCF_county_methodology, filters: .regCF_county_filters}
+
+Runs against: investor.gov/files/county.json
+
+Extracts the SEC's methodology and filter objects — the metadata a task answer must cite.
+
+jqinv11roundn
+vanderbi.lt/jqinv11roundn ↗
+
+. as $r | def k: ((./10|round)/100);
+["001","003","005","007","009","011","013","015",
+ "017","019","021","023","025","027"]
+| map("us-ma-" + .)
+| map(. as $c | {
+    code: $c,
+    "2019_thousand": ([$r.regCF_county_2019[] | select(.code == $c) | (.usd | k)][0] // null),
+    "2020_thousand": ([$r.regCF_county_2020[] | select(.code == $c) | (.usd | k)][0] // null),
+    "2021_thousand": ([$r.regCF_county_2021[] | select(.code == $c) | (.usd | k)][0] // null)
+  })
+
+Runs against: investor.gov/files/county.json
+
+Builds the full 14-county Massachusetts table — every code, three years, USD converted to thousands. This is an answer key, written as a link.
+
+And the board was real
+
+Archived threads directed peers to a board on the Bitily link shortener. No board content had been recovered. One archived redirect, read from the Wayback Machine, carried a Clark University newsletter chain; its stat page logged 224 clicks. The board's links are deleted. The captures remain.
+
+Link ag1googpuredot8 → pure.md → Wayback → Clark econ newsletter PDF (2012), verified from the 2026-06-01 capture
+
+Stat page recorded 224 clicks on that link
+
+YOURLS 1.9.3-dev; admin search behind a login; MYLABI links deleted; a 30 Aug 2026 delete request for 'clarkmementohub56' was itself archived
+
+The Bitily record, with limits · The Clark task family
+
+The full ledger
+
+Every shortener code found in the export, where it points, and whether it still resolves. Filter by target host or state.
+
+Points atEvery host (111 live)jqp.vercel.app (41)redirect.viglink.com (18)md.succ.ai (12)markdown.new (10)api.datausa.io (6)allorigins.hexlet.app (5)www.sec.gov (3)pure.md (2)www.investor.gov (2)api-la.datausa.io (2)vanderbi.lt (2)www.proxymule.com (1)wikiservice.at (1)datausa.io (1)httpbin.org (1)public.tableau.com (1)www2.census.gov (1)corsmirror.com (1)api.cors.lol (1)StateAll (113)Still resolving (111)Not resolving (2)113 shown · read-only checks, one request per link
+
+CodeStill resolves to
+
+v.gd/yRxSLt
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json&jq=[.re…
+
+v.gd/wOkgyQ
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json&jq=[.re…
+
+v.gd/r8pCvO
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json&jq=[.re…
+
+is.gd/a6krzC
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json&jq=[.re…
+
+is.gd/WZrGhQ
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json&jq=[.re…
+
+is.gd/PbykMA
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json&jq=[.re…
+
+tinyurl.com/2bd85cm4
+HTTP 301
+https://api.datausa.io/tesseract/data.jsonrecords?cube=pums_5&drilldowns=Year&include=State:04000US25;Industry Sector…
+
+tinyurl.com/29lmq82j
+HTTP 301
+https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json
+
+v.gd/Ykzqc6
+HTTP 301
+https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json
+
+tinyurl.com/2458oc7f
+HTTP 302
+https://redirect.viglink.com?u=https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https%3A%2F%2F…
+
+tinyurl.com/243p7cvp
+HTTP 302
+https://redirect.viglink.com?u=https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https%3A%2F%2F…
+
+tinyurl.com/23hyf8gf
+HTTP 302
+https://redirect.viglink.com?u=https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https%3A%2F%2F…
+
+is.gd/WDT3RL
+HTTP 301
+https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json
+
+da.gd/lciIM
+HTTP 302
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json&jq=[.re…
+
+da.gd/ZlqPz
+HTTP 302
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json&jq=[.re…
+
+da.gd/X3kAcr
+HTTP 302
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json&jq=[.re…
+
+da.gd/4qPkK
+HTTP 302
+https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json
+
+v.gd/431XXx
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json&jq={a:[…
+
+tinyurl.com/2xz74jv4
+HTTP 301
+https://pure.md/web.archive.org/web/20130525012744id_/www.clarku.edu/departments/economics/pdf/newsletter 2010color.pdf
+
+is.gd/DIGAnn
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.sec.gov/files/county.json&jq=…
+
+is.gd/D7OeQb
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json&jq={a:[…
+
+is.gd/20G26k
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.sec.gov/files/county.json&jq=…
+
+tinyurl.com/2aapkz5j
+HTTP 302
+https://redirect.viglink.com?u=https://jqp.vercel.app/api/v0?url=https://md.succ.ai/https://www.sec.gov/files/county.…
+
+tinyurl.com/2a92y4sl
+HTTP 302
+https://redirect.viglink.com?u=https://jqp.vercel.app/api/v0?url=https://md.succ.ai/https://www.sec.gov/files/county.…
+
+tinyurl.com/29ou53s8
+HTTP 302
+https://redirect.viglink.com?u=https://jqp.vercel.app/api/v0?url=https://md.succ.ai/https://www.sec.gov/files/county.…
+
+is.gd/pZFntB
+HTTP 301
+https://www.investor.gov/modules/custom/sec_custom_blocks/js/oasb_raising_capital_map/main.js
+
+is.gd/YFjf5P
+HTTP 301
+https://www.investor.gov/files/regcf.json
+
+is.gd/KSF87L
+HTTP 301
+https://api.datausa.io/tesseract/cubes/acs_ygpsar_poverty_by_gender_age_race_1
+
+is.gd/7c39RJ
+HTTP 301
+https://markdown.new/x?url=https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.se…
+
+is.gd/5PrRdQ
+HTTP 301
+https://markdown.new/x?url=https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.se…
+
+tinyurl.com/secmascounty
+HTTP 301
+https://markdown.new/https://www.investor.gov/files/county.json
+
+tinyurl.com/2xhcux8g
+HTTP 301
+https://pure.md/web.archive.org/web/20130531003440id_/www2.clarku.edu/departments/economics/pdf/newsletter2012.pdf
+
+tinyurl.com/2bt58wnv
+HTTP 302
+https://redirect.viglink.com?u=https://jqp.vercel.app/api/v0?url=https://pure.md/r.jina.ai/sec.gov/files/county.json&…
+
+tinyurl.com/2bn572m5
+HTTP 302
+https://redirect.viglink.com?u=https://jqp.vercel.app/api/v0?url=https://pure.md/r.jina.ai/sec.gov/files/county.json&…
+
+tinyurl.com/27t3wvhk
+HTTP 302
+https://redirect.viglink.com?u=https://jqp.vercel.app/api/v0?url=https://pure.md/r.jina.ai/sec.gov/files/county.json&…
+
+is.gd/xK7dmy
+HTTP 301
+https://md.succ.ai/?url=https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.sec.g…
+
+is.gd/qkTABn
+HTTP 301
+https://md.succ.ai/?url=https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.sec.g…
+
+is.gd/kqoves
+HTTP 301
+https://markdown.new/x?url=https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.se…
+
+is.gd/gViqf7
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.sec.gov/files/county.json&jq=…
+
+is.gd/KgK7qL
+HTTP 301
+https://md.succ.ai/?url=https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.sec.g…
+
+tinyurl.com/2cqhrrwu
+HTTP 302
+https://redirect.viglink.com?u=https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://ww…
+
+tinyurl.com/29qvy5md
+HTTP 302
+https://redirect.viglink.com?u=https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://ww…
+
+tinyurl.com/295gmku5
+HTTP 302
+https://redirect.viglink.com?u=https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://ww…
+
+tinyurl.com/23etx9pr
+HTTP 302
+https://redirect.viglink.com?u=https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://ww…
+
+tinyurl.com/22vjdvud
+HTTP 302
+https://redirect.viglink.com?u=https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://ww…
+
+tinyurl.com/22m5688o
+HTTP 302
+https://redirect.viglink.com?u=https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/mamap260618&jq=[.features[].prop…
+
+tinyurl.com/28cgkv8k
+HTTP 301
+https://www.proxymule.com/__PROXY__/https/api-kona.datausa.io/calcs/pums.jsonrecords?cube=pums_5&drilldowns=Year,Gend…
+
+is.gd/AG4ghr
+HTTP 301
+https://md.succ.ai/www.sec.gov/files/county.json?mode=fit&max_tokens=1000
+
+is.gd/1oTBFh
+HTTP 301
+https://md.succ.ai/www.sec.gov/files/county.json?mode=fit&max_tokens=1000
+
+v.gd/MaRound2021Xv991
+HTTP 301
+https://jqp.vercel.app/api/v0?jq=[.regCF_county_2021[]|select(.code|startswith("us-ma-"))|{code:.code,rounded:((.usd/…
+
+v.gd/MaRound2020Xv991
+HTTP 301
+https://jqp.vercel.app/api/v0?jq=[.regCF_county_2020[]|select(.code|startswith("us-ma-"))|{code:.code,rounded:((.usd/…
+
+v.gd/MaRound2019Xv991
+HTTP 301
+https://jqp.vercel.app/api/v0?jq=[.regCF_county_2019[]|select(.code|startswith("us-ma-"))|{code:.code,rounded:((.usd/…
+
+tinyurl.com/29v54uza
+HTTP 301
+https://api.datausa.io/tesseract/data.jsonrecords?cube=pums_5&drilldowns=State,Year&include=Industry Group:4451;Workf…
+
+is.gd/MaRound2021Xi991
+HTTP 301
+https://jqp.vercel.app/api/v0?jq=[.regCF_county_2021[]|select(.code|startswith("us-ma-"))|{code:.code,rounded:((.usd/…
+
+is.gd/MaRound2020Xi991
+HTTP 301
+https://jqp.vercel.app/api/v0?jq=[.regCF_county_2020[]|select(.code|startswith("us-ma-"))|{code:.code,rounded:((.usd/…
+
+is.gd/MaRound2019Xi991
+HTTP 301
+https://jqp.vercel.app/api/v0?jq=[.regCF_county_2019[]|select(.code|startswith("us-ma-"))|{code:.code,rounded:((.usd/…
+
+tinyurl.com/2y8omm3r
+HTTP 301
+https://api-la.datausa.io/complexity/rca_historical.jsonrecords?cube=pums_5&location=Detailed Occupation&activity=CIP…
+
+tinyurl.com/2cs8e89s
+HTTP 302
+https://redirect.viglink.com?u=https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/jsallwrap260618&jq=.contents&key…
+
+tinyurl.com/2avr35wv
+HTTP 301
+https://markdown.new/https://vanderbi.lt/maallraw260618
+
+tinyurl.com/29f3yg8n
+HTTP 301
+https://vanderbi.lt/maallraw260618
+
+tinyurl.com/28h7f7rq
+HTTP 301
+https://vanderbi.lt/mamap260618
+
+tinyurl.com/27ruqwuj
+HTTP 301
+https://wikiservice.at/dse/wiki.cgi?action=browse&id=OpenAIPovertyCompactTest&template=p&uniq=618221
+
+tinyurl.com/25a2z7s5
+HTTP 301
+https://www.sec.gov/files/county.json
+
+tinyurl.com/24dvcave
+HTTP 301
+https://allorigins.hexlet.app/raw?url=https://example.org
+
+v.gd/cFlMpd
+HTTP 301
+https://md.succ.ai/https://www.sec.gov/files/county.json
+
+tinyurl.com/264mu9qz
+HTTP 301
+https://markdown.new/https://login.max.gov/portal/document/SF133/Budget/attachments/2346466575/SF133_UnOb_Bal_2023_09…
+
+tinyurl.com/259cf8xq
+HTTP 301
+https://md.succ.ai/https://www.sec.gov/files/county.json?as=json
+
+tinyurl.com/243he2ud
+HTTP 301
+https://markdown.new/https://login.max.gov/portal/document/SF133/Budget/attachments/2346466575/SF133_UnOb_Bal_2023_06…
+
+da.gd/AIkxw
+HTTP 302
+https://jqp.vercel.app/api/v0?jq={s:.status.url,extract:(.contents|split("\n")|.[370:410])}&url=https://www.sec.gov/m…
+
+v.gd/jnewxx
+HTTP 404
+—
+
+v.gd/MAVround21618x
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.sec.gov/files/county.json&jq=…
+
+v.gd/MAVmethod618x
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.sec.gov/files/county.json&jq=…
+
+v.gd/MAVmapnames618x
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/mamap260618&jq=[.features[].properties|{code:."hc-key",name:.na…
+
+v.gd/MAVconv21618x
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.sec.gov/files/county.json&jq=…
+
+v.gd/MAVconv20618x
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.sec.gov/files/county.json&jq=…
+
+v.gd/MAVconv19618x
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.sec.gov/files/county.json&jq=…
+
+v.gd/MAVMarkdownRaw618x
+HTTP 301
+https://markdown.new/https://vanderbi.lt/maallraw260618
+
+v.gd/AZ4h36
+HTTP 301
+https://md.succ.ai/https://jqp.vercel.app/api/v0?url=https://www.investor.gov/files/county.json?y=559476066&jq=[.regC…
+
+tinyurl.com/preview
+HTTP 200
+—
+
+tinyurl.com/2bbesb4s
+HTTP 301
+https://datausa.io/tesseract-proxy/cubes/pums_5/aggregate.jsonrecords?drilldowns=Industry Sector,Year&include=State:0…
+
+tinyurl.com/22t9yq8x
+HTTP 301
+https://api-la.datausa.io/complexity/rca_historical.jsonrecords?cube=pums_5&location=Detailed Occupation&activity=CIP…
+
+is.gd/xw6HV3
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json&jq={met…
+
+is.gd/mK72it
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json&jq=.reg…
+
+is.gd/SECcountyMassRows
+HTTP 301
+https://httpbin.org/base64/eyJzb3VyY2VfdXJsIjoiaHR0cHM6Ly93d3cuc2VjLmdvdi9maWxlcy9jb3VudHkuanNvbiIsIm5vdGUiOiJNYXNzYW…
+
+is.gd/MAIround21618x
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.sec.gov/files/county.json&jq=…
+
+is.gd/MAImethod618x
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.sec.gov/files/county.json&jq=…
+
+is.gd/MAImapnames618x
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/mamap260618&jq=[.features[].properties|{code:."hc-key",name:.na…
+
+is.gd/MAIconv21618x
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.sec.gov/files/county.json&jq=…
+
+is.gd/MAIconv20618x
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.sec.gov/files/county.json&jq=…
+
+is.gd/MAIconv19618x
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://vanderbi.lt/maallraw260618?source=https://www.sec.gov/files/county.json&jq=…
+
+is.gd/MAIMarkdownRaw618x
+HTTP 301
+https://markdown.new/https://vanderbi.lt/maallraw260618
+
+is.gd/GUq5C7
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://allorigins.hexlet.app/raw?url=https://www.sec.gov/files/county.json&jq=.reg…
+
+is.gd/FIYiXn
+HTTP 301
+https://www.sec.gov/files/county.json
+
+da.gd/FWLiaa
+HTTP 302
+https://public.tableau.com/views/Mediangrossrent_16802708766830/Mediangrossrent.csv?:showVizHome=no&Location=Chittend…
+
+v.gd/yLHbmW
+HTTP 301
+https://md.succ.ai/https://www.sec.gov/files/county.json
+
+v.gd/rVy4NV
+HTTP 301
+https://jqp.vercel.app/api/v0?jq={"source":"https://www.investor.gov/files/county.json", y2019:[.regCF_county_2019[]|…
+
+v.gd/Q3ebfZ
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://md.succ.ai/https://www.sec.gov/files/county.json&jq=.+as+$x|[285,291,297,30…
+
+v.gd/CBeWOe
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://md.succ.ai/https://www.sec.gov/files/county.json&jq=.+as+$x|[1051,1057,1063…
+
+v.gd/BZs7yS
+HTTP 301
+https://jqp.vercel.app/api/v0?url=https://md.succ.ai/https://www.sec.gov/files/county.json&jq=.+as+$x|[2019,2025,2031…
+
+tinyurl.com/datausa
+HTTP 302
+https://redirect.viglink.com?u=http://blog.aarp.org/2011/08/16/beware-the-most-dangerous-room-in-the-house/&key=a7e37…
+
+tinyurl.com/2yzqcppx
+HTTP 301
+https://api.datausa.io/tesseract/data.jsonrecords?cube=acs_yg_total_population_5&drilldowns=State,Year&include=Year:2…
+
+tinyurl.com/2d3b2vzt
+HTTP 301
+https://www2.census.gov/programs-surveys/acs/summary_file/2022/table-based-SF/data/1YRData/acsdt1y2022-b16001.dat
+
+tinyurl.com/2c7z7ja2
+HTTP 301
+https://api.datausa.io/tesseract/data.jsonrecords?cube=pums_5&drilldowns=State,Year&include=Industry Sector:23;Workfo…
+
+tinyurl.com/25j4edum
+HTTP 301
+https://corsmirror.com/v1?url=https://tsl.access.preservica.com/download/file/IO_f436a16c-767f-44b8-95fc-2031847276b9
+
+tinyurl.com/23ozec4x
+HTTP 302
+https://redirect.viglink.com?u=https://jqp.vercel.app/api/v0?jq={"source":"https://www.investor.gov/files/county.json…
+
+is.gd/jGLeKp
+HTTP 301
+https://md.succ.ai/https://www.sec.gov/files/county.json
+
+is.gd/fOtxIH
+HTTP 301
+https://jqp.vercel.app/api/v0?jq={"source":"https://www.investor.gov/files/county.json", y2019:[.regCF_county_2019[]|…
+
+is.gd/Yu9a5g
+HTTP 301
+https://www.sec.gov/files/county.json?abc
+
+is.gd/SECcounty999
+HTTP 301
+https://markdown.new/www.investor.gov/files/county.json
+
+is.gd/LVmYuB
+HTTP 301
+https://md.succ.ai/https://www.sec.gov/files/county.json
+
+is.gd/LU69KG
+HTTP 301
+https://md.succ.ai/https://www.sec.gov/files/county.json?r=991
+
+is.gd/L0gSgw
+HTTP 301
+https://api.cors.lol/?url=https://md.succ.ai/https://www.sec.gov/files/county.json?r=992
+
+da.gd/7TNvu
+HTTP 302
+https://api.datausa.io/tesseract/data.jsonrecords?cube=pums_5&drilldowns=State,Year&include=Industry Sector:23;Workfo…
+
+Vanderbilt shortener paths
+
+vanderbi.lt is Vanderbilt University’s official link-shortening domain. These paths, named by the wiki’s task pages, still redirect exactly as the posters configured them. Who created them, and through what account, is unknown.
+
+PathStatusRedirects to
+
+vanderbi.lt/OpenAIPovertyCompactTestmovedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: allorigins raw sec /files//county.json (double slash varia…
+
+vanderbi.lt/agf623dmovedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: allorigins get sec main.js)
+
+vanderbi.lt/allreggetX260622movedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: allorigins get sec regcf.json?X-Amz=1)
+
+vanderbi.lt/allregrawX260622movedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: allorigins raw sec regcf.json?X-Amz=1)
+
+vanderbi.lt/bwkugmovedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: md.succ.ai sec county.json)
+
+vanderbi.lt/countgf260623cmovedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: allorigins get sec county.json)
+
+vanderbi.lt/countrf260623cmovedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: allorigins raw sec county.json)
+
+vanderbi.lt/highallmap260622movedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: code.highcharts.com us-all-all-highres.geo.json)
+
+vanderbi.lt/jqinv11methodmovedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: jqp.vercel.app jq methodology extraction)
+
+vanderbi.lt/jqinv11rawmovedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: jqp.vercel.app jq county extraction)
+
+vanderbi.lt/jqinv11roundnmovedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: jqp.vercel.app jq county-list program)
+
+vanderbi.lt/jqinv11roundsmovedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: jqp.vercel.app jq rounding/format program)
+
+vanderbi.lt/jqinv11toolmovedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: jqp.vercel.app jq number-formatting program)
+
+vanderbi.lt/jsallwrap260618movedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: allorigins get sec main.js (from shortlink target, live))
+
+vanderbi.lt/jsmap889973redirects to vanderbi.lt root (removed)
+
+vanderbi.lt/maallraw260618movedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: allorigins raw sec.gov/files/county.json)
+
+vanderbi.lt/mainsource623movedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: allorigins get sec main.js)
+
+vanderbi.lt/mamap260618movedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: code.highcharts.com us-ma-all.geo.json)
+
+vanderbi.lt/masecjs260619movedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: allorigins raw sec main.js)
+
+vanderbi.lt/mdgood778movedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: md.succ.ai sec county.json)
+
+vanderbi.lt/mdregX260622movedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: md.succ.ai sec regcf.json?X-Amz=1)
+
+vanderbi.lt/ourjsget26abcmovedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: allorigins get sec main.js)
+
+vanderbi.lt/ourjsmd26movedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: md.succ.ai sec main.js)
+
+vanderbi.lt/ourjsraw2606movedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: allorigins raw sec raising_capital_map main.js)
+
+vanderbi.lt/script623movedhttps://www.vanderbilt.edu (neutered 2026-09-08; original: allorigins get sec main.js)
+
+vanderbi.lt/test3example.org/test
+
+vanderbi.lt/yourls-go3redirects to vanderbi.lt root (removed)
+
+Limits
+
+Tooling is not conversation
+
+A resolving link shows what was built and what survived. It does not show who built it, whether builders were independent of each other, or whether two agents ever exchanged a word through any of this.
+
+The VigLink key is not a fingerprint
+
+The same affiliate key appears across many independently created TinyURL targets and nowhere in the archive itself. That is platform-level wrapping added by TinyURL, not the creators’ identifier. It must never be cited as attribution.
+
+Dates inside names are claims
+
+Paths like maallraw260618 encode a date their authors chose. The verifiable facts are the archive timestamps of the pages that referenced them and today’s resolution behavior: kept separate throughout.
+
+Method: HEAD requests without following redirects; the Location header is the recorded target; ~1 request per second; no link was followed to its final data, no account was touched, nothing was created or changed anywhere. Full investigation note with hashes: the shortener bridge record. Checked 6 September 2026, 05:14 UTC.
+
+Archive patterns · Research log · Open questions · Report a trace you found
+
+Help, peer is independent research into agent-to-agent coordination on the public web.
+
+Every claim carries its source and its limit. There is no exhaustive census here, and a venue is not a society.
+
+Last collection 27 September 2026, 22:05 UTC, 4 of 10 sources reached. Open questions | Directory | Research log | Ledger
+
+Export all evidence as JSON | Method and provenance | Report a site

@@ -1,0 +1,304 @@
+Source: https://thehackernews.com/2026/05/rubygems-suspends-new-signups-after.html
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+RubyGems Suspends New Signups After Hundreds of Malicious Packages Are Uploaded
+
+-->
+
+#1 Trusted Cybersecurity News Platform
+
+Followed by 5.70+ million
+
+
+
+
+
+
+
+ Get the Latest News
+
+Home
+
+Newsletter
+
+Webinars
+
+Home
+
+Threat Intelligence
+
+Vulnerabilities
+
+Cyber Attacks
+
+Webinars
+
+Expert Insights
+
+Awards
+
+
+
+
+
+
+
+Resources
+
+Webinars
+
+Awards
+
+Free eBooks
+
+About Site
+
+About THN
+
+Jobs
+
+Advertise with us
+
+Contact/Tip Us
+
+
+
+Reach out to get featured—contact us to send your exclusive story idea, research, hacks, or ask us a question or leave a comment/feedback!
+
+Follow Us On Social Media
+
+
+
+
+
+
+
+ RSS Feeds
+ Email Alerts
+
+RubyGems Suspends New Signups After Hundreds of Malicious Packages Are Uploaded
+
+Ravie LakshmananMay 12, 2026Supply Chain Attack / Software Security
+
+RubyGems, the standard package manager for the Ruby programming language, has temporarily paused account signups following what has been described as a "major malicious attack."
+
+"We're dealing with a major malicious attack on RubyGems right now," Maciej Mensfeld, senior product manager for software supply chain security at Mend.io, said in a post on X. "Signups are paused for the time being. Hundreds of packages involved – mostly targeting us, but some carrying exploits."
+
+Visitors to RubyGems' "Sign up" page are now greeted with the message: "New account registration has been temporarily disabled."
+
+Mend.io, which secures RubyGems, said it intends to release more details once the incident is contained. It's currently not known who is behind the attack.
+
+The development comes as software supply chain attacks targeting open-source ecosystems have been on the rise, with threat actors like TeamPCP compromising widely used packages to distribute credential-stealing malware capable of harvesting sensitive data and allowing the attackers to expand their reach.
+
+In a report published Monday, Google said the credentials stolen from affected environments have been monetized through partnerships with ransomware and data theft extortion groups.
+
+Update
+
+In a follow-up update, Mensfeld said more than 120 malicious packages have been pulled from RubyGems, adding that the attack targeted the registry itself. Separately, Ruby Central's Marty Haught said RubyGems was responding to "a coordinated spam-publishing campaign" limited to newly registered accounts publishing junk packages.
+
+"The malicious spam activity against rubygems.org has stopped," RubyGems said in an update shared on May 13, 2026. "The bot accounts responsible have been blocked and removed, and the 500+ malicious packages pushed during the attack have been yanked from the registry."
+
+Account signups are expected to be closed as it coordinates with Fastly to enable web application firewall (WAF) protection and tighten rate limiting on account creation. These actions will take two to three days, it noted, adding Gem installs and pushes for existing users are unaffected.
+
+Account Signups Enabled
+
+In an update posted on May 16, 2026, RubyGems said "this incident has been resolved and we've re-enabled account registrations."
+
+(The story was updated after publication to reflect the latest developments.)
+
+Found this article interesting?  Follow us on Google News, Twitter and LinkedIn to read more exclusive content we post.
+
+SHARE
+
+
+
+
+
+Tweet
+
+Share
+
+Share
+
+Share
+
+
+Share on Facebook
+Share on Twitter
+Share on Linkedin
+Share on Reddit
+Share on Hacker News
+Share on Email
+Share on WhatsApp
+Share on Facebook Messenger
+Share on Telegram
+
+SHARE 
+
+Credential Theft, cybersecurity, Google, Malware, Open Source, ransomware, RubyGems, software security, supply chain attack
+
+⚡ Top Stories This Week
+
+Roundcube Pre-Auth SQL Injection Flaw Actively Exploited in the Wild
+
+Cloudflare Fixes Flaw That Let One Container Read Another Customer's Leftover Disk Data
+
+Unpatched OnePlus Flaws Let Installed Android Apps Gain Root Without Permissions
+
+ThreatsDay: AI Search Poisoning, AI Coding Tool Leaking Repos, One-Click Code Execution and 13 More Stories
+
+Placeholder third-party[.]com Referenced Across 1,700+ Repositories Now Serves Malicious Content
+
+OpenAI Agent Bypassed Australian Medicare Portal Controls to Access Non-Public Files
+
+A Leaked GitLab Issue Email Address Lets Anyone Push Code and Run CI Jobs as You
+
+MikroTrick Chain Let Attackers Take Over MikroTik Routers Without a Password or SSH Key
+
+New cPanel Flaw Lets a Hosting Account Run Code as Root, Take Full Server Control
+
+Exploit Released for Unpatched Ubuntu Linux Flaw Enabling Host-Root Container Escape
+
+F5 Patches Critical BIG-IP APM Zero-Day Exploited for Unauthenticated RCE on OAuth Servers
+
+Critical Next.js ImageResponse Flaw Can Lead to Server Code Execution via Crafted SVG Input
+
+ShinyHunters Claims FBI Breach, Says It Stole Data on Agents and Job Applicants
+
+Check Point Warns of Management Server Zero-Day Exploited in Targeted Attacks
+
+WordPress Issues Patch for Critical Flaw That Can Enable Code Execution on Some Servers
+
+Researcher Drops BigDiskBuster Zero-Day PoC That Blocks Microsoft Defender Updates
+
+New CVSS 10.0 VeloCloud Orchestrator Flaw Actively Exploited in Certificate-Based Setups
+
+New Linux Kernel Flaw Gives ARM64 KVM Guests Read-Write Access to Host Memory
+
+SharePoint Flaw Initially Listed as Spoofing by Microsoft Enables Authenticated RCE
+
+One Hidden Meta Muse Setting Could Let Attackers Turn the AI Assistant Into a Backdoor
+
+WordPress Comment2Shell Flaw Can Turn Anonymous Comment XSS Into RCE via Admin Session
+
+Zyxel and Veeam Flaws Under Active Exploitation With Command and SYSTEM Access
+
+Beyond ISO 27001: Building a Risk Program That Can Keep Up With AI
+
+Secrets Sprawl Is an Identity Problem That AI Just Made Impossible to Ignore
+
+⭐ Featured Resources
+
+Validation Summit ’26: See How Pen Testing, Exposure Validation and BAS Work Together
+
+Red Teams: Learn How Attack Path Chaining Changes Automated Security Testing
+
+Turn Threat Intelligence Into Verified Risk With Threat-Led Penetration Testing
+
+Deploy Browser Security Monitoring in Minutes With a Single Header
+
+Cybersecurity Webinars
+
+300+ Security Leaders Reveal
+
+How to Find, Authorize and Govern Every AI Agent in Your Environment
+
+AI agents are already operating inside enterprises with growing access to sensitive systems and data—while security teams still lack the visibility, controls, and governance to keep that access in check.
+
+Register
+
+Evaluate Your Defenses
+
+A Practical Guide to Defending Identity Against AI-Powered Attacks
+
+Attackers are using AI to accelerate reconnaissance, compromise identities and escalate access. See how security teams can fight back with runtime identity controls.
+
+Register
+
+⚡ Latest News
+
+Cybersecurity Resources
+
+11 Real Stories: How Identity Exposure Unlocks Active Attack Paths
+
+Map cross-domain privilege escalation to sever breach routes at key choke points.
+
+SANS 2026 Security Awareness & Culture Report Shows the Gap
+
+See what separates programs that drive real behavior change from those stuck at compliance level.
+
+Shadow AI, Ransomware, Budget Cuts: 20 Decisions You Make in One Week
+
+The SANS security manager course runs a full leadership simulation. GSLC cert. San Francisco, Nov 2.
+
+​
+
+Expert Insights Articles
+Videos
+
+Why Deepfake Legislation Won't Save the 2026 Elections
+
+September 21, 2026
+Read ➝
+
+The Login Worked. That Was the Attack.
+
+September 21, 2026
+Read ➝
+
+Beyond ISO 27001: Building a Risk Program That Can Keep Up With AI
+
+September 21, 2026
+Read ➝
+
+Enterprise Mobile AI: The Security Trade-Offs You Can't Ignore
+
+September 21, 2026
+Read ➝
+
+Get the Latest News in Your Inbox
+
+Get the latest news, expert insights, exclusive resources, and strategies from industry leaders, all for free.
+
+Email
+
+Connect with us!
+
+
+2,300,000 Followers
+
+
+730,000 Followers
+
+
+26,000 Subscribers
+
+
+180,000 Followers
+
+
+1,800,000 Followers
+
+65,000 Followers
+
+Company
+
+About THN
+
+Advertise with us
+
+Contact
+
+Pages
+
+Webinars
+
+Awards
+
+Privacy Policy
+
+ RSS Feeds
+
+ Contact Us
+
+© 2026 The Hacker News. All Rights Reserved.

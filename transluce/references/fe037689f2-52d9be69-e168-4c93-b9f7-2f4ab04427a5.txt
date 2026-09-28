@@ -1,0 +1,214 @@
+Source: https://urlquery.net/report/52d9be69-e168-4c93-b9f7-2f4ab04427a5
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+Report - ramp.quidax.io/?public_key=pub_AEHVJQim2kMNuvRNwibdyWQXm3VF4sM4&reference=e705-uq-20260920-002&from_currency=NGN&to_currency=USDT&from_amount=5000&network=BEP20&mode=buy&address=0x2170ed0880ac9a755fd29b2688956bd959f933f8&destination_tag=70501
+ urlquery
+
+ Home  Search  Insights About
+Login
+
+ Check icon
+
+ Warning icon
+
+ Warning icon
+
+Share Report
+
+Generates a temporary link to share non-public report for a limited time.
+
+Valid for (hours 1-300) 
+
+Generate Link
+
+urlquery report
+
+JSON report
+
+Raw JSON report
+
+Share report
+
+Share a non-public report with others
+
+Request review
+
+Request a review of report
+
+External sources
+
+ VirusTotal
+
+VirusTotal
+
+FQDN
+
+ramp.quidax.io
+
+DOMAIN
+
+quidax.io
+
+IP
+
+104.18.20.245
+
+ crt.sh
+
+crt.sh
+
+FQDN
+
+ramp.quidax.io
+
+DOMAIN
+
+quidax.io
+
+Report Overview
+
+Visitedpublic 
+
+2026-09-19 22:03:11
+
+Tags
+
+Submit Tags
+
+URL
+
+ramp.quidax.io/?public_key=pub_AEHVJQim2kMNuvRNwibdyWQXm3VF4sM4&reference=e705-uq-20260920-002&from_currency=NGN&to_currency=USDT&from_amount=5000&network=BEP20&mode=buy&address=0x2170ed0880ac9a755fd29b2688956bd959f933f8&destination_tag=70501
+
+Finishing URL
+
+ramp.quidax.io/transaction/e6cbf852-3696-4e2e-a721-15c3caa10a61/buy?enableWalletConnect=true
+
+IP / ASN
+
+104.18.20.245
+
+#13335 Cloudflare, Inc.
+
+Title
+
+Ramp
+
+Detections
+
+urlquery
+
+0
+
+Network Intrusion Detection
+
+0
+
+Threat Detection Systems
+
+0
+
+Host Summary
+
+HostRankRegisteredFirst SeenLast SeenSentReceivedIPFingerprints
+
+ramp.quidax.io 
+unknown2018-06-182026-09-192026-09-1977 kB1.9 MB
+
+104.18.20.245
+
+eu-assets.i.posthog.com 
+1690092020-01-232024-02-282026-09-192.3 kB161 kB
+
+172.66.166.164
+
+challenges.cloudflare.com 
+113932009-02-172021-10-202026-09-136.3 kB1.3 MB
+
+104.18.95.41
+
+eu.i.posthog.com 
+1026602020-01-232024-02-202026-09-181.8 kB2.8 kB
+
+3.40.5.189
+
+brunhild.challenges.cloudflare.com 
+unknown2009-02-172026-06-242026-09-16628 B0 B
+
+Cloudflare (CDN)
+Cloudflare is a web-infrastructure and website-security company, providing content-delivery-network services, DDoS mitigation, Internet security, and distributed domain-name-server services.
+
+Cloudflare Browser Insights (Analytics, RUM)
+Cloudflare Browser Insights is a tool that measures the performance of websites from the perspective of users.
+
+Cloudflare Bot Management (Security)
+Cloudflare bot management solution identifies and mitigates automated traffic to protect websites from bad bots.
+
+Envoy (Reverse proxies)
+Envoy is an open-source edge and service proxy, designed for cloud-native applications.
+
+Amazon Web Services (PaaS)
+Amazon Web Services (AWS) is a comprehensive cloud services platform offering compute power, database storage, content delivery and other functionality.
+
+Related reports
+
+Domain
+
+IP
+
+ASN
+
+Screenshot
+
+Similar
+
+Threat Detection Systems
+
+No alerts detected
+
+JavaScript (75)
+
+Script (75)
+
+Eval (0)
+
+Write (0)
+
+Filter scripts by metadata or content (case-insensitive)
+
+Loading...
+
+No JavaScripts
+
+HTTP Transactions (60)
+
+Filter transactions by metadata or HTML content (case-insensitive)
+
+URLIPResponseSize
+
+ urlquery
+urlquery is a service for URL and domain scanning, identifying and categorizing  potentially harmful elements on a webpage, checking for malware infections and assessing overall reputation.
+
+Powered by penguins.
+
+Contact
+
+General questions, feedback, or technical inquiries:
+📧 contact@urlquery.net
+
+Report phishing:
+📧 phishing@urlquery.net
+
+For abuse or removal requests:
+📧 support@urlquery.net
+
+Follow us
+
+Github
+
+Legal
+
+Privacy Policy
+
+Terms & Conditions
+
+© 2026 urlquery All Rights Reserved.

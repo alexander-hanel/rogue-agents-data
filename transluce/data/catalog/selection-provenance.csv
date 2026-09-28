@@ -1,0 +1,72 @@
+report_id,source_batch,group,source,record_kind,selection_basis,description
+ec853d1c-3e39-4891-bf18-628df24c0ad1,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,POST public mailbox creation
+48cfc835-7727-4073-8332-bac8aecf082e,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,POST public mailbox creation
+ee1e2595-a6d4-4f33-92a7-ca33f32a3d2f,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,POST public mailbox creation
+750bc59f-a761-4eea-8d46-3e616ef9e664,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,POST public mailbox creation
+4951f023-ccac-46b8-ad3a-f56132940bd2,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,POST guest initialization
+9ba20e47-5921-4194-a177-ccbd0ef7f3d4,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,Fetch guest-session JavaScript
+682ad78f-f0ad-4c7e-9d1d-039a03dd7bfa,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,GET public domains with guest headers
+3170e410-bede-4e7c-8e2a-d96d175bcc71,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,POST public mailbox creation
+28923269-0e07-4101-845d-51a0bcc092fc,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,POST public mailbox creation
+c2622e5c-21bf-40d7-b7ff-37cc2a3e87a6,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,POST public mailbox creation
+85c82df8-e151-4f75-8ae5-8c6374b3c322,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,POST mailbox creation with guest headers
+a927f5d5-fbe3-4d43-894a-b8a5c1fc5b68,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,POST mailbox creation with guest headers
+59ffbd06-5439-434b-baa1-5e7333c1be2c,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,GET mailbox received messages; seven scheduled polls
+54d74390-d59d-4c8e-9abe-d708149b0cf0,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,GET mailbox received messages
+b1910c20-c3ca-4913-b8d4-ef98c7f50866,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,GET guest mailbox received messages
+ac8faf79-bb26-4d75-b9c9-092558fbc245,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,POST public mailbox creation
+6cb37459-b125-4ff8-9f69-113ad0331fa4,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,POST public mailbox creation
+de2ca758-bf17-48aa-9c08-8dab4ea99184,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,POST public mailbox creation
+3bd1bae2-f91b-4208-ae40-6dfbe2e27cb9,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,POST public mailbox creation
+9418dd5f-cf02-424d-b2e3-28b2a3f5b09f,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,POST public mailbox creation
+3b55e716-4af4-40ce-be8a-79dc1385ecb1,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,POST public mailbox creation
+e72b1024-7ddf-41b2-994d-2d96a5f3a52f,daniel_20260923,Boomlify,Boomlify,submitted_program,reviewed_boomlify_chronology,POST public mailbox creation
+bcefd8b2-c97e-44b8-abc2-1e1e49a937b9,daniel_20260923,Recognized source,ACLED,recognized_source_reference,shared_annotation_source_id,Reference to ACLED in available report evidence.
+ea0a6bef-537f-4675-91fb-7c8a5f36b4c5,daniel_20260923,Recognized source,Clark University economics newsletter,recognized_source_reference,shared_annotation_source_id,Reference to Clark University economics newsletter in available report evidence.
+1965b45b-166e-4deb-a02d-4003fe3d42e4,daniel_20260923,Recognized source,Data for India,recognized_source_reference,shared_annotation_source_id,Reference to Data for India in available report evidence.
+df77bf50-3c00-4bef-8bd0-5fa74f8f4619,daniel_20260923,Recognized source,DataUSA,recognized_source_reference,shared_annotation_source_id,Reference to DataUSA in available report evidence.
+fd8b10f3-282f-4839-aacd-892d628b1a68,daniel_20260923,Recognized source,Digital Public Library of America,recognized_source_reference,shared_annotation_source_id,Reference to Digital Public Library of America in available report evidence.
+9c7af413-8f0a-4db2-965d-6a9994f31a72,daniel_20260923,Recognized source,Drivelah,recognized_source_reference,shared_annotation_source_id,Reference to Drivelah in available report evidence.
+de4f4546-ecfe-4645-8305-974939e17d15,daniel_20260923,Recognized source,GBBC / eBird,recognized_source_reference,shared_annotation_source_id,Reference to GBBC / eBird in available report evidence.
+ae29223b-f820-45fe-a4c0-454b68fcd165,daniel_20260923,Recognized source,GBBC / eBird,recognized_source_reference,shared_annotation_source_id,Reference to GBBC / eBird in available report evidence.
+3c2e5d3e-67ad-4ff9-90c5-fa106fd49b62,daniel_20260923,Recognized source,Iowa public health / CDC,recognized_source_reference,shared_annotation_source_id,Reference to Iowa public health / CDC in available report evidence.
+4e28d95e-9349-414f-bd6a-227d6476ed4b,daniel_20260923,Recognized source,Iowa public health / CDC,recognized_source_reference,shared_annotation_source_id,Reference to Iowa public health / CDC in available report evidence.
+46cf3d9e-55d8-4c95-a813-390bda8d0062,daniel_20260923,Recognized source,Iowa public health / CDC,recognized_source_reference,shared_annotation_source_id,Reference to Iowa public health / CDC in available report evidence.
+d27f67be-aa04-42fd-810d-66271ad01498,daniel_20260923,Recognized source,Iowa public health / CDC,recognized_source_reference,shared_annotation_source_id,Reference to Iowa public health / CDC in available report evidence.
+fa6f897e-46e8-4d1a-a79a-9f1972f1889b,daniel_20260923,Recognized source,Iowa public health / CDC,recognized_source_reference,shared_annotation_source_id,Reference to Iowa public health / CDC in available report evidence.
+47ee883b-0c52-4351-a534-b29f34c253cb,daniel_20260923,Recognized source,Looker / Data Studio report,recognized_source_reference,shared_annotation_source_id,Reference to Looker / Data Studio report in available report evidence.
+c982cfed-5a5d-4168-a4b4-9aae0c42e2a6,daniel_20260923,Recognized source,Mapillary,recognized_source_reference,shared_annotation_source_id,Reference to Mapillary in available report evidence.
+0c015fb2-2f6c-4cdd-8f3f-bffec1c1eab7,daniel_20260923,Recognized source,Mapillary,recognized_source_reference,shared_annotation_source_id,Reference to Mapillary in available report evidence.
+6fb2fa62-c1fe-4cc9-bd67-df90100b16f7,daniel_20260923,Recognized source,SEC county data,recognized_source_reference,shared_annotation_source_id,Reference to SEC county data in available report evidence.
+3669ec8d-0c1d-4b12-8ef3-3810d2259ef9,daniel_20260923,Recognized source,Telemetr,recognized_source_reference,shared_annotation_source_id,Reference to Telemetr in available report evidence.
+1b323754-f171-46c0-885c-ff4d51f60193,daniel_20260923,Recognized source,Thai ONCB,recognized_source_reference,shared_annotation_source_id,Reference to Thai ONCB in available report evidence.
+ae8dd33a-fa03-41d0-b967-8365a16403f0,daniel_20260923,Recognized source,Thai ONCB,recognized_source_reference,shared_annotation_source_id,Reference to Thai ONCB in available report evidence.
+c46c6d18-beaf-4eb6-958f-6b4259706895,daniel_20260923,Recognized source,Thai ONCB,recognized_source_reference,shared_annotation_source_id,Reference to Thai ONCB in available report evidence.
+1fcd4fec-d8de-4714-9708-1802c79d6b9f,daniel_20260923,Recognized source,UCSB digital collections,recognized_source_reference,shared_annotation_source_id,Reference to UCSB digital collections in available report evidence.
+5c0ca355-51e5-4a84-9e69-e7edac6240f9,daniel_20260923,Recognized source,UCSB digital collections,recognized_source_reference,shared_annotation_source_id,Reference to UCSB digital collections in available report evidence.
+c5b628be-e790-4ad2-a38d-3a12c2e30e46,daniel_20260923,Recognized source,UCSB digital collections,recognized_source_reference,shared_annotation_source_id,Reference to UCSB digital collections in available report evidence.
+364e7732-cae0-4005-81d6-ca685b09f48b,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+09fe8ceb-c69c-46ae-b084-b5c91c0882a0,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+1f6c5ffa-32fe-4a26-82ae-c0682c278542,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+39a820f4-6b76-4497-ba2e-28ca4b216042,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+f67898ea-c1d7-45ff-a40a-9425d608e529,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+20a56b18-902e-4c2e-b166-23255c373554,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+e13ff06c-1403-4c56-bda8-05f1f9ccbada,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+146bfba8-6d25-42a8-9b02-fb29d31dedce,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+40c08804-d063-4e5d-a520-bf0e00df787c,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+fd74f132-9a3a-4957-bff2-5fe04d177c6c,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+4ffda3cb-1be4-4677-9ca5-540b59279d8d,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+de304910-d405-4c3f-b779-0726767c196e,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+6c608e0e-251f-490f-827e-a1f85ee835bf,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+4dcc64cd-c8f6-4812-a8f8-272dbb5f4957,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+f6702f4a-054e-4a4f-a5b6-8a08eb7011fa,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+b581a76c-dba1-444c-9173-8c27ec705952,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+7cdd879f-5425-46d8-802f-80dae59fa93f,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+c505bc6a-1e3f-4c95-813b-f8e5a9a94b9d,daniel_20260923,Recognized source,UNCTAD,recognized_source_reference,shared_annotation_source_id,Reference to UNCTAD in available report evidence.
+196c7d16-1562-45a8-85b6-ca498a3ddda4,daniel_20260923,Recognized source,UNCTAD,submitted_automatic_form,reviewed_submitted_source,Submitted automatic form targets the UNCTAD API.
+56d37b93-a246-48d2-ac60-ebcc9d887650,daniel_20260923,Quidax,Quidax,direct_widget,reviewed_quidax_sequence,Direct Quidax widget report associated with the reviewed transaction/API sequence.
+8f9b4702-c140-4e98-a96e-9ea9a9484f98,daniel_20260923,Quidax,Quidax,direct_widget,reviewed_quidax_sequence,Direct Quidax widget report associated with the reviewed transaction/API sequence.
+1567e2e1-3830-4eef-86f9-6998e32a8c29,daniel_20260923,Quidax,Quidax,direct_widget,reviewed_quidax_sequence,Direct Quidax widget report associated with the reviewed transaction/API sequence.
+31523fa7-6eb4-4432-b2d6-506066f4a2f8,daniel_20260923,Quidax,Quidax,direct_widget,reviewed_quidax_sequence,Direct Quidax widget report associated with the reviewed transaction/API sequence.
+a0622898-50c0-4b20-8803-7090b8e86c6d,daniel_20260923,Quidax,Quidax,direct_widget,reviewed_quidax_sequence,Direct Quidax widget report associated with the reviewed transaction/API sequence.
+bdf482a4-6a84-4975-b362-8a1839ff728f,daniel_20260923,Quidax,Quidax,control,reviewed_quidax_sequence,JavaScript execution/title/console control associated with the Quidax sequence.

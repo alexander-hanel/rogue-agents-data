@@ -1,0 +1,66 @@
+{
+  "source_url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+  "checked_at": "2026-09-28T00:46:53.553607+00:00",
+  "scope": "Source articles, their directly linked first-party assets, public download bundles, and selected directly cited articles/evidence. No recursive crawl of citations or operational endpoints.",
+  "downloads": [
+    {
+      "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+      "path": "article/index.html",
+      "kind": "article",
+      "checked_at": "2026-09-28T00:46:53.553607+00:00",
+      "http_status": "403",
+      "final_url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+      "content_type": "text/html; charset=UTF-8",
+      "status": "unavailable",
+      "error": "curl: (22) The requested URL returned error: 403"
+    },
+    {
+      "url": "https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf",
+      "path": "references/2869273e2d-OpenAI-Hugging-Face-Incident-Technical-Report.pdf",
+      "kind": "reference",
+      "checked_at": "2026-09-28T00:46:53.553607+00:00",
+      "http_status": "200",
+      "final_url": "https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf",
+      "content_type": "application/pdf",
+      "bytes": 521159,
+      "sha256": "dd635cf6e5f39f0e1f646f08c36549090d77156ed89cbd3d733ed496648cae9c",
+      "status": "downloaded"
+    },
+    {
+      "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/",
+      "path": "references/8e38112b54-2026-08-26-openai-hugging-face-incident-investigation.html",
+      "kind": "reference",
+      "checked_at": "2026-09-28T00:46:53.553607+00:00",
+      "http_status": "200",
+      "final_url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 429995,
+      "sha256": "405de9f2b28d6b431fae6d5bbdddf0b1ce5d764b0fa4360b8fb24da1203ba565",
+      "status": "downloaded"
+    }
+  ],
+  "link_discovery": {
+    "method": "Publisher page inspected using the web reader; direct curl requests returned HTTP 403.",
+    "page_url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+    "scope": "Three selected direct links: technical report, METR report, and Black Hat talk. Not a complete outbound-link inventory.",
+    "observed_at": "2026-09-28T00:47:49.749354+00:00"
+  },
+  "additional_article_attempts": [
+    {
+      "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+      "user_agent": "Mozilla/5.0",
+      "http_status": 403,
+      "status": "unavailable"
+    },
+    {
+      "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
+      "http_status": 403,
+      "status": "unavailable"
+    },
+    {
+      "url": "https://openai.com/en-US/index/hugging-face-incident-and-the-road-ahead/",
+      "http_status": 403,
+      "status": "unavailable"
+    }
+  ]
+}

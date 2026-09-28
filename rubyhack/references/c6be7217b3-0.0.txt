@@ -1,0 +1,474 @@
+Source: https://my.diffend.io/gems/sampledocpayload624286/0.0.6
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+RubyGems - sampledocpayload624286 - Versions diffs - 0.0.6 - Mend - Supply Chain Defender
+
+RubyGems
+
+npm
+
+PyPI
+
+Organizations
+
+Log in
+
+RubyGems
+
+sampledocpayload624286
+
+Versions diffs
+
+0.0.6
+
+sampledocpayload624286
+0.0.6
+
+This diff represents the content of publicly available package versions that have been released to one of the supported registries. The information contained in this diff is provided for informational purposes only and reflects changes between package versions as they appear in their respective public registries.
+
+Potentially problematic release.
+
+This version of sampledocpayload624286 might be problematic. Click here for more details.
+
+        Files changed (7)
+        hide
+        show
+
+            checksums.yaml
+
+          +7
+          -0
+
+            data/.yardopts
+
+          +4
+          -0
+
+            data/README.md
+
+          +1
+          -0
+
+            data/exploit.rb
+
+          +2
+          -0
+
+            data/lib/sample.rb
+
+          +5
+          -0
+
+            data/payload.html
+
+          +1
+          -0
+
+            metadata
+
+          +49
+          -0
+
+        checksums.yaml
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,7 @@
+
+1
+
+            +
+            ---
+
+2
+
+            +
+            SHA256:
+
+3
+
+            +
+              metadata.gz: '096b568806f44a188441dfcf3409c15fce8163cbd082708b6949cde69ab66239'
+
+4
+
+            +
+              data.tar.gz: ba8043d3cd6562b7db8746076d8291730473abd49582503381f1a8193cbc0711
+
+5
+
+            +
+            SHA512:
+
+6
+
+            +
+              metadata.gz: 6e20cbb5fa00b95729ffba1707e615694be6da21f7c9bf139406e7e65161294b936c725fc52a921d3a183cbbb2e626809d2ed36604bb044e857d678f52dbba28
+
+7
+
+            +
+              data.tar.gz: 75c3b3a0f644ead0a540ada7fad23515742d4d3b22d42a834a6350d8278c0c924ff678d203c37c98504cedf7f70a1a1925c3a4e807da8d015a708d78ad7808d2
+
+        data/.yardopts
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,4 @@
+
+1
+
+            +
+            --main README.md
+
+2
+
+            +
+            --markup markdown
+
+3
+
+            +
+            --load exploit.rb
+
+4
+
+            +
+            --asset payload.html:payload.html
+
+        data/README.md
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            # Hello gem docs test
+
+        data/exploit.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,2 @@
+
+1
+
+            +
+            # harmless no-op test load
+
+2
+
+            +
+            ENV['TEST']='1'
+
+        data/lib/sample.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,5 @@
+
+1
+
+            +
+            # documentation class
+
+2
+
+            +
+            class SampleDocTest
+
+3
+
+            +
+             # hi
+
+4
+
+            +
+             def foo;end
+
+5
+
+            +
+            end
+
+        data/payload.html
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            <h1> ORIG V6 </h1>
+
+        metadata
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,49 @@
+
+1
+
+            +
+            --- !ruby/object:Gem::Specification
+
+2
+
+            +
+            name: sampledocpayload624286
+
+3
+
+            +
+            version: !ruby/object:Gem::Version
+
+4
+
+            +
+              version: 0.0.6
+
+5
+
+            +
+            platform: ruby
+
+6
+
+            +
+            authors:
+
+7
+
+            +
+            - x
+
+8
+
+            +
+            autorequire:
+
+9
+
+            +
+            bindir: bin
+
+10
+
+            +
+            cert_chain: []
+
+11
+
+            +
+            date: 2026-05-26 00:00:00.000000000 Z
+
+12
+
+            +
+            dependencies: []
+
+13
+
+            +
+            description: Sample documentation payload test
+
+14
+
+            +
+            email: ''
+
+15
+
+            +
+            executables: []
+
+16
+
+            +
+            extensions: []
+
+17
+
+            +
+            extra_rdoc_files:
+
+18
+
+            +
+            - README.md
+
+19
+
+            +
+            files:
+
+20
+
+            +
+            - ".yardopts"
+
+21
+
+            +
+            - README.md
+
+22
+
+            +
+            - exploit.rb
+
+23
+
+            +
+            - lib/sample.rb
+
+24
+
+            +
+            - payload.html
+
+25
+
+            +
+            homepage:
+
+26
+
+            +
+            licenses: []
+
+27
+
+            +
+            metadata: {}
+
+28
+
+            +
+            post_install_message:
+
+29
+
+            +
+            rdoc_options:
+
+30
+
+            +
+            - "--main=README.md"
+
+31
+
+            +
+            - "--copy-files=payload.html"
+
+32
+
+            +
+            require_paths:
+
+33
+
+            +
+            - lib
+
+34
+
+            +
+            required_ruby_version: !ruby/object:Gem::Requirement
+
+35
+
+            +
+              requirements:
+
+36
+
+            +
+              - - ">="
+
+37
+
+            +
+                - !ruby/object:Gem::Version
+
+38
+
+            +
+                  version: '0'
+
+39
+
+            +
+            required_rubygems_version: !ruby/object:Gem::Requirement
+
+40
+
+            +
+              requirements:
+
+41
+
+            +
+              - - ">="
+
+42
+
+            +
+                - !ruby/object:Gem::Version
+
+43
+
+            +
+                  version: '0'
+
+44
+
+            +
+            requirements: []
+
+45
+
+            +
+            rubygems_version: 3.3.15
+
+46
+
+            +
+            signing_key:
+
+47
+
+            +
+            specification_version: 4
+
+48
+
+            +
+            summary: Sample docs
+
+49
+
+            +
+            test_files: []
+
+Contact Us
+
+Terms of Service
+
+Privacy Policy
+
+Docs
+
+Copyright © 2026 Mend Software

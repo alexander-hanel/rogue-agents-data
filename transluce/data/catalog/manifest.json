@@ -1,0 +1,70 @@
+{
+  "dataset": "URLQuery agent-activity catalog v5 with reviewed confidence",
+  "snapshot_date": "2026-09-23",
+  "base_packages": [
+    "agent-attacks-urlquery-links-v5",
+    "urlquery-agent-activity-2026-09-22"
+  ],
+  "files": {
+    "README.md": {
+      "bytes": 5349,
+      "sha256": "0b498c2b26d80bdd28adc9790438f8c2cf2557abe06c00035bb610b1459641d6"
+    },
+    "additional-cited-reports.csv": {
+      "bytes": 38534,
+      "sha256": "d9acf3bd1eedb3c79740f211077cf83df4a5d98fcf61c06d7e7264df6a7fddfd"
+    },
+    "all-report-links.txt": {
+      "bytes": 2480400,
+      "sha256": "bbc84c0aa4192b952f94ae316aad28e2e5de027dd0c3533d49e64f471aa203f2"
+    },
+    "all-reports.csv": {
+      "bytes": 17750685,
+      "sha256": "64c59f7ffa31d08f1c66fd274953cf21d446ca18aca04d3a614208639fbf6eb8"
+    },
+    "classification-overrides.json": {
+      "bytes": 1906,
+      "sha256": "92ab708f5c10fac306425354603ee0cd948c8508942438ebf4e209f79dbd85b3"
+    },
+    "collection-summary.json": {
+      "bytes": 1083,
+      "sha256": "5a7bf02c1a6aa8e2c70efe7c18af2344c222bccf098ff83a3246d04a3d0e8dbe"
+    },
+    "daily-counts.csv": {
+      "bytes": 8863,
+      "sha256": "7c5b82bbbf506bbf24958d7458ad29185281b17d3334f3a7ae82c155774c4f35"
+    },
+    "daily-source-counts.csv": {
+      "bytes": 8337,
+      "sha256": "595aa1187491485547868bf43ecdd2865006be421021df0c9b87cfcf3328e91b"
+    },
+    "methods.json": {
+      "bytes": 21187,
+      "sha256": "4eed4705fce4e7cd944af37bb303b63218bfceb95fdbea0475e0e857bd69a28d"
+    },
+    "report-sources.csv": {
+      "bytes": 3424581,
+      "sha256": "d92acb400b845bb10de669f8a04e0be06813085e6e5c71d0d35e64734e68fb67"
+    },
+    "reports.csv": {
+      "bytes": 17712263,
+      "sha256": "026de639726f1d610b61e89a86260770defb90d49c1ce847e6ff1690207b2165"
+    },
+    "search-coverage.json": {
+      "bytes": 13344,
+      "sha256": "decffdc7425bef9adf6589ff4a48d14dbaf3927eff0c94cb670303d8f67eaad9"
+    },
+    "selection-provenance.csv": {
+      "bytes": 12947,
+      "sha256": "1fcf2c9e36149ab6f8ab4bfdfaab5de5db193fd4733300556ac4c863946563f1"
+    },
+    "supplement-classifications.json": {
+      "bytes": 52263,
+      "sha256": "25b605e60d1e7d7c1624ee297eda354e6bb781bee83bbb2f1380804c47da508f"
+    },
+    "supplement-summary.json": {
+      "bytes": 392,
+      "sha256": "b605a2be793c508f92f99fcfbbb5f67f425e8c81ca0664d85d05ad2f00051f62"
+    }
+  }
+}

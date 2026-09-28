@@ -1,0 +1,17 @@
+{
+  "files_checked": 63,
+  "format_checks": {
+    "article/links.json": {
+      "json": "valid"
+    },
+    "backup-manifest.json": {
+      "json": "valid"
+    },
+    "references/2869273e2d-OpenAI-Hugging-Face-Incident-Technical-Report.pdf": {
+      "pdf_header": "valid"
+    },
+    "references/4a24bf12f5-oversight-letter-to-openai-openai-hugging-face-incident-1.pdf": {
+      "pdf_header": "valid"
+    }
+  }
+}

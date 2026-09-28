@@ -1,0 +1,17 @@
+{
+  "total_supplement_rows": 82,
+  "selena_v4_rows": 11,
+  "daniel_selected_rows": 71,
+  "daniel_confidence_counts": {
+    "significant": 23,
+    "suggestive": 47
+  },
+  "daniel_background_controls": 1,
+  "newly_included_since_v4": 70,
+  "plotted_reports": 37638,
+  "full_included_reports": 37649,
+  "full_included_confidence_counts": {
+    "suggestive": 31182,
+    "significant": 6467
+  }
+}

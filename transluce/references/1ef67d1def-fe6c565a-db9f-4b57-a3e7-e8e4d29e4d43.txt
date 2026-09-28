@@ -1,0 +1,197 @@
+Source: https://urlquery.net/report/fe6c565a-db9f-4b57-a3e7-e8e4d29e4d43
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+Report - itty.bitty.site/#/data:text/html;base64,PGh0bWw+PGJvZHk+PGZvcm0gaWQ9ZiBhY3Rpb249Imh0dHBzOi8vd3d3LmZpbGVzY2FuLmlvL2FwaS9zY2FuL3VybCIgbWV0aG9kPXBvc3QgZW5jdHlwZT0ibXVsdGlwYXJ0L2Zvcm0tZGF0YSI+PGlucHV0IG5hbWU9dXJsIHZhbHVlPSJodHRwczovL3d3dy5haWh3Lmdvdi5hdS9nZXRtZWRpYS9jZTEzZDQyMy1lZDE4LTQxNjktOGI3Ni0yZjY3MWRmOTM1ZGUvYWlody1od2UtMDk4LXBicy1hdGMxLXByZXNjcmlwdGlvbnMtbW9udGhseS1kYXRhX2tlZXAuemlwP2ZzPTE3ODIwNDgwMDEiPjwvZm9ybT48c2NyaXB0PmYuc3VibWl0KCk8L3NjcmlwdD48L2JvZHk+PC9odG1sPg==
+ urlquery
+
+ Home  Search  Insights About
+Login
+
+ Check icon
+
+ Warning icon
+
+ Warning icon
+
+Share Report
+
+Generates a temporary link to share non-public report for a limited time.
+
+Valid for (hours 1-300) 
+
+Generate Link
+
+urlquery report
+
+JSON report
+
+Raw JSON report
+
+Share report
+
+Share a non-public report with others
+
+Request review
+
+Request a review of report
+
+External sources
+
+ VirusTotal
+
+VirusTotal
+
+FQDN
+
+itty.bitty.site
+
+DOMAIN
+
+bitty.site
+
+IP
+
+63.176.8.218
+
+ crt.sh
+
+crt.sh
+
+FQDN
+
+itty.bitty.site
+
+DOMAIN
+
+bitty.site
+
+Report Overview
+
+Visitedpublic 
+
+2026-06-21 13:15:35
+
+Tags
+
+Submit Tags
+
+URL
+
+itty.bitty.site/#/data:text/html;base64,PGh0bWw+PGJvZHk+PGZvcm0gaWQ9ZiBhY3Rpb249Imh0dHBzOi8vd3d3LmZpbGVzY2FuLmlvL2FwaS9zY2FuL3VybCIgbWV0aG9kPXBvc3QgZW5jdHlwZT0ibXVsdGlwYXJ0L2Zvcm0tZGF0YSI+PGlucHV0IG5hbWU9dXJsIHZhbHVlPSJodHRwczovL3d3dy5haWh3Lmdvdi5hdS9nZXRtZWRpYS9jZTEzZDQyMy1lZDE4LTQxNjktOGI3Ni0yZjY3MWRmOTM1ZGUvYWlody1od2UtMDk4LXBicy1hdGMxLXByZXNjcmlwdGlvbnMtbW9udGhseS1kYXRhX2tlZXAuemlwP2ZzPTE3ODIwNDgwMDEiPjwvZm9ybT48c2NyaXB0PmYuc3VibWl0KCk8L3NjcmlwdD48L2JvZHk+PC9odG1sPg==
+
+Finishing URL
+
+www.filescan.io/api/scan/url
+
+IP / ASN
+
+63.176.8.218
+
+#16509 AMAZON-02
+
+Title
+
+filescan.io/api/scan/url
+
+Detections
+
+urlquery
+
+0
+
+Network Intrusion Detection
+
+0
+
+Threat Detection Systems
+
+1
+
+Host Summary
+
+HostRankRegisteredFirst SeenLast SeenSentReceivedIPFingerprints
+
+www.filescan.io 
+unknown2017-12-092021-10-082026-06-211.2 kB23 kB
+
+172.67.70.67
+
+itty.bitty.site 
+4 alert(s) on this Host
+
+unknown2018-05-092018-07-052026-06-201.8 kB2.3 kB
+
+35.157.26.135
+
+Cloudflare (CDN)
+Cloudflare is a web-infrastructure and website-security company, providing content-delivery-network services, DDoS mitigation, Internet security, and distributed domain-name-server services.
+
+Netlify (PaaS, CDN)
+Netlify providers hosting and server-less backend services for web applications and static websites.
+
+Related reports
+
+Domain
+
+IP
+
+ASN
+
+Screenshot
+
+Similar
+
+Threat Detection Systems
+
+Detection SystemIndicatorVerdictAlert
+
+DNS4EUitty.bitty.sitemalicious
+Sinkholed
+
+JavaScript (77)
+
+Script (77)
+
+Eval (0)
+
+Write (0)
+
+Filter scripts by metadata or content (case-insensitive)
+
+Loading...
+
+No JavaScripts
+
+HTTP Transactions (6)
+
+Filter transactions by metadata or HTML content (case-insensitive)
+
+URLIPResponseSize
+
+ urlquery
+urlquery is a service for URL and domain scanning, identifying and categorizing  potentially harmful elements on a webpage, checking for malware infections and assessing overall reputation.
+
+Powered by penguins.
+
+Contact
+
+General questions, feedback, or technical inquiries:
+📧 contact@urlquery.net
+
+Report phishing:
+📧 phishing@urlquery.net
+
+For abuse or removal requests:
+📧 support@urlquery.net
+
+Follow us
+
+Github
+
+Legal
+
+Privacy Policy
+
+Terms & Conditions
+
+© 2026 urlquery All Rights Reserved.

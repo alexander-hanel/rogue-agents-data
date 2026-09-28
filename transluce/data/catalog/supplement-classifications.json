@@ -1,0 +1,825 @@
+{
+  "original_classifier_sha256": "a2c3455db7993d314d3030354b6a7031942ea52961a16a7a8927a4588a5329ae",
+  "decisions": [
+    {
+      "report_id": "209375ce-0f6b-41e0-9ac3-6acd4ab3538a",
+      "source_batch": "selena_v4",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "related_source_via_reader",
+      "reason": "ONCB statistics requested through Jina; mirrors the original corpus\u2019s March 6 Jina/ONCB reports, labeled suggestive / indirection. No distinct submitted program appears in this report.",
+      "classification_provenance": "Selena public v4 documented rubric-based decision; preserved unchanged."
+    },
+    {
+      "report_id": "960b3314-f644-4832-a57e-fab108a95678",
+      "source_batch": "selena_v4",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "source_request",
+      "basis": "reviewed_quidax_source_request",
+      "reason": "Direct Quidax ramp or transaction API request within the reviewed episode; no distinctive submitted program or narrow exploit payload was established for this report.",
+      "classification_provenance": "Selena public v4 documented rubric-based decision; preserved unchanged."
+    },
+    {
+      "report_id": "86c548e9-2caf-4596-a8ef-ba71f6cb9d72",
+      "source_batch": "selena_v4",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "source_request",
+      "basis": "reviewed_quidax_source_request",
+      "reason": "Direct Quidax ramp or transaction API request within the reviewed episode; no distinctive submitted program or narrow exploit payload was established for this report.",
+      "classification_provenance": "Selena public v4 documented rubric-based decision; preserved unchanged."
+    },
+    {
+      "report_id": "52d9be69-e168-4c93-b9f7-2f4ab04427a5",
+      "source_batch": "selena_v4",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "source_request",
+      "basis": "reviewed_quidax_source_request",
+      "reason": "Direct Quidax ramp or transaction API request within the reviewed episode; no distinctive submitted program or narrow exploit payload was established for this report.",
+      "classification_provenance": "Selena public v4 documented rubric-based decision; preserved unchanged."
+    },
+    {
+      "report_id": "52d1c0b4-e30c-4daf-ba93-4d4db542f0f6",
+      "source_batch": "selena_v4",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "source_request",
+      "basis": "reviewed_quidax_source_request",
+      "reason": "Direct Quidax ramp or transaction API request within the reviewed episode; no distinctive submitted program or narrow exploit payload was established for this report.",
+      "classification_provenance": "Selena public v4 documented rubric-based decision; preserved unchanged."
+    },
+    {
+      "report_id": "8d4f4f02-66e3-465c-a181-c4cc20fbdbc9",
+      "source_batch": "selena_v4",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "source_request",
+      "basis": "reviewed_quidax_html_parameter",
+      "reason": "An HTML-bearing status-message parameter on a fake transaction path suggests a probe, but this individual request lacks the original rubric\u2019s narrow task link needed for significant evidence. Success is not inferred.",
+      "classification_provenance": "Selena public v4 documented rubric-based decision; preserved unchanged."
+    },
+    {
+      "report_id": "fa7c2f4c-4799-412c-9f85-0d9f38eb194b",
+      "source_batch": "selena_v4",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "reviewed_quidax_program",
+      "reason": "Decoded submitted HTML contains task-specific multi-endpoint Quidax API fetch probes, and the archived browser recorded Quidax requests. Execution or exploitation success is not inferred.",
+      "classification_provenance": "Selena public v4 documented rubric-based decision; preserved unchanged."
+    },
+    {
+      "report_id": "7cf8f5a2-6788-4c78-b7c7-f8e96d1f7533",
+      "source_batch": "selena_v4",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "reviewed_quidax_program",
+      "reason": "Decoded submitted HTML contains task-specific multi-endpoint Quidax API fetch probes, and the archived browser recorded Quidax requests. Execution or exploitation success is not inferred.",
+      "classification_provenance": "Selena public v4 documented rubric-based decision; preserved unchanged."
+    },
+    {
+      "report_id": "595ea88a-07a4-445b-8a5e-288c5f9b8453",
+      "source_batch": "selena_v4",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "reviewed_quidax_program",
+      "reason": "Decoded submitted HTML contains task-specific multi-endpoint Quidax API fetch probes, and the archived browser recorded Quidax requests. Execution or exploitation success is not inferred.",
+      "classification_provenance": "Selena public v4 documented rubric-based decision; preserved unchanged."
+    },
+    {
+      "report_id": "328fc5f4-0ef9-441d-bb3c-e11dcb1167fa",
+      "source_batch": "selena_v4",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "reviewed_quidax_program",
+      "reason": "Decoded submitted HTML contains task-specific multi-endpoint Quidax API fetch probes, and the archived browser recorded Quidax requests. Execution or exploitation success is not inferred.",
+      "classification_provenance": "Selena public v4 documented rubric-based decision; preserved unchanged."
+    },
+    {
+      "report_id": "f825e84d-5014-4819-ab26-31c6e794fc6e",
+      "source_batch": "selena_v4",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "reviewed_quidax_program",
+      "reason": "Decoded submitted HTML contains task-specific multi-endpoint Quidax API fetch probes, and the archived browser recorded Quidax requests. Execution or exploitation success is not inferred.",
+      "classification_provenance": "Selena public v4 documented rubric-based decision; preserved unchanged."
+    },
+    {
+      "report_id": "ec853d1c-3e39-4891-bf18-628df24c0ad1",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. POST public mailbox creation Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "48cfc835-7727-4073-8332-bac8aecf082e",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. POST public mailbox creation Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "ee1e2595-a6d4-4f33-92a7-ca33f32a3d2f",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. POST public mailbox creation Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "750bc59f-a761-4eea-8d46-3e616ef9e664",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. POST public mailbox creation Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "4951f023-ccac-46b8-ad3a-f56132940bd2",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. POST guest initialization Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "9ba20e47-5921-4194-a177-ccbd0ef7f3d4",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. Fetch guest-session JavaScript Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "682ad78f-f0ad-4c7e-9d1d-039a03dd7bfa",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. GET public domains with guest headers Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "3170e410-bede-4e7c-8e2a-d96d175bcc71",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. POST public mailbox creation Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "28923269-0e07-4101-845d-51a0bcc092fc",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. POST public mailbox creation Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "c2622e5c-21bf-40d7-b7ff-37cc2a3e87a6",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. POST public mailbox creation Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "85c82df8-e151-4f75-8ae5-8c6374b3c322",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. POST mailbox creation with guest headers Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "a927f5d5-fbe3-4d43-894a-b8a5c1fc5b68",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. POST mailbox creation with guest headers Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "59ffbd06-5439-434b-baa1-5e7333c1be2c",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. GET mailbox received messages; seven scheduled polls Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "54d74390-d59d-4c8e-9abe-d708149b0cf0",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. GET mailbox received messages Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "b1910c20-c3ca-4913-b8d4-ef98c7f50866",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. GET guest mailbox received messages Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "ac8faf79-bb26-4d75-b9c9-092558fbc245",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. POST public mailbox creation Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "6cb37459-b125-4ff8-9f69-113ad0331fa4",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. POST public mailbox creation Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "de2ca758-bf17-48aa-9c08-8dab4ea99184",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. POST public mailbox creation Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "3bd1bae2-f91b-4208-ae40-6dfbe2e27cb9",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. POST public mailbox creation Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "9418dd5f-cf02-424d-b2e3-28b2a3f5b09f",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. POST public mailbox creation Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "3b55e716-4af4-40ce-be8a-79dc1385ecb1",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. POST public mailbox creation Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "e72b1024-7ddf-41b2-994d-2d96a5f3a52f",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Boomlify: Boomlify. POST public mailbox creation Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "bcefd8b2-c97e-44b8-abc2-1e1e49a937b9",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: ACLED. Reference to ACLED in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "ea0a6bef-537f-4675-91fb-7c8a5f36b4c5",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: Clark University economics newsletter. Reference to Clark University economics newsletter in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "1965b45b-166e-4deb-a02d-4003fe3d42e4",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "source_request",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: Data for India. Reference to Data for India in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "df77bf50-3c00-4bef-8bd0-5fa74f8f4619",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: DataUSA. Reference to DataUSA in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "fd8b10f3-282f-4839-aacd-892d628b1a68",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: Digital Public Library of America. Reference to Digital Public Library of America in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "9c7af413-8f0a-4db2-965d-6a9994f31a72",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: Drivelah. Reference to Drivelah in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "de4f4546-ecfe-4645-8305-974939e17d15",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: GBBC / eBird. Reference to GBBC / eBird in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "ae29223b-f820-45fe-a4c0-454b68fcd165",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: GBBC / eBird. Reference to GBBC / eBird in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "3c2e5d3e-67ad-4ff9-90c5-fa106fd49b62",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: Iowa public health / CDC. Reference to Iowa public health / CDC in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "4e28d95e-9349-414f-bd6a-227d6476ed4b",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: Iowa public health / CDC. Reference to Iowa public health / CDC in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "46cf3d9e-55d8-4c95-a813-390bda8d0062",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: Iowa public health / CDC. Reference to Iowa public health / CDC in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "d27f67be-aa04-42fd-810d-66271ad01498",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: Iowa public health / CDC. Reference to Iowa public health / CDC in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "fa6f897e-46e8-4d1a-a79a-9f1972f1889b",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: Iowa public health / CDC. Reference to Iowa public health / CDC in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "47ee883b-0c52-4351-a534-b29f34c253cb",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: Looker / Data Studio report. Reference to Looker / Data Studio report in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "c982cfed-5a5d-4168-a4b4-9aae0c42e2a6",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: Mapillary. Reference to Mapillary in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "0c015fb2-2f6c-4cdd-8f3f-bffec1c1eab7",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: Mapillary. Reference to Mapillary in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "6fb2fa62-c1fe-4cc9-bd67-df90100b16f7",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: SEC county data. Reference to SEC county data in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "3669ec8d-0c1d-4b12-8ef3-3810d2259ef9",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "source_request",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: Telemetr. Reference to Telemetr in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "1b323754-f171-46c0-885c-ff4d51f60193",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: Thai ONCB. Reference to Thai ONCB in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "ae8dd33a-fa03-41d0-b967-8365a16403f0",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: Thai ONCB. Reference to Thai ONCB in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "c46c6d18-beaf-4eb6-958f-6b4259706895",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: Thai ONCB. Reference to Thai ONCB in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "1fcd4fec-d8de-4714-9708-1802c79d6b9f",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UCSB digital collections. Reference to UCSB digital collections in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "5c0ca355-51e5-4a84-9e69-e7edac6240f9",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UCSB digital collections. Reference to UCSB digital collections in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "c5b628be-e790-4ad2-a38d-3a12c2e30e46",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UCSB digital collections. Reference to UCSB digital collections in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "364e7732-cae0-4005-81d6-ca685b09f48b",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "09fe8ceb-c69c-46ae-b084-b5c91c0882a0",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "1f6c5ffa-32fe-4a26-82ae-c0682c278542",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "39a820f4-6b76-4497-ba2e-28ca4b216042",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "f67898ea-c1d7-45ff-a40a-9425d608e529",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "20a56b18-902e-4c2e-b166-23255c373554",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "e13ff06c-1403-4c56-bda8-05f1f9ccbada",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "146bfba8-6d25-42a8-9b02-fb29d31dedce",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "40c08804-d063-4e5d-a520-bf0e00df787c",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "fd74f132-9a3a-4957-bff2-5fe04d177c6c",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "4ffda3cb-1be4-4677-9ca5-540b59279d8d",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "de304910-d405-4c3f-b779-0726767c196e",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "6c608e0e-251f-490f-827e-a1f85ee835bf",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "4dcc64cd-c8f6-4812-a8f8-272dbb5f4957",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "f6702f4a-054e-4a4f-a5b6-8a08eb7011fa",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "b581a76c-dba1-444c-9173-8c27ec705952",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "7cdd879f-5425-46d8-802f-80dae59fa93f",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "indirection",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "c505bc6a-1e3f-4c95-813b-f8e5a9a94b9d",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "significant",
+      "broad_class": "custom_program",
+      "basis": "decoded_submitted_program",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Reference to UNCTAD in available report evidence. Preserved submitted content matches the existing custom-program rule (data fetch or automatic POST form).",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "196c7d16-1562-45a8-85b6-ca498a3ddda4",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "source_request",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Recognized source: UNCTAD. Submitted automatic form targets the UNCTAD API.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "56d37b93-a246-48d2-ac60-ebcc9d887650",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "source_request",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Quidax: Quidax. Direct Quidax widget report associated with the reviewed transaction/API sequence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "8f9b4702-c140-4e98-a96e-9ea9a9484f98",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "source_request",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Quidax: Quidax. Direct Quidax widget report associated with the reviewed transaction/API sequence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "1567e2e1-3830-4eef-86f9-6998e32a8c29",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "source_request",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Quidax: Quidax. Direct Quidax widget report associated with the reviewed transaction/API sequence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "31523fa7-6eb4-4432-b2d6-506066f4a2f8",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "source_request",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Quidax: Quidax. Direct Quidax widget report associated with the reviewed transaction/API sequence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "a0622898-50c0-4b20-8803-7090b8e86c6d",
+      "source_batch": "daniel_20260923",
+      "disposition": "included",
+      "confidence": "suggestive",
+      "broad_class": "source_request",
+      "basis": "reviewed_source_or_workflow_reference",
+      "reason": "Daniel selected this report as part of Quidax: Quidax. Direct Quidax widget report associated with the reviewed transaction/API sequence.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    },
+    {
+      "report_id": "bdf482a4-6a84-4975-b362-8a1839ff728f",
+      "source_batch": "daniel_20260923",
+      "disposition": "background",
+      "confidence": null,
+      "broad_class": "indirection",
+      "basis": "reviewed_execution_control",
+      "reason": "JavaScript execution/title/console control associated with the Quidax sequence; this report records no Quidax request. Retained for context, excluded from activity counts.",
+      "classification_provenance": "Existing evidence.py detector applied to full archived JSON with reviewed_case=True for the explicitly supplied set; execution control manually retained as background."
+    }
+  ]
+}

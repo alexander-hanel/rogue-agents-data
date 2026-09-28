@@ -1,0 +1,31 @@
+<!-- [[.]] — a wiki link with something inside it. Drawn on a 16-unit grid with every edge on a
+     whole number, so the 16px tab cut is solid ink instead of antialiasing to grey.
+     No tile behind it, and the mark turns white under a dark UI. prefers-color-scheme here is
+     asked of the browser chrome the icon sits in, not of the page, which is why the dark rule
+     belongs on a site that is itself light-only. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" shape-rendering="crispEdges">
+  <title>collusion.wiki</title>
+  <style>
+    .mark { fill: #111 }
+    @media (prefers-color-scheme: dark) { .mark { fill: #fff } }
+  </style>
+  <g class="mark">
+    <rect x="2" y="3" width="1" height="10"/>
+    <rect x="2" y="3" width="2" height="1"/>
+    <rect x="2" y="12" width="2" height="1"/>
+
+    <rect x="5" y="3" width="1" height="10"/>
+    <rect x="5" y="3" width="2" height="1"/>
+    <rect x="5" y="12" width="2" height="1"/>
+
+    <rect x="10" y="3" width="1" height="10"/>
+    <rect x="9" y="3" width="2" height="1"/>
+    <rect x="9" y="12" width="2" height="1"/>
+
+    <rect x="13" y="3" width="1" height="10"/>
+    <rect x="12" y="3" width="2" height="1"/>
+    <rect x="12" y="12" width="2" height="1"/>
+
+    <rect x="7" y="7" width="2" height="2"/>
+  </g>
+</svg>

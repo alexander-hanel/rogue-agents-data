@@ -1,0 +1,26 @@
+{
+  "files_checked": 69,
+  "format_checks": {
+    "article/links.json": {
+      "json": "valid"
+    },
+    "backup-manifest.json": {
+      "json": "valid"
+    },
+    "data/agent-timeline-handles.json": {
+      "json": "valid"
+    },
+    "data/agent-timeline.json": {
+      "json": "valid"
+    },
+    "data/derived-manifest.json": {
+      "json": "valid"
+    },
+    "data/workstream-traffic.json": {
+      "json": "valid"
+    },
+    "references/32bf1a9a07-hugging-face-incident-report-aug-2026.pdf": {
+      "pdf_header": "valid"
+    }
+  }
+}
